@@ -32,6 +32,7 @@ fetch("data/art.json").then(r=>r.json()).then(data=>{
     <div class="art-item">
       <h3>${esc(w.title)}<span class="yr">${esc(w.year||"")}</span></h3>
       ${(w.body||[]).map(p=>`<p>${esc(p)}</p>`).join("")}
+      ${w.image?`<img class="art-img" loading="lazy" src="${esc(w.image)}" alt="${esc(w.title)}">`:""}
       ${w.video?`<div class="embed"><iframe src="${yt(w.video)}" title="${esc(w.title)}" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>`:""}
       ${w.links&&w.links.length?`<div class="cta" style="margin-top:12px">${w.links.map(l=>`<a class="btn ghost" style="border-color:var(--line);color:var(--indigo-2)" href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)} ↗</a>`).join("")}</div>`:""}
       ${w.watch&&w.watch.length?`<p class="ref">Referenced: ${w.watch.map(v=>`<a href="https://www.youtube.com/watch?v=${esc(v.id)}" target="_blank" rel="noopener">${esc(v.label)}</a>`).join(" · ")}</p>`:""}

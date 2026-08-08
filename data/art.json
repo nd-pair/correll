@@ -4,6 +4,7 @@
     {
       "title": "Electronic Music",
       "year": "various, 2025",
+      "image": "assets/art/releases.png",
       "body": [
         "Series of electronic music created with Elektron Model:Cycles, an FM-based synthesizer, and Arturia MicroFreak, a hybrid Digital Signal Processor (DSP) synthesizer with analog filters. DSPs have led to a renaissance of fully digital and hybrid synthesizers and beatboxes that dramatically lower the floor of music creation exploiting oscillators and non-linear dynamics. Cover art created by Stable Diffusion."
       ],
@@ -29,6 +30,7 @@
     {
       "title": "GEEN1400 Air-Monitoring Public Sculpture",
       "year": "2018, collaboration",
+      "video": "cTdVo59KM1w",
       "body": [
         "In collaboration with Ken Bernstein Art studio and INSTAAR. GEEN1400 students conducted a feasibility study for a proposed design that involves smart materials to display real-time air quality data from the internet, and delivered a proof-of-concept prototype.",
         "Students: Olivia André, Harrison Bolin, Jack Carver, Sydney Crowe, Labon Hillberry, Henry Kvietok, Justin Paige, and Meghan Pfeifer."
@@ -52,6 +54,7 @@
     {
       "title": "endo/exo",
       "year": "2013, collaboration",
+      "video": "y6bb5NlkJoc",
       "body": [
         "endo/exo is an interactive kinetic art installation, melding sound, robotic kinetic motion, and light, created by new media artist Michael Theodore as part of the organism/mechanism solo show at the David B. Smith Gallery in Denver, Colorado, May 11 – June 15, 2013.",
         "Collaborators: Pedro Caceres (structural design), Jiffer Harriman (software design), Nikolaus Correll (technology design), Bob Shannon (lighting design), Jane Theodore (fabrication), Nathan Wheeler (fabrication). Video by Matthew Campbell."
@@ -63,6 +66,7 @@
     {
       "title": "flutter",
       "year": "2012, collaboration",
+      "image": "assets/art/flutter.png",
       "body": [
         "Flutter was created by Halley Profita, Nicholas Farrow, and Nikolaus Correll at the University of Colorado Boulder. An extraordinary fusing of textiles and robotics, Flutter received First Prize for both Best in Show and Most Inclusive and Usable Design at the 2012 International Symposium on Wearable Computer Design Exhibition in Newcastle, England.",
         "Inspired to aid individuals with hearing impairments, Flutter administers vibrotactile feedback in the direction of a loud sound or alarm to help those with hearing loss respond more intuitively to their external environment. It was conceived as an alternative form of assistive technology — an ethereal and functional garment that calls attention to the beauty of the device, not the disability.",
@@ -75,6 +79,7 @@
     {
       "title": "Swarm Wall",
       "year": "2012, collaboration",
+      "video": "ySkK9ngLVkg",
       "body": [
         "An interactive sculpture incorporating sound, light, and kinetic motion. Part of the solo show \"Michael Theodore: Field Theory,\" exhibited at the CU Art Museum June 15 – July 14, 2012. Dimensions modular and variable, here 13' × 42'.",
         "Collaborators: Nikolaus Correll (custom electronics development), Ken Sugawara (algorithm and software design), Nicholas Farrow (software design), Bob Shannon (lighting design), Pedro Caceres (preparator), Stephen Martonis (exhibitions manager), Jane Theodore (fabrication). Video assembled from footage shot by Mark McCoin and Matthew Campbell."

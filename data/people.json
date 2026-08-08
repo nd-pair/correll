@@ -6,332 +6,98 @@
         "name": "Nikolaus Correll",
         "title": "Viola D. Hank Professor of Aerospace and Mechanical Engineering",
         "bio": "Viola D. Hank Professor of Aerospace and Mechanical Engineering at the University of Notre Dame. PhD in CS from EPFL (2007); Diplom in Electrical Engineering from ETH Zürich. Post-doc at MIT CSAIL with Daniela Rus (2007–2009). Recipient of a 2012 NSF CAREER and a 2012 NASA Early Career Faculty Fellowship.",
-        "email": "nikolaus.correll@gmail.com"
+        "email": "nikolaus.correll@gmail.com",
+        "img": "assets/people/correll.png"
       }
     ]
   },
   {
-    "group": "PhD Students",
+    "group": "University of Notre Dame",
     "members": [
-      {
-        "name": "Zachary Allen",
-        "role": "BS University of Colorado • Senior Robotics Engineer, Lunar Outpost"
-      },
-      {
-        "name": "Stefan Caldararu",
-        "role": "PhD Student • NASA Pathways Intern • BS University of Wisconsin-Madison"
-      },
-      {
-        "name": "Max Conway",
-        "role": "PhD Student • BS/MSc University of Denver"
-      },
-      {
-        "name": "Chen Liu",
-        "role": "MS University of Southern California"
-      },
-      {
-        "name": "Niraj Pudasaini",
-        "role": "BS New York University Abu Dhabi"
-      },
-      {
-        "name": "Kailey Shara",
-        "role": "PhD Student • BSc Case Western (Electrical Engineering) • BSc Case Western (Chemistry)"
-      },
-      {
-        "name": "Dhanush Varma",
-        "role": "PhD Student • MS University of Southern California"
-      },
-      {
-        "name": "James Watson",
-        "role": "PhD Student • MSc University of Utah • BSc University of Illinois"
-      },
-      {
-        "name": "William Xie",
-        "role": "PhD Student • NSF Graduate Fellow • BSc Columbia University"
-      },
-      {
-        "name": "Yutong Zhang",
-        "role": "PhD Student • BS/MS Computer Science UC San Diego"
-      }
+      { "name": "Chen Liu", "role": "PhD Student • MS University of Southern California", "img": "assets/people/chen-liu.jpeg" },
+      { "name": "Niraj Pudasaini", "role": "PhD Student • BS New York University Abu Dhabi", "img": "assets/people/niraj-pudasaini.jpeg" }
     ]
   },
   {
-    "group": "Undergraduates",
+    "group": "CU Boulder",
     "members": [
-      {
-        "name": "Adam Abid",
-        "role": "BS in Computer Science Class of 2028"
-      },
-      {
-        "name": "Paul Afriyie",
-        "role": "BS in Computer Science Class of 2029"
-      },
-      {
-        "name": "Justin Costa",
-        "role": "Independent Study • UROP"
-      },
-      {
-        "name": "Jasmitha Gourabathini",
-        "role": "Fundamentals of Undergraduate Research Program (FUTURE) • UROP"
-      },
-      {
-        "name": "Jensen Lavering",
-        "role": "Independent Study"
-      }
+      { "name": "Zachary Allen", "role": "PhD Student • BS University of Colorado • Senior Robotics Engineer, Lunar Outpost", "img": "assets/people/zachary-allen.jpeg" },
+      { "name": "Max Conway", "role": "PhD Student • BS/MSc University of Denver", "img": "assets/people/max-conway.png" },
+      { "name": "Kailey Shara", "role": "PhD Student • BSc Case Western (Electrical Engineering) • BSc Case Western (Chemistry)", "img": "assets/people/kailey-shara.png" },
+      { "name": "James Watson", "role": "PhD Student • MSc University of Utah • BSc University of Illinois", "img": "assets/people/james-watson.jpeg" },
+      { "name": "William Xie", "role": "PhD Student • NSF Graduate Fellow • BSc Columbia University", "img": "assets/people/william-xie.png" },
+      { "name": "Yutong Zhang", "role": "PhD Student • BS/MS Computer Science UC San Diego", "img": "assets/people/yutong-zhang.png" },
+      { "name": "Adam Abid", "role": "Undergraduate • BS in Computer Science, Class of 2028", "img": "assets/people/adam-abid.png" },
+      { "name": "Paul Afriyie", "role": "Undergraduate • BS in Computer Science, Class of 2029", "img": "assets/people/paul-afriyie.jpg" },
+      { "name": "Justin Costa", "role": "Undergraduate • Independent Study • UROP", "img": "assets/people/justin-costa.png" },
+      { "name": "Jasmitha Gourabathini", "role": "Undergraduate • FUTURE Program • UROP", "img": "assets/people/jasmitha-gourabathini.jpeg" },
+      { "name": "Jensen Lavering", "role": "Undergraduate • Independent Study", "img": "assets/people/jensen-lavering.jpeg" },
+      { "name": "Mateo Feit", "role": "High School Intern • Visiting Student", "img": "assets/people/mateo-feit.jpeg" }
     ]
   },
   {
-    "group": "High School Interns",
+    "group": "Alumni · CU Boulder",
     "members": [
-      {
-        "name": "Mateo Feit",
-        "role": "Visiting Student"
-      }
-    ]
-  },
-  {
-    "group": "Alumni",
-    "members": [
-      {
-        "name": "Dr. Sarah Aguasvivas Manzano",
-        "role": "PhD Student"
-      },
-      {
-        "name": "Michael Beam",
-        "role": "Undergraduate • NSF REU"
-      },
-      {
-        "name": "Samuel Beckett",
-        "role": "Undergraduate • NSF DREU"
-      },
-      {
-        "name": "Dr. Timothy Caldwell",
-        "role": "Post-Doc"
-      },
-      {
-        "name": "Jorge Cañardo Alastuey",
-        "role": "Master's student"
-      },
-      {
-        "name": "Dr. David Coleman",
-        "role": "PhD Student"
-      },
-      {
-        "name": "Eliza Cornell",
-        "role": "Highschool Intern"
-      },
-      {
-        "name": "Rebecca Cox",
-        "role": "Master's student • Electrical Engineering"
-      },
-      {
-        "name": "Joshua Dinerman",
-        "role": "Undergraduate"
-      },
-      {
-        "name": "Jean Dinet",
-        "role": "Undergraduate • University of Bourgogne-Franche-Comté"
-      },
-      {
-        "name": "Parker Evans",
-        "role": "Undergraduate"
-      },
-      {
-        "name": "Nicholas Farrow",
-        "role": "PhD Student"
-      },
-      {
-        "name": "Aymar Omar Hammuda",
-        "role": "Master's student"
-      },
-      {
-        "name": "Hadi Hasbini",
-        "role": "Independent Study • BS American University Beirut"
-      },
-      {
-        "name": "Mohammad Hashemi",
-        "role": "Master's student"
-      },
-      {
-        "name": "Dr. Heather Hava",
-        "role": "PhD Student • Aerospace Engineering Sciences"
-      },
-      {
-        "name": "Ariel Hoffman",
-        "role": "Undergraduate • DLA • NSF REU"
-      },
-      {
-        "name": "Henry Horsey",
-        "role": "Undergraduate • NSF REU • Oberlin College"
-      },
-      {
-        "name": "Dr. Dana Hughes",
-        "role": "PhD Student"
-      },
-      {
-        "name": "Dr. Jaeheon Jeong",
-        "role": "PhD Student"
-      },
-      {
-        "name": "Regina Jingwen",
-        "role": "Undergraduate"
-      },
-      {
-        "name": "Christopher Johnson",
-        "role": "Undergraduate • NSF REU"
-      },
-      {
-        "name": "Dr. Anshul Kanakia",
-        "role": "PhD Student"
-      },
-      {
-        "name": "Dr. John Klingner",
-        "role": "PhD Student"
-      },
-      {
-        "name": "Prof. Erik Komendera",
-        "role": "PhD Student"
-      },
-      {
-        "name": "Dylan Kriegman",
-        "role": "Undergraduate • Senior Thesis"
-      },
-      {
-        "name": "Carter Kruse",
-        "role": "Visiting Student - Dartmouth College"
-      },
-      {
-        "name": "John Lammie",
-        "role": "Master's student"
-      },
-      {
-        "name": "Arielle Lathinen",
-        "role": "Independent Study"
-      },
-      {
-        "name": "Dr. Yang Li",
-        "role": "PhD Student"
-      },
-      {
-        "name": "Dr. Khoi Ly",
-        "role": "PhD Student • Mechanical Engineering"
-      },
-      {
-        "name": "Joseph Maniaci",
-        "role": "Undergraduate • UROP"
-      },
-      {
-        "name": "Brian McDonald",
-        "role": "Undergraduate • UROP"
-      },
-      {
-        "name": "Lauren McIntire",
-        "role": "Undergraduate"
-      },
-      {
-        "name": "Andrea Miller",
-        "role": "Undergraduate Researcher"
-      },
-      {
-        "name": "Roger Montané-Güell",
-        "role": "Undergraduate • Universitat Autònoma de Barcelona"
-      },
-      {
-        "name": "Cory Morales",
-        "role": "Undergraduate"
-      },
-      {
-        "name": "Akshay Mysore",
-        "role": "Master's student"
-      },
-      {
-        "name": "Prof. Michael Otte",
-        "role": "PhD Student"
-      },
-      {
-        "name": "Stephen Otto",
-        "role": "Master's student • Mechanical Engineering"
-      },
-      {
-        "name": "Dr. Radhen Patel",
-        "role": "PhD Student"
-      },
-      {
-        "name": "Florian Pescher",
-        "role": "Undergraduate • Supelec Metz"
-      },
-      {
-        "name": "Dr. Halley Profita",
-        "role": "PhD Student"
-      },
-      {
-        "name": "Sarah Radzihovsky",
-        "role": "Highschool Intern"
-      },
-      {
-        "name": "Vijeth Rai",
-        "role": "Master's student"
-      },
-      {
-        "name": "Audrey Randall",
-        "role": "Undergraduate"
-      },
-      {
-        "name": "Blake Reimer",
-        "role": "Undergraduate"
-      },
-      {
-        "name": "Dr. Dustin Reishus",
-        "role": "Postdoc"
-      },
-      {
-        "name": "Branden Romero",
-        "role": "Undergraduate • Senior Thesis"
-      },
-      {
-        "name": "Streck Salmon",
-        "role": "Independent Study"
-      },
-      {
-        "name": "Scott Scheraga",
-        "role": "Master's student • Mechanical Engineering"
-      },
-      {
-        "name": "Naren Sivagnanadasan",
-        "role": "Highschool Intern"
-      },
-      {
-        "name": "Uri Soltz",
-        "role": "Independent Study"
-      },
-      {
-        "name": "Daniel Sutton",
-        "role": "Undergraduate • Senior Thesis"
-      },
-      {
-        "name": "Dr. Hong Truong",
-        "role": "PhD Student"
-      },
-      {
-        "name": "Britta Ulm",
-        "role": "NSF REU"
-      },
-      {
-        "name": "Joseph Vasse",
-        "role": "Undergraduate • University of Bourgogne-Franche-Comté"
-      },
-      {
-        "name": "Rowan Wing",
-        "role": "PhD Student"
-      },
-      {
-        "name": "Xingjie Zhong",
-        "role": "Undergraduate • DLA • NSF REU"
-      },
-      {
-        "name": "Daniel Zukowski",
-        "role": "Master's student"
-      }
+      { "name": "Dr. Sarah Aguasvivas Manzano", "role": "PhD Student" },
+      { "name": "Michael Beam", "role": "Undergraduate • NSF REU" },
+      { "name": "Samuel Beckett", "role": "Undergraduate • NSF DREU" },
+      { "name": "Dr. Timothy Caldwell", "role": "Post-Doc" },
+      { "name": "Jorge Cañardo Alastuey", "role": "Master's student" },
+      { "name": "Dr. David Coleman", "role": "PhD Student" },
+      { "name": "Eliza Cornell", "role": "Highschool Intern" },
+      { "name": "Rebecca Cox", "role": "Master's student • Electrical Engineering" },
+      { "name": "Joshua Dinerman", "role": "Undergraduate" },
+      { "name": "Jean Dinet", "role": "Undergraduate • University of Bourgogne-Franche-Comté" },
+      { "name": "Parker Evans", "role": "Undergraduate" },
+      { "name": "Nicholas Farrow", "role": "PhD Student" },
+      { "name": "Aymar Omar Hammuda", "role": "Master's student" },
+      { "name": "Hadi Hasbini", "role": "Independent Study • BS American University Beirut" },
+      { "name": "Mohammad Hashemi", "role": "Master's student" },
+      { "name": "Dr. Heather Hava", "role": "PhD Student • Aerospace Engineering Sciences" },
+      { "name": "Ariel Hoffman", "role": "Undergraduate • DLA • NSF REU" },
+      { "name": "Henry Horsey", "role": "Undergraduate • NSF REU • Oberlin College" },
+      { "name": "Dr. Dana Hughes", "role": "PhD Student" },
+      { "name": "Dr. Jaeheon Jeong", "role": "PhD Student" },
+      { "name": "Regina Jingwen", "role": "Undergraduate" },
+      { "name": "Christopher Johnson", "role": "Undergraduate • NSF REU" },
+      { "name": "Dr. Anshul Kanakia", "role": "PhD Student" },
+      { "name": "Dr. John Klingner", "role": "PhD Student" },
+      { "name": "Prof. Erik Komendera", "role": "PhD Student" },
+      { "name": "Dylan Kriegman", "role": "Undergraduate • Senior Thesis" },
+      { "name": "Carter Kruse", "role": "Visiting Student - Dartmouth College" },
+      { "name": "John Lammie", "role": "Master's student" },
+      { "name": "Arielle Lathinen", "role": "Independent Study" },
+      { "name": "Dr. Yang Li", "role": "PhD Student" },
+      { "name": "Dr. Khoi Ly", "role": "PhD Student • Mechanical Engineering" },
+      { "name": "Joseph Maniaci", "role": "Undergraduate • UROP" },
+      { "name": "Brian McDonald", "role": "Undergraduate • UROP" },
+      { "name": "Lauren McIntire", "role": "Undergraduate" },
+      { "name": "Andrea Miller", "role": "Undergraduate Researcher" },
+      { "name": "Roger Montané-Güell", "role": "Undergraduate • Universitat Autònoma de Barcelona" },
+      { "name": "Cory Morales", "role": "Undergraduate" },
+      { "name": "Akshay Mysore", "role": "Master's student" },
+      { "name": "Prof. Michael Otte", "role": "PhD Student" },
+      { "name": "Stephen Otto", "role": "Master's student • Mechanical Engineering" },
+      { "name": "Dr. Radhen Patel", "role": "PhD Student" },
+      { "name": "Florian Pescher", "role": "Undergraduate • Supelec Metz" },
+      { "name": "Dr. Halley Profita", "role": "PhD Student" },
+      { "name": "Sarah Radzihovsky", "role": "Highschool Intern" },
+      { "name": "Vijeth Rai", "role": "Master's student" },
+      { "name": "Audrey Randall", "role": "Undergraduate" },
+      { "name": "Blake Reimer", "role": "Undergraduate" },
+      { "name": "Dr. Dustin Reishus", "role": "Postdoc" },
+      { "name": "Branden Romero", "role": "Undergraduate • Senior Thesis" },
+      { "name": "Streck Salmon", "role": "Independent Study" },
+      { "name": "Scott Scheraga", "role": "Master's student • Mechanical Engineering" },
+      { "name": "Naren Sivagnanadasan", "role": "Highschool Intern" },
+      { "name": "Uri Soltz", "role": "Independent Study" },
+      { "name": "Daniel Sutton", "role": "Undergraduate • Senior Thesis" },
+      { "name": "Dr. Hong Truong", "role": "PhD Student" },
+      { "name": "Britta Ulm", "role": "NSF REU" },
+      { "name": "Joseph Vasse", "role": "Undergraduate • University of Bourgogne-Franche-Comté" },
+      { "name": "Rowan Wing", "role": "PhD Student" },
+      { "name": "Xingjie Zhong", "role": "Undergraduate • DLA • NSF REU" },
+      { "name": "Daniel Zukowski", "role": "Master's student" }
     ]
   }
 ]

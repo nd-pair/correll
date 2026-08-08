@@ -29,10 +29,12 @@ fetch("data/people.json").then(r=>r.json()).then(data=>{
   const root = document.getElementById("people-root");
   const groups = data.groups || data;
   let html = "";
+  const initials = n => esc(n.replace(/^(Dr\.|Prof\.)\s+/,"").split(/\s+/).map(w=>w[0]).slice(0,2).join("").toUpperCase());
   const piGroup = groups.find(g=>/^pi$/i.test(g.group) || /principal/i.test(g.group));
   if(piGroup && piGroup.members[0]){
     const p = piGroup.members[0];
     html += `<div class="pi">
+      ${p.img?`<img class="avatar" src="${esc(p.img)}" alt="${esc(p.name)}">`:""}
       <div>
         <div class="nm">${esc(p.name)}</div>
         <div class="role">${esc(p.title||p.role||"")}</div>
@@ -44,14 +46,18 @@ fetch("data/people.json").then(r=>r.json()).then(data=>{
   const rest = groups.filter(g=>g!==piGroup);
   const alumni = rest.filter(g=>/alumni/i.test(g.group));
   const active = rest.filter(g=>!/alumni/i.test(g.group));
-  const renderRoster = m => `<div class="rperson"><div class="rn">${esc(m.name)}</div>${m.role?`<div class="rm">${esc(m.role)}</div>`:""}</div>`;
+  const card = m => `<div class="pcard">
+    ${m.img?`<img class="ph" loading="lazy" src="${esc(m.img)}" alt="${esc(m.name)}">`:`<div class="ph mono">${initials(m.name)}</div>`}
+    <div class="n">${esc(m.name)}</div>${m.role?`<div class="r">${esc(m.role)}</div>`:""}
+  </div>`;
+  const rosterRow = m => `<div class="rperson"><div class="rn">${esc(m.name)}</div>${m.role?`<div class="rm">${esc(m.role)}</div>`:""}</div>`;
   active.forEach(g=>{
     html += `<div class="rostergrp"><h2>${esc(g.group)} <span class="cnt">${g.members.length}</span></h2>
-      <div class="roster">${g.members.map(renderRoster).join("")}</div></div>`;
+      <div class="pgrid">${g.members.map(card).join("")}</div></div>`;
   });
   alumni.forEach(g=>{
     html += `<details class="group"><summary>${esc(g.group)} <span class="cnt">${g.members.length}</span></summary>
-      <div class="roster">${g.members.map(renderRoster).join("")}</div></details>`;
+      <div class="roster">${g.members.map(rosterRow).join("")}</div></details>`;
   });
   root.innerHTML = html;
 }).catch(()=>{document.getElementById("people-root").textContent="Could not load people.";});
