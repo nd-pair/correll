@@ -2,15 +2,17 @@
 """Automatically extract a representative figure for each publication from its open-access PDF.
 
 For every paper that does NOT already have a hand-curated thumbnail (data/pub_images.json),
-this downloads the OA PDF (arXiv links resolved to the direct PDF), opens page 1, and picks the
-"first image on the top right" — the largest embedded raster whose position is highest/rightmost,
-which is almost always the teaser figure. The image is resized into assets/pubs/auto/ and recorded
-in data/pub_figures.json (normalized-title -> path). The site prefers curated images and falls
-back to these. Paywalled papers (no OA PDF) are simply skipped.
+this downloads the OA PDF (arXiv links resolved to the direct PDF) and gathers the candidate
+teaser figures from its first pages. If GitHub Models is available, a vision model chooses the
+most representative one; otherwise a "top-right, earliest page" heuristic is used. The chosen
+figure is resized into assets/pubs/auto/ and recorded in data/pub_figures.json (normalized-title
+-> path). The site prefers curated images and falls back to these. Paywalled papers are skipped.
 
-Deps: pymupdf, pillow.  Usage: python3 scripts/pull_pub_figures.py [--limit N]
+Deps: pymupdf, pillow (+ optional GitHub Models). Usage: python3 scripts/pull_pub_figures.py [--limit N]
 """
 import io, json, os, re, sys, time, urllib.request
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PUBS = os.path.join(ROOT, "data", "publications.json")
@@ -56,42 +58,61 @@ def download(url, cap=35 * 1024 * 1024):
     return data
 
 
-def best_figure(pdf_bytes):
-    """Return PNG bytes of the top-right teaser image on page 1, or None.
+def candidate_figures(pdf_bytes, max_n=4):
+    """Return a list of PNG bytes for the most likely teaser figures, best-first.
 
-    Uses get_image_info(xrefs=True) so images placed inside XObject forms (the norm for
-    arXiv teaser figures) are still found, with a page-coordinate bbox for positioning.
+    Scans the first two pages, keeps sufficiently large rasters, and orders them by a
+    "top-right, earlier page" heuristic. Each figure is RENDERED from its page region (so
+    soft-masks/transparency show as displayed, on white) rather than extracting the raw xref
+    (which loses the mask and comes out black). Uses get_image_info(xrefs=True) so images inside
+    XObject forms — the norm for arXiv teaser figures — are still found with a page bbox.
     """
     import pymupdf
     doc = pymupdf.open(stream=pdf_bytes, filetype="pdf")
     try:
-        if doc.page_count == 0:
-            return None
-        page = doc[0]
-        pw = page.rect.width or 1
         cands = []
-        for d in page.get_image_info(xrefs=True):
-            w, h = d.get("width", 0), d.get("height", 0)
-            if min(w, h) < MIN_SIDE or w * h < MIN_AREA:
-                continue
-            if max(w, h) / max(1, min(w, h)) > MAX_ASPECT:
-                continue
-            x0, y0, x1, y1 = d["bbox"]
-            if (x1 - x0) < 40 or (y1 - y0) < 40:      # degenerate placement
-                continue
-            # "top right": smaller y is higher; larger x is more to the right.
-            score = y0 - (x1 / pw) * 40
-            cands.append((score, pymupdf.Rect(d["bbox"])))
-        if not cands:
-            return None
+        for pno in range(min(2, doc.page_count)):
+            page = doc[pno]
+            pw = page.rect.width or 1
+            for d in page.get_image_info(xrefs=True):
+                w, h = d.get("width", 0), d.get("height", 0)
+                if min(w, h) < MIN_SIDE or w * h < MIN_AREA:
+                    continue
+                if max(w, h) / max(1, min(w, h)) > MAX_ASPECT:
+                    continue
+                x0, y0, x1, y1 = d["bbox"]
+                if (x1 - x0) < 40 or (y1 - y0) < 40:
+                    continue
+                score = pno * 100000 + y0 - (x1 / pw) * 40   # earlier page, then top-right
+                cands.append((score, pno, pymupdf.Rect(d["bbox"])))
         cands.sort(key=lambda c: c[0])
-        # Render the page region where the figure sits, so soft-masks/transparency are applied
-        # exactly as displayed (on the page's white background) — not the raw, unmasked xref.
-        clip = cands[0][1] & page.rect
-        pix = page.get_pixmap(matrix=pymupdf.Matrix(2, 2), clip=clip, alpha=False)
-        return pix.tobytes("png")
+        pngs = []
+        for _, pno, rect in cands[:max_n]:
+            page = doc[pno]
+            clip = rect & page.rect
+            pix = page.get_pixmap(matrix=pymupdf.Matrix(2, 2), clip=clip, alpha=False)
+            pngs.append(pix.tobytes("png"))
+        return pngs
     finally:
         doc.close()
+
+
+def choose_with_llm(title, pngs):
+    """Ask a vision model which candidate best represents the paper; return an index or 0."""
+    import llm
+    if not llm.available() or len(pngs) < 2:
+        return 0
+    prompt = (f'Choose the single best "teaser" image to represent the paper "{title}" in a '
+              f"publication list. Prefer a figure showing the robot, hardware, system overview, or "
+              f"method pipeline; avoid plain line plots, bar charts, tables, or equations. "
+              f"There are {len(pngs)} candidates, numbered in order. Reply with ONLY the number.")
+    try:
+        n = llm.choose_image(prompt, pngs)
+        if n and 1 <= n <= len(pngs):
+            return n - 1
+    except (llm.Unavailable, llm.RateLimited) as e:
+        print(f"    (llm pick skipped: {e})", file=sys.stderr)
+    return 0
 
 
 def save_resized(png_bytes, dest):
@@ -113,14 +134,23 @@ def main():
     os.makedirs(FIG_DIR, exist_ok=True)
     pubs = json.load(open(PUBS))
     curated = set(json.load(open(CURATED)).get("images", {})) if os.path.exists(CURATED) else set()
+    # Incremental: keep figures already extracted (and their files), only work new papers.
+    figures = {}
+    if os.path.exists(OUT):
+        for k, rel in json.load(open(OUT)).get("images", {}).items():
+            if os.path.exists(os.path.join(ROOT, rel)):
+                figures[k] = rel
 
     works = [it for g in pubs.get("years", []) for it in g.get("items", [])]
-    todo = [w for w in works if norm(w["title"]) not in curated and w.get("pdf")]
+    todo = [w for w in works if norm(w["title"]) not in curated
+            and norm(w["title"]) not in figures and w.get("pdf")]
     if limit:
         todo = todo[:limit]
-    print(f"{len(todo)} papers to try (of {len(works)}; {len(curated)} already curated)", file=sys.stderr)
+    import llm
+    picker = "vision LLM" if llm.available() else "heuristic"
+    print(f"{len(todo)} papers to try (of {len(works)}; {len(curated)} curated, "
+          f"{len(figures)} already auto). Figure pick: {picker}.", file=sys.stderr)
 
-    figures = {}
     ok = fail = 0
     for w in todo:
         url = pdf_url(w)
@@ -128,21 +158,24 @@ def main():
             continue
         time.sleep(0.6)  # be polite to arXiv / OA hosts, avoid rate-limit misses
         try:
-            png = best_figure(download(url))
-            if not png:
+            pngs = candidate_figures(download(url))
+            if not pngs:
                 print(f"  --  no figure: {w['title'][:56]}", file=sys.stderr)
                 fail += 1
                 continue
+            idx = choose_with_llm(w["title"], pngs)
             dest = os.path.join(FIG_DIR, slug(w["title"]) + ".png")
-            save_resized(png, dest)
+            save_resized(pngs[idx], dest)
             figures[norm(w["title"])] = os.path.relpath(dest, ROOT)
             ok += 1
-            print(f"  ok  {os.path.basename(dest)}  <-  {w['title'][:52]}", file=sys.stderr)
+            tag = f"#{idx+1}/{len(pngs)}" if len(pngs) > 1 else "only"
+            print(f"  ok  {os.path.basename(dest)} ({tag})  <-  {w['title'][:48]}", file=sys.stderr)
         except Exception as e:
             fail += 1
             print(f"  FAIL {w['title'][:52]}: {e}", file=sys.stderr)
 
-    out = {"source": "open-access PDFs (page-1 teaser figure)", "count": len(figures), "images": figures}
+    out = {"source": "open-access PDFs (teaser figure, LLM- or heuristic-selected)",
+           "count": len(figures), "images": figures}
     json.dump(out, open(OUT, "w"), indent=2)
     print(f"extracted {ok} figures, {fail} misses -> {OUT}")
 

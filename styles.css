@@ -102,6 +102,7 @@ section{padding:64px 0}
 .pub .pthumb.ph{display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:26px;color:var(--indigo-lt);background:linear-gradient(150deg,var(--mist),#eae8fb)}
 .pub .meta{min-width:0}
 .pub .t{font-weight:600;color:var(--ink)}
+.pub .teaser{font-size:13.5px;color:var(--body);margin-top:4px;max-width:70ch}
 .pub .m{font-size:13px;color:var(--muted);margin-top:3px}
 .pub .au{color:var(--gold-2);font-weight:600}
 .pub .more{color:var(--muted);font-style:italic}

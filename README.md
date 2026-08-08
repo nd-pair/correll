@@ -38,12 +38,25 @@ python3 scripts/pull_pub_figures.py  # auto figure per paper from its OA PDF (ne
   token-free original, resizes it into `assets/pubs/`, and writes `data/pub_images.json`
   (normalized, fuzzy-matched title → image).
 - **`pull_pub_figures.py`** fills the gaps automatically: for every paper without a curated
-  thumbnail, it downloads the open-access PDF (arXiv links resolved to the direct PDF), finds
-  the largest raster on page 1 positioned toward the **top-right** — the teaser figure — renders
-  that region (so soft-masks/transparency show correctly on white), resizes it into
-  `assets/pubs/auto/`, and writes `data/pub_figures.json`. Paywalled or HTML-only papers are
+  thumbnail, it downloads the open-access PDF (arXiv links resolved to the direct PDF) and gathers
+  the candidate teaser figures from the first pages. If a Claude API key is available, a vision
+  model picks the most representative one; otherwise a "top-right, earliest page" heuristic is used.
+  The chosen figure is rendered (so soft-masks/transparency show on white), resized into
+  `assets/pubs/auto/`, and recorded in `data/pub_figures.json`. Paywalled or HTML-only papers are
   skipped. The site merges the two maps with the **curated image winning** over the auto figure,
   and shows a subtle placeholder when neither exists.
+- **`pull_pub_teasers.py`** writes a one-line teaser for each paper from its OpenAlex abstract
+  (`data/abstracts.json`) using the Claude API, cached in `data/pub_teasers.json`. Incremental —
+  only papers without a cached teaser are sent — and best-effort: with no API key it no-ops.
+
+### LLM enrichment (optional)
+
+The figure-selection and teaser steps call **Claude via the Anthropic API** (`scripts/llm.py`,
+default model `claude-opus-5`, override with `CORRELL_LLM_MODEL`). They activate only when an
+`ANTHROPIC_API_KEY` is present — add it as a repo secret (**Settings → Secrets and variables →
+Actions**) to turn them on. Without the key the site still works: figures fall back to the
+heuristic and no teasers are shown. (An earlier version used GitHub Models, which GitHub is
+retiring; the pipeline now uses the Anthropic API directly.)
 
 ## Automation
 

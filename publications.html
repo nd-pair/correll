@@ -34,7 +34,7 @@
 const esc = s => String(s==null?"":s).replace(/[&<>]/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
 const norm = t => String(t||"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim();
 const ME = /correll/i;
-let IMAGES = {};
+let IMAGES = {}, TEASERS = {};
 function authorList(a){
   if(!a||!a.length) return "";
   const names = a.map(n => ME.test(n) ? `<span class="au">${esc(n)}</span>` : esc(n));
@@ -49,11 +49,13 @@ function pubHTML(w){
   const thumb = img
     ? `<img class="pthumb" loading="lazy" src="${esc(img)}" alt="">`
     : `<div class="pthumb ph">◆</div>`;
-  const s = (w.title+" "+(w.authors||[]).join(" ")+" "+(w.venue||"")+" "+(w.year||"")).toLowerCase();
+  const teaser = TEASERS[norm(w.title)];
+  const s = (w.title+" "+(w.authors||[]).join(" ")+" "+(w.venue||"")+" "+(w.year||"")+" "+(teaser||"")).toLowerCase();
   return `<div class="pub" data-s="${esc(s)}">
     ${thumb}
     <div class="meta">
       <div class="t">${t}</div>
+      ${teaser?`<div class="teaser">${esc(teaser)}</div>`:""}
       <div class="m">${authorList(w.authors)}</div>
       ${meta?`<div class="m">${meta}</div>`:""}
     </div>
@@ -63,9 +65,11 @@ let YEARS=[];
 Promise.all([
   fetch("data/publications.json").then(r=>r.json()),
   fetch("data/pub_images.json").then(r=>r.json()).catch(()=>({images:{}})),
-  fetch("data/pub_figures.json").then(r=>r.json()).catch(()=>({images:{}}))
-]).then(([data,imgs,figs])=>{
+  fetch("data/pub_figures.json").then(r=>r.json()).catch(()=>({images:{}})),
+  fetch("data/pub_teasers.json").then(r=>r.json()).catch(()=>({teasers:{}}))
+]).then(([data,imgs,figs,teas])=>{
   IMAGES = Object.assign({}, figs.images||{}, imgs.images||{});  // curated wins over auto-extracted
+  TEASERS = teas.teasers||{};
   YEARS = data.years||[];
   document.getElementById("pub-sub").textContent =
     `${data.total} publications · ${YEARS.length} years · via ${data.source||"OpenAlex"}`;

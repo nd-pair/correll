@@ -15,6 +15,21 @@ def get(url):
         return json.load(r)
 
 
+def reconstruct_abstract(inv):
+    """OpenAlex gives abstracts as an inverted index {word: [positions]}; rebuild the text."""
+    if not inv:
+        return None
+    slots = {}
+    for word, positions in inv.items():
+        for p in positions:
+            slots[p] = word
+    if not slots:
+        return None
+    words = [slots[i] for i in range(max(slots) + 1) if i in slots]
+    text = " ".join(words).strip()
+    return text[:2000] or None
+
+
 def pick_pdf(w):
     """Best open-access PDF url for a work, if any (used for automatic figure extraction)."""
     for key in ("best_oa_location", "primary_location"):
@@ -33,7 +48,8 @@ def works_for(aid):
         q = urllib.parse.urlencode({
             "filter": f"author.id:{aid}",
             "select": ("id,title,publication_year,publication_date,primary_location,"
-                       "best_oa_location,locations,open_access,authorships,doi"),
+                       "best_oa_location,locations,open_access,authorships,doi,"
+                       "abstract_inverted_index"),
             "per-page": 200, "cursor": cursor, "mailto": MAILTO})
         d = get(f"{API}/works?{q}")
         for w in d.get("results", []):
@@ -59,6 +75,7 @@ def main():
                 "year": w.get("publication_year"), "date": w.get("publication_date"),
                 "venue": src.get("display_name") if src else None,
                 "pdf": pick_pdf(w),
+                "abstract": reconstruct_abstract(w.get("abstract_inverted_index")),
                 "authors": [ (a.get("author") or {}).get("display_name") for a in w.get("authorships", [])
                              if (a.get("author") or {}).get("display_name") ],
             }
@@ -75,6 +92,16 @@ def main():
             if cur:  # keep the fuller author list
                 if len(cur["authors"]) > len(w["authors"]): w["authors"] = cur["authors"]
             by_title[k] = w
+
+    # Pull abstracts into their own file (keyed by normalized title) so the site's
+    # publications.json download stays small; only the LLM teaser script reads abstracts.
+    abstracts = {}
+    for k, w in by_title.items():
+        ab = w.pop("abstract", None)
+        if ab:
+            abstracts[k] = ab
+    json.dump({"count": len(abstracts), "abstracts": abstracts},
+              open(os.path.join(ROOT, "data", "abstracts.json"), "w"), indent=2)
 
     years = {}
     for w in by_title.values():
