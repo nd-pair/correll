@@ -3,6 +3,11 @@ on:
   schedule:
     - cron: "17 6 * * 1"   # every Monday 06:17 UTC
   workflow_dispatch:
+    inputs:
+      refresh_figures:
+        description: "Re-extract & LLM-re-pick every figure (ignore the cache) — one-time backlog cleanup"
+        type: boolean
+        default: false
 permissions:
   contents: write   # commit refreshed data
   pages: write      # deploy the result (a GITHUB_TOKEN push does not trigger deploy.yml)
@@ -37,7 +42,7 @@ jobs:
       - name: Auto-extract & LLM-select figures from open-access PDFs
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: python3 scripts/pull_pub_figures.py
+        run: python3 scripts/pull_pub_figures.py ${{ github.event.inputs.refresh_figures == 'true' && '--refresh' || '' }}
       - name: Generate teaser lines from abstracts
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}

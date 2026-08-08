@@ -131,12 +131,14 @@ def main():
     limit = None
     if "--limit" in sys.argv:
         limit = int(sys.argv[sys.argv.index("--limit") + 1])
+    refresh = "--refresh" in sys.argv  # re-process every paper, ignoring the existing figure cache
     os.makedirs(FIG_DIR, exist_ok=True)
     pubs = json.load(open(PUBS))
     curated = set(json.load(open(CURATED)).get("images", {})) if os.path.exists(CURATED) else set()
-    # Incremental: keep figures already extracted (and their files), only work new papers.
+    # Incremental by default: keep figures already extracted (and their files), only work new
+    # papers. With --refresh, start empty so every OA paper is re-extracted and re-picked.
     figures = {}
-    if os.path.exists(OUT):
+    if os.path.exists(OUT) and not refresh:
         for k, rel in json.load(open(OUT)).get("images", {}).items():
             if os.path.exists(os.path.join(ROOT, rel)):
                 figures[k] = rel
