@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Art — Correll Lab</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header id="site-nav"></header>
+
+<div class="hero" style="padding-bottom:20px">
+  <div class="wrap">
+    <p class="eyebrow">Correll Lab</p>
+    <h1>Art</h1>
+    <p class="role" id="art-intro" style="max-width:74ch">Loading…</p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap" id="art-root"></div>
+</section>
+
+<footer id="site-footer"></footer>
+<script src="site.js"></script>
+<script>
+const esc = s => String(s==null?"":s).replace(/[&<>]/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+fetch("data/art.json").then(r=>r.json()).then(data=>{
+  document.getElementById("art-intro").textContent = data.intro || "";
+  document.getElementById("art-root").innerHTML = (data.works||[]).map(w=>`
+    <div class="art-item">
+      <h3>${esc(w.title)} <span style="font-family:var(--sans);font-size:13px;color:var(--muted);font-weight:400">${esc(w.year||"")}</span></h3>
+      ${(w.body||[]).map(p=>`<p>${esc(p)}</p>`).join("")}
+      ${w.links&&w.links.length?`<div class="links" style="margin-top:10px">${w.links.map(l=>`<a class="btn" href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)} ↗</a>`).join("")}</div>`:""}
+      ${w.refs&&w.refs.length?`<div class="ref">${w.refs.map(r=>esc(r)).join("<br>")}</div>`:""}
+    </div>`).join("");
+});
+</script>
+</body>
+</html>

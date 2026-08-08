@@ -1,0 +1,14 @@
+[
+  {
+    "code": "CSCI 7000",
+    "title": "Transformers for Robotics",
+    "desc": "Deep neural networks based on self-attention are revolutionizing robotics with their ability to perform \"open world\" reasoning across multiple modalities including text and images, and to generate multi-modal data ranging from text to actions.",
+    "url": "https://www.colorado.edu/lab/correll/teaching"
+  },
+  {
+    "code": "CSCI 3302",
+    "title": "Introduction to Robotics",
+    "desc": "Creates an appreciation for the tight interplay between mechanism, sensor, and control in the design of intelligent systems — including formally describing the forward and inverse kinematics and dynamics of robotic systems, and programming perception, planning, and control.",
+    "url": "https://introduction-to-autonomous-robots.github.io/"
+  }
+]

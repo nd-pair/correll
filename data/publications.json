@@ -1,0 +1,2428 @@
+{
+  "generated": "2026-08-08 18:44 UTC",
+  "source": "OpenAlex (https://openalex.org)",
+  "total": 159,
+  "years": [
+    {
+      "year": 2026,
+      "count": 6,
+      "items": [
+        {
+          "id": "https://openalex.org/W7158052700",
+          "doi": "https://doi.org/10.48550/arxiv.2604.25554",
+          "title": "Egocentric Tactile and Proximity Sensors as Observation Priors for Humanoid Collision Avoidance",
+          "year": 2026,
+          "date": "2026-04-28",
+          "venue": "arXiv (Cornell University)",
+          "authors": [
+            "Carson Kohlbrenner",
+            "Niraj Pudasaini",
+            "William Xie",
+            "Naren Sivagnanadasan",
+            "Nikolaus Correll",
+            "Alessandro Roncone"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W7147365941",
+          "doi": "https://doi.org/10.48550/arxiv.2603.27058",
+          "title": "Liquid Networks with Mixture Density Heads for Efficient Imitation Learning",
+          "year": 2026,
+          "date": "2026-03-28",
+          "venue": "arXiv (Cornell University)",
+          "authors": [
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W7139927679",
+          "doi": "https://doi.org/10.48550/arxiv.2603.18520",
+          "title": "Robotic Agentic Platform for Intelligent Electric Vehicle Disassembly",
+          "year": 2026,
+          "date": "2026-03-19",
+          "venue": "arXiv (Cornell University)",
+          "authors": [
+            "Zachary Allen",
+            "Max Conway",
+            "Lyle Antieau",
+            "Allen Ponraj",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W7134946137",
+          "doi": "https://doi.org/10.48550/arxiv.2603.09051",
+          "title": "Cutting the Cord: System Architecture for Low-Cost, GPU-Accelerated Bimanual Mobile Manipulation",
+          "year": 2026,
+          "date": "2026-03-10",
+          "venue": "arXiv (Cornell University)",
+          "authors": [
+            "Artemis Shaw",
+            "Chen Liu",
+            "Justin Costa",
+            "Rane Gray",
+            "Alina Skowronek",
+            "Kevin Diaz",
+            "Nam Bui",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W7134986512",
+          "doi": "https://doi.org/10.48550/arxiv.2603.08961",
+          "title": "FAME: Force-Adaptive RL for Expanding the Manipulation Envelope of a Full-Scale Humanoid",
+          "year": 2026,
+          "date": "2026-03-09",
+          "venue": "arXiv (Cornell University)",
+          "authors": [
+            "Niraj Pudasaini",
+            "Yutong Zhang",
+            "Jensen Lavering",
+            "Alessandro Roncone",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W7134925179",
+          "doi": "https://doi.org/10.48550/arxiv.2603.08988",
+          "title": "Characterization, Analytical Planning, and Hybrid Force Control for the Inspire RH56DFX Hand",
+          "year": 2026,
+          "date": "2026-03-09",
+          "venue": "arXiv (Cornell University)",
+          "authors": [
+            "Tan, Xuan",
+            "William Xie",
+            "Nikolaus Correll"
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2025,
+      "count": 3,
+      "items": [
+        {
+          "id": "https://openalex.org/W4414581685",
+          "doi": "https://doi.org/10.48550/arxiv.2505.18792",
+          "title": "On the Dual-Use Dilemma in Physical Reasoning and Force",
+          "year": 2025,
+          "date": "2025-05-24",
+          "venue": "arXiv (Cornell University)",
+          "authors": [
+            "William Xie",
+            "Enora Rice",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W4415198452",
+          "doi": "https://doi.org/10.48550/arxiv.2505.09731",
+          "title": "Unfettered Forceful Skill Acquisition with Physical Reasoning and Coordinate Frame Labeling",
+          "year": 2025,
+          "date": "2025-05-14",
+          "venue": "arXiv (Cornell University)",
+          "authors": [
+            "William Xie",
+            "Conway, Max",
+            "Yutong Zhang",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W4416541426",
+          "doi": "https://doi.org/10.48550/arxiv.2504.11827",
+          "title": "Towards Forceful Robotic Foundation Models: a Literature Survey",
+          "year": 2025,
+          "date": "2025-04-16",
+          "venue": "arXiv (Cornell University)",
+          "authors": [
+            "William Xie",
+            "Nikolaus Correll"
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2024,
+      "count": 5,
+      "items": [
+        {
+          "id": "https://openalex.org/W4405033465",
+          "doi": "https://doi.org/10.48550/arxiv.2412.00689",
+          "title": "A Machine Learning Approach to Contact Localization in Variable Density Three-Dimensional Tactile Artificial Skin",
+          "year": 2024,
+          "date": "2024-12-01",
+          "venue": "arXiv (Cornell University)",
+          "authors": [
+            "Carson Kohlbrenner",
+            "Murray, Mitchell",
+            "Yutong Zhang",
+            "Caleb Escobedo",
+            "Thomas Dunnington",
+            "Nicholas Stevenson",
+            "Nikolaus Correll",
+            "Alessandro Roncone"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W4403579179",
+          "doi": "https://doi.org/10.48550/arxiv.2410.13124",
+          "title": "Just Add Force for Contact-Rich Robot Policies",
+          "year": 2024,
+          "date": "2024-10-17",
+          "venue": "arXiv (Cornell University)",
+          "authors": [
+            "William Xie",
+            "Stefan Caldararu",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W4392781413",
+          "doi": "https://doi.org/10.48550/arxiv.2403.07832",
+          "title": "DeliGrasp: Inferring Object Properties with LLMs for Adaptive Grasp Policies",
+          "year": 2024,
+          "date": "2024-03-12",
+          "venue": "arXiv (Cornell University)",
+          "authors": [
+            "William Xie",
+            "Valentini, Maria",
+            "Jensen Lavering",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W4391766367",
+          "doi": "https://doi.org/10.48550/arxiv.2402.06018",
+          "title": "A versatile robotic hand with 3D perception, force sensing for autonomous manipulation",
+          "year": 2024,
+          "date": "2024-02-08",
+          "venue": "arXiv (Cornell University)",
+          "authors": [
+            "Nikolaus Correll",
+            "Dylan Kriegman",
+            "Stephen Otto",
+            "James Watson"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W4391211975",
+          "doi": "https://doi.org/10.48550/arxiv.2401.12317",
+          "title": "Software Engineering for Robotics: Future Research Directions; Report from the 2023 Workshop on Software Engineering for Robotics",
+          "year": 2024,
+          "date": "2024-01-22",
+          "venue": "arXiv (Cornell University)",
+          "authors": [
+            "Claire Le Goues",
+            "Sebastian Elbaum",
+            "Anthony S. David",
+            "Celik, Z. Berkay",
+            "Mauricio Castillo\u2010Effen",
+            "Nikolaus Correll",
+            "Pooyan Jamshidi",
+            "Morgan Quigley",
+            "Trenton Tabor",
+            "Qi Zhu"
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2023,
+      "count": 3,
+      "items": [
+        {
+          "id": "https://openalex.org/W4385424581",
+          "doi": "https://doi.org/10.1038/s41467-023-39842-2",
+          "title": "A multifunctional soft robotic shape display with high-speed actuation, sensing, and control",
+          "year": 2023,
+          "date": "2023-07-31",
+          "venue": "Nature Communications",
+          "authors": [
+            "Brian K. Johnson",
+            "Mantas Naris",
+            "Vani Sundaram",
+            "Angella Volchko",
+            "Kevin Ly",
+            "Shane K. Mitchell",
+            "Eric Acome",
+            "Nicholas Kellaris",
+            "Christoph Keplinger",
+            "Nikolaus Correll",
+            "J. Sean Humbert",
+            "Mark E. Rentschler"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W4377089301",
+          "doi": "https://doi.org/10.1109/ner52421.2023.10123819",
+          "title": "Distributed Tactile Sensors for Palmar Surfaces of Prosthetic Hands",
+          "year": 2023,
+          "date": "2023-04-24",
+          "venue": null,
+          "authors": [
+            "Hoang Truong",
+            "Nikolaus Correll",
+            "Jacob L. Segil"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W4318347849",
+          "doi": "https://doi.org/10.48550/arxiv.2301.10846",
+          "title": "Optimal decision making in robotic assembly and other trial-and-error tasks",
+          "year": 2023,
+          "date": "2023-01-25",
+          "venue": "arXiv (Cornell University)",
+          "authors": [
+            "James Watson",
+            "Nikolaus Correll"
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2022,
+      "count": 4,
+      "items": [
+        {
+          "id": "https://openalex.org/W4300594564",
+          "doi": "https://doi.org/10.1177/00219983221129691",
+          "title": "Toward smart composites: Small-scale, untethered prediction and control for soft sensor/actuator systems",
+          "year": 2022,
+          "date": "2022-10-03",
+          "venue": "Journal of Composite Materials",
+          "authors": [
+            "Sarah Aguasvivas Manzano",
+            "Vani Sundaram",
+            "Artemis Xu",
+            "Khoi Ly",
+            "Mark E. Rentschler",
+            "Robert F. Shepherd",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W4295036252",
+          "doi": "https://doi.org/10.1109/tro.2022.3200164",
+          "title": "Embedded Magnetic Sensing for Feedback Control of Soft HASEL Actuators",
+          "year": 2022,
+          "date": "2022-09-09",
+          "venue": "IEEE Transactions on Robotics",
+          "authors": [
+            "Vani Sundaram",
+            "Khoi Ly",
+            "Brian K. Johnson",
+            "Mantas Naris",
+            "Maxwell P. Anderson",
+            "J. Sean Humbert",
+            "Nikolaus Correll",
+            "Mark E. Rentschler"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W4285268956",
+          "doi": "https://doi.org/10.1109/tro.2022.3167438",
+          "title": "Electro-Hydraulic Rolling Soft Wheel: Design, Hybrid Dynamic Modeling, and Model Predictive Control",
+          "year": 2022,
+          "date": "2022-05-02",
+          "venue": "IEEE Transactions on Robotics",
+          "authors": [
+            "Khoi Ly",
+            "Jatin V. Mayekar",
+            "Sarah Aguasvivas",
+            "Christoph Keplinger",
+            "Mark E. Rentschler",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2989914320",
+          "doi": "https://doi.org/10.1007/s10015-022-00763-w",
+          "title": "Augmented reality for human\u2013swarm interaction in a swarm-robotic chemistry simulation",
+          "year": 2022,
+          "date": "2022-05-01",
+          "venue": "Artificial Life and Robotics",
+          "authors": [
+            "Sumeet Batra",
+            "John Klingner",
+            "Nikolaus Correll"
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2021,
+      "count": 3,
+      "items": [
+        {
+          "id": "https://openalex.org/W4200051702",
+          "doi": "https://doi.org/10.1515/9783110562064-010",
+          "title": "Interview with Nikolaus Correll: Robotic Materials",
+          "year": 2021,
+          "date": "2021-12-20",
+          "venue": null,
+          "authors": [
+            "Nikolaus Correll",
+            "Micha\u00ebl Friedman",
+            "Karin Krauthausen"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W3136513942",
+          "doi": "https://doi.org/10.1109/mra.2021.3061951",
+          "title": "Mobile Manipulation Hackathon: Moving into Real World Applications",
+          "year": 2021,
+          "date": "2021-03-17",
+          "venue": "IEEE Robotics & Automation Magazine",
+          "authors": [
+            "M\u00e1ximo A. Roa",
+            "Mehmet R. Do\u011far",
+            "Jordi Pag\u00e8s",
+            "Carlos Vivas",
+            "Antonio Morales",
+            "Nikolaus Correll",
+            "Michael G\u00f6rner",
+            "Jan Rosell",
+            "Sergi Foix",
+            "Raphael Memmesheimer",
+            "Francesco Ferro"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W3196910092",
+          "doi": "https://doi.org/10.1007/978-3-030-71151-1_52",
+          "title": "High-bandwidth nonlinear control for soft actuators with recursive network models",
+          "year": 2021,
+          "date": "2021-01-04",
+          "venue": "arXiv (Cornell University)",
+          "authors": [
+            "Sarah Aguasvivas Manzano",
+            "Patricia Xu",
+            "Khoi Ly",
+            "Robert F. Shepherd",
+            "Nikolaus Correll"
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2020,
+      "count": 5,
+      "items": [
+        {
+          "id": "https://openalex.org/W3085631264",
+          "doi": "https://doi.org/10.1089/soro.2020.0048",
+          "title": "Miniaturized Circuitry for Capacitive Self-Sensing and Closed-Loop Control of Soft Electrostatic Transducers",
+          "year": 2020,
+          "date": "2020-10-01",
+          "venue": "Soft Robotics",
+          "authors": [
+            "Khoi Ly",
+            "Nicholas Kellaris",
+            "Dade McMorris",
+            "Brian K. Johnson",
+            "Eric Acome",
+            "Vani Sundaram",
+            "Mantas Naris",
+            "J. Sean Humbert",
+            "Mark E. Rentschler",
+            "Christoph Keplinger",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W4287667465",
+          "doi": "https://doi.org/10.48550/arxiv.2009.06852",
+          "title": "Miniaturized Circuitry for Capacitive Self-sensing and Closed-loop\\n Control of Soft Electrostatic Transducers",
+          "year": 2020,
+          "date": "2020-09-14",
+          "venue": "arXiv (Cornell University)",
+          "authors": [
+            "Khoi Ly",
+            "Nicholas Kellaris",
+            "Dade McMorris",
+            "Brian K. Johnson",
+            "Eric Acome",
+            "Vani Sundaram",
+            "Mantas Naris",
+            "J. Sean Humbert",
+            "Mark E. Rentschler",
+            "Christoph Keplinger",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W3039423177",
+          "doi": "https://doi.org/10.1016/j.actaastro.2020.07.001",
+          "title": "SIRONA: Sustainable Integration of Regenerative Outer-space Nature and Agriculture. Part 2 \u2014 Design Development and Projected Performance",
+          "year": 2020,
+          "date": "2020-07-04",
+          "venue": "Acta Astronautica",
+          "authors": [
+            "Heather Hava",
+            "Hanying Zhou",
+            "Chad Mehlenbeck",
+            "Abby King",
+            "Elizabeth M. Lombardi",
+            "Kyri Baker",
+            "Andy Kaufman",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W3017026154",
+          "doi": "https://doi.org/10.1016/j.robot.2020.103530",
+          "title": "Robots and autonomous systems, SI DARS 2018",
+          "year": 2020,
+          "date": "2020-04-15",
+          "venue": "Robotics and Autonomous Systems",
+          "authors": [
+            "Nikolaus Correll",
+            "Mac Schwager"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W3012297501",
+          "doi": "https://doi.org/10.1109/lra.2020.2982056",
+          "title": "Identification and Control of a Nonlinear Soft Actuator and Sensor System",
+          "year": 2020,
+          "date": "2020-03-19",
+          "venue": "IEEE Robotics and Automation Letters",
+          "authors": [
+            "Brian K. Johnson",
+            "Vani Sundaram",
+            "Mantas Naris",
+            "Eric Acome",
+            "Khoi Ly",
+            "Nikolaus Correll",
+            "Christoph Keplinger",
+            "J. Sean Humbert",
+            "Mark E. Rentschler"
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2019,
+      "count": 6,
+      "items": [
+        {
+          "id": "https://openalex.org/W2997649102",
+          "doi": "https://doi.org/10.1080/01691864.2019.1705910",
+          "title": "Robots assembling machines: learning from the World Robot Summit 2018 Assembly Challenge",
+          "year": 2019,
+          "date": "2019-12-26",
+          "venue": "Advanced Robotics",
+          "authors": [
+            "Felix von Drigalski",
+            "Christian Schlette",
+            "Martin Rudorfer",
+            "Nikolaus Correll",
+            "Joshua C. Triyonoputro",
+            "Weiwei Wan",
+            "Tokuo Tsuji",
+            "Tetsuyou Watanabe"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2978569040",
+          "doi": "https://doi.org/10.1016/j.robot.2019.103306",
+          "title": "Fault-tolerant Covariance Intersection for localizing robot swarms",
+          "year": 2019,
+          "date": "2019-10-04",
+          "venue": "Robotics and Autonomous Systems",
+          "authors": [
+            "John Klingner",
+            "Nisar Ahmed",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W3012223707",
+          "doi": null,
+          "title": "SIRONA: Sustainable Integration of Regenerative Outer-space Nature and Agriculture. Part 1 -- Architecture and Technology",
+          "year": 2019,
+          "date": "2019-07-07",
+          "venue": "ThinkTech (Texas Tech University)",
+          "authors": [
+            "Heather Hava",
+            "Larissa Zhou",
+            "Elizabeth M. Lombardi",
+            "Kaixin Cui",
+            "Heeyeon Joung",
+            "Sarah Aguasvivas Manzano",
+            "Abby King",
+            "Hayley Kinlaw",
+            "Kyri Baker",
+            "Andy Kaufman",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2963705825",
+          "doi": "https://doi.org/10.1177/0278364919856099",
+          "title": "Materials that make robots smart",
+          "year": 2019,
+          "date": "2019-06-13",
+          "venue": "The International Journal of Robotics Research",
+          "authors": [
+            "Dana Hughes",
+            "Christoffer Heckman",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2941842768",
+          "doi": "https://doi.org/10.1177/1687814019844643",
+          "title": "Multi-modal prosthetic fingertip sensor with proximity, contact, and force localization capabilities",
+          "year": 2019,
+          "date": "2019-04-01",
+          "venue": "Advances in Mechanical Engineering",
+          "authors": [
+            "Jacob L. Segil",
+            "Radhen Patel",
+            "John Klingner",
+            "Richard F. Weir",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W4303858538",
+          "doi": "https://doi.org/10.48550/arxiv.1903.10480",
+          "title": "Robotic Materials",
+          "year": 2019,
+          "date": "2019-03-25",
+          "venue": "arXiv (Cornell University)",
+          "authors": [
+            "Nikolaus Correll",
+            "Ray H. Baughman",
+            "Richard M. Voyles",
+            "Lining Yao",
+            "Dan Inman"
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2018,
+      "count": 13,
+      "items": [
+        {
+          "id": "https://openalex.org/W2896451911",
+          "doi": "https://doi.org/10.1016/b978-0-08-102260-3.00012-3",
+          "title": "Robotic materials for robot autonomy",
+          "year": 2018,
+          "date": "2018-10-19",
+          "venue": "Elsevier eBooks",
+          "authors": [
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W4245184442",
+          "doi": "https://doi.org/10.1016/b978-0-08-102260-3.09991-1",
+          "title": "List of contributors",
+          "year": 2018,
+          "date": "2018-10-19",
+          "venue": "Elsevier eBooks",
+          "authors": [
+            "Nozomi Akashi",
+            "Iain A. Anderson",
+            "Yasemin Ozkan-Aydin",
+            "Daniel M. Baechle",
+            "Remmi Baker",
+            "Anna C. Balazs",
+            "Allan M. Brooks",
+            "Nikolaus Correll",
+            "U. Daalkhaijav",
+            "Kristopher A. Darling",
+            "Donglei Fan",
+            "Andrew T. Gaynor",
+            "Anit K. Giri",
+            "Daniel I. Goldman",
+            "Jianhe Guo",
+            "Christian Hubicki",
+            "Hiroshi Ishii",
+            "Volodymyr B. Koman",
+            "Daichi Kozawa",
+            "Tao Li",
+            "Zhaohan Li",
+            "Zexi Liang",
+            "Pingwei Liu",
+            "Albert Tianxiang Liu",
+            "Carmel Majidi",
+            "E.-F. Markus Henke",
+            "Michael C. McAlpine",
+            "Y. Meng\u00fc\u00e7",
+            "Jeffrey L. Moran",
+            "Randy Mrozek",
+            "Todd D. Murphey",
+            "Kohei Nakajima",
+            "Sung Hyun Park",
+            "Ron Pelrine",
+            "Ana Pervan",
+            "Kirstin Petersen",
+            "Jennifer M. Rieser",
+            "William Savoie",
+            "Ayusman Sen",
+            "Robert F. Shepherd",
+            "Oleg E. Shklyaev",
+            "Henry Shum",
+            "Geoffrey A. Slipher",
+            "Michael S. Strano",
+            "Ruitao Su",
+            "S. Walker",
+            "Shawn M. Walsh",
+            "Raymond A. Wildman",
+            "Katherine Wilson",
+            "Jing Yang",
+            "Lining Yao",
+            "O.D. Yirmibe\u015fo\u011flu",
+            "Ge Zhang"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2896753023",
+          "doi": "https://doi.org/10.1089/soro.2017.0147",
+          "title": "Shape-Changing Materials Using Variable Stiffness and Distributed Control",
+          "year": 2018,
+          "date": "2018-10-12",
+          "venue": "Soft Robotics",
+          "authors": [
+            "Michael McEvoy",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2909573358",
+          "doi": "https://doi.org/10.1109/iros.2018.8593797",
+          "title": "System Identification and Closed-Loop Control of a Hydraulically Amplified Self-Healing Electrostatic (HASEL) Actuator",
+          "year": 2018,
+          "date": "2018-10-01",
+          "venue": null,
+          "authors": [
+            "Cosima Schunk",
+            "Levi Pearson",
+            "Eric Acome",
+            "Timothy G. Morrissey",
+            "Nikolaus Correll",
+            "Christoph Keplinger",
+            "Mark E. Rentschler",
+            "J. Sean Humbert"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2889924020",
+          "doi": "https://doi.org/10.48550/arxiv.1809.04171",
+          "title": "From Natural to Artificial Camouflage: Components and Systems",
+          "year": 2018,
+          "date": "2018-09-11",
+          "venue": "arXiv (Cornell University)",
+          "authors": [
+            "Yang Li",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2799692011",
+          "doi": "https://doi.org/10.1007/s10514-018-9751-4",
+          "title": "Integrated proximity, contact and force sensing using elastomer-embedded commodity proximity sensors",
+          "year": 2018,
+          "date": "2018-04-21",
+          "venue": "Autonomous Robots",
+          "authors": [
+            "Radhen Patel",
+            "Rebecca Cox",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2787893308",
+          "doi": "https://doi.org/10.1007/s10514-018-9714-9",
+          "title": "Dynamic teams of robots as ad hoc distributed computers: reducing the complexity of multi-robot motion planning via subspace selection",
+          "year": 2018,
+          "date": "2018-02-27",
+          "venue": "Autonomous Robots",
+          "authors": [
+            "Michael Otte",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2886057219",
+          "doi": "https://doi.org/10.1007/s10514-018-9717-6",
+          "title": "Distributed camouflage for swarm robotics and smart materials",
+          "year": 2018,
+          "date": "2018-02-21",
+          "venue": "Autonomous Robots",
+          "authors": [
+            "Yang Li",
+            "John Klingner",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2789884309",
+          "doi": "https://doi.org/10.1109/lra.2018.2799743",
+          "title": "A Robotic Skin for Collision Avoidance and Affective Touch Recognition",
+          "year": 2018,
+          "date": "2018-01-30",
+          "venue": "IEEE Robotics and Automation Letters",
+          "authors": [
+            "Dana Hughes",
+            "JOHN LAMMIE",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2818477978",
+          "doi": "https://doi.org/10.1016/j.promfg.2018.06.021",
+          "title": "Wireless Online Impact Source Localization on a Composite",
+          "year": 2018,
+          "date": "2018-01-01",
+          "venue": "Procedia Manufacturing",
+          "authors": [
+            "Sarah Aguasvivas Manzano",
+            "Dana Hughes",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2883959653",
+          "doi": "https://doi.org/10.1007/978-3-319-94568-2_6",
+          "title": "Manipulation Using the \u201cUtah\u201d Prosthetic Hand: The Role of Stiffness in Manipulation",
+          "year": 2018,
+          "date": "2018-01-01",
+          "venue": "Communications in computer and information science",
+          "authors": [
+            "Radhen Patel",
+            "Jacob L. Segil",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2580057948",
+          "doi": "https://doi.org/10.1007/978-3-319-94568-2_9",
+          "title": "Improving Grasp Performance Using In-Hand Proximity and Contact Sensing",
+          "year": 2018,
+          "date": "2018-01-01",
+          "venue": "Communications in computer and information science",
+          "authors": [
+            "Radhen Patel",
+            "Rebeca Curtis",
+            "Branden Romero",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2793703160",
+          "doi": "https://doi.org/10.1007/978-3-319-73008-0_43",
+          "title": "Distributed Convolutional Neural Networks for Human Activity Recognition in Wearable Robotics",
+          "year": 2018,
+          "date": "2018-01-01",
+          "venue": "Springer proceedings in advanced robotics",
+          "authors": [
+            "Dana Hughes",
+            "Nikolaus Correll"
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2017,
+      "count": 12,
+      "items": [
+        {
+          "id": "https://openalex.org/W2769044080",
+          "doi": "https://doi.org/10.1126/scirobotics.aar4527",
+          "title": "Will robots be bodies with brains or brains with bodies?",
+          "year": 2017,
+          "date": "2017-11-22",
+          "venue": "Science Robotics",
+          "authors": [
+            "Yi\u011fit Meng\u00fc\u00e7",
+            "Nikolaus Correll",
+            "Rebecca K. Kramer",
+            "Jamie Paik"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2793674688",
+          "doi": "https://doi.org/10.1145/3131672.3131702",
+          "title": "Wireless Robotic Materials",
+          "year": 2017,
+          "date": "2017-11-06",
+          "venue": null,
+          "authors": [
+            "Nikolaus Correll",
+            "Prabal Dutta",
+            "Richard Han",
+            "Kristofer S. J. Pister"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2749018315",
+          "doi": "https://doi.org/10.48550/arxiv.1708.04677",
+          "title": "New Directions: Wireless Robotic Materials",
+          "year": 2017,
+          "date": "2017-08-15",
+          "venue": "arXiv (Cornell University)",
+          "authors": [
+            "Nikolaus Correll",
+            "Prabal Dutta",
+            "Richard Han",
+            "Kristofer S. J. Pister"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2736405652",
+          "doi": "https://doi.org/10.1007/978-3-319-60916-4_26",
+          "title": "Fast Sample-Based Planning for Dynamic Systems by Zero-Control Linearization-Based Steering",
+          "year": 2017,
+          "date": "2017-07-24",
+          "venue": "Springer proceedings in advanced robotics",
+          "authors": [
+            "Timothy M. Caldwell",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2618733545",
+          "doi": "https://doi.org/10.1002/adem.201700016",
+          "title": "Soft Robotics: Review of Fluid\u2010Driven Intrinsically Soft Devices; Manufacturing, Sensing, Control, and Applications in Human\u2010Robot Interaction",
+          "year": 2017,
+          "date": "2017-05-31",
+          "venue": "Advanced Engineering Materials",
+          "authors": [
+            "Panagiotis Polygerinos",
+            "Nikolaus Correll",
+            "Stephen A. Morin",
+            "Bobak Mosadegh",
+            "\u00c7a\u011fda\u015f D. \u00d6nal",
+            "Kirstin Petersen",
+            "Matteo Cianchetti",
+            "Michael T. Tolley",
+            "Robert F. Shepherd"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2738751727",
+          "doi": "https://doi.org/10.1109/icra.2017.7989267",
+          "title": "Recognizing social touch gestures using recurrent and convolutional neural networks",
+          "year": 2017,
+          "date": "2017-05-01",
+          "venue": null,
+          "authors": [
+            "Dana Hughes",
+            "Alon Krauthammer",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2736506837",
+          "doi": "https://doi.org/10.1109/icra.2017.7989651",
+          "title": "Functionalized textiles for interactive soft robotics",
+          "year": 2017,
+          "date": "2017-05-01",
+          "venue": null,
+          "authors": [
+            "Nicholas Farrow",
+            "Lauren McIntire",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W4413618188",
+          "doi": "https://doi.org/10.64628/aai.mjydkpyx7",
+          "title": "To really help US workers, we should invest in robots",
+          "year": 2017,
+          "date": "2017-03-30",
+          "venue": null,
+          "authors": [
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2580807697",
+          "doi": "https://doi.org/10.3390/s17020219",
+          "title": "Intelligent RF-Based Gesture Input Devices Implemented Using e-Textiles",
+          "year": 2017,
+          "date": "2017-01-24",
+          "venue": "Sensors",
+          "authors": [
+            "Dana Hughes",
+            "Halley Profita",
+            "Sarah Radzihovsky",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W3209183524",
+          "doi": null,
+          "title": "Textile-Based Wearables",
+          "year": 2017,
+          "date": "2017-01-01",
+          "venue": null,
+          "authors": [
+            "Michael Lightner",
+            "Shaun K. Kane",
+            "Nikolaus Correll",
+            "Halley Profita"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2902984537",
+          "doi": null,
+          "title": "Merging Local and Global 3D Perception using Contact Sensing.",
+          "year": 2017,
+          "date": "2017-01-01",
+          "venue": "National Conference on Artificial Intelligence",
+          "authors": [
+            "Rebecca Cox",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2598278179",
+          "doi": "https://doi.org/10.1007/978-3-319-50115-4_17",
+          "title": "Improving Grasp Performance Using In-Hand Proximity and Dynamic Tactile Sensing",
+          "year": 2017,
+          "date": "2017-01-01",
+          "venue": "Springer proceedings in advanced robotics",
+          "authors": [
+            "Radhen Patel",
+            "Jorge Ca\u00f1ardo Alastuey",
+            "Nikolaus Correll"
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2016,
+      "count": 12,
+      "items": [
+        {
+          "id": "https://openalex.org/W2544211228",
+          "doi": "https://doi.org/10.48550/arxiv.1610.07671",
+          "title": "Sparser Sparse Roadmaps",
+          "year": 2016,
+          "date": "2016-10-24",
+          "venue": "arXiv (Cornell University)",
+          "authors": [
+            "David Coleman",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2529170537",
+          "doi": "https://doi.org/10.1109/tase.2016.2600527",
+          "title": "Analysis and Observations From the First Amazon Picking Challenge",
+          "year": 2016,
+          "date": "2016-10-05",
+          "venue": "IEEE Transactions on Automation Science and Engineering",
+          "authors": [
+            "Nikolaus Correll",
+            "Kostas E. Bekris",
+            "Dmitry Berenson",
+            "Oliver Brock",
+            "Albert Causo",
+            "Kris Hauser",
+            "Kei Okada",
+            "Alberto Rodr\u00edguez",
+            "Joseph M. Romano",
+            "Peter R. Wurman"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2953015979",
+          "doi": "https://doi.org/10.1371/journal.pone.0162768",
+          "title": "Consensus or Deadlock? Consequences of Simple Behavioral Rules for Coordination in Group Decisions",
+          "year": 2016,
+          "date": "2016-09-28",
+          "venue": "PLoS ONE",
+          "authors": [
+            "Helen F. McCreery",
+            "Nikolaus Correll",
+            "Michael D. Breed",
+            "Samuel M. Flaxman"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2409616265",
+          "doi": "https://doi.org/10.15607/rss.2016.xii.035",
+          "title": "Integrated force and distance sensing using elastomer-embedded commodity proximity sensors",
+          "year": 2016,
+          "date": "2016-06-27",
+          "venue": null,
+          "authors": [
+            "Radhen Patel",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2437757123",
+          "doi": "https://doi.org/10.48550/arxiv.1606.03508",
+          "title": "Distributed Machine Learning in Materials that Couple Sensing, Actuation, Computation and Communication",
+          "year": 2016,
+          "date": "2016-06-11",
+          "venue": "arXiv (Cornell University)",
+          "authors": [
+            "Dana Hughes",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W4297710703",
+          "doi": "https://doi.org/10.48550/arxiv.1606.03508",
+          "title": "Distributed Machine Learning in Materials that Couple Sensing,\\n Actuation, Computation and Communication",
+          "year": 2016,
+          "date": "2016-06-10",
+          "venue": "arXiv (Cornell University)",
+          "authors": [
+            "Dana Hughes",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2346234316",
+          "doi": "https://doi.org/10.48550/arxiv.1605.00354",
+          "title": "Morphological and Embedded Computation in a Self-contained Soft Robotic Hand",
+          "year": 2016,
+          "date": "2016-05-02",
+          "venue": "arXiv (Cornell University)",
+          "authors": [
+            "Nicholas Farrow",
+            "Yang Li",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2343765183",
+          "doi": "https://doi.org/10.1007/s11721-016-0123-4",
+          "title": "Modeling multi-robot task allocation with limited information as global game",
+          "year": 2016,
+          "date": "2016-04-28",
+          "venue": "Swarm Intelligence",
+          "authors": [
+            "Anshul Kanakia",
+            "Behrouz Touri",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2295278273",
+          "doi": null,
+          "title": "Lessons from the Amazon Picking Challenge.",
+          "year": 2016,
+          "date": "2016-01-21",
+          "venue": "arXiv (Cornell University)",
+          "authors": [
+            "Nikolaus Correll",
+            "Kostas E. Bekris",
+            "Dmitry Berenson",
+            "Oliver Brock",
+            "Albert Causo",
+            "Kris Hauser",
+            "Kei Okada",
+            "Alberto Rodr\u00edguez",
+            "Joseph M. Romano",
+            "Peter R. Wurman"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2546421665",
+          "doi": "https://doi.org/10.1007/978-3-319-43488-9_27",
+          "title": "Simulating Chemical Reactions Using a Swarm of Miniature Robots",
+          "year": 2016,
+          "date": "2016-01-01",
+          "venue": "Lecture notes in computer science",
+          "authors": [
+            "Audrey Randall",
+            "John Klingner",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2524922126",
+          "doi": "https://doi.org/10.1016/j.protcy.2016.08.002",
+          "title": "Distributed Inverse Kinematics for Shape-changing Robotic Materials",
+          "year": 2016,
+          "date": "2016-01-01",
+          "venue": "Procedia Technology",
+          "authors": [
+            "Michael McEvoy",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2405120882",
+          "doi": "https://doi.org/10.1007/978-4-431-55879-8_14",
+          "title": "A Response Threshold Sigmoid Function Model for Swarm Robot Collaboration",
+          "year": 2016,
+          "date": "2016-01-01",
+          "venue": "Springer tracts in advanced robotics",
+          "authors": [
+            "Anshul Kanakia",
+            "John Klingner",
+            "Nikolaus Correll"
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2015,
+      "count": 11,
+      "items": [
+        {
+          "id": "https://openalex.org/W2398344989",
+          "doi": "https://doi.org/10.1007/978-3-319-23778-7_59",
+          "title": "Shape Change Through Programmable Stiffness",
+          "year": 2015,
+          "date": "2015-11-12",
+          "venue": "Springer tracts in advanced robotics",
+          "authors": [
+            "Michael McEvoy",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2396157854",
+          "doi": "https://doi.org/10.1007/978-3-319-23778-7_10",
+          "title": "Robotic Manipulation for Identification of Flexible Objects",
+          "year": 2015,
+          "date": "2015-11-12",
+          "venue": "Springer tracts in advanced robotics",
+          "authors": [
+            "Timothy M. Caldwell",
+            "David Coleman",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2396933895",
+          "doi": "https://doi.org/10.1007/978-3-319-23778-7_33",
+          "title": "Precise Assembly of 3D Truss Structures Using EKF-Based Error Prediction and Correction",
+          "year": 2015,
+          "date": "2015-11-12",
+          "venue": "Springer tracts in advanced robotics",
+          "authors": [
+            "Erik Komendera",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2180025243",
+          "doi": "https://doi.org/10.1145/2818346.2830601",
+          "title": "Detecting and Identifying Tactile Gestures using Deep Autoencoders, Geometric Moments and Gesture Level Features",
+          "year": 2015,
+          "date": "2015-11-09",
+          "venue": null,
+          "authors": [
+            "Dana Hughes",
+            "Nicholas Farrow",
+            "Halley Profita",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2294621665",
+          "doi": "https://doi.org/10.1177/0278364915596588",
+          "title": "Precise assembly of 3D truss structures using MLE-based error prediction and correction",
+          "year": 2015,
+          "date": "2015-10-19",
+          "venue": "The International Journal of Robotics Research",
+          "authors": [
+            "Erik Komendera",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W1880957851",
+          "doi": "https://doi.org/10.1088/1748-3190/10/5/055002",
+          "title": "Texture recognition and localization in amorphous robotic skin",
+          "year": 2015,
+          "date": "2015-09-09",
+          "venue": "Bioinspiration & Biomimetics",
+          "authors": [
+            "Dana Hughes",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2060166206",
+          "doi": "https://doi.org/10.1145/2744203",
+          "title": "Distributed Spatiotemporal Gesture Recognition in Sensor Arrays",
+          "year": 2015,
+          "date": "2015-09-08",
+          "venue": "ACM Transactions on Autonomous and Adaptive Systems",
+          "authors": [
+            "Homa Hosseinmardi",
+            "Akshay Mysore",
+            "Nicholas Farrow",
+            "Nikolaus Correll",
+            "Richard Han"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2216138881",
+          "doi": "https://doi.org/10.1109/iros.2015.7353689",
+          "title": "A soft pneumatic actuator that can sense grasp and touch",
+          "year": 2015,
+          "date": "2015-09-01",
+          "venue": null,
+          "authors": [
+            "Nicholas Farrow",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2029953460",
+          "doi": "https://doi.org/10.1126/science.1261689",
+          "title": "Materials that couple sensing, actuation, computation, and communication",
+          "year": 2015,
+          "date": "2015-03-19",
+          "venue": "Science",
+          "authors": [
+            "Michael McEvoy",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2028658459",
+          "doi": "https://doi.org/10.1145/2677199.2680586",
+          "title": "Flutter",
+          "year": 2015,
+          "date": "2015-01-12",
+          "venue": null,
+          "authors": [
+            "Halley Profita",
+            "Nicholas Farrow",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W1448371888",
+          "doi": "https://doi.org/10.1007/978-3-662-43505-2_74",
+          "title": "Probabilistic Modeling of Swarming Systems",
+          "year": 2015,
+          "date": "2015-01-01",
+          "venue": null,
+          "authors": [
+            "Nikolaus Correll",
+            "Heiko Hamann"
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2014,
+      "count": 21,
+      "items": [
+        {
+          "id": "https://openalex.org/W2949483653",
+          "doi": "https://doi.org/10.48550/arxiv.1411.0802",
+          "title": "Simultaneous Localization, Mapping, and Manipulation for Unsupervised Object Discovery",
+          "year": 2014,
+          "date": "2014-11-04",
+          "venue": "arXiv (Cornell University)",
+          "authors": [
+            "Lu Ma",
+            "Mahsa Ghafarianzadeh",
+            "Dave Coleman",
+            "Nikolaus Correll",
+            "Gabe Sibley"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2949457334",
+          "doi": "https://doi.org/10.48550/arxiv.1410.1950",
+          "title": "Experience-Based Planning with Sparse Roadmap Spanners",
+          "year": 2014,
+          "date": "2014-10-08",
+          "venue": "arXiv (Cornell University)",
+          "authors": [
+            "David Coleman",
+            "Ioan A. \u015eucan",
+            "Mark Moll",
+            "Kei Okada",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2092077905",
+          "doi": "https://doi.org/10.1145/2634317.2634343",
+          "title": "SwitchBack",
+          "year": 2014,
+          "date": "2014-09-13",
+          "venue": null,
+          "authors": [
+            "Dana Hughes",
+            "Halley Profita",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2036347104",
+          "doi": "https://doi.org/10.1109/iros.2014.6942666",
+          "title": "Optimal parameter identification for discrete mechanical systems with application to flexible object manipulation",
+          "year": 2014,
+          "date": "2014-09-01",
+          "venue": null,
+          "authors": [
+            "Timothy M. Caldwell",
+            "Dave Coleman",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2076171213",
+          "doi": "https://doi.org/10.1109/iros.2014.6942658",
+          "title": "A stick-slip omnidirectional powertrain for low-cost swarm robotics: Mechanism, calibration, and control",
+          "year": 2014,
+          "date": "2014-09-01",
+          "venue": null,
+          "authors": [
+            "John Klingner",
+            "Anshul Kanakia",
+            "Nicholas Farrow",
+            "Dustin Reishus",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2401599515",
+          "doi": "https://doi.org/10.5281/zenodo.1178785",
+          "title": "Endo/Exo Making Art And Music With Distributed Computing",
+          "year": 2014,
+          "date": "2014-06-01",
+          "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+          "authors": [
+            "Jiffer Harriman",
+            "Michael Theodore",
+            "Nikolaus Correll",
+            "Hunter Ewen"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W4413695413",
+          "doi": "https://doi.org/10.64628/ab.tf7xf5cj5",
+          "title": "Crowdfunding of science leads to innovation and better public engagement",
+          "year": 2014,
+          "date": "2014-05-23",
+          "venue": null,
+          "authors": [
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2406473165",
+          "doi": "https://doi.org/10.1609/icaps.v24i1.13660",
+          "title": "C-FOREST: Parallel Shortest-Path Planning with Super Linear Speedup",
+          "year": 2014,
+          "date": "2014-05-11",
+          "venue": "Proceedings of the International Conference on Automated Planning and Scheduling",
+          "authors": [
+            "Michael Otte",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2163173276",
+          "doi": "https://doi.org/10.1109/icra.2014.6907770",
+          "title": "Miniature six-channel range and bearing system: Algorithm, analysis and experimental validation",
+          "year": 2014,
+          "date": "2014-05-01",
+          "venue": null,
+          "authors": [
+            "Nicholas Farrow",
+            "John Klingner",
+            "Dustin Reishus",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2081456158",
+          "doi": "https://doi.org/10.1109/icra.2014.6907101",
+          "title": "A soft, amorphous skin that can sense and localize textures",
+          "year": 2014,
+          "date": "2014-05-01",
+          "venue": null,
+          "authors": [
+            "Dana Hughes",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W3174514172",
+          "doi": null,
+          "title": "Truss Assembly and Welding by Intelligent Precision Jigging Robots",
+          "year": 2014,
+          "date": "2014-04-14",
+          "venue": "NASA STI Repository (National Aeronautics and Space Administration)",
+          "authors": [
+            "Erik Komendera",
+            "John T. Dorsey",
+            "William R. Doggett",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2091994837",
+          "doi": "https://doi.org/10.1109/tepra.2014.6869152",
+          "title": "Assembly path planning for stable robotic construction",
+          "year": 2014,
+          "date": "2014-04-01",
+          "venue": null,
+          "authors": [
+            "Michael McEvoy",
+            "Erik Komendera",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W1993093786",
+          "doi": "https://doi.org/10.1109/tepra.2014.6869156",
+          "title": "Abstracting perception and manipulation in end-user robot programming using Sikuli",
+          "year": 2014,
+          "date": "2014-04-01",
+          "venue": null,
+          "authors": [
+            "Michael Kasper",
+            "Nikolaus Correll",
+            "Tom Yeh"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2054583192",
+          "doi": "https://doi.org/10.1177/0021998314525982",
+          "title": "Thermoplastic variable stiffness composites with embedded, networked sensing, actuation, and control",
+          "year": 2014,
+          "date": "2014-03-10",
+          "venue": "Journal of Composite Materials",
+          "authors": [
+            "Michael McEvoy",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2039239091",
+          "doi": "https://doi.org/10.1145/2540930.2540967",
+          "title": "Gesture based distributed user interaction system for a reconfigurable self-organizing smart wall",
+          "year": 2014,
+          "date": "2014-02-16",
+          "venue": null,
+          "authors": [
+            "Nicholas Farrow",
+            "Naren Sivagnanadasan",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W4214796086",
+          "doi": "https://doi.org/10.48550/arxiv.1402.2735",
+          "title": "Optimal Parameter Identification for Discrete Mechanical Systems with\\n Application to Flexible Object Manipulation",
+          "year": 2014,
+          "date": "2014-02-11",
+          "venue": "arXiv (Cornell University)",
+          "authors": [
+            "Timothy M. Caldwell",
+            "Dave Coleman",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2001449314",
+          "doi": "https://doi.org/10.4028/www.scientific.net/amm.490-491.1424",
+          "title": "Towards Real-Time Trinocular Visual Odometry",
+          "year": 2014,
+          "date": "2014-01-01",
+          "venue": "Applied Mechanics and Materials",
+          "authors": [
+            "Jae Heon Jeong",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2129487045",
+          "doi": "https://doi.org/10.1145/2658779.2659110",
+          "title": "SikuliBot",
+          "year": 2014,
+          "date": "2014-01-01",
+          "venue": null,
+          "authors": [
+            "Jeeeun Kim",
+            "Mike Kasper",
+            "Tom Yeh",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2964083861",
+          "doi": "https://doi.org/10.6092/joser_2014_05_01_p3",
+          "title": "Reducing the Barrier to Entry of Complex Robotic Software: a MoveIt! Case Study",
+          "year": 2014,
+          "date": "2014-01-01",
+          "venue": "Aisberg (University of Bergamo)",
+          "authors": [
+            "David Coleman",
+            "Ioan A. \u015eucan",
+            "Sachin Chitta",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W31081183",
+          "doi": "https://doi.org/10.1007/978-3-642-55146-8_10",
+          "title": "Object Transportation by Granular Convection Using Swarm Robots",
+          "year": 2014,
+          "date": "2014-01-01",
+          "venue": "Springer tracts in advanced robotics",
+          "authors": [
+            "Ken Sugawara",
+            "Nikolaus Correll",
+            "Dustin Reishus"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W185570188",
+          "doi": "https://doi.org/10.1007/978-3-642-55146-8_12",
+          "title": "A One-Hour Curriculum to Engage Middle School Students in Robotics and Computer Science Using Cubelets",
+          "year": 2014,
+          "date": "2014-01-01",
+          "venue": "Springer tracts in advanced robotics",
+          "authors": [
+            "Nikolaus Correll",
+            "Chris Wailes",
+            "Scott Slaby"
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2013,
+      "count": 10,
+      "items": [
+        {
+          "id": "https://openalex.org/W4413628549",
+          "doi": "https://doi.org/10.64628/ab.scjcd44hx",
+          "title": "Space exploration can drive the next agricultural revolution",
+          "year": 2013,
+          "date": "2013-12-06",
+          "venue": null,
+          "authors": [
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2006583031",
+          "doi": "https://doi.org/10.1109/iros.2013.6696804",
+          "title": "Navigation with foraging",
+          "year": 2013,
+          "date": "2013-11-01",
+          "venue": null,
+          "authors": [
+            "Michael Otte",
+            "Nikolaus Correll",
+            "Emilio Frazzoli"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2211031842",
+          "doi": "https://doi.org/10.1007/978-3-642-28572-1_16",
+          "title": "Soft Autonomous Materials\u2014Using Active Elasticity and Embedded Distributed Computation",
+          "year": 2013,
+          "date": "2013-08-20",
+          "venue": "Springer tracts in advanced robotics",
+          "authors": [
+            "Nikolaus Correll",
+            "\u00c7a\u011fda\u015f D. \u00d6nal",
+            "Haiyi Liang",
+            "Erik Schoenfeld",
+            "Daniela Rus"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W113921806",
+          "doi": "https://doi.org/10.1007/978-3-642-28572-1_51",
+          "title": "Any-Com Multi-robot Path-Planning with Dynamic Teams: Multi-robot Coordination under Communication Constraints",
+          "year": 2013,
+          "date": "2013-08-20",
+          "venue": "Springer tracts in advanced robotics",
+          "authors": [
+            "Michael Otte",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W4256488142",
+          "doi": "https://doi.org/10.1201/b14908-11",
+          "title": "Self-Organized Robotic Systems",
+          "year": 2013,
+          "date": "2013-05-23",
+          "venue": "Pan Stanford eBooks",
+          "authors": [
+            "Gr\u00e9gory Mermoud",
+            "Amanda Prorok",
+            "L\u00f6\u0131c Matthey",
+            "Christopher Cianci",
+            "Nikolaus Correll",
+            "Alcherio Martinoli"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2187299683",
+          "doi": "https://doi.org/10.1201/b14908-6",
+          "title": "Architectures and Control of Networked Robotic Systems",
+          "year": 2013,
+          "date": "2013-05-23",
+          "venue": null,
+          "authors": [
+            "Nikolaus Correll",
+            "Daniela Rus"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W4238428990",
+          "doi": "https://doi.org/10.1109/tepra.2013.6556345",
+          "title": "Precise truss assembly using commodity parts and low precision welding",
+          "year": 2013,
+          "date": "2013-04-01",
+          "venue": null,
+          "authors": [
+            "Erik Komendera",
+            "Dustin Reishus",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2051292214",
+          "doi": "https://doi.org/10.1145/2460625.2460718",
+          "title": "HoneyComb",
+          "year": 2013,
+          "date": "2013-02-10",
+          "venue": null,
+          "authors": [
+            "Nikolaus Correll",
+            "Nicholas Farrow",
+            "Shang Ma"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2066918959",
+          "doi": "https://doi.org/10.1109/tro.2013.2240176",
+          "title": "C-FOREST: Parallel Shortest Path Planning With Superlinear Speedup",
+          "year": 2013,
+          "date": "2013-01-31",
+          "venue": "IEEE Transactions on Robotics",
+          "authors": [
+            "Micha\u00ebl Otte",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2025039669",
+          "doi": "https://doi.org/10.1109/worv.2013.6521943",
+          "title": "Trinocular visual odometry for divergent views with minimal overlap",
+          "year": 2013,
+          "date": "2013-01-01",
+          "venue": null,
+          "authors": [
+            "Jaeheon Jeong",
+            "J. Mulligan",
+            "Nikolaus Correll"
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2012,
+      "count": 9,
+      "items": [
+        {
+          "id": "https://openalex.org/W2056697427",
+          "doi": "https://doi.org/10.1109/greencom.2012.74",
+          "title": "Establishing Multi-cast Groups in Computational Robotic Materials",
+          "year": 2012,
+          "date": "2012-11-01",
+          "venue": null,
+          "authors": [
+            "Shang Ma",
+            "Homa Hosseinmardi",
+            "Nicholas Farrow",
+            "Richard Han",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2063637049",
+          "doi": "https://doi.org/10.1109/te.2012.2220774",
+          "title": "A One-Year Introductory Robotics Curriculum for Computer Science Upperclassmen",
+          "year": 2012,
+          "date": "2012-10-19",
+          "venue": "IEEE Transactions on Education",
+          "authors": [
+            "Nikolaus Correll",
+            "Rowan Wing",
+            "David Coleman"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2170389705",
+          "doi": "https://doi.org/10.4018/978-1-4666-2092-6.ch016",
+          "title": "Organizing the Aggregate",
+          "year": 2012,
+          "date": "2012-09-21",
+          "venue": "IGI Global eBooks",
+          "authors": [
+            "Jacob Beal",
+            "Stefan Dulman",
+            "Kyle Usbeck",
+            "Mirko Viroli",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2043088471",
+          "doi": "https://doi.org/10.2514/6.2012-5115",
+          "title": "An Efficient and Versatile Means for Assembling and Manufacturing Systems in Space",
+          "year": 2012,
+          "date": "2012-09-11",
+          "venue": null,
+          "authors": [
+            "John T. Dorsey",
+            "William R. Doggett",
+            "Robert A. Hafley",
+            "Erik Komendera",
+            "Nikolaus Correll",
+            "Bruce King"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2410928708",
+          "doi": "https://doi.org/10.1007/978-3-642-32723-0",
+          "title": "Distributed Autonomous Robotic Systems: The 10th International Symposium",
+          "year": 2012,
+          "date": "2012-09-06",
+          "venue": null,
+          "authors": [
+            "Alcherio Martinoli",
+            "Francesco Mondada",
+            "Nikolaus Correll",
+            "Grgory Mermoud",
+            "Magnus Egerstedt",
+            "M. Ani Hsieh",
+            "Lynne E. Parker",
+            "Kasper Sty"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W3143860396",
+          "doi": "https://doi.org/10.1007/978-3-642-32723-0",
+          "title": "Distributed Autonomous Robotic Systems",
+          "year": 2012,
+          "date": "2012-09-05",
+          "venue": "Springer tracts in advanced robotics",
+          "authors": [
+            "Alcherio Martinoli",
+            "Francesco Mondada",
+            "Nikolaus Correll",
+            "Gr\u00e9gory Mermoud",
+            "Magnus Egerstedt",
+            "M. Ani Hsieh",
+            "Lynne E. Parker",
+            "Kasper St\u00f8y"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2128635427",
+          "doi": "https://doi.org/10.1007/978-3-642-32723-0_12",
+          "title": "Any-Com Multi-robot Path-Planning: Maximizing Collaboration for Variable Bandwidth",
+          "year": 2012,
+          "date": "2012-09-05",
+          "venue": "Springer tracts in advanced robotics",
+          "authors": [
+            "Michael Otte",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W4394655480",
+          "doi": "https://doi.org/10.48550/arxiv.1202.5509",
+          "title": "Organizing the Aggregate: Languages for Spatial Computing",
+          "year": 2012,
+          "date": "2012-02-24",
+          "venue": "arXiv (Cornell University)",
+          "authors": [
+            "Jacob Beal",
+            "Stefan Dulman",
+            "Kyle Usbeck",
+            "Mirko Viroli",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W102068892",
+          "doi": "https://doi.org/10.1007/978-3-642-31869-6_52",
+          "title": "Bloom Filter-Based Ad Hoc Multicast Communication in Cyber-Physical Systems and Computational Materials",
+          "year": 2012,
+          "date": "2012-01-01",
+          "venue": "Lecture notes in computer science",
+          "authors": [
+            "Homa Hosseinmardi",
+            "Nikolaus Correll",
+            "Richard Han"
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2011,
+      "count": 7,
+      "items": [
+        {
+          "id": "https://openalex.org/W2116604920",
+          "doi": "https://doi.org/10.1109/iros.2011.6095038",
+          "title": "Self-assembly of modular robots from finite number of modules using graph grammars",
+          "year": 2011,
+          "date": "2011-09-01",
+          "venue": "2011 IEEE/RSJ International Conference on Intelligent Robots and Systems",
+          "authors": [
+            "Vijeth Rai",
+            "Anne van Rossum",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2114953575",
+          "doi": "https://doi.org/10.1109/icra.2011.5980367",
+          "title": "Decentralized self-repair to maintain connectivity and coverage in networked multi-robot systems",
+          "year": 2011,
+          "date": "2011-05-01",
+          "venue": null,
+          "authors": [
+            "Anna Derbakova",
+            "Nikolaus Correll",
+            "Daniela Rus"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W1978171206",
+          "doi": "https://doi.org/10.1177/0278364911403017",
+          "title": "Modeling and designing self-organized aggregation in a swarm of miniature robots",
+          "year": 2011,
+          "date": "2011-04-01",
+          "venue": "The International Journal of Robotics Research",
+          "authors": [
+            "Nikolaus Correll",
+            "Alcherio Martinoli"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2023510972",
+          "doi": "https://doi.org/10.1177/0278364911399521",
+          "title": "Multi-level spatial modeling for stochastic distributed robotic systems",
+          "year": 2011,
+          "date": "2011-02-08",
+          "venue": "The International Journal of Robotics Research",
+          "authors": [
+            "Amanda Prorok",
+            "Nikolaus Correll",
+            "Alcherio Martinoli"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2266937728",
+          "doi": null,
+          "title": "Path Planning with Forests of Random Trees: Parallelization with Super Linear Speedup ; CU-CS-1079-11",
+          "year": 2011,
+          "date": "2011-01-01",
+          "venue": "CU Scholar (University of Colorado Boulder)",
+          "authors": [
+            "Michael Otte",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2763546711",
+          "doi": null,
+          "title": "Assembly by Intelligent Scaffolding ; CU-CS-1080-11",
+          "year": 2011,
+          "date": "2011-01-01",
+          "venue": "CU Scholar (University of Colorado Boulder)",
+          "authors": [
+            "Erik Komendera",
+            "Dustin Reishus",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2141517821",
+          "doi": null,
+          "title": "Any-com multi-robot path planning",
+          "year": 2011,
+          "date": "2011-01-01",
+          "venue": null,
+          "authors": [
+            "Nikolaus Correll",
+            "Michael Otte"
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2010,
+      "count": 4,
+      "items": [
+        {
+          "id": "https://openalex.org/W1981209452",
+          "doi": "https://doi.org/10.1109/iros.2010.5651536",
+          "title": "Object Interaction Language (OIL): An intent-based language for programming self-organized sensor/actuator networks",
+          "year": 2010,
+          "date": "2010-10-01",
+          "venue": null,
+          "authors": [
+            "Dwight Sutton",
+            "Phil Klein",
+            "Michael Otte",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2112718380",
+          "doi": "https://doi.org/10.1007/s11370-010-0076-1",
+          "title": "Indoor robot gardening: design and implementation",
+          "year": 2010,
+          "date": "2010-08-24",
+          "venue": "Intelligent Service Robotics",
+          "authors": [
+            "Nikolaus Correll",
+            "Nikos Ar\u00e9chiga",
+            "Adrienne Bolger",
+            "M. Bollini",
+            "Ben Charrow",
+            "Adam Clayton",
+            "Felipe Dominguez",
+            "Kenneth Donahue",
+            "Samuel Dyar",
+            "Luke B. Johnson",
+            "Huan Liu",
+            "Alexander Patrikalakis",
+            "Timothy Robertson",
+            "Jeremy S. Smith",
+            "Daniel E. Soltero",
+            "Melissa M. Tanner",
+            "Lauren White",
+            "Daniela Rus"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W1992239833",
+          "doi": "https://doi.org/10.1007/s00521-010-0440-2",
+          "title": "From swarm robotics to smart materials",
+          "year": 2010,
+          "date": "2010-08-08",
+          "venue": "Neural Computing and Applications",
+          "authors": [
+            "Nikolaus Correll",
+            "Roderich Gro\u00df"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2588662949",
+          "doi": null,
+          "title": "Multiple Object 3D-Mapping using a Physics Simulator ; CU-CS-1069-10",
+          "year": 2010,
+          "date": "2010-01-01",
+          "venue": "CU Scholar (University of Colorado Boulder)",
+          "authors": [
+            "Neeti Wagle",
+            "Nikolaus Correll"
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2009,
+      "count": 4,
+      "items": [
+        {
+          "id": "https://openalex.org/W2117881755",
+          "doi": "https://doi.org/10.1109/iros.2009.5354261",
+          "title": "Building a distributed robot garden",
+          "year": 2009,
+          "date": "2009-10-01",
+          "venue": null,
+          "authors": [
+            "Nikolaus Correll",
+            "Nikos Ar\u00e9chiga",
+            "Adrienne Bolger",
+            "M. Bollini",
+            "Ben Charrow",
+            "Adam Clayton",
+            "Felipe Dominguez",
+            "Kenneth Donahue",
+            "Samuel Dyar",
+            "Luke B. Johnson",
+            "Huan Liu",
+            "Alexander Patrikalakis",
+            "Timothy Robertson",
+            "Jeremy S. Smith",
+            "Daniel E. Soltero",
+            "Melissa M. Tanner",
+            "Lauren White",
+            "Daniela Rus"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2169944694",
+          "doi": "https://doi.org/10.1109/robot.2009.5152742",
+          "title": "Ad-hoc wireless network coverage with networked robots that cannot localize",
+          "year": 2009,
+          "date": "2009-05-01",
+          "venue": null,
+          "authors": [
+            "Nikolaus Correll",
+            "Jonathan Bachrach",
+            "D. Vickery",
+            "Daniela Rus"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W1982707864",
+          "doi": "https://doi.org/10.1109/mra.2008.931633",
+          "title": "Multirobot inspection of industrial machinery",
+          "year": 2009,
+          "date": "2009-03-01",
+          "venue": "IEEE Robotics & Automation Magazine",
+          "authors": [
+            "Nikolaus Correll",
+            "Alcherio Martinoli"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2164998884",
+          "doi": "https://doi.org/10.4108/icst.robocomm2009.5863",
+          "title": "Behavior Modes for Randomized Robotic Coverage",
+          "year": 2009,
+          "date": "2009-01-01",
+          "venue": null,
+          "authors": [
+            "Jacob Beal",
+            "Nikolaus Correll",
+            "Leonardo Urbina",
+            "Jonathan Bachrach"
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2008,
+      "count": 10,
+      "items": [
+        {
+          "id": "https://openalex.org/W2148992977",
+          "doi": "https://doi.org/10.1016/j.robot.2008.10.023",
+          "title": "Collaborative coverage using a swarm of networked miniature robots",
+          "year": 2008,
+          "date": "2008-11-26",
+          "venue": "Robotics and Autonomous Systems",
+          "authors": [
+            "Samuel Rutishauser",
+            "Nikolaus Correll",
+            "Alcherio Martinoli"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W1991756220",
+          "doi": "https://doi.org/10.1145/1460412.1460448",
+          "title": "PCP",
+          "year": 2008,
+          "date": "2008-11-05",
+          "venue": null,
+          "authors": [
+            "Hari Balakrishnan",
+            "Nikolaus Correll",
+            "Jakob Erikkson",
+            "Sejoon Lim",
+            "Samuel Madden",
+            "Daniela Rus"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W1991082013",
+          "doi": "https://doi.org/10.1109/mcs.2008.927321",
+          "title": "Cells and Robots: Modeling and Control of Large-Size Agent Populations (Dejan L.J. Milutinovic and P. Lima; 2007) [Book Review]",
+          "year": 2008,
+          "date": "2008-09-24",
+          "venue": "IEEE Control Systems",
+          "authors": [
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2099604484",
+          "doi": "https://doi.org/10.1109/iros.2008.4650937",
+          "title": "SwisTrack - A Flexible Open Source Tracking Software for Multi-Agent Systems",
+          "year": 2008,
+          "date": "2008-09-01",
+          "venue": null,
+          "authors": [
+            "Thomas Lochmatter",
+            "Pierre Roduit",
+            "Chris Cianci",
+            "Nikolaus Correll",
+            "Jacques Jacot",
+            "Alcherio Martinoli"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W1581919048",
+          "doi": "https://doi.org/10.1007/978-3-540-69134-1_43",
+          "title": "Social Control of Herd Animals by Integration of Artificially Controlled Congeners",
+          "year": 2008,
+          "date": "2008-08-12",
+          "venue": "Lecture notes in computer science",
+          "authors": [
+            "Nikolaus Correll",
+            "Mac Schwager",
+            "Daniela Rus"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2139610651",
+          "doi": "https://doi.org/10.1109/robot.2008.4543714",
+          "title": "Parameter estimation and optimal control of swarm-robotic systems: A case study in distributed task allocation",
+          "year": 2008,
+          "date": "2008-05-01",
+          "venue": null,
+          "authors": [
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2157559538",
+          "doi": "https://doi.org/10.1007/s10472-009-9127-8",
+          "title": "Distributed boundary coverage with a team of networked miniature robots using a robust market-based algorithm",
+          "year": 2008,
+          "date": "2008-04-01",
+          "venue": "Annals of Mathematics and Artificial Intelligence",
+          "authors": [
+            "Patrick Amstutz",
+            "Nikolaus Correll",
+            "Alcherio Martinoli"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W1951605278",
+          "doi": "https://doi.org/10.1007/978-3-540-77457-0_44",
+          "title": "Comparing Coordination Schemes for Miniature Robotic Swarms: A Case Study in Boundary Coverage of Regular Structures",
+          "year": 2008,
+          "date": "2008-01-29",
+          "venue": "Springer tracts in advanced robotics",
+          "authors": [
+            "Nikolaus Correll",
+            "Samuel Rutishauser",
+            "Alcherio Martinoli"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2240328051",
+          "doi": "https://doi.org/10.1007/978-4-431-35873-2_36",
+          "title": "Modeling and Optimization of a Swarm-Intelligent Inspection System",
+          "year": 2008,
+          "date": "2008-01-23",
+          "venue": null,
+          "authors": [
+            "Nikolaus Correll",
+            "Alcherio Martinoli"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2112594827",
+          "doi": null,
+          "title": "Demo Abstract: PCP: The Personal Commute Portal",
+          "year": 2008,
+          "date": "2008-01-01",
+          "venue": null,
+          "authors": [
+            "Hari Balakrishnan",
+            "Nikolaus Correll",
+            "Jakob Erikkson",
+            "Sejoon Lim",
+            "Samuel Madden",
+            "Daniela Rus"
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2007,
+      "count": 5,
+      "items": [
+        {
+          "id": "https://openalex.org/W1964750332",
+          "doi": "https://doi.org/10.1126/science.1144259",
+          "title": "Social Integration of Robots into Groups of Cockroaches to Control Self-Organized Choices",
+          "year": 2007,
+          "date": "2007-11-16",
+          "venue": "Science",
+          "authors": [
+            "Jos\u00e9 Halloy",
+            "Gr\u00e9gory Sempo",
+            "Gilles Caprari",
+            "Colette Rivault",
+            "Masoud Asadpour",
+            "Florin Tache",
+            "Imen Sa\u00efd",
+            "V. Durier",
+            "St\u00e9phane Canonge",
+            "Jean-Marc Am\u00e9",
+            "Claire Detrain",
+            "Nikolaus Correll",
+            "Alcherio Martinoli",
+            "Francesco Mondada",
+            "Roland Siegwart",
+            "Jean\u2010Louis Deneubourg"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2149902396",
+          "doi": "https://doi.org/10.1007/4-431-35881-1_4",
+          "title": "System Identification of Self-Organizing Robotic Swarms",
+          "year": 2007,
+          "date": "2007-06-09",
+          "venue": null,
+          "authors": [
+            "Nikolaus Correll",
+            "Alcherio Martinoli"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2152360806",
+          "doi": "https://doi.org/10.1109/robot.2007.363816",
+          "title": "Robust Distributed Coverage using a Swarm of Miniature Robots",
+          "year": 2007,
+          "date": "2007-04-01",
+          "venue": "Proceedings - IEEE International Conference on Robotics and Automation/Proceedings",
+          "authors": [
+            "Nikolaus Correll",
+            "Alcherio Martinoli"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W1810559892",
+          "doi": null,
+          "title": "Modeling Self-Organized Aggregation in a Swarm of Miniature Robots",
+          "year": 2007,
+          "date": "2007-01-01",
+          "venue": "Infoscience (Ecole Polytechnique F\u00e9d\u00e9rale de Lausanne)",
+          "authors": [
+            "Nikolaus Correll",
+            "Alcherio Martinoli"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W1926098067",
+          "doi": null,
+          "title": "A Challenging Application in Swarm Robotics: The Autonomous Inspection of Complex Engineered Structures",
+          "year": 2007,
+          "date": "2007-01-01",
+          "venue": "Infoscience (Ecole Polytechnique F\u00e9d\u00e9rale de Lausanne)",
+          "authors": [
+            "Nikolaus Correll",
+            "Alcherio Martinoli"
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2006,
+      "count": 5,
+      "items": [
+        {
+          "id": "https://openalex.org/W2143128937",
+          "doi": "https://doi.org/10.1109/iros.2006.282558",
+          "title": "SwisTrack: A Tracking Tool for Multi-Unit Robotic and Biological Systems",
+          "year": 2006,
+          "date": "2006-10-01",
+          "venue": null,
+          "authors": [
+            "Nikolaus Correll",
+            "Gr\u00e9gory Sempo",
+            "Y.L. de Meneses",
+            "Jos\u00e9 Halloy",
+            "Jean\u2010Louis Deneubourg",
+            "Alcherio Martinoli"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2144512373",
+          "doi": "https://doi.org/10.1109/robot.2005.1570484",
+          "title": "Modeling and Analysis of Beaconless and Beacon-Based Policies for a Swarm-Intelligent Inspection System",
+          "year": 2006,
+          "date": "2006-01-18",
+          "venue": null,
+          "authors": [
+            "Nikolaus Correll",
+            "Alcherio Martinoli"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2081610064",
+          "doi": "https://doi.org/10.3182/20060906-3-it-2910.00052",
+          "title": "TOWARDS OPTIMAL CONTROL OF SELF-ORGANIZED ROBOTIC INSPECTION SYSTEMS",
+          "year": 2006,
+          "date": "2006-01-01",
+          "venue": "IFAC Proceedings Volumes",
+          "authors": [
+            "Nikolaus Correll",
+            "Alcherio Martinoli"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W1585558507",
+          "doi": null,
+          "title": "Self-Organized Embedded Sensor/Actuator Networks for \"\"Smart\"\" Turbines",
+          "year": 2006,
+          "date": "2006-01-01",
+          "venue": "Infoscience (Ecole Polytechnique F\u00e9d\u00e9rale de Lausanne)",
+          "authors": [
+            "Nikolaus Correll",
+            "Christopher M. Cianci",
+            "Xavier Raemy",
+            "Alcherio Martinoli"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2109587741",
+          "doi": "https://doi.org/10.1007/11552246_36",
+          "title": "Collective Inspection of Regular Structures using a Swarm of Miniature Robots",
+          "year": 2006,
+          "date": "2006-01-01",
+          "venue": "Springer tracts in advanced robotics",
+          "authors": [
+            "Nikolaus Correll",
+            "Alcherio Martinoli"
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2002,
+      "count": 1,
+      "items": [
+        {
+          "id": "https://openalex.org/W2346563870",
+          "doi": null,
+          "title": "6-DOF Visual Servoing Using the Lie Group of Affine Transformations",
+          "year": 2002,
+          "date": "2002-01-01",
+          "venue": "Lund University Publications Student Papers (Lund University)",
+          "authors": [
+            "Nikolaus Correll"
+          ]
+        }
+      ]
+    }
+  ]
+}

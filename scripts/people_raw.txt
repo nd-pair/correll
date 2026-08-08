@@ -1,0 +1,82 @@
+##PI
+Nikolaus Correll | Professor | Professor of Computer Science at the University of Colorado Boulder. PhD in CS from EPFL (2007); Diplom in Electrical Engineering from ETH Zürich. Post-doc at MIT CSAIL with Daniela Rus (2007–2009). Recipient of a 2012 NSF CAREER, a 2012 NASA Early Career Faculty Fellowship, and a 2016 Provost achievement award. | ncorrell@colorado.edu
+##PhD Students
+Zachary Allen | BS University of Colorado • Senior Robotics Engineer, Lunar Outpost
+Stefan Caldararu | PhD Student • NASA Pathways Intern • BS University of Wisconsin-Madison
+Max Conway | PhD Student • BS/MSc University of Denver
+Chen Liu | MS University of Southern California
+Niraj Pudasaini | BS New York University Abu Dhabi
+Kailey Shara | PhD Student • BSc Case Western (Electrical Engineering) • BSc Case Western (Chemistry)
+Dhanush Varma | PhD Student • MS University of Southern California
+James Watson | PhD Student • MSc University of Utah • BSc University of Illinois
+William Xie | PhD Student • NSF Graduate Fellow • BSc Columbia University
+Yutong Zhang | PhD Student • BS/MS Computer Science UC San Diego
+##Undergraduates
+Adam Abid | BS in Computer Science Class of 2028
+Paul Afriyie | BS in Computer Science Class of 2029
+Justin Costa | Independent Study • UROP
+Jasmitha Gourabathini | Fundamentals of Undergraduate Research Program (FUTURE) • UROP
+Jensen Lavering | Independent Study
+##High School Interns
+Mateo Feit | Visiting Student
+##Alumni
+Dr. Sarah Aguasvivas Manzano | PhD Student
+Michael Beam | Undergraduate • NSF REU
+Samuel Beckett | Undergraduate • NSF DREU
+Dr. Timothy Caldwell | Post-Doc
+Jorge Cañardo Alastuey | Master's student
+Dr. David Coleman | PhD Student
+Eliza Cornell | Highschool Intern
+Rebecca Cox | Master's student • Electrical Engineering
+Joshua Dinerman | Undergraduate
+Jean Dinet | Undergraduate • University of Bourgogne-Franche-Comté
+Parker Evans | Undergraduate
+Nicholas Farrow | PhD Student
+Aymar Omar Hammuda | Master's student
+Hadi Hasbini | Independent Study • BS American University Beirut
+Mohammad Hashemi | Master's student
+Dr. Heather Hava | PhD Student • Aerospace Engineering Sciences
+Ariel Hoffman | Undergraduate • DLA • NSF REU
+Henry Horsey | Undergraduate • NSF REU • Oberlin College
+Dr. Dana Hughes | PhD Student
+Dr. Jaeheon Jeong | PhD Student
+Regina Jingwen | Undergraduate
+Christopher Johnson | Undergraduate • NSF REU
+Dr. Anshul Kanakia | PhD Student
+Dr. John Klingner | PhD Student
+Prof. Erik Komendera | PhD Student
+Dylan Kriegman | Undergraduate • Senior Thesis
+Carter Kruse | Visiting Student - Dartmouth College
+John Lammie | Master's student
+Arielle Lathinen | Independent Study
+Dr. Yang Li | PhD Student
+Dr. Khoi Ly | PhD Student • Mechanical Engineering
+Joseph Maniaci | Undergraduate • UROP
+Brian McDonald | Undergraduate • UROP
+Lauren McIntire | Undergraduate
+Andrea Miller | Undergraduate Researcher
+Roger Montané-Güell | Undergraduate • Universitat Autònoma de Barcelona
+Cory Morales | Undergraduate
+Akshay Mysore | Master's student
+Prof. Michael Otte | PhD Student
+Stephen Otto | Master's student • Mechanical Engineering
+Dr. Radhen Patel | PhD Student
+Florian Pescher | Undergraduate • Supelec Metz
+Dr. Halley Profita | PhD Student
+Sarah Radzihovsky | Highschool Intern
+Vijeth Rai | Master's student
+Audrey Randall | Undergraduate
+Blake Reimer | Undergraduate
+Dr. Dustin Reishus | Postdoc
+Branden Romero | Undergraduate • Senior Thesis
+Streck Salmon | Independent Study
+Scott Scheraga | Master's student • Mechanical Engineering
+Naren Sivagnanadasan | Highschool Intern
+Uri Soltz | Independent Study
+Daniel Sutton | Undergraduate • Senior Thesis
+Dr. Hong Truong | PhD Student
+Britta Ulm | NSF REU
+Joseph Vasse | Undergraduate • University of Bourgogne-Franche-Comté
+Rowan Wing | PhD Student
+Xingjie Zhong | Undergraduate • DLA • NSF REU
+Daniel Zukowski | Master's student

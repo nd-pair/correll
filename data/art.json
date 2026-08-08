@@ -1,0 +1,79 @@
+{
+  "intro": "Based in his research in swarm robotics and mixed animal-robot systems, Nikolaus has long been interested in self-organization and non-linear collective phenomena. In addition to understanding the underlying principles in natural systems and contributing to the engineering science of swarming, he is interested in how swarming systems affect and interact with the human experience. After all, every natural phenomenon is a distributed one: atoms form molecules, molecules form organisms, and organisms form animals, which again form collectives, all governed by similar, scale-free principles.",
+  "works": [
+    {
+      "title": "Electronic Music",
+      "year": "various, 2025",
+      "body": [
+        "Series of electronic music created with Elektron Model:Cycles, an FM-based synthesizer, and Arturia MicroFreak, a hybrid Digital Signal Processor (DSP) synthesizer with analog filters. DSPs have led to a renaissance of fully digital and hybrid synthesizers and beatboxes that dramatically lower the floor of music creation exploiting oscillators and non-linear dynamics. Cover art created by Stable Diffusion."
+      ],
+      "links": [
+        {"label": "YouTube", "url": "https://www.youtube.com/"},
+        {"label": "Apple Music", "url": "https://music.apple.com/"},
+        {"label": "Spotify", "url": "https://open.spotify.com/"}
+      ]
+    },
+    {
+      "title": "What Power Art Thou",
+      "year": "2021",
+      "body": [
+        "Arrangement for 12 ABB IRB 4600-40, steel tread plate, monochromatic lights (12 x 12 x 4 m³ real size) in the Webots simulator on \"What power art thou\" from the opera \"King Arthur\" (1691) by Henry Purcell, recorded by William Christie, Les Arts Florissants.",
+        "As in my 2015 piece \"Droplets meet Philip Glass\", I'm exploring phase shift and resynchronization inspired by Steve Reich's work \"Piano Phase\", this time in kinematic systems. The system starts in the same phase, then cycles through different orders of disarray, and ends up in the same phase at around 3:30, resolving tension analogous with Purcell's piece that also explores dissonances in a painful, repetitive way. I'm also thrilled by Olafur Eliasson's use of monochromatic light in \"The Weather Project\", which is used here."
+      ]
+    },
+    {
+      "title": "GEEN1400 Air-Monitoring Public Sculpture",
+      "year": "2018, collaboration",
+      "body": [
+        "In collaboration with Ken Bernstein Art studio and INSTAAR. GEEN1400 students conducted a feasibility study for a proposed design that involves smart materials to display real-time air quality data from the internet, and delivered a proof-of-concept prototype.",
+        "Students: Olivia André, Harrison Bolin, Jack Carver, Sydney Crowe, Labon Hillberry, Henry Kvietok, Justin Paige, and Meghan Pfeifer."
+      ]
+    },
+    {
+      "title": "Droplets meet Philip Glass",
+      "year": "2015",
+      "body": [
+        "Arrangement for 100 \"Droplets\" miniature robots. Music: Philip Glass, \"String Quartet 3, Mishima: 1957 Award Montage\" by Paul Klee 4Tet. Program: John Klingner.",
+        "A swarm of Droplets is repeating a simple pattern over and over, while getting more and more out of phase, letting more complex visual patterns emerge. The same effect — repeating patterns that slowly get out of phase — was first explored in music by Steve Reich in his 1965 piece \"It's gonna rain\", considered a landmark in the minimalism movement he pioneered with Philip Glass and others. String Quartet 3 (1985) is one of Glass' more typical works, heavily relying on repetitive structures."
+      ],
+      "refs": [
+        "Farrow, N., Klingner, J., Reishus, D. and Correll, N., 2014. Miniature six-channel range and bearing system: algorithm, analysis and experimental validation. In 2014 IEEE International Conference on Robotics and Automation (ICRA), pp. 6180–6185."
+      ]
+    },
+    {
+      "title": "endo/exo",
+      "year": "2013, collaboration",
+      "body": [
+        "endo/exo is an interactive kinetic art installation, melding sound, robotic kinetic motion, and light, created by new media artist Michael Theodore as part of the organism/mechanism solo show at the David B. Smith Gallery in Denver, Colorado, May 11 – June 15, 2013.",
+        "Collaborators: Pedro Caceres (structural design), Jiffer Harriman (software design), Nikolaus Correll (technology design), Bob Shannon (lighting design), Jane Theodore (fabrication), Nathan Wheeler (fabrication). Video by Matthew Campbell."
+      ],
+      "refs": [
+        "Harriman, J., Theodore, M., Correll, N. and Ewen, H., 2014. endo/exo: Making Art and Music with Distributed Computing. In NIME, pp. 383–386."
+      ]
+    },
+    {
+      "title": "flutter",
+      "year": "2012, collaboration",
+      "body": [
+        "Flutter was created by Halley Profita, Nicholas Farrow, and Nikolaus Correll at the University of Colorado Boulder. An extraordinary fusing of textiles and robotics, Flutter received First Prize for both Best in Show and Most Inclusive and Usable Design at the 2012 International Symposium on Wearable Computer Design Exhibition in Newcastle, England.",
+        "Inspired to aid individuals with hearing impairments, Flutter administers vibrotactile feedback in the direction of a loud sound or alarm to help those with hearing loss respond more intuitively to their external environment. It was conceived as an alternative form of assistive technology — an ethereal and functional garment that calls attention to the beauty of the device, not the disability.",
+        "Flutter's bodice is constructed from cotton and polyester textiles with an inner framework of embedded microphones that network together to determine the frequencies and amplitude of incoming sounds. The microphones collectively vote on the direction of the sound and, in turn, actuate small vibration motors in the winglets to simulate 'fluttering' in the direction of the auditory cue."
+      ],
+      "refs": [
+        "Profita, H. P., Farrow, N. and Correll, N., 2015. Flutter: An exploration of an assistive garment using distributed sensing, computation and actuation. In Proceedings of the Ninth International Conference on Tangible, Embedded, and Embodied Interaction (TEI). ACM."
+      ]
+    },
+    {
+      "title": "Swarm Wall",
+      "year": "2012, collaboration",
+      "body": [
+        "An interactive sculpture incorporating sound, light, and kinetic motion. Part of the solo show \"Michael Theodore: Field Theory,\" exhibited at the CU Art Museum June 15 – July 14, 2012. Dimensions modular and variable, here 13' × 42'.",
+        "Collaborators: Nikolaus Correll (custom electronics development), Ken Sugawara (algorithm and software design), Nicholas Farrow (software design), Bob Shannon (lighting design), Pedro Caceres (preparator), Stephen Martonis (exhibitions manager), Jane Theodore (fabrication). Video assembled from footage shot by Mark McCoin and Matthew Campbell."
+      ],
+      "refs": [
+        "Correll, N., Farrow, N., Sugawara, K. and Theodore, M., 2013. The swarm-wall: Toward life's uncanny valley. In Proceedings of the IEEE International Conference on Robotics and Automation, Karlsruhe, Germany, pp. 6–10.",
+        "Correll, N., Farrow, N. and Ma, S., 2013. Honeycomb: a platform for computational robotic materials. In Proceedings of the 7th International Conference on Tangible, Embedded and Embodied Interaction, pp. 419–422."
+      ]
+    }
+  ]
+}

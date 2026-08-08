@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>People — Correll Lab</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header id="site-nav"></header>
+
+<div class="hero" style="padding-bottom:20px">
+  <div class="wrap">
+    <p class="eyebrow">Correll Lab</p>
+    <h1>People</h1>
+    <p class="role">The team behind the lab's research — and the alumni carrying it forward.</p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap" id="people-root">Loading…</div>
+</section>
+
+<footer id="site-footer"></footer>
+<script src="site.js"></script>
+<script>
+const esc = s => String(s==null?"":s).replace(/[&<>]/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+fetch("data/people.json").then(r=>r.json()).then(data=>{
+  const root = document.getElementById("people-root");
+  const groups = data.groups || data;
+  let html = "";
+  // PI first
+  const piGroup = groups.find(g=>/^pi$/i.test(g.group) || /principal/i.test(g.group));
+  if(piGroup && piGroup.members[0]){
+    const p = piGroup.members[0];
+    html += `<div class="pi">
+      <div>
+        <div class="nm">${esc(p.name)}</div>
+        <div class="role">${esc(p.title||p.role||"")}</div>
+        ${p.bio?`<p style="margin:.2em 0;max-width:66ch">${esc(p.bio)}</p>`:""}
+        ${p.email?`<p style="margin:.4em 0 0"><a href="mailto:${esc(p.email)}">${esc(p.email)}</a></p>`:""}
+      </div>
+    </div>`;
+  }
+  // Active (non-PI, non-alumni) groups shown open
+  const rest = groups.filter(g=>g!==piGroup);
+  const alumni = rest.filter(g=>/alumni/i.test(g.group));
+  const active = rest.filter(g=>!/alumni/i.test(g.group));
+  const renderRoster = m => `<div class="person"><div class="n">${esc(m.name)}</div>${m.role?`<div class="r">${esc(m.role)}</div>`:""}</div>`;
+  active.forEach(g=>{
+    html += `<div style="margin-top:30px"><h2 style="font-size:22px">${esc(g.group)} <span class="cnt">${g.members.length}</span></h2>
+      <div class="roster">${g.members.map(renderRoster).join("")}</div></div>`;
+  });
+  alumni.forEach(g=>{
+    html += `<details class="grp" style="margin-top:26px"><summary>${esc(g.group)} <span class="cnt">${g.members.length}</span></summary>
+      <div class="roster">${g.members.map(renderRoster).join("")}</div></details>`;
+  });
+  root.innerHTML = html;
+}).catch(e=>{document.getElementById("people-root").textContent="Could not load people.";});
+</script>
+</body>
+</html>

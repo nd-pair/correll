@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Teaching — Correll Lab</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header id="site-nav"></header>
+
+<div class="hero" style="padding-bottom:20px">
+  <div class="wrap">
+    <p class="eyebrow">Correll Lab</p>
+    <h1>Teaching</h1>
+    <p class="role">Courses on robotics, from first principles to the frontier.</p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap grid g2" id="teach-root">Loading…</div>
+</section>
+
+<section style="background:var(--soft);border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="section-head"><h2>Textbook</h2></div>
+    <p class="lead"><em>Introduction to Autonomous Robots</em> — an open, freely available textbook on the
+      kinematics, perception, planning, and control of autonomous mobile robots and manipulators, used in
+      courses around the world.</p>
+    <div class="links" style="margin-top:14px">
+      <a class="btn primary" href="https://introduction-to-autonomous-robots.github.io/" target="_blank" rel="noopener">Read online ↗</a>
+    </div>
+  </div>
+</section>
+
+<footer id="site-footer"></footer>
+<script src="site.js"></script>
+<script>
+const esc = s => String(s==null?"":s).replace(/[&<>]/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+fetch("data/teaching.json").then(r=>r.json()).then(list=>{
+  document.getElementById("teach-root").innerHTML = list.map(c=>`
+    <div class="card">
+      <p class="eyebrow">${esc(c.code||"")}</p>
+      <h3>${c.url?`<a href="${esc(c.url)}" target="_blank" rel="noopener">${esc(c.title)}</a>`:esc(c.title)}</h3>
+      <p>${esc(c.desc||"")}</p>
+    </div>`).join("");
+});
+</script>
+</body>
+</html>
