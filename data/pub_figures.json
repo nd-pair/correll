@@ -1,0 +1,17 @@
+{
+  "source": "open-access PDFs (page-1 teaser figure)",
+  "count": 11,
+  "images": {
+    "egocentric tactile and proximity sensors as observation priors for humanoid collision avoidance": "assets/pubs/auto/egocentric-tactile-and-proximity-sensors-as-observation-prio.png",
+    "a versatile robotic hand with 3d perception force sensing for autonomous manipulation": "assets/pubs/auto/a-versatile-robotic-hand-with-3d-perception-force-sensing-fo.png",
+    "high bandwidth nonlinear control for soft actuators with recursive network models": "assets/pubs/auto/high-bandwidth-nonlinear-control-for-soft-actuators-with-rec.png",
+    "sparser sparse roadmaps": "assets/pubs/auto/sparser-sparse-roadmaps.png",
+    "integrated force and distance sensing using elastomer embedded commodity proximity sensors": "assets/pubs/auto/integrated-force-and-distance-sensing-using-elastomer-embedd.png",
+    "lessons from the amazon picking challenge": "assets/pubs/auto/lessons-from-the-amazon-picking-challenge.png",
+    "simultaneous localization mapping and manipulation for unsupervised object discovery": "assets/pubs/auto/simultaneous-localization-mapping-and-manipulation-for-unsup.png",
+    "experience based planning with sparse roadmap spanners": "assets/pubs/auto/experience-based-planning-with-sparse-roadmap-spanners.png",
+    "optimal parameter identification for discrete mechanical systems with application to flexible object manipulation": "assets/pubs/auto/optimal-parameter-identification-for-discrete-mechanical-sys.png",
+    "optimal parameter identification for discrete mechanical systems with n application to flexible object manipulation": "assets/pubs/auto/optimal-parameter-identification-for-discrete-mechanical-sys.png",
+    "a challenging application in swarm robotics the autonomous inspection of complex engineered structures": "assets/pubs/auto/a-challenging-application-in-swarm-robotics-the-autonomous-i.png"
+  }
+}

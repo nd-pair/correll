@@ -15,12 +15,25 @@ def get(url):
         return json.load(r)
 
 
+def pick_pdf(w):
+    """Best open-access PDF url for a work, if any (used for automatic figure extraction)."""
+    for key in ("best_oa_location", "primary_location"):
+        loc = w.get(key) or {}
+        if loc.get("pdf_url"):
+            return loc["pdf_url"]
+    for loc in (w.get("locations") or []):
+        if loc.get("pdf_url"):
+            return loc["pdf_url"]
+    return (w.get("open_access") or {}).get("oa_url")
+
+
 def works_for(aid):
     cursor = "*"
     while cursor:
         q = urllib.parse.urlencode({
             "filter": f"author.id:{aid}",
-            "select": "id,title,publication_year,publication_date,primary_location,authorships,doi",
+            "select": ("id,title,publication_year,publication_date,primary_location,"
+                       "best_oa_location,locations,open_access,authorships,doi"),
             "per-page": 200, "cursor": cursor, "mailto": MAILTO})
         d = get(f"{API}/works?{q}")
         for w in d.get("results", []):
@@ -45,6 +58,7 @@ def main():
                 "title": (w.get("title") or "(untitled)").strip(),
                 "year": w.get("publication_year"), "date": w.get("publication_date"),
                 "venue": src.get("display_name") if src else None,
+                "pdf": pick_pdf(w),
                 "authors": [ (a.get("author") or {}).get("display_name") for a in w.get("authorships", [])
                              if (a.get("author") or {}).get("display_name") ],
             }

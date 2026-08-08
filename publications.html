@@ -62,9 +62,10 @@ function pubHTML(w){
 let YEARS=[];
 Promise.all([
   fetch("data/publications.json").then(r=>r.json()),
-  fetch("data/pub_images.json").then(r=>r.json()).catch(()=>({images:{}}))
-]).then(([data,imgs])=>{
-  IMAGES = imgs.images||{};
+  fetch("data/pub_images.json").then(r=>r.json()).catch(()=>({images:{}})),
+  fetch("data/pub_figures.json").then(r=>r.json()).catch(()=>({images:{}}))
+]).then(([data,imgs,figs])=>{
+  IMAGES = Object.assign({}, figs.images||{}, imgs.images||{});  // curated wins over auto-extracted
   YEARS = data.years||[];
   document.getElementById("pub-sub").textContent =
     `${data.total} publications · ${YEARS.length} years · via ${data.source||"OpenAlex"}`;

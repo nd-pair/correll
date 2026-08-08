@@ -61,9 +61,10 @@ const esc = s => String(s==null?"":s).replace(/[&<>]/g, c=>({"&":"&amp;","<":"&l
 const norm = t => String(t||"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim();
 Promise.all([
   fetch("data/publications.json").then(r=>r.json()),
-  fetch("data/pub_images.json").then(r=>r.json()).catch(()=>({images:{}}))
-]).then(([pubs, imgs])=>{
-  const images = imgs.images||{};
+  fetch("data/pub_images.json").then(r=>r.json()).catch(()=>({images:{}})),
+  fetch("data/pub_figures.json").then(r=>r.json()).catch(()=>({images:{}}))
+]).then(([pubs, imgs, figs])=>{
+  const images = Object.assign({}, figs.images||{}, imgs.images||{});
   const flat = [];
   (pubs.years||[]).forEach(g => g.items.forEach(it => flat.push(it)));
   const recent = flat.slice(0,4);
