@@ -13,7 +13,7 @@
     nav.className = "nav";
     nav.innerHTML =
       `<div class="wrap">
-        <a class="brand" href="index.html"><span class="dot"></span>Nikolaus Correll</a>
+        <a class="brand" href="index.html"><span class="dot"></span>Correll Laboratory</a>
         <button class="navtoggle" aria-label="Menu">☰</button>
         <nav>${PAGES.map(([h,l])=>`<a href="${h}" class="${h===here?"active":""}">${l}</a>`).join("")}</nav>
       </div>`;
@@ -26,8 +26,8 @@
     foot.innerHTML =
       `<div class="wrap">
         <div style="max-width:42ch">
-          <div class="brand" style="font-family:var(--serif);font-weight:600">Nikolaus Correll</div>
-          <div style="margin-top:6px">Viola D. Hank Professor of Aerospace and Mechanical Engineering, University of Notre Dame. Robotic manipulation, robotic materials, and full-stack humanoids.</div>
+          <div class="brand" style="font-family:var(--serif);font-weight:600">Correll Laboratory</div>
+          <div style="margin-top:6px">Nikolaus Correll, Viola D. Hank Professor of Aerospace and Mechanical Engineering, University of Notre Dame. Robotic manipulation, robotic materials, and full-stack humanoids.</div>
         </div>
         <div style="display:grid;gap:5px">
           <div><a href="https://nd-pair.github.io/web/" target="_blank" rel="noopener">Physical AI &amp; Robotics Initiative</a></div>
@@ -36,6 +36,6 @@
           <div><a href="mailto:nikolaus.correll@gmail.com">nikolaus.correll@gmail.com</a></div>
         </div>
       </div>
-      <div class="wrap" style="margin-top:24px"><small>© Nikolaus Correll · University of Notre Dame</small></div>`;
+      <div class="wrap" style="margin-top:24px"><small>© Correll Laboratory · University of Notre Dame</small></div>`;
   }
 })();

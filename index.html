@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Nikolaus Correll — University of Notre Dame</title>
-<meta name="description" content="Nikolaus Correll — Viola D. Hank Professor of Aerospace and Mechanical Engineering at the University of Notre Dame. Robotic manipulation, robotic materials, and full-stack humanoids." />
+<title>Correll Laboratory — University of Notre Dame</title>
+<meta name="description" content="The Correll Laboratory of Nikolaus Correll, Viola D. Hank Professor of Aerospace and Mechanical Engineering at the University of Notre Dame. Robotic manipulation, robotic materials, and full-stack humanoids." />
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -13,9 +13,9 @@
 <div class="hero">
   <div class="wrap">
     <p class="eyebrow">University of Notre Dame</p>
-    <h1>Nikolaus Correll</h1>
-    <p class="role"><b>Viola D. Hank Professor of Aerospace and Mechanical Engineering.</b>
-      Robotic manipulation, robotic materials, and full-stack humanoids.</p>
+    <h1>Correll Laboratory</h1>
+    <p class="role"><b>Nikolaus Correll</b> · Viola D. Hank Professor of Aerospace and Mechanical
+      Engineering. Robotic manipulation, robotic materials, and full-stack humanoids.</p>
     <div class="cta">
       <a class="btn gold" href="publications.html">Publications</a>
       <a class="btn solid" href="people.html">The team</a>
@@ -44,6 +44,13 @@
   </div>
 </section>
 
+<section>
+  <div class="wrap">
+    <div class="section-head"><p class="eyebrow">Watch</p><h2>Videos</h2></div>
+    <div class="grid g3" id="videos">Loading…</div>
+  </div>
+</section>
+
 <section class="mist">
   <div class="wrap">
     <div class="section-head" style="display:flex;justify-content:space-between;align-items:flex-end;gap:16px;max-width:none">
@@ -59,6 +66,14 @@
 <script>
 const esc = s => String(s==null?"":s).replace(/[&<>]/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
 const norm = t => String(t||"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim();
+const yt = id => `https://www.youtube-nocookie.com/embed/${encodeURIComponent(id)}`;
+fetch("data/videos.json").then(r=>r.json()).then(d=>{
+  document.getElementById("videos").innerHTML = (d.videos||[]).map(v=>`
+    <div class="card vidcard">
+      <div class="embed"><iframe src="${yt(v.id)}" title="${esc(v.title)}" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+      <div class="body"><h3>${esc(v.title)}</h3><div class="m">${esc(v.source||"")}</div></div>
+    </div>`).join("");
+}).catch(()=>{document.getElementById("videos").style.display="none";});
 Promise.all([
   fetch("data/publications.json").then(r=>r.json()),
   fetch("data/pub_images.json").then(r=>r.json()).catch(()=>({images:{}})),

@@ -1,8 +1,8 @@
-# Nikolaus Correll
+# Correll Laboratory
 
-Personal / lab website for **Nikolaus Correll**, Viola D. Hank Professor of Aerospace and
-Mechanical Engineering at the **University of Notre Dame** — robotic manipulation, robotic
-materials, and full-stack humanoids.
+Website for the **Correll Laboratory** of **Nikolaus Correll**, Viola D. Hank Professor of
+Aerospace and Mechanical Engineering at the **University of Notre Dame** — robotic manipulation,
+robotic materials, and full-stack humanoids.
 
 Live at **[nd-pair.github.io/correll](https://nd-pair.github.io/correll)**.
 
