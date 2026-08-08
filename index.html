@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Nikolaus Correll — Correll Lab</title>
-<meta name="description" content="Correll Lab — robotic manipulation, robotic materials, and full-stack humanoids at the University of Colorado Boulder." />
+<title>Nikolaus Correll — University of Notre Dame</title>
+<meta name="description" content="Nikolaus Correll — Viola D. Hank Professor of Aerospace and Mechanical Engineering at the University of Notre Dame. Robotic manipulation, robotic materials, and full-stack humanoids." />
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -12,14 +12,14 @@
 
 <div class="hero">
   <div class="wrap">
-    <p class="eyebrow">Correll Lab · University of Colorado Boulder</p>
+    <p class="eyebrow">University of Notre Dame</p>
     <h1>Nikolaus Correll</h1>
-    <p class="role">Professor of Computer Science</p>
-    <div class="links">
-      <a class="btn primary" href="publications.html">Publications</a>
-      <a class="btn" href="people.html">People</a>
-      <a class="btn" href="teaching.html">Teaching</a>
-      <a class="btn" href="https://introduction-to-autonomous-robots.github.io/" target="_blank" rel="noopener">Textbook ↗</a>
+    <p class="role"><b>Viola D. Hank Professor of Aerospace and Mechanical Engineering.</b>
+      Robotic manipulation, robotic materials, and full-stack humanoids.</p>
+    <div class="cta">
+      <a class="btn gold" href="publications.html">Publications</a>
+      <a class="btn solid" href="people.html">The team</a>
+      <a class="btn ghost" href="https://introduction-to-autonomous-robots.github.io/" target="_blank" rel="noopener">Textbook ↗</a>
     </div>
   </div>
 </div>
@@ -33,10 +33,9 @@
       moving toward full-stack humanoid development. Our alumni have become tenure-track professors at
       R1 universities, graduate students and post-docs at the world's premier research universities,
       and engineers and scientists at leading companies.</p>
-
     <div class="grid g3" style="margin-top:26px">
       <div class="card"><h3>Robotic Manipulation</h3><p>Giving robots human-like object manipulation
-        skills through perception, learning, and control.</p></div>
+        skills through perception, learning, and force-aware control.</p></div>
       <div class="card"><h3>Robotic Materials</h3><p>Composite materials that embed sensing,
         actuation, computation, and communication — robotic muscles, skin, and bones.</p></div>
       <div class="card"><h3>Full-stack Humanoids</h3><p>Bringing manipulation and robotic materials
@@ -45,19 +44,44 @@
   </div>
 </section>
 
-<section style="background:var(--soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
-  <div class="wrap" style="display:flex;gap:24px;flex-wrap:wrap;justify-content:space-between;align-items:center">
-    <div class="section-head" style="margin:0"><h2>Explore</h2>
-      <p style="color:var(--muted);margin:0">Publications, the lab team, courses, and art at the intersection of robotics and music.</p></div>
-    <div class="links">
-      <a class="btn" href="publications.html">159 publications</a>
-      <a class="btn" href="people.html">The team</a>
-      <a class="btn" href="art.html">Art</a>
+<section class="mist">
+  <div class="wrap">
+    <div class="section-head" style="display:flex;justify-content:space-between;align-items:flex-end;gap:16px;max-width:none">
+      <div><p class="eyebrow">Latest</p><h2>Recent publications</h2></div>
+      <a class="go" href="publications.html" style="font-weight:600">All publications →</a>
     </div>
+    <div class="grid g4" id="recent">Loading…</div>
   </div>
 </section>
 
 <footer id="site-footer"></footer>
 <script src="site.js"></script>
+<script>
+const esc = s => String(s==null?"":s).replace(/[&<>]/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+const norm = t => String(t||"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim();
+Promise.all([
+  fetch("data/publications.json").then(r=>r.json()),
+  fetch("data/pub_images.json").then(r=>r.json()).catch(()=>({images:{}}))
+]).then(([pubs, imgs])=>{
+  const images = imgs.images||{};
+  const flat = [];
+  (pubs.years||[]).forEach(g => g.items.forEach(it => flat.push(it)));
+  const recent = flat.slice(0,4);
+  document.getElementById("recent").innerHTML = recent.map(w=>{
+    const img = images[norm(w.title)];
+    const link = w.doi || w.id;
+    const thumb = img ? `<div class="thumb" style="background-image:url('${esc(img)}')"></div>`
+                      : `<div class="thumb"></div>`;
+    return `<a class="card pubcard" href="${esc(link||'publications.html')}" target="_blank" rel="noopener">
+      ${thumb}
+      <div class="body">
+        <div class="yr">${esc(w.year||"")}</div>
+        <h3>${esc(w.title)}</h3>
+        <div class="m">${esc(w.venue||"")}</div>
+      </div>
+    </a>`;
+  }).join("");
+});
+</script>
 </body>
 </html>

@@ -1,0 +1,16 @@
+{
+  "source": "colorado.edu/lab/correll/all-papers",
+  "count": 10,
+  "images": {
+    "robotic agentic platform for intelligent electric vehicle disassembly": "assets/pubs/evbattery.png",
+    "characterization analytical planning and hybrid force control for the inspire rh56dfx hand": "assets/pubs/3d_workspace.png",
+    "cutting the cord system architecture for low cost gpu accelerated bimanual mobile manipulation": "assets/pubs/xlerobot.png",
+    "fame force adaptive rl for expanding the manipulation envelope of a full scale humanoid": "assets/pubs/fame.png",
+    "on the dual use dilemma in physical reasoning and force": "assets/pubs/unfettered.jpg",
+    "unfettered forceful skill acquisition with physical reasoning and coordinate frame labeling": "assets/pubs/deligrasp2.jpg",
+    "towards forceful robotic foundation models a literature survey": "assets/pubs/forcesensors.jpg",
+    "a machine learning approach to contact localization in variable density three dimensional tactile artificial skin": "assets/pubs/kohlbrenner.png",
+    "just add force for contact rich robot policies": "assets/pubs/highlevel.png",
+    "deligrasp inferring object properties with llms for adaptive grasp policies": "assets/pubs/deligrasp.png"
+  }
+}

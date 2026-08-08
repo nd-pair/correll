@@ -3,17 +3,17 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Art — Correll Lab</title>
+<title>Art — Nikolaus Correll</title>
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 <header id="site-nav"></header>
 
-<div class="hero" style="padding-bottom:20px">
+<div class="hero sub">
   <div class="wrap">
-    <p class="eyebrow">Correll Lab</p>
+    <p class="eyebrow">Swarms · sound · kinetic sculpture</p>
     <h1>Art</h1>
-    <p class="role" id="art-intro" style="max-width:74ch">Loading…</p>
+    <p class="role" id="art-intro" style="max-width:76ch">Loading…</p>
   </div>
 </div>
 
@@ -25,13 +25,16 @@
 <script src="site.js"></script>
 <script>
 const esc = s => String(s==null?"":s).replace(/[&<>]/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+const yt = id => `https://www.youtube-nocookie.com/embed/${encodeURIComponent(id)}`;
 fetch("data/art.json").then(r=>r.json()).then(data=>{
   document.getElementById("art-intro").textContent = data.intro || "";
   document.getElementById("art-root").innerHTML = (data.works||[]).map(w=>`
     <div class="art-item">
-      <h3>${esc(w.title)} <span style="font-family:var(--sans);font-size:13px;color:var(--muted);font-weight:400">${esc(w.year||"")}</span></h3>
+      <h3>${esc(w.title)}<span class="yr">${esc(w.year||"")}</span></h3>
       ${(w.body||[]).map(p=>`<p>${esc(p)}</p>`).join("")}
-      ${w.links&&w.links.length?`<div class="links" style="margin-top:10px">${w.links.map(l=>`<a class="btn" href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)} ↗</a>`).join("")}</div>`:""}
+      ${w.video?`<div class="embed"><iframe src="${yt(w.video)}" title="${esc(w.title)}" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>`:""}
+      ${w.links&&w.links.length?`<div class="cta" style="margin-top:12px">${w.links.map(l=>`<a class="btn ghost" style="border-color:var(--line);color:var(--indigo-2)" href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)} ↗</a>`).join("")}</div>`:""}
+      ${w.watch&&w.watch.length?`<p class="ref">Referenced: ${w.watch.map(v=>`<a href="https://www.youtube.com/watch?v=${esc(v.id)}" target="_blank" rel="noopener">${esc(v.label)}</a>`).join(" · ")}</p>`:""}
       ${w.refs&&w.refs.length?`<div class="ref">${w.refs.map(r=>esc(r)).join("<br>")}</div>`:""}
     </div>`).join("");
 });

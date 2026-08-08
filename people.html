@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>People — Correll Lab</title>
+<title>People — Nikolaus Correll</title>
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 <header id="site-nav"></header>
 
-<div class="hero" style="padding-bottom:20px">
+<div class="hero sub">
   <div class="wrap">
-    <p class="eyebrow">Correll Lab</p>
+    <p class="eyebrow">University of Notre Dame</p>
     <h1>People</h1>
     <p class="role">The team behind the lab's research — and the alumni carrying it forward.</p>
   </div>
@@ -29,7 +29,6 @@ fetch("data/people.json").then(r=>r.json()).then(data=>{
   const root = document.getElementById("people-root");
   const groups = data.groups || data;
   let html = "";
-  // PI first
   const piGroup = groups.find(g=>/^pi$/i.test(g.group) || /principal/i.test(g.group));
   if(piGroup && piGroup.members[0]){
     const p = piGroup.members[0];
@@ -37,26 +36,25 @@ fetch("data/people.json").then(r=>r.json()).then(data=>{
       <div>
         <div class="nm">${esc(p.name)}</div>
         <div class="role">${esc(p.title||p.role||"")}</div>
-        ${p.bio?`<p style="margin:.2em 0;max-width:66ch">${esc(p.bio)}</p>`:""}
+        ${p.bio?`<p style="margin:.2em 0;max-width:70ch">${esc(p.bio)}</p>`:""}
         ${p.email?`<p style="margin:.4em 0 0"><a href="mailto:${esc(p.email)}">${esc(p.email)}</a></p>`:""}
       </div>
     </div>`;
   }
-  // Active (non-PI, non-alumni) groups shown open
   const rest = groups.filter(g=>g!==piGroup);
   const alumni = rest.filter(g=>/alumni/i.test(g.group));
   const active = rest.filter(g=>!/alumni/i.test(g.group));
-  const renderRoster = m => `<div class="person"><div class="n">${esc(m.name)}</div>${m.role?`<div class="r">${esc(m.role)}</div>`:""}</div>`;
+  const renderRoster = m => `<div class="rperson"><div class="rn">${esc(m.name)}</div>${m.role?`<div class="rm">${esc(m.role)}</div>`:""}</div>`;
   active.forEach(g=>{
-    html += `<div style="margin-top:30px"><h2 style="font-size:22px">${esc(g.group)} <span class="cnt">${g.members.length}</span></h2>
+    html += `<div class="rostergrp"><h2>${esc(g.group)} <span class="cnt">${g.members.length}</span></h2>
       <div class="roster">${g.members.map(renderRoster).join("")}</div></div>`;
   });
   alumni.forEach(g=>{
-    html += `<details class="grp" style="margin-top:26px"><summary>${esc(g.group)} <span class="cnt">${g.members.length}</span></summary>
+    html += `<details class="group"><summary>${esc(g.group)} <span class="cnt">${g.members.length}</span></summary>
       <div class="roster">${g.members.map(renderRoster).join("")}</div></details>`;
   });
   root.innerHTML = html;
-}).catch(e=>{document.getElementById("people-root").textContent="Could not load people.";});
+}).catch(()=>{document.getElementById("people-root").textContent="Could not load people.";});
 </script>
 </body>
 </html>

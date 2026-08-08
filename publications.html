@@ -3,25 +3,28 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Publications — Correll Lab</title>
+<title>Publications — Nikolaus Correll</title>
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 <header id="site-nav"></header>
 
-<div class="hero" style="padding-bottom:20px">
+<div class="hero sub">
   <div class="wrap">
-    <p class="eyebrow">Correll Lab</p>
+    <p class="eyebrow">University of Notre Dame</p>
     <h1>Publications</h1>
     <p class="role" id="pub-sub">Loading…</p>
   </div>
 </div>
 
 <div class="pubbar">
-  <div class="wrap"><input id="q" type="search" placeholder="Search by title, author, venue, or year…" autocomplete="off" /></div>
+  <div class="wrap">
+    <input id="q" type="search" placeholder="Search by title, author, venue, or year…" autocomplete="off" />
+    <div class="yearchips" id="chips"></div>
+  </div>
 </div>
 
-<section style="padding-top:6px">
+<section style="padding-top:8px">
   <div class="wrap" id="pub-root"></div>
 </section>
 
@@ -29,7 +32,9 @@
 <script src="site.js"></script>
 <script>
 const esc = s => String(s==null?"":s).replace(/[&<>]/g, c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+const norm = t => String(t||"").toLowerCase().replace(/[^a-z0-9]+/g," ").trim();
 const ME = /correll/i;
+let IMAGES = {};
 function authorList(a){
   if(!a||!a.length) return "";
   const names = a.map(n => ME.test(n) ? `<span class="au">${esc(n)}</span>` : esc(n));
@@ -40,36 +45,48 @@ function pubHTML(w){
   const link = w.doi || w.id;
   const t = link ? `<a href="${esc(link)}" target="_blank" rel="noopener">${esc(w.title)}</a>` : esc(w.title);
   const meta = [w.venue, w.year].filter(Boolean).map(esc).join(" · ");
-  return `<div class="pub" data-s="${esc((w.title+" "+(w.authors||[]).join(" ")+" "+(w.venue||"")+" "+(w.year||"")).toLowerCase())}">
-    <div class="t">${t}</div>
-    <div class="m">${authorList(w.authors)}</div>
-    ${meta?`<div class="m">${meta}</div>`:""}
+  const img = IMAGES[norm(w.title)];
+  const thumb = img
+    ? `<img class="pthumb" loading="lazy" src="${esc(img)}" alt="">`
+    : `<div class="pthumb ph">◆</div>`;
+  const s = (w.title+" "+(w.authors||[]).join(" ")+" "+(w.venue||"")+" "+(w.year||"")).toLowerCase();
+  return `<div class="pub" data-s="${esc(s)}">
+    ${thumb}
+    <div class="meta">
+      <div class="t">${t}</div>
+      <div class="m">${authorList(w.authors)}</div>
+      ${meta?`<div class="m">${meta}</div>`:""}
+    </div>
   </div>`;
 }
 let YEARS=[];
-fetch("data/publications.json").then(r=>r.json()).then(data=>{
+Promise.all([
+  fetch("data/publications.json").then(r=>r.json()),
+  fetch("data/pub_images.json").then(r=>r.json()).catch(()=>({images:{}}))
+]).then(([data,imgs])=>{
+  IMAGES = imgs.images||{};
   YEARS = data.years||[];
   document.getElementById("pub-sub").textContent =
     `${data.total} publications · ${YEARS.length} years · via ${data.source||"OpenAlex"}`;
+  document.getElementById("chips").innerHTML =
+    YEARS.filter(g=>g.year).map(g=>`<a href="#y${g.year}">${g.year}</a>`).join("");
   render();
 });
 function render(){
-  const root = document.getElementById("pub-root");
-  root.innerHTML = YEARS.map(g=>`<div class="yeargroup" data-year="${g.year||""}">
-    <h2>${g.year||"Other"} <span class="c">${g.count}</span></h2>
+  document.getElementById("pub-root").innerHTML = YEARS.map(g=>`<div class="yeargroup" data-year="${g.year||''}">
+    <h2 id="y${g.year||''}">${g.year||"Other"} <span class="c">${g.count}</span></h2>
     ${g.items.map(pubHTML).join("")}
   </div>`).join("");
 }
 document.getElementById("q").addEventListener("input", e=>{
   const q = e.target.value.trim().toLowerCase();
-  let shownYears=0;
   document.querySelectorAll(".yeargroup").forEach(yg=>{
     let n=0;
     yg.querySelectorAll(".pub").forEach(p=>{
       const hit = !q || p.dataset.s.includes(q);
       p.style.display = hit?"":"none"; if(hit) n++;
     });
-    yg.style.display = n?"":"none"; if(n) shownYears++;
+    yg.style.display = n?"":"none";
   });
 });
 </script>

@@ -16,9 +16,14 @@
     {
       "title": "What Power Art Thou",
       "year": "2021",
+      "video": "6W7OFn8VR_Q",
       "body": [
         "Arrangement for 12 ABB IRB 4600-40, steel tread plate, monochromatic lights (12 x 12 x 4 m³ real size) in the Webots simulator on \"What power art thou\" from the opera \"King Arthur\" (1691) by Henry Purcell, recorded by William Christie, Les Arts Florissants.",
         "As in my 2015 piece \"Droplets meet Philip Glass\", I'm exploring phase shift and resynchronization inspired by Steve Reich's work \"Piano Phase\", this time in kinematic systems. The system starts in the same phase, then cycles through different orders of disarray, and ends up in the same phase at around 3:30, resolving tension analogous with Purcell's piece that also explores dissonances in a painful, repetitive way. I'm also thrilled by Olafur Eliasson's use of monochromatic light in \"The Weather Project\", which is used here."
+      ],
+      "watch": [
+        {"label": "Steve Reich — Piano Phase", "id": "i0345c6zNfM"},
+        {"label": "Olafur Eliasson — The Weather Project", "id": "IsT9vEpfNq4"}
       ]
     },
     {
@@ -32,9 +37,13 @@
     {
       "title": "Droplets meet Philip Glass",
       "year": "2015",
+      "video": "b9tIGWx9I-c",
       "body": [
         "Arrangement for 100 \"Droplets\" miniature robots. Music: Philip Glass, \"String Quartet 3, Mishima: 1957 Award Montage\" by Paul Klee 4Tet. Program: John Klingner.",
         "A swarm of Droplets is repeating a simple pattern over and over, while getting more and more out of phase, letting more complex visual patterns emerge. The same effect — repeating patterns that slowly get out of phase — was first explored in music by Steve Reich in his 1965 piece \"It's gonna rain\", considered a landmark in the minimalism movement he pioneered with Philip Glass and others. String Quartet 3 (1985) is one of Glass' more typical works, heavily relying on repetitive structures."
+      ],
+      "watch": [
+        {"label": "Steve Reich — It's Gonna Rain", "id": "vugqRAX7xQE"}
       ],
       "refs": [
         "Farrow, N., Klingner, J., Reishus, D. and Correll, N., 2014. Miniature six-channel range and bearing system: algorithm, analysis and experimental validation. In 2014 IEEE International Conference on Robotics and Automation (ICRA), pp. 6180–6185."
