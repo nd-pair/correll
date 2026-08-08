@@ -5,11 +5,16 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
+  pages: write
+  id-token: write
 concurrency:
-  group: refresh
+  group: pages          # shares the deploy workflow's group so they never collide
   cancel-in-progress: false
 jobs:
   refresh:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -38,3 +43,11 @@ jobs:
             git commit -m "Auto-refresh publications and thumbnails"
             git push
           fi
+      # Deploy Pages directly — a push made with GITHUB_TOKEN does not trigger deploy.yml,
+      # so this workflow publishes the refreshed content itself.
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - id: deployment
+        uses: actions/deploy-pages@v4
