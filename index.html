@@ -10,7 +10,9 @@
 <body>
 <header id="site-nav"></header>
 
-<div class="hero">
+<div class="hero mosaic-hero">
+  <div class="mosaic" id="mosaic" aria-hidden="true"></div>
+  <div class="mosaic-scrim" aria-hidden="true"></div>
   <div class="wrap">
     <p class="eyebrow">University of Notre Dame</p>
     <h1>Correll Laboratory</h1>
@@ -74,6 +76,51 @@ fetch("data/videos.json").then(r=>r.json()).then(d=>{
       <div class="body"><h3>${esc(v.title)}</h3><div class="m">${esc(v.source||"")}</div></div>
     </div>`).join("");
 }).catch(()=>{document.getElementById("videos").style.display="none";});
+// Fragmented, rotating, parallaxing hero built from recent-paper photos.
+(function(){
+  const host = document.getElementById("mosaic");
+  if(!host) return;
+  const imgs = [
+    "assets/pubs/xlerobot.png",
+    "assets/pubs/evbattery.png",
+    "assets/pubs/auto/a-versatile-robotic-hand-with-3d-perception-force-sensing-fo.png",
+    "assets/pubs/auto/lessons-from-the-amazon-picking-challenge.png"
+  ];
+  imgs.forEach(src => { const im = new Image(); im.src = src; });   // preload
+  const N = 5, factors = [0.15,-0.09,0.18,-0.05,0.12];
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const cols = [];
+  for(let i=0;i<N;i++){
+    const col = document.createElement("div"); col.className = "mcol";
+    const a = document.createElement("div"), b = document.createElement("div");
+    a.className = b.className = "layer";
+    const posX = (N>1 ? (i/(N-1))*100 : 50) + "%";        // each column shows a different slice
+    a.style.backgroundPositionX = b.style.backgroundPositionX = posX;
+    a.style.backgroundImage = `url('${imgs[i % imgs.length]}')`;
+    a.classList.add("on");
+    col.append(a,b); host.append(col);
+    cols.push({col, layers:[a,b], cur:0, idx:i % imgs.length});
+  }
+  if(reduce) return;
+  // rotate one column at a time to the next (different) image — a gentle continuous shuffle
+  let k = 0;
+  setInterval(()=>{
+    const c = cols[k++ % N];
+    c.idx = (c.idx + 1 + Math.floor(Math.random()*(imgs.length-1))) % imgs.length;
+    const next = c.layers[c.cur ^ 1];
+    next.style.backgroundImage = `url('${imgs[c.idx]}')`;
+    next.classList.add("on"); c.layers[c.cur].classList.remove("on"); c.cur ^= 1;
+  }, 2300);
+  // parallax: each fragment drifts at its own rate on scroll
+  let ticking = false;
+  const apply = () => {
+    const y = window.scrollY;
+    cols.forEach((c,i)=>{ c.col.style.transform = `translate3d(0,${(y*factors[i%factors.length]).toFixed(1)}px,0)`; });
+    ticking = false;
+  };
+  addEventListener("scroll", ()=>{ if(!ticking){ requestAnimationFrame(apply); ticking = true; } }, {passive:true});
+})();
+
 Promise.all([
   fetch("data/publications.json").then(r=>r.json()),
   fetch("data/pub_images.json").then(r=>r.json()).catch(()=>({images:{}})),
