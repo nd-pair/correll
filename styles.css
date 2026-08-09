@@ -43,19 +43,16 @@ img{max-width:100%}
 .hero::after{width:480px;height:480px;background:radial-gradient(circle,#5b52e6bb,transparent 70%);bottom:-190px;left:-120px;animation:float2 20s ease-in-out infinite}
 .hero .wrap{position:relative;z-index:5;padding:92px 24px 84px}
 
-/* fragmented, rotating, parallax hero mosaic (home only) */
-.hero.mosaic-hero{background:linear-gradient(155deg,#080f26,#121a44)}
-.hero.mosaic-hero::before,.hero.mosaic-hero::after{display:none}
-.hero .mosaic{position:absolute;inset:0;z-index:0;display:flex;gap:3px;background:var(--navy-3)}
-.hero .mcol{position:relative;flex:1;height:146%;top:-23%;overflow:hidden;will-change:transform}
-.hero .mcol .layer{position:absolute;inset:0;background-size:cover;background-position:center;
-  opacity:0;transition:opacity 1.3s ease;filter:saturate(.55) brightness(.62) contrast(1.05)}
-.hero .mcol .layer.on{opacity:1}
-.hero .mosaic-scrim{position:absolute;inset:0;z-index:1;pointer-events:none;
-  background:linear-gradient(100deg, rgba(8,14,34,.95) 0%, rgba(11,20,48,.9) 30%, rgba(18,24,66,.66) 62%, rgba(40,33,108,.5) 100%),
-             linear-gradient(180deg, rgba(8,14,34,.25) 0%, transparent 24%, transparent 66%, rgba(8,14,34,.55) 100%)}
-@media(max-width:640px){.hero .mosaic-scrim{background:linear-gradient(175deg, rgba(8,14,34,.9), rgba(11,20,48,.82))}}
-@media(prefers-reduced-motion:reduce){.hero .mcol{transform:none!important}}
+/* scroll-reveal hero: one large image behind, cut-out windows that grow to reveal it (home only) */
+.hero.reveal-hero{background:linear-gradient(155deg,#080f26,#121a44)}
+.hero.reveal-hero::before,.hero.reveal-hero::after{display:none}
+.hero .reveal{position:absolute;inset:0;z-index:0;overflow:hidden}
+.hero .rtile{position:absolute;background-repeat:no-repeat;will-change:clip-path;
+  filter:saturate(.9) brightness(.86) contrast(1.02)}
+.hero .reveal-scrim{position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(100deg, rgba(8,14,34,.92) 0%, rgba(11,20,48,.8) 32%, rgba(14,20,52,.46) 62%, rgba(22,28,78,.28) 100%),
+             linear-gradient(180deg, rgba(8,14,34,.2) 0%, transparent 26%, transparent 64%, rgba(8,14,34,.5) 100%)}
+@media(max-width:640px){.hero .reveal-scrim{background:linear-gradient(175deg, rgba(8,14,34,.86), rgba(11,20,48,.78))}}
 .hero .eyebrow{color:var(--gold-lt)}
 .hero h1{color:#fff;font-size:clamp(34px,5.6vw,58px);letter-spacing:.3px;margin-bottom:.15em}
 .hero .role{font-size:clamp(16px,2vw,20px);color:#cfd6ec;max-width:52ch;margin-top:8px}
