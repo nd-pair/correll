@@ -1,6 +1,6 @@
 {
-  "source": "open-access PDFs (page-1 teaser figure)",
-  "count": 11,
+  "source": "open-access PDFs (teaser figure, LLM- or heuristic-selected)",
+  "count": 17,
   "images": {
     "egocentric tactile and proximity sensors as observation priors for humanoid collision avoidance": "assets/pubs/auto/egocentric-tactile-and-proximity-sensors-as-observation-prio.png",
     "a versatile robotic hand with 3d perception force sensing for autonomous manipulation": "assets/pubs/auto/a-versatile-robotic-hand-with-3d-perception-force-sensing-fo.png",
@@ -12,6 +12,12 @@
     "experience based planning with sparse roadmap spanners": "assets/pubs/auto/experience-based-planning-with-sparse-roadmap-spanners.png",
     "optimal parameter identification for discrete mechanical systems with application to flexible object manipulation": "assets/pubs/auto/optimal-parameter-identification-for-discrete-mechanical-sys.png",
     "optimal parameter identification for discrete mechanical systems with n application to flexible object manipulation": "assets/pubs/auto/optimal-parameter-identification-for-discrete-mechanical-sys.png",
-    "a challenging application in swarm robotics the autonomous inspection of complex engineered structures": "assets/pubs/auto/a-challenging-application-in-swarm-robotics-the-autonomous-i.png"
+    "a challenging application in swarm robotics the autonomous inspection of complex engineered structures": "assets/pubs/auto/a-challenging-application-in-swarm-robotics-the-autonomous-i.png",
+    "from natural to artificial camouflage components and systems": "assets/pubs/auto/from-natural-to-artificial-camouflage-components-and-systems.png",
+    "new directions wireless robotic materials": "assets/pubs/auto/new-directions-wireless-robotic-materials.png",
+    "distributed machine learning in materials that couple sensing actuation computation and communication": "assets/pubs/auto/distributed-machine-learning-in-materials-that-couple-sensin.png",
+    "distributed machine learning in materials that couple sensing n actuation computation and communication": "assets/pubs/auto/distributed-machine-learning-in-materials-that-couple-sensin.png",
+    "morphological and embedded computation in a self contained soft robotic hand": "assets/pubs/auto/morphological-and-embedded-computation-in-a-self-contained-s.png",
+    "swistrack a tracking tool for multi unit robotic and biological systems": "assets/pubs/auto/swistrack-a-tracking-tool-for-multi-unit-robotic-and-biologi.png"
   }
 }
