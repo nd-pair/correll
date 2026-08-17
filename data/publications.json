@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-10 08:04 UTC",
+  "generated": "2026-08-17 07:16 UTC",
   "source": "OpenAlex (https://openalex.org)",
   "total": 159,
   "years": [
@@ -96,7 +96,7 @@
           "venue": "arXiv (Cornell University)",
           "pdf": "https://doi.org/10.48550/arxiv.2603.08988",
           "authors": [
-            "Tan, Xuan",
+            "Xuan Tan",
             "William Xie",
             "Nikolaus Correll"
           ]
@@ -542,7 +542,7 @@
           "year": 2019,
           "date": "2019-12-26",
           "venue": "Advanced Robotics",
-          "pdf": null,
+          "pdf": "http://arxiv.org/pdf/1911.05884",
           "authors": [
             "Felix von Drigalski",
             "Christian Schlette",

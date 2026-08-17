@@ -1,6 +1,6 @@
 {
   "source": "open-access PDFs (teaser figure, LLM- or heuristic-selected)",
-  "count": 17,
+  "count": 19,
   "images": {
     "egocentric tactile and proximity sensors as observation priors for humanoid collision avoidance": "assets/pubs/auto/egocentric-tactile-and-proximity-sensors-as-observation-prio.png",
     "a versatile robotic hand with 3d perception force sensing for autonomous manipulation": "assets/pubs/auto/a-versatile-robotic-hand-with-3d-perception-force-sensing-fo.png",
@@ -18,6 +18,8 @@
     "distributed machine learning in materials that couple sensing actuation computation and communication": "assets/pubs/auto/distributed-machine-learning-in-materials-that-couple-sensin.png",
     "distributed machine learning in materials that couple sensing n actuation computation and communication": "assets/pubs/auto/distributed-machine-learning-in-materials-that-couple-sensin.png",
     "morphological and embedded computation in a self contained soft robotic hand": "assets/pubs/auto/morphological-and-embedded-computation-in-a-self-contained-s.png",
-    "swistrack a tracking tool for multi unit robotic and biological systems": "assets/pubs/auto/swistrack-a-tracking-tool-for-multi-unit-robotic-and-biologi.png"
+    "swistrack a tracking tool for multi unit robotic and biological systems": "assets/pubs/auto/swistrack-a-tracking-tool-for-multi-unit-robotic-and-biologi.png",
+    "robots assembling machines learning from the world robot summit 2018 assembly challenge": "assets/pubs/auto/robots-assembling-machines-learning-from-the-world-robot-sum.png",
+    "building a distributed robot garden": "assets/pubs/auto/building-a-distributed-robot-garden.png"
   }
 }
