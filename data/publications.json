@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-17 07:16 UTC",
+  "generated": "2026-08-24 07:20 UTC",
   "source": "OpenAlex (https://openalex.org)",
   "total": 159,
   "years": [
@@ -396,7 +396,7 @@
           "year": 2021,
           "date": "2021-03-17",
           "venue": "IEEE Robotics & Automation Magazine",
-          "pdf": "https://upcommons.upc.edu/bitstream/2117/343534/1/Mobile_Manipulation_Hackathon-Moving_into_real_world_applications%281%29.pdf",
+          "pdf": "https://eprints.whiterose.ac.uk/id/eprint/172917/1/RAM20_Hackathon%20%284%29.pdf",
           "authors": [
             "M\u00e1ximo A. Roa",
             "Mehmet R. Do\u011far",
@@ -575,7 +575,7 @@
           "year": 2019,
           "date": "2019-07-07",
           "venue": "ThinkTech (Texas Tech University)",
-          "pdf": "https://hdl.handle.net/2346/84413",
+          "pdf": null,
           "authors": [
             "Heather Hava",
             "Larissa Zhou",
@@ -2412,7 +2412,7 @@
           "doi": "https://doi.org/10.1126/science.1144259",
           "title": "Social Integration of Robots into Groups of Cockroaches to Control Self-Organized Choices",
           "year": 2007,
-          "date": "2007-11-16",
+          "date": "2007-11-15",
           "venue": "Science",
           "pdf": "http://infoscience.epfl.ch/record/114099",
           "authors": [
@@ -2479,8 +2479,8 @@
           "title": "A Challenging Application in Swarm Robotics: The Autonomous Inspection of Complex Engineered Structures",
           "year": 2007,
           "date": "2007-01-01",
-          "venue": "Infoscience (Ecole Polytechnique F\u00e9d\u00e9rale de Lausanne)",
-          "pdf": "https://infoscience.epfl.ch/record/100221/files/NC_SGA_newsletter_07.pdf",
+          "venue": null,
+          "pdf": "http://infoscience.epfl.ch/record/100221",
           "authors": [
             "Nikolaus Correll",
             "Alcherio Martinoli"
