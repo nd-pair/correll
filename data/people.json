@@ -31,7 +31,6 @@
       { "name": "Paul Afriyie", "role": "Undergraduate • BS in Computer Science, Class of 2029", "img": "assets/people/paul-afriyie.jpg" },
       { "name": "Justin Costa", "role": "Undergraduate • Independent Study • UROP", "img": "assets/people/justin-costa.png" },
       { "name": "Jasmitha Gourabathini", "role": "Undergraduate • FUTURE Program • UROP", "img": "assets/people/jasmitha-gourabathini.jpeg" },
-      { "name": "Jensen Lavering", "role": "Undergraduate • Independent Study", "img": "assets/people/jensen-lavering.jpeg" },
       { "name": "Mateo Feit", "role": "High School Intern • Visiting Student", "img": "assets/people/mateo-feit.jpeg" }
     ]
   },
@@ -69,6 +68,7 @@
       { "name": "Arielle Lathinen", "role": "Independent Study" },
       { "name": "Dr. Yang Li", "role": "PhD Student" },
       { "name": "Dr. Khoi Ly", "role": "PhD Student • Mechanical Engineering" },
+      { "name": "Jensen Lavering", "role": "Undergraduate • Independent Study"},
       { "name": "Joseph Maniaci", "role": "Undergraduate • UROP" },
       { "name": "Brian McDonald", "role": "Undergraduate • UROP" },
       { "name": "Lauren McIntire", "role": "Undergraduate" },
