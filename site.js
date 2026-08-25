@@ -16,6 +16,7 @@
         <a class="brand" href="index.html"><span class="dot"></span>Correll Laboratory</a>
         <button class="navtoggle" aria-label="Menu">☰</button>
         <nav>${PAGES.map(([h,l])=>`<a href="${h}" class="${h===here?"active":""}">${l}</a>`).join("")}</nav>
+        <a class="ndmark" href="https://www.nd.edu" target="_blank" rel="noopener" aria-label="University of Notre Dame"><img src="assets/nd/nd-lockup-white.png" alt="University of Notre Dame"></a>
       </div>`;
     const t=nav.querySelector(".navtoggle"), m=nav.querySelector("nav");
     t.addEventListener("click",()=>m.classList.toggle("open"));
@@ -36,6 +37,9 @@
           <div><a href="mailto:nikolaus.correll@gmail.com">nikolaus.correll@gmail.com</a></div>
         </div>
       </div>
-      <div class="wrap" style="margin-top:24px"><small>© Correll Laboratory · University of Notre Dame</small></div>`;
+      <div class="wrap" style="margin-top:26px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+        <a class="ndmark" href="https://www.nd.edu" target="_blank" rel="noopener" aria-label="University of Notre Dame"><img src="assets/nd/nd-lockup-white.png" alt="University of Notre Dame"></a>
+        <small>© Correll Laboratory · University of Notre Dame</small>
+      </div>`;
   }
 })();

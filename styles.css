@@ -181,3 +181,11 @@ footer.site small{color:#8590ab;font-size:12.5px}
   .nav nav.open{display:flex}
   .navtoggle{display:block;margin-left:auto;background:none;border:0;color:#fff;font-size:24px;cursor:pointer}
 }
+
+/* University of Notre Dame institutional lockup (shared nav + footer) */
+.nav .ndmark{display:flex;align-items:center;flex:none}
+.nav .ndmark img{height:26px;width:auto;display:block;opacity:.92;transition:opacity .2s}
+.nav .ndmark:hover img{opacity:1}
+@media(max-width:860px){.nav .ndmark{display:none}}
+footer.site .ndmark img{height:34px;width:auto;display:block;opacity:.9;transition:opacity .2s}
+footer.site .ndmark:hover img{opacity:1}
