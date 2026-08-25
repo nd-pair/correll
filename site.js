@@ -8,6 +8,7 @@
     ["art.html","Art"],
   ];
   const here = (location.pathname.split("/").pop() || "index.html");
+  { const sk=document.createElement("a"); sk.className="skip-link"; sk.href="#main"; sk.textContent="Skip to main content"; document.body.insertBefore(sk, document.body.firstChild); }
   const nav = document.getElementById("site-nav");
   if(nav){
     nav.className = "nav";
@@ -39,7 +40,7 @@
       </div>
       <div class="wrap" style="margin-top:26px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
         <a class="ndmark" href="https://www.nd.edu" target="_blank" rel="noopener" aria-label="University of Notre Dame"><img src="assets/nd/nd-lockup-white.png" alt="University of Notre Dame"></a>
-        <small>© Correll Laboratory · University of Notre Dame</small>
+        <small>Notre Dame, IN 46556 USA · <a href="https://www.nd.edu/about/accessibility/" target="_blank" rel="noopener">Accessibility</a> · © 2026 University of Notre Dame</small>
       </div>`;
   }
 })();

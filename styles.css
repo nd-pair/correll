@@ -189,3 +189,8 @@ footer.site small{color:#8590ab;font-size:12.5px}
 @media(max-width:860px){.nav .ndmark{display:none}}
 footer.site .ndmark img{height:34px;width:auto;display:block;opacity:.9;transition:opacity .2s}
 footer.site .ndmark:hover img{opacity:1}
+
+/* accessibility: skip link + visible keyboard focus (WCAG 2.4.1 / 2.4.7) */
+.skip-link{position:absolute;left:-9999px;top:0;z-index:100;background:var(--gold);color:#241a00;padding:10px 16px;border-radius:0 0 10px 0;font-weight:700;text-decoration:none}
+.skip-link:focus{left:0}
+:focus-visible{outline:3px solid var(--gold-lt);outline-offset:2px;border-radius:4px}
