@@ -64,14 +64,16 @@ def extract_rows():
     with sync_playwright() as p:
         b = p.chromium.launch()
         pg = b.new_page()
-        pg.goto(SRC, wait_until="networkidle", timeout=60000)
         try:
-            pg.wait_for_selector('a[href*="/lab/correll/20"]', timeout=30000)
-        except Exception:
-            pass
-        pg.wait_for_timeout(2500)
-        rows = pg.evaluate(js)
-        b.close()
+            pg.goto(SRC, wait_until="domcontentloaded", timeout=60000)
+            try:
+                pg.wait_for_selector('a[href*="/lab/correll/20"]', timeout=30000)
+            except Exception:
+                pass
+            pg.wait_for_timeout(2500)
+            rows = pg.evaluate(js)
+        finally:
+            b.close()
     return [r for r in rows if r.get("path") and "/files/" in r["path"]]
 
 
@@ -93,7 +95,11 @@ def save_image(url, dest):
 def main():
     os.makedirs(PUB_DIR, exist_ok=True)
     oa_titles = load_openalex_titles()
-    rows = extract_rows()
+    try:
+        rows = extract_rows()
+    except Exception as e:
+        print(f"scrape failed ({e}); keeping existing {OUT}", file=sys.stderr)
+        return
     print(f"found {len(rows)} papers with thumbnails", file=sys.stderr)
     images = {}
     for r in rows:
@@ -107,6 +113,9 @@ def main():
             print(f"  ok  {fn}  <-  {r['title'][:60]}", file=sys.stderr)
         except Exception as e:
             print(f"  FAIL {fn}: {e}", file=sys.stderr)
+    if not images:
+        print(f"no thumbnails scraped; keeping existing {OUT}", file=sys.stderr)
+        return
     out = {"source": "colorado.edu/lab/correll/all-papers", "count": len(images), "images": images}
     json.dump(out, open(OUT, "w"), indent=2)
     print(f"wrote {len(images)} image mappings to {OUT}")
