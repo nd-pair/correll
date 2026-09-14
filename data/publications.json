@@ -1,7 +1,7 @@
 {
-  "generated": "2026-09-07 12:42 UTC",
+  "generated": "2026-09-14 12:43 UTC",
   "source": "OpenAlex (https://openalex.org)",
-  "total": 159,
+  "total": 158,
   "years": [
     {
       "year": 2026,
@@ -770,7 +770,7 @@
           "year": 2018,
           "date": "2018-04-21",
           "venue": "Autonomous Robots",
-          "pdf": "https://www.osti.gov/biblio/1478224",
+          "pdf": null,
           "authors": [
             "Radhen Patel",
             "Rebecca Cox",
@@ -1922,7 +1922,7 @@
           "year": 2012,
           "date": "2012-09-06",
           "venue": null,
-          "pdf": null,
+          "pdf": "http://d-nb.info/102454866X/04",
           "authors": [
             "Alcherio Martinoli",
             "Francesco Mondada",
@@ -2000,7 +2000,7 @@
     },
     {
       "year": 2011,
-      "count": 7,
+      "count": 6,
       "items": [
         {
           "id": "https://openalex.org/W2116604920",
@@ -2083,19 +2083,6 @@
             "Dustin Reishus",
             "Nikolaus Correll"
           ]
-        },
-        {
-          "id": "https://openalex.org/W2141517821",
-          "doi": null,
-          "title": "Any-com multi-robot path planning",
-          "year": 2011,
-          "date": "2011-01-01",
-          "venue": null,
-          "pdf": null,
-          "authors": [
-            "Nikolaus Correll",
-            "Michael Otte"
-          ]
         }
       ]
     },
@@ -2125,7 +2112,7 @@
           "year": 2010,
           "date": "2010-08-24",
           "venue": "Intelligent Service Robotics",
-          "pdf": "http://hdl.handle.net/1721.1/71699",
+          "pdf": "https://orcid.org/0000-0001-6084-7287",
           "authors": [
             "Nikolaus Correll",
             "Nikos Ar\u00e9chiga",
@@ -2230,7 +2217,7 @@
           "year": 2009,
           "date": "2009-03-01",
           "venue": "IEEE Robotics & Automation Magazine",
-          "pdf": "http://hdl.handle.net/1721.1/51894",
+          "pdf": "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=4799452&isnumber=4799428",
           "authors": [
             "Nikolaus Correll",
             "Alcherio Martinoli"
