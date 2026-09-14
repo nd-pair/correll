@@ -6,7 +6,9 @@ this downloads the OA PDF (arXiv links resolved to the direct PDF) and gathers t
 teaser figures from its first pages. If GitHub Models is available, a vision model chooses the
 most representative one; otherwise a "top-right, earliest page" heuristic is used. The chosen
 figure is resized to WebP in assets/pubs/auto/ and recorded in data/pub_figures.json (normalized-title
--> path). The site prefers curated images and falls back to these. Paywalled papers are skipped.
+-> path). When a PDF yields no usable figure, its first page is rendered instead, so any paper whose
+PDF downloads gets a thumbnail. The site prefers curated images and falls back to these. Paywalled
+papers, and papers with no open-access PDF at all, are skipped.
 
 Deps: pymupdf, pillow (+ optional GitHub Models). Usage: python3 scripts/pull_pub_figures.py [--limit N]
 """
@@ -97,6 +99,37 @@ def candidate_figures(pdf_bytes, max_n=4):
         doc.close()
 
 
+def first_page_png(pdf_bytes):
+    """Render page 1 of the PDF as a PNG, trimmed to its content.
+
+    The fallback when no teaser figure can be found: a picture of the paper's own
+    first page is a far more useful thumbnail than an empty tile, and it is always
+    available once the PDF itself downloads. Margins are cropped away so the text
+    block fills the thumbnail instead of floating in white space.
+    """
+    import pymupdf
+    doc = pymupdf.open(stream=pdf_bytes, filetype="pdf")
+    try:
+        page = doc[0]
+        content = None
+        for rect in ([pymupdf.Rect(b[:4]) for b in page.get_text("blocks")]
+                     + [pymupdf.Rect(d["bbox"]) for d in page.get_image_info()]):
+            if rect.is_empty or rect.is_infinite:
+                continue
+            content = rect if content is None else (content | rect)
+        if content is not None:
+            content += (-8, -8, 8, 8)              # a little breathing room
+            clip = content & page.rect
+        else:
+            clip = page.rect
+        if clip.width < 40 or clip.height < 40:    # nothing sensible to crop to
+            clip = page.rect
+        pix = page.get_pixmap(matrix=pymupdf.Matrix(2, 2), clip=clip, alpha=False)
+        return pix.tobytes("png")
+    finally:
+        doc.close()
+
+
 def choose_with_llm(title, pngs):
     """Ask a vision model which candidate best represents the paper; return an index or 0."""
     import llm
@@ -153,25 +186,30 @@ def main():
     print(f"{len(todo)} papers to try (of {len(works)}; {len(curated)} curated, "
           f"{len(figures)} already auto). Figure pick: {picker}.", file=sys.stderr)
 
-    ok = fail = 0
+    ok = pages = fail = 0
     for w in todo:
         url = pdf_url(w)
         if not url:
             continue
         time.sleep(0.6)  # be polite to arXiv / OA hosts, avoid rate-limit misses
         try:
-            pngs = candidate_figures(download(url))
-            if not pngs:
-                print(f"  --  no figure: {w['title'][:56]}", file=sys.stderr)
-                fail += 1
-                continue
-            idx = choose_with_llm(w["title"], pngs)
+            pdf = download(url)
+            pngs = candidate_figures(pdf)
             dest = os.path.join(FIG_DIR, slug(w["title"]) + ".webp")
-            save_resized(pngs[idx], dest)
+            if pngs:
+                idx = choose_with_llm(w["title"], pngs)
+                save_resized(pngs[idx], dest)
+                ok += 1
+                tag = f"#{idx+1}/{len(pngs)}" if len(pngs) > 1 else "only"
+                print(f"  ok   {os.path.basename(dest)} ({tag})  <-  {w['title'][:48]}",
+                      file=sys.stderr)
+            else:
+                # No usable figure — fall back to a picture of the first page.
+                save_resized(first_page_png(pdf), dest)
+                pages += 1
+                print(f"  page {os.path.basename(dest)} (first page)  <-  {w['title'][:48]}",
+                      file=sys.stderr)
             figures[norm(w["title"])] = os.path.relpath(dest, ROOT)
-            ok += 1
-            tag = f"#{idx+1}/{len(pngs)}" if len(pngs) > 1 else "only"
-            print(f"  ok  {os.path.basename(dest)} ({tag})  <-  {w['title'][:48]}", file=sys.stderr)
         except Exception as e:
             fail += 1
             print(f"  FAIL {w['title'][:52]}: {e}", file=sys.stderr)
@@ -179,7 +217,7 @@ def main():
     out = {"source": "open-access PDFs (teaser figure, LLM- or heuristic-selected)",
            "count": len(figures), "images": figures}
     json.dump(out, open(OUT, "w"), indent=2)
-    print(f"extracted {ok} figures, {fail} misses -> {OUT}")
+    print(f"extracted {ok} figures + {pages} first-page renders, {fail} misses -> {OUT}")
 
 
 if __name__ == "__main__":
