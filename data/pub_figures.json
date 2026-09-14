@@ -35,5 +35,19 @@
     "organizing the aggregate languages for spatial computing": "assets/pubs/auto/organizing-the-aggregate-languages-for-spatial-computing.webp",
     "behavior modes for randomized robotic coverage": "assets/pubs/auto/behavior-modes-for-randomized-robotic-coverage.webp",
     "modeling self organized aggregation in a swarm of miniature robots": "assets/pubs/auto/modeling-self-organized-aggregation-in-a-swarm-of-miniature-.webp"
-  }
+  },
+  "first_page": [
+    "an efficient and versatile means for assembling and manufacturing systems in space",
+    "behavior modes for randomized robotic coverage",
+    "c forest parallel shortest path planning with super linear speedup",
+    "consensus or deadlock consequences of simple behavioral rules for coordination in group decisions",
+    "liquid networks with mixture density heads for efficient imitation learning",
+    "miniaturized circuitry for capacitive self sensing and closed loop control of soft electrostatic transducers",
+    "miniaturized circuitry for capacitive self sensing and closed loop n control of soft electrostatic transducers",
+    "modeling self organized aggregation in a swarm of miniature robots",
+    "optimal decision making in robotic assembly and other trial and error tasks",
+    "organizing the aggregate languages for spatial computing",
+    "robotic materials",
+    "software engineering for robotics future research directions report from the 2023 workshop on software engineering for robotics"
+  ]
 }
