@@ -1,6 +1,6 @@
 {
   "source": "open-access PDFs (teaser figure, LLM- or heuristic-selected)",
-  "count": 21,
+  "count": 33,
   "images": {
     "egocentric tactile and proximity sensors as observation priors for humanoid collision avoidance": "assets/pubs/auto/egocentric-tactile-and-proximity-sensors-as-observation-prio.webp",
     "a versatile robotic hand with 3d perception force sensing for autonomous manipulation": "assets/pubs/auto/a-versatile-robotic-hand-with-3d-perception-force-sensing-fo.webp",
@@ -22,6 +22,18 @@
     "robots assembling machines learning from the world robot summit 2018 assembly challenge": "assets/pubs/auto/robots-assembling-machines-learning-from-the-world-robot-sum.webp",
     "building a distributed robot garden": "assets/pubs/auto/building-a-distributed-robot-garden.webp",
     "mobile manipulation hackathon moving into real world applications": "assets/pubs/auto/mobile-manipulation-hackathon-moving-into-real-world-applica.webp",
-    "distributed autonomous robotic systems the 10th international symposium": "assets/pubs/auto/distributed-autonomous-robotic-systems-the-10th-internationa.webp"
+    "distributed autonomous robotic systems the 10th international symposium": "assets/pubs/auto/distributed-autonomous-robotic-systems-the-10th-internationa.webp",
+    "liquid networks with mixture density heads for efficient imitation learning": "assets/pubs/auto/liquid-networks-with-mixture-density-heads-for-efficient-imi.webp",
+    "software engineering for robotics future research directions report from the 2023 workshop on software engineering for robotics": "assets/pubs/auto/software-engineering-for-robotics-future-research-directions.webp",
+    "optimal decision making in robotic assembly and other trial and error tasks": "assets/pubs/auto/optimal-decision-making-in-robotic-assembly-and-other-trial-.webp",
+    "miniaturized circuitry for capacitive self sensing and closed loop control of soft electrostatic transducers": "assets/pubs/auto/miniaturized-circuitry-for-capacitive-self-sensing-and-close.webp",
+    "miniaturized circuitry for capacitive self sensing and closed loop n control of soft electrostatic transducers": "assets/pubs/auto/miniaturized-circuitry-for-capacitive-self-sensing-and-close.webp",
+    "robotic materials": "assets/pubs/auto/robotic-materials.webp",
+    "consensus or deadlock consequences of simple behavioral rules for coordination in group decisions": "assets/pubs/auto/consensus-or-deadlock-consequences-of-simple-behavioral-rule.webp",
+    "c forest parallel shortest path planning with super linear speedup": "assets/pubs/auto/c-forest-parallel-shortest-path-planning-with-super-linear-s.webp",
+    "an efficient and versatile means for assembling and manufacturing systems in space": "assets/pubs/auto/an-efficient-and-versatile-means-for-assembling-and-manufact.webp",
+    "organizing the aggregate languages for spatial computing": "assets/pubs/auto/organizing-the-aggregate-languages-for-spatial-computing.webp",
+    "behavior modes for randomized robotic coverage": "assets/pubs/auto/behavior-modes-for-randomized-robotic-coverage.webp",
+    "modeling self organized aggregation in a swarm of miniature robots": "assets/pubs/auto/modeling-self-organized-aggregation-in-a-swarm-of-miniature-.webp"
   }
 }

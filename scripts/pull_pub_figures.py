@@ -12,7 +12,8 @@ papers, and papers with no open-access PDF at all, are skipped.
 
 Deps: pymupdf, pillow (+ optional GitHub Models). Usage: python3 scripts/pull_pub_figures.py [--limit N]
 """
-import io, json, os, re, sys, time, urllib.request
+import hashlib, io, json, os, re, sys, time
+import urllib.error, urllib.parse, urllib.request
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
@@ -25,7 +26,18 @@ MAXPX = 480
 MIN_SIDE = 150            # ignore small logos / icons / equations
 MIN_AREA = 240 * 240
 MAX_ASPECT = 6.0
-UA = {"User-Agent": "Mozilla/5.0 (correll-site figure extraction)"}
+UA = {"User-Agent": ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
+                     "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"),
+      "Accept": "application/pdf,text/html;q=0.9,*/*;q=0.8",
+      "Accept-Language": "en-US,en;q=0.9"}
+RETRY_CODES = (429, 500, 502, 503, 504)
+
+# Repositories and publishers advertise the real PDF behind a landing page with a
+# citation_pdf_url meta tag (the Highwire convention EPFL Infoscience, DSpace, CU
+# Scholar, IEEE, Springer and others all emit). Attribute order varies, so match both.
+PDF_META = re.compile(rb"""<meta[^>]+?name=["']citation_pdf_url["'][^>]+?content=["']([^"']+)["']""", re.I)
+PDF_META_REV = re.compile(rb"""<meta[^>]+?content=["']([^"']+)["'][^>]+?name=["']citation_pdf_url["']""", re.I)
+PDF_HREF = re.compile(rb"""href=["']([^"']+?\.pdf(?:\?[^"']*)?)["']""", re.I)
 
 
 def norm(t):
@@ -48,16 +60,48 @@ def pdf_url(w):
     return raw or None
 
 
-def download(url, cap=35 * 1024 * 1024):
-    req = urllib.request.Request(url, headers=UA)
-    with urllib.request.urlopen(req, timeout=45) as r:
-        ctype = (r.headers.get("Content-Type") or "").lower()
-        data = r.read(cap + 1)
+def pdf_from_landing(html, base):
+    """Find the PDF behind an HTML landing page, or None."""
+    for pat in (PDF_META, PDF_META_REV):
+        m = pat.search(html)
+        if m:
+            return urllib.parse.urljoin(base, m.group(1).decode("utf-8", "replace"))
+    m = PDF_HREF.search(html)
+    if m:
+        return urllib.parse.urljoin(base, m.group(1).decode("utf-8", "replace"))
+    return None
+
+
+def download(url, cap=35 * 1024 * 1024, _followed=False):
+    """Fetch a PDF.
+
+    Many of the open-access links OpenAlex gives are landing pages rather than files,
+    so an HTML response is followed once to the PDF it advertises. Transient server
+    errors get one retry; a hard 403 is the publisher refusing us and is left alone.
+    """
+    for attempt in (1, 2):
+        try:
+            req = urllib.request.Request(url, headers=UA)
+            with urllib.request.urlopen(req, timeout=45) as r:
+                final = r.geturl()
+                ctype = (r.headers.get("Content-Type") or "").lower()
+                data = r.read(cap + 1)
+            break
+        except urllib.error.HTTPError as e:
+            if e.code in RETRY_CODES and attempt == 1:
+                time.sleep(3)
+                continue
+            raise
     if len(data) > cap:
         raise ValueError("pdf too large")
-    if b"%PDF" not in data[:1024] and "pdf" not in ctype:
-        raise ValueError(f"not a pdf ({ctype})")
-    return data
+    if b"%PDF" in data[:1024] or "pdf" in ctype:
+        return data
+    if not _followed:
+        target = pdf_from_landing(data, final)
+        if target and target != url:
+            time.sleep(0.6)
+            return download(target, cap, _followed=True)
+    raise ValueError(f"not a pdf ({ctype})")
 
 
 def candidate_figures(pdf_bytes, max_n=4):
@@ -186,6 +230,10 @@ def main():
     print(f"{len(todo)} papers to try (of {len(works)}; {len(curated)} curated, "
           f"{len(figures)} already auto). Figure pick: {picker}.", file=sys.stderr)
 
+    # Two papers can slug to the same filename (a preprint and its published version,
+    # say). Remember who owns each destination so the second does not overwrite the first.
+    owner = {os.path.join(ROOT, rel): key for key, rel in figures.items()}
+
     ok = pages = fail = 0
     for w in todo:
         url = pdf_url(w)
@@ -195,7 +243,13 @@ def main():
         try:
             pdf = download(url)
             pngs = candidate_figures(pdf)
+            key = norm(w["title"])
             dest = os.path.join(FIG_DIR, slug(w["title"]) + ".webp")
+            if owner.get(dest, key) != key:
+                dest = os.path.join(
+                    FIG_DIR,
+                    f"{slug(w['title'])}-{hashlib.sha1(key.encode()).hexdigest()[:6]}.webp")
+            owner[dest] = key
             if pngs:
                 idx = choose_with_llm(w["title"], pngs)
                 save_resized(pngs[idx], dest)
@@ -209,7 +263,7 @@ def main():
                 pages += 1
                 print(f"  page {os.path.basename(dest)} (first page)  <-  {w['title'][:48]}",
                       file=sys.stderr)
-            figures[norm(w["title"])] = os.path.relpath(dest, ROOT)
+            figures[key] = os.path.relpath(dest, ROOT)
         except Exception as e:
             fail += 1
             print(f"  FAIL {w['title'][:52]}: {e}", file=sys.stderr)

@@ -87,8 +87,9 @@ python3 scripts/pull_pub_teasers.py  # one-line teaser per paper from its abstra
   The chosen figure is rendered onto white, resized into `assets/pubs/auto/` as WebP, and recorded
   in `data/pub_figures.json`. When a PDF yields no usable figure, its **first page** is rendered
   instead (cropped to the text block, so the margins don't eat the thumbnail) — so every paper whose
-  PDF downloads gets a picture. Paywalled papers, and papers with no open-access PDF at all, are
-  skipped. The build merges the two maps with the **curated image winning** over the auto figure,
+  PDF downloads gets a picture. Many "open-access" links are landing pages rather than files, so an
+  HTML response is followed once to the PDF it advertises (`citation_pdf_url`, then any `.pdf` link).
+  Paywalled papers, and papers with no open-access PDF at all, are skipped. The build merges the two maps with the **curated image winning** over the auto figure,
   and falls back to a neutral tile when neither exists.
 - **`pull_pub_teasers.py`** writes a one-line teaser for each paper from its OpenAlex abstract
   (`data/abstracts.json`) using the Claude API, cached in `data/pub_teasers.json`. Incremental —
