@@ -1,6 +1,6 @@
 {
   "source": "open-access PDFs (teaser figure, LLM- or heuristic-selected)",
-  "count": 47,
+  "count": 49,
   "images": {
     "egocentric tactile and proximity sensors as observation priors for humanoid collision avoidance": "assets/pubs/auto/egocentric-tactile-and-proximity-sensors-as-observation-prio.webp",
     "liquid networks with mixture density heads for efficient imitation learning": "assets/pubs/auto/liquid-networks-with-mixture-density-heads-for-efficient-imi.webp",
@@ -48,7 +48,9 @@
     "towards optimal control of self organized robotic inspection systems": "assets/pubs/auto/towards-optimal-control-of-self-organized-robotic-inspection.webp",
     "self organized embedded sensor actuator networks for smart turbines": "assets/pubs/auto/self-organized-embedded-sensor-actuator-networks-for-smart-t.webp",
     "collective inspection of regular structures using a swarm of miniature robots": "assets/pubs/auto/collective-inspection-of-regular-structures-using-a-swarm-of.webp",
-    "6 dof visual servoing using the lie group of affine transformations": "assets/pubs/auto/6-dof-visual-servoing-using-the-lie-group-of-affine-transfor.webp"
+    "6 dof visual servoing using the lie group of affine transformations": "assets/pubs/auto/6-dof-visual-servoing-using-the-lie-group-of-affine-transfor.webp",
+    "building a distributed robot garden": "assets/pubs/auto/building-a-distributed-robot-garden.webp",
+    "multi modal prosthetic fingertip sensor with proximity contact and force localization capabilities": "assets/pubs/auto/multi-modal-prosthetic-fingertip-sensor-with-proximity-conta.webp"
   },
   "first_page": [
     "6 dof visual servoing using the lie group of affine transformations",

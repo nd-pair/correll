@@ -325,6 +325,35 @@ def save_resized(png_bytes, dest):
     im.save(dest, "WEBP", quality=78, method=6)
 
 
+def adopt_orphans(figures, works, curated):
+    """Take ownership of renders sitting in FIG_DIR that the index does not mention.
+
+    Files and index can drift apart — a run killed before an image was recorded, a
+    retry that failed after its predecessor had been forgotten. The filename is
+    slug(title), so the mapping can always be rebuilt; without this the paper shows a
+    neutral tile even though its picture is right there on disk, and the next run
+    downloads the PDF all over again.
+    """
+    if not os.path.isdir(FIG_DIR):
+        return 0
+    referenced = {os.path.basename(rel) for rel in figures.values()}
+    by_slug = {}
+    for w in works:
+        by_slug.setdefault(slug(w["title"]), []).append(w["title"])
+    adopted = 0
+    for fn in sorted(os.listdir(FIG_DIR)):
+        if not fn.endswith(".webp") or fn in referenced:
+            continue
+        stem = re.sub(r"-[0-9a-f]{6}$", "", fn[:-5])   # strip a collision suffix
+        for title in by_slug.get(stem, []):
+            key = norm(title)
+            if key in curated or key in figures:
+                continue
+            figures[key] = os.path.relpath(os.path.join(FIG_DIR, fn), ROOT)
+            adopted += 1
+    return adopted
+
+
 def write_index(figures, page_renders, path=None):
     """Persist the title -> image index.
 
@@ -359,15 +388,20 @@ def main():
             if os.path.exists(os.path.join(ROOT, rel)):
                 figures[k] = rel
         page_renders = {k for k in cached.get("first_page", []) if k in figures}
-    if upgrade:
-        # Re-try only the papers currently showing a picture of their first page, to see
-        # whether an improved scan can find them a real figure. Everything else is kept.
-        for k in page_renders:
-            figures.pop(k, None)
+    # Re-try only the papers currently showing a picture of their first page, to see
+    # whether an improved scan can find them a real figure. Their existing entries stay
+    # in place: a retry that fails must leave the paper with the picture it already had.
+    retry = set(page_renders) if upgrade else set()
 
     works = [it for g in pubs.get("years", []) for it in g.get("items", [])]
-    todo = [w for w in works if norm(w["title"]) not in curated
-            and norm(w["title"]) not in figures and (w.get("pdfs") or w.get("pdf") or w.get("doi"))]
+    adopted = adopt_orphans(figures, works, curated)
+    if adopted:
+        print(f"adopted {adopted} render(s) already on disk but missing from the index",
+              file=sys.stderr)
+    todo = [w for w in works
+            if norm(w["title"]) not in curated
+            and (norm(w["title"]) not in figures or norm(w["title"]) in retry)
+            and (w.get("pdfs") or w.get("pdf") or w.get("doi"))]
     if limit:
         todo = todo[:limit]
     import llm
