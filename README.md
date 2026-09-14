@@ -89,7 +89,11 @@ python3 scripts/pull_pub_teasers.py  # one-line teaser per paper from its abstra
   instead (cropped to the text block, so the margins don't eat the thumbnail) — so every paper whose
   PDF downloads gets a picture. Many "open-access" links are landing pages rather than files, so an
   HTML response is followed once to the PDF it advertises (`citation_pdf_url`, then any `.pdf` link).
-  Paywalled papers, and papers with no open-access PDF at all, are skipped.
+  A paper is tried at every open-access location OpenAlex knows about, in turn, and then at
+  Europe PMC by DOI — publisher sites are the most bot-hostile place to fetch from (Nature and
+  Elsevier hand a scripted client an interstitial or a 403 even for fully open-access papers),
+  while Europe PMC mirrors those deposits and serves them to anyone. Only papers that no source
+  will release are skipped.
   Figures are looked for twice: first as rasters, then — for older papers, whose figures are
   vector line art carrying no bitmap at all — by their captions, cropping the gap between a
   caption and the text above it down to the drawings inside it. Run with `--upgrade` to revisit

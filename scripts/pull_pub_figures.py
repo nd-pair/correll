@@ -51,16 +51,68 @@ def slug(t):
     return re.sub(r"[^a-z0-9]+", "-", (t or "").lower()).strip("-")[:60] or "paper"
 
 
-def pdf_url(w):
-    """Resolve a work's OA link to a directly-downloadable PDF url (arXiv handled explicitly)."""
-    raw = w.get("pdf") or ""
-    m = re.search(r"arxiv[.:/](\d{4}\.\d{4,5})(v\d+)?", raw, re.I) or \
-        re.search(r"abs/(\d{4}\.\d{4,5})", raw, re.I)
-    if m:
-        return f"https://arxiv.org/pdf/{m.group(1)}"
-    if raw.lower().endswith(".pdf") or "/pdf/" in raw.lower():
-        return raw
-    return raw or None
+EPMC = "https://www.ebi.ac.uk/europepmc/webservices/rest/search"
+
+
+def pdf_urls(w):
+    """Every candidate PDF url for a work, best first (arXiv links resolved to the file)."""
+    out = []
+    for raw in (w.get("pdfs") or [w.get("pdf")]):
+        if not raw:
+            continue
+        m = re.search(r"arxiv[.:/](\d{4}\.\d{4,5})(v\d+)?", raw, re.I) or \
+            re.search(r"abs/(\d{4}\.\d{4,5})", raw, re.I)
+        url = f"https://arxiv.org/pdf/{m.group(1)}" if m else raw
+        if url not in out:
+            out.append(url)
+    return out
+
+
+def europepmc_pdf(doi):
+    """Europe PMC's copy of an open-access paper, if it holds one.
+
+    Publisher sites are the most bot-hostile place to fetch from: Nature, Elsevier and
+    IOP hand a scripted client an HTML interstitial or a 403 even for papers that are
+    fully open access. Europe PMC mirrors those deposits and serves them to anyone, so
+    it is worth asking once the publisher has refused.
+    """
+    if not doi:
+        return None
+    doi = re.sub(r"^https?://(dx\.)?doi\.org/", "", doi).strip()
+    q = urllib.parse.urlencode({"query": f'DOI:"{doi}"', "format": "json",
+                                "pageSize": 1, "resultType": "lite"})
+    try:
+        req = urllib.request.Request(f"{EPMC}?{q}", headers=UA)
+        with urllib.request.urlopen(req, timeout=30) as r:
+            d = json.load(r)
+    except Exception:
+        return None
+    for rec in ((d.get("resultList") or {}).get("result") or []):
+        if rec.get("pmcid") and rec.get("inEPMC") == "Y" and rec.get("hasPDF") == "Y":
+            return f"https://europepmc.org/articles/{rec['pmcid']}?pdf=render"
+    return None
+
+
+def fetch_pdf(w):
+    """Download a work's PDF from the first source that will give it up.
+
+    Returns (bytes, url). Raises ValueError listing what each source said if none will.
+    """
+    tried = []
+    for url in pdf_urls(w):
+        time.sleep(0.6)  # be polite to arXiv / OA hosts, avoid rate-limit misses
+        try:
+            return download(url), url
+        except Exception as e:
+            tried.append(f"{urllib.parse.urlparse(url).netloc or url}: {e}")
+    alt = europepmc_pdf(w.get("doi"))
+    if alt:
+        time.sleep(0.6)
+        try:
+            return download(alt), alt
+        except Exception as e:
+            tried.append(f"europepmc: {e}")
+    raise ValueError("; ".join(tried) or "no open-access pdf")
 
 
 def pdf_from_landing(html, base):
@@ -315,7 +367,7 @@ def main():
 
     works = [it for g in pubs.get("years", []) for it in g.get("items", [])]
     todo = [w for w in works if norm(w["title"]) not in curated
-            and norm(w["title"]) not in figures and w.get("pdf")]
+            and norm(w["title"]) not in figures and (w.get("pdfs") or w.get("pdf") or w.get("doi"))]
     if limit:
         todo = todo[:limit]
     import llm
@@ -329,12 +381,10 @@ def main():
 
     ok = pages = fail = 0
     for w in todo:
-        url = pdf_url(w)
-        if not url:
-            continue
-        time.sleep(0.6)  # be polite to arXiv / OA hosts, avoid rate-limit misses
         try:
-            pdf = download(url)
+            pdf, used = fetch_pdf(w)
+            if urllib.parse.urlparse(used).netloc.endswith("europepmc.org"):
+                print(f"  via  europepmc  <-  {w['title'][:48]}", file=sys.stderr)
             pngs = candidate_figures(pdf) or caption_figures(pdf)
             key = norm(w["title"])
             dest = os.path.join(FIG_DIR, slug(w["title"]) + ".webp")

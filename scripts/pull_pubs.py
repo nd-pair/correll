@@ -30,16 +30,31 @@ def reconstruct_abstract(inv):
     return text[:2000] or None
 
 
-def pick_pdf(w):
-    """Best open-access PDF url for a work, if any (used for automatic figure extraction)."""
+def pick_pdfs(w):
+    """Every open-access url for a work, best first.
+
+    A paper is often deposited in several places, and they are not equally willing to
+    serve a scripted client: a publisher may hand out an HTML interstitial or a 403 for
+    a paper that a repository mirror gives up without complaint. Keep them all so the
+    figure extraction can fall through the list.
+    """
+    out = []
     for key in ("best_oa_location", "primary_location"):
         loc = w.get(key) or {}
         if loc.get("pdf_url"):
-            return loc["pdf_url"]
+            out.append(loc["pdf_url"])
     for loc in (w.get("locations") or []):
         if loc.get("pdf_url"):
-            return loc["pdf_url"]
-    return (w.get("open_access") or {}).get("oa_url")
+            out.append(loc["pdf_url"])
+    oa = (w.get("open_access") or {}).get("oa_url")
+    if oa:
+        out.append(oa)
+    seen, uniq = set(), []
+    for u in out:
+        if u not in seen:
+            seen.add(u)
+            uniq.append(u)
+    return uniq
 
 
 def works_for(aid):
@@ -74,7 +89,7 @@ def main():
                 "title": (w.get("title") or "(untitled)").strip(),
                 "year": w.get("publication_year"), "date": w.get("publication_date"),
                 "venue": src.get("display_name") if src else None,
-                "pdf": pick_pdf(w),
+                "pdf": (pick_pdfs(w) or [None])[0], "pdfs": pick_pdfs(w),
                 "abstract": reconstruct_abstract(w.get("abstract_inverted_index")),
                 "authors": [ (a.get("author") or {}).get("display_name") for a in w.get("authorships", [])
                              if (a.get("author") or {}).get("display_name") ],
