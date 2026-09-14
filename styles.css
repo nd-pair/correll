@@ -8,6 +8,32 @@
  * Documentation: https://webtheme.nd.edu
  */
 
+/* --- hero ---------------------------------------------------------------- */
+
+/* A second image layered over the page header's own, so the hero can cross-fade
+   between lab photographs. It sits below the theme's gradient (z-index 1) and is
+   only ever created by app.js, so the markup and the LCP image stay untouched. */
+.page-image .hero-layer {
+  height: 100%;
+  inset: 0;
+  object-fit: cover;
+  opacity: 0;
+  position: absolute;
+  transition: opacity 1.2s ease;
+  width: 100%;
+  z-index: 0;
+}
+
+.page-image .hero-layer.is-visible {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-image .hero-layer {
+    transition: none;
+  }
+}
+
 /* --- publications ------------------------------------------------------- */
 
 .pub-search {

@@ -15,6 +15,51 @@
     });
   }
 
+  /* Hero: cross-fade between lab photographs.
+     The first image is the one in the markup, so the largest contentful paint is
+     unaffected; the others are only fetched once the page has finished loading,
+     and the whole thing is skipped for visitors who prefer reduced motion. */
+  (function () {
+    var figure = document.querySelector(".page-image[data-hero-rotate]");
+    if (!figure || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    var base = figure.querySelector("img");
+    if (!base) return;
+
+    var extra;
+    try { extra = JSON.parse(figure.getAttribute("data-hero-rotate")); } catch (e) { return; }
+    if (!Array.isArray(extra) || !extra.length) return;
+
+    var shots = [{ src: base.getAttribute("src"), srcset: base.getAttribute("srcset") || "" }]
+      .concat(extra);
+
+    window.addEventListener("load", function () {
+      var layer = new Image();
+      layer.className = "hero-layer";
+      layer.alt = "";
+      layer.sizes = "100vw";
+      layer.decoding = "async";
+      figure.appendChild(layer);
+
+      var i = 0;            // index currently on screen
+      var onLayer = false;  // is the visible image the overlay, or the markup one?
+
+      setInterval(function () {
+        if (document.hidden) return;
+        var next = shots[(i + 1) % shots.length];
+        var target = onLayer ? base : layer;
+        target.srcset = next.srcset || "";
+        target.src = next.src;
+        var show = function () {
+          layer.classList.toggle("is-visible", !onLayer);
+          onLayer = !onLayer;
+          i = (i + 1) % shots.length;
+        };
+        if (target.complete) show();
+        else target.addEventListener("load", show, { once: true });
+      }, 7000);
+    });
+  })();
+
   /* Publications: filter the pre-rendered list as the visitor types. */
   var q = document.getElementById("pub-q");
   if (!q) return;
