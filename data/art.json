@@ -4,7 +4,7 @@
     {
       "title": "Electronic Music",
       "year": "various, 2025",
-      "image": "assets/art/releases.png",
+      "image": "assets/art/releases.webp",
       "body": [
         "Series of electronic music created with Elektron Model:Cycles, an FM-based synthesizer, and Arturia MicroFreak, a hybrid Digital Signal Processor (DSP) synthesizer with analog filters. DSPs have led to a renaissance of fully digital and hybrid synthesizers and beatboxes that dramatically lower the floor of music creation exploiting oscillators and non-linear dynamics. Cover art created by Stable Diffusion."
       ],
@@ -66,7 +66,7 @@
     {
       "title": "flutter",
       "year": "2012, collaboration",
-      "image": "assets/art/flutter.png",
+      "image": "assets/art/flutter.webp",
       "body": [
         "Flutter was created by Halley Profita, Nicholas Farrow, and Nikolaus Correll at the University of Colorado Boulder. An extraordinary fusing of textiles and robotics, Flutter received First Prize for both Best in Show and Most Inclusive and Usable Design at the 2012 International Symposium on Wearable Computer Design Exhibition in Newcastle, England.",
         "Inspired to aid individuals with hearing impairments, Flutter administers vibrotactile feedback in the direction of a loud sound or alarm to help those with hearing loss respond more intuitively to their external environment. It was conceived as an alternative form of assistive technology — an ethereal and functional garment that calls attention to the beauty of the device, not the disability.",

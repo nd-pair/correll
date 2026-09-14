@@ -33,7 +33,7 @@ jobs:
           python -m playwright install --with-deps chromium
       - name: Pull publications from OpenAlex
         env:
-          OPENALEX_MAILTO: nikolaus.correll@gmail.com
+          OPENALEX_MAILTO: ncorrell@nd.edu
         run: python3 scripts/pull_pubs.py
       - name: Extract curated thumbnails from the lab site
         run: python3 scripts/pull_pub_images.py
@@ -47,11 +47,13 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python3 scripts/pull_pub_teasers.py
+      - name: Rebuild the pages from the refreshed data
+        run: python3 scripts/build_site.py
       - name: Commit changes if any
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/publications.json data/abstracts.json data/pub_images.json data/pub_figures.json data/pub_teasers.json assets/pubs
+          git add data/publications.json data/abstracts.json data/pub_images.json data/pub_figures.json data/pub_teasers.json assets/pubs *.html sitemap.xml
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
@@ -61,8 +63,13 @@ jobs:
       # Deploy Pages directly — a push made with GITHUB_TOKEN does not trigger deploy.yml,
       # so this workflow publishes the refreshed content itself.
       - uses: actions/configure-pages@v5
+      - name: Stage the publishable site
+        run: |
+          mkdir -p _site
+          cp *.html styles.css app.js robots.txt sitemap.xml _site/
+          cp -r assets _site/
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: _site
       - id: deployment
         uses: actions/deploy-pages@v4

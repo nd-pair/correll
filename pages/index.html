@@ -1,0 +1,89 @@
+{
+  "title": "Home",
+  "wrapper": "wrapper page--full-width nav-top--false home",
+  "description": "The Correll Laboratory at the University of Notre Dame studies robotic manipulation, robotic materials, and full-stack humanoids. Led by Nikolaus Correll, Viola D. Hank Professor of Aerospace and Mechanical Engineering."
+}
+---
+  <main id="content" class="site-content">
+    <div class="page-header page-header--screen bg--dark">
+      <figure class="page-image bg--gradient bg--brand-blue">
+        <img src="assets/hero/battery.webp"
+             srcset="assets/hero/battery-800.webp 800w, assets/hero/battery.webp 1600w"
+             sizes="100vw" width="1600" height="1064" alt="" fetchpriority="high" decoding="async">
+      </figure>
+      <div class="page-title-wrapper">
+        <h1 class="page-title page-title--sm">Robotic manipulation, robotic materials, and full-stack humanoids</h1>
+        <p class="page-lede">The Correll Laboratory of Nikolaus Correll, Viola D. Hank Professor of Aerospace and Mechanical Engineering at the University of Notre Dame.</p>
+      </div>
+    </div>
+
+    <div class="page-primary">
+      <div class="section">
+        <h2>What we work on</h2>
+        <p>We investigate robotic manipulation, to give robots human-like object manipulation skills,
+          and robotic materials &mdash; composite materials that embed sensing, actuation, computation
+          and communication, such as robotic muscles, skin and bones. The two strands now come together
+          in full-stack humanoid development.</p>
+        <p>Our alumni have become tenure-track professors at R1 universities, graduate students and
+          post-docs at the world's premier research universities, and engineers and scientists at
+          leading companies.</p>
+        <p class="btn-list">
+          <a class="btn btn--cta" href="publications.html">Read our publications</a>
+          <a class="btn btn--secondary" href="people.html">Meet the team</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="page-secondary full-width">
+      <section class="section">
+        <h2 class="section-title">Research areas</h2>
+        <ul class="grid grid-md-3 list--unstyled">
+          <li class="card-container">
+            <div class="card card--figure">
+              <figure class="card-image"><img src="assets/pubs/deligrasp.webp" alt="" width="328" height="480" loading="lazy" decoding="async"></figure>
+              <div class="card-body">
+                <h3 class="card-title">Robotic manipulation</h3>
+                <p class="card-summary">Giving robots human-like object manipulation skills through
+                  perception, learning and force-aware control.</p>
+              </div>
+            </div>
+          </li>
+          <li class="card-container">
+            <div class="card card--figure">
+              <figure class="card-image"><img src="assets/pubs/forcesensors.webp" alt="" width="480" height="313" loading="lazy" decoding="async"></figure>
+              <div class="card-body">
+                <h3 class="card-title">Robotic materials</h3>
+                <p class="card-summary">Composite materials that embed sensing, actuation, computation
+                  and communication &mdash; robotic muscles, skin and bones.</p>
+              </div>
+            </div>
+          </li>
+          <li class="card-container">
+            <div class="card card--figure">
+              <figure class="card-image"><img src="assets/hero/xlerobot-800.webp" alt="" width="800" height="457" loading="lazy" decoding="async"></figure>
+              <div class="card-body">
+                <h3 class="card-title">Full-stack humanoids</h3>
+                <p class="card-summary">Bringing manipulation and robotic materials together toward
+                  capable, general-purpose humanoid systems.</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section bg--sky-blue-light">
+        <h2 class="section-title">Recent publications</h2>
+        <ul class="grid grid-sm-2 grid-ml-4 list--unstyled">
+{{RECENT_PUBLICATIONS}}
+        </ul>
+        <p class="btn-list"><a class="btn btn--more" href="publications.html">All publications</a></p>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Videos</h2>
+        <ul class="grid grid-md-3 list--unstyled">
+{{VIDEOS}}
+        </ul>
+      </section>
+    </div>
+  </main>

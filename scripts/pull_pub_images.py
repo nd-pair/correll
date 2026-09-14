@@ -78,18 +78,20 @@ def extract_rows():
 
 
 def save_image(url, dest):
+    """Download a thumbnail and store it as a resized WebP (smaller = faster pages)."""
     req = urllib.request.Request(url, headers={"User-Agent": "correll-site image sync"})
     with urllib.request.urlopen(req, timeout=60) as r:
         data = r.read()
-    with open(dest, "wb") as f:
-        f.write(data)
-    try:
-        from PIL import Image
-        im = Image.open(dest)
-        im.thumbnail((MAXPX, MAXPX))
-        im.save(dest)
-    except Exception as e:
-        print(f"    (resize skipped: {e})", file=sys.stderr)
+    from PIL import Image
+    import io
+    im = Image.open(io.BytesIO(data))
+    if im.mode in ("RGBA", "LA", "P"):
+        im = im.convert("RGBA")
+        bg = Image.new("RGBA", im.size, (255, 255, 255, 255))  # flatten onto white
+        im = Image.alpha_composite(bg, im)
+    im = im.convert("RGB")
+    im.thumbnail((MAXPX, MAXPX))
+    im.save(dest, "WEBP", quality=78, method=6)
 
 
 def main():
@@ -104,7 +106,7 @@ def main():
     images = {}
     for r in rows:
         orig = to_original(r["path"])
-        fn = os.path.basename(orig)
+        fn = os.path.splitext(os.path.basename(orig))[0] + ".webp"
         dest = os.path.join(PUB_DIR, fn)
         url = ORIGIN + orig
         try:

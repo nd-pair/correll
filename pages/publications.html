@@ -1,0 +1,32 @@
+{
+  "title": "Publications",
+  "description": "Peer-reviewed publications of the Correll Laboratory at the University of Notre Dame, covering robotic manipulation, robotic materials and humanoid robotics."
+}
+---
+  <main id="content" class="site-content">
+    <div class="page-header">
+      <div class="page-title-wrapper">
+        <nav aria-label="Breadcrumbs" class="breadcrumbs"><ol><li><a href="index.html">Home</a></li><li aria-current="page">Publications</li></ol></nav>
+        <h1 class="page-title page-title--sm">Publications</h1>
+        <p class="page-lede">{{PUBLICATIONS_SUMMARY}}</p>
+      </div>
+    </div>
+
+    <div class="page-primary">
+      <div class="section">
+        <form class="search-form pub-search" role="search" aria-label="Search publications" onsubmit="return false">
+          <label class="visually-hidden" for="pub-q">Search publications by title, author, venue or year</label>
+          <input id="pub-q" class="search-input" type="search" autocomplete="off"
+                 placeholder="Search by title, author, venue or year">
+          <button type="submit" class="search-button btn--action" aria-label="Search publications"><svg class="icon" width="16" height="16" aria-hidden="true"><use xlink:href="#icon-search"></use></svg></button>
+        </form>
+        <p id="pub-status" class="pub-status" role="status"></p>
+        <nav id="nav-anchor" class="nav-anchor" aria-label="Jump to year">
+          <ul>
+      {{PUBLICATIONS_ANCHORS}}
+          </ul>
+        </nav>
+      </div>
+{{PUBLICATIONS_LIST}}
+    </div>
+  </main>

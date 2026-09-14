@@ -5,7 +5,7 @@ For every paper that does NOT already have a hand-curated thumbnail (data/pub_im
 this downloads the OA PDF (arXiv links resolved to the direct PDF) and gathers the candidate
 teaser figures from its first pages. If GitHub Models is available, a vision model chooses the
 most representative one; otherwise a "top-right, earliest page" heuristic is used. The chosen
-figure is resized into assets/pubs/auto/ and recorded in data/pub_figures.json (normalized-title
+figure is resized to WebP in assets/pubs/auto/ and recorded in data/pub_figures.json (normalized-title
 -> path). The site prefers curated images and falls back to these. Paywalled papers are skipped.
 
 Deps: pymupdf, pillow (+ optional GitHub Models). Usage: python3 scripts/pull_pub_figures.py [--limit N]
@@ -124,7 +124,7 @@ def save_resized(png_bytes, dest):
         im = Image.alpha_composite(bg, im)
     im = im.convert("RGB")
     im.thumbnail((MAXPX, MAXPX))
-    im.save(dest, "PNG")
+    im.save(dest, "WEBP", quality=78, method=6)
 
 
 def main():
@@ -166,7 +166,7 @@ def main():
                 fail += 1
                 continue
             idx = choose_with_llm(w["title"], pngs)
-            dest = os.path.join(FIG_DIR, slug(w["title"]) + ".png")
+            dest = os.path.join(FIG_DIR, slug(w["title"]) + ".webp")
             save_resized(pngs[idx], dest)
             figures[norm(w["title"])] = os.path.relpath(dest, ROOT)
             ok += 1

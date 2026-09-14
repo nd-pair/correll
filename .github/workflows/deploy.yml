@@ -18,9 +18,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install build dependencies
+        run: pip install pillow
+      - name: Build pages from partials/ and pages/
+        run: python3 scripts/build_site.py
+      - name: Stage the publishable site
+        run: |
+          mkdir -p _site
+          cp *.html styles.css app.js robots.txt sitemap.xml _site/
+          cp -r assets _site/
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: _site
       - id: deployment
         uses: actions/deploy-pages@v4

@@ -3,7 +3,7 @@
 from OpenAlex (Nikolaus Correll's author ids, incl. split identities), grouped by year."""
 import json, os, re, sys, time, urllib.parse, urllib.request, datetime
 
-MAILTO = os.environ.get("OPENALEX_MAILTO", "nikolaus.correll@gmail.com")
+MAILTO = os.environ.get("OPENALEX_MAILTO", "ncorrell@nd.edu")
 API = "https://api.openalex.org"
 IDS = ["A5047458039", "A5119753651", "A5120513272", "A5128775924", "A5130238936", "A5130284295"]
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

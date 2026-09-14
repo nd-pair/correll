@@ -1,0 +1,36 @@
+<dialog class="global-menu global-menu--search" id="global-menu" aria-modal="true">
+  <div class="global-menu-header">
+    <form method="dialog" class="global-menu-close">
+      <button class="btn btn--action" type="submit" aria-label="Close global menu">
+        <svg aria-hidden="true"><use xlink:href="#icon-close"></use></svg>
+      </button>
+    </form>
+    <div class="global-menu-search">
+      <form method="get" action="https://www.google.com/search" class="search-form" role="search" aria-label="Site search" id="site-search">
+        <input type="search" name="q" class="search-input" placeholder="Search this site" aria-label="Search this site">
+        <button type="submit" class="search-button btn--action" aria-label="Search"><svg class="icon" width="16" height="16" aria-hidden="true"><use xlink:href="#icon-search"></use></svg></button>
+      </form>
+    </div>
+  </div>
+  <div class="global-menu-body">
+    <nav class="nav-site nav-mobile" aria-label="Mobile navigation">
+      <ul class="nav-level-1 depth_1">
+{{MOBILENAV}}
+      </ul>
+    </nav>
+  </div>
+  <div class="global-menu-footer">
+    <div class="global-menu-nav-secondary"></div>
+    <ul class="global-menu-utils list--inline">
+      <li class="light-dark global-menu-utils-lightdark">
+        <label>
+          <span class="switch">
+            <input type="checkbox" name="light-dark" class="light-dark-toggle">
+            <span class="slider"><svg class="icon" data-icon="mode" aria-hidden="true" focusable="false"><use xlink:href="#icon-mode"></use></svg></span>
+          </span>
+          <span>Light/Dark</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+</dialog>
