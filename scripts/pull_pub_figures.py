@@ -273,6 +273,22 @@ def save_resized(png_bytes, dest):
     im.save(dest, "WEBP", quality=78, method=6)
 
 
+def write_index(figures, page_renders, path=None):
+    """Persist the title -> image index.
+
+    Written after every paper, not once at the end: a run that is interrupted part
+    way (or killed by a flaky download) would otherwise leave its images on disk with
+    nothing pointing at them, and the next run would not know they exist.
+    """
+    out = {"source": "open-access PDFs (teaser figure, LLM- or heuristic-selected)",
+           "count": len(figures), "images": figures,
+           "first_page": sorted(page_renders & set(figures))}
+    tmp = (path or OUT) + ".tmp"
+    with open(tmp, "w") as fh:
+        json.dump(out, fh, indent=2)
+    os.replace(tmp, path or OUT)   # atomic: never leave a half-written index behind
+
+
 def main():
     limit = None
     if "--limit" in sys.argv:
@@ -343,14 +359,12 @@ def main():
                 print(f"  page {os.path.basename(dest)} (first page)  <-  {w['title'][:48]}",
                       file=sys.stderr)
             figures[key] = os.path.relpath(dest, ROOT)
+            write_index(figures, page_renders)
         except Exception as e:
             fail += 1
             print(f"  FAIL {w['title'][:52]}: {e}", file=sys.stderr)
 
-    out = {"source": "open-access PDFs (teaser figure, LLM- or heuristic-selected)",
-           "count": len(figures), "images": figures,
-           "first_page": sorted(page_renders & set(figures))}
-    json.dump(out, open(OUT, "w"), indent=2)
+    write_index(figures, page_renders)
     print(f"extracted {ok} figures + {pages} first-page renders, {fail} misses -> {OUT}")
 
 

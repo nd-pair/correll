@@ -1,6 +1,6 @@
 {
   "source": "open-access PDFs (teaser figure, LLM- or heuristic-selected)",
-  "count": 33,
+  "count": 49,
   "images": {
     "egocentric tactile and proximity sensors as observation priors for humanoid collision avoidance": "assets/pubs/auto/egocentric-tactile-and-proximity-sensors-as-observation-prio.webp",
     "a versatile robotic hand with 3d perception force sensing for autonomous manipulation": "assets/pubs/auto/a-versatile-robotic-hand-with-3d-perception-force-sensing-fo.webp",
@@ -34,7 +34,23 @@
     "an efficient and versatile means for assembling and manufacturing systems in space": "assets/pubs/auto/an-efficient-and-versatile-means-for-assembling-and-manufact.webp",
     "organizing the aggregate languages for spatial computing": "assets/pubs/auto/organizing-the-aggregate-languages-for-spatial-computing.webp",
     "behavior modes for randomized robotic coverage": "assets/pubs/auto/behavior-modes-for-randomized-robotic-coverage.webp",
-    "modeling self organized aggregation in a swarm of miniature robots": "assets/pubs/auto/modeling-self-organized-aggregation-in-a-swarm-of-miniature-.webp"
+    "modeling self organized aggregation in a swarm of miniature robots": "assets/pubs/auto/modeling-self-organized-aggregation-in-a-swarm-of-miniature-.webp",
+    "6 dof visual servoing using the lie group of affine transformations": "assets/pubs/auto/6-dof-visual-servoing-using-the-lie-group-of-affine-transfor.webp",
+    "assembly by intelligent scaffolding cu cs 1080 11": "assets/pubs/auto/assembly-by-intelligent-scaffolding-cu-cs-1080-11.webp",
+    "collaborative coverage using a swarm of networked miniature robots": "assets/pubs/auto/collaborative-coverage-using-a-swarm-of-networked-miniature-.webp",
+    "collective inspection of regular structures using a swarm of miniature robots": "assets/pubs/auto/collective-inspection-of-regular-structures-using-a-swarm-of.webp",
+    "modeling and analysis of beaconless and beacon based policies for a swarm intelligent inspection system": "assets/pubs/auto/modeling-and-analysis-of-beaconless-and-beacon-based-policie.webp",
+    "modeling and designing self organized aggregation in a swarm of miniature robots": "assets/pubs/auto/modeling-and-designing-self-organized-aggregation-in-a-swarm.webp",
+    "modeling and optimization of a swarm intelligent inspection system": "assets/pubs/auto/modeling-and-optimization-of-a-swarm-intelligent-inspection-.webp",
+    "multi modal prosthetic fingertip sensor with proximity contact and force localization capabilities": "assets/pubs/auto/multi-modal-prosthetic-fingertip-sensor-with-proximity-conta.webp",
+    "path planning with forests of random trees parallelization with super linear speedup cu cs 1079 11": "assets/pubs/auto/path-planning-with-forests-of-random-trees-parallelization-w.webp",
+    "reducing the barrier to entry of complex robotic software a moveit case study": "assets/pubs/auto/reducing-the-barrier-to-entry-of-complex-robotic-software-a-.webp",
+    "robust distributed coverage using a swarm of miniature robots": "assets/pubs/auto/robust-distributed-coverage-using-a-swarm-of-miniature-robot.webp",
+    "self organized embedded sensor actuator networks for smart turbines": "assets/pubs/auto/self-organized-embedded-sensor-actuator-networks-for-smart-t.webp",
+    "social integration of robots into groups of cockroaches to control self organized choices": "assets/pubs/auto/social-integration-of-robots-into-groups-of-cockroaches-to-c.webp",
+    "swistrack a flexible open source tracking software for multi agent systems": "assets/pubs/auto/swistrack-a-flexible-open-source-tracking-software-for-multi.webp",
+    "system identification of self organizing robotic swarms": "assets/pubs/auto/system-identification-of-self-organizing-robotic-swarms.webp",
+    "towards optimal control of self organized robotic inspection systems": "assets/pubs/auto/towards-optimal-control-of-self-organized-robotic-inspection.webp"
   },
   "first_page": [
     "an efficient and versatile means for assembling and manufacturing systems in space",
