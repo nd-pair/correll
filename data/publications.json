@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-14 12:43 UTC",
+  "generated": "2026-09-15 20:22 UTC",
   "source": "OpenAlex (https://openalex.org)",
   "total": 158,
   "years": [
@@ -15,6 +15,9 @@
           "date": "2026-04-28",
           "venue": "arXiv (Cornell University)",
           "pdf": "https://doi.org/10.48550/arxiv.2604.25554",
+          "pdfs": [
+            "https://doi.org/10.48550/arxiv.2604.25554"
+          ],
           "authors": [
             "Carson Kohlbrenner",
             "Niraj Pudasaini",
@@ -32,6 +35,9 @@
           "date": "2026-03-28",
           "venue": "arXiv (Cornell University)",
           "pdf": "https://doi.org/10.48550/arxiv.2603.27058",
+          "pdfs": [
+            "https://doi.org/10.48550/arxiv.2603.27058"
+          ],
           "authors": [
             "Nikolaus Correll"
           ]
@@ -44,6 +50,9 @@
           "date": "2026-03-19",
           "venue": "arXiv (Cornell University)",
           "pdf": "https://doi.org/10.48550/arxiv.2603.18520",
+          "pdfs": [
+            "https://doi.org/10.48550/arxiv.2603.18520"
+          ],
           "authors": [
             "Zachary Allen",
             "Max Conway",
@@ -60,6 +69,9 @@
           "date": "2026-03-10",
           "venue": "arXiv (Cornell University)",
           "pdf": "https://doi.org/10.48550/arxiv.2603.09051",
+          "pdfs": [
+            "https://doi.org/10.48550/arxiv.2603.09051"
+          ],
           "authors": [
             "Artemis Shaw",
             "Chen Liu",
@@ -79,6 +91,9 @@
           "date": "2026-03-09",
           "venue": "arXiv (Cornell University)",
           "pdf": "https://doi.org/10.48550/arxiv.2603.08961",
+          "pdfs": [
+            "https://doi.org/10.48550/arxiv.2603.08961"
+          ],
           "authors": [
             "Niraj Pudasaini",
             "Yutong Zhang",
@@ -95,6 +110,9 @@
           "date": "2026-03-09",
           "venue": "arXiv (Cornell University)",
           "pdf": "https://doi.org/10.48550/arxiv.2603.08988",
+          "pdfs": [
+            "https://doi.org/10.48550/arxiv.2603.08988"
+          ],
           "authors": [
             "Xuan Tan",
             "William Xie",
@@ -115,6 +133,9 @@
           "date": "2025-05-24",
           "venue": "arXiv (Cornell University)",
           "pdf": "https://arxiv.org/pdf/2505.18792",
+          "pdfs": [
+            "https://arxiv.org/pdf/2505.18792"
+          ],
           "authors": [
             "William Xie",
             "Enora Rice",
@@ -129,6 +150,9 @@
           "date": "2025-05-14",
           "venue": "arXiv (Cornell University)",
           "pdf": "https://arxiv.org/pdf/2505.09731",
+          "pdfs": [
+            "https://arxiv.org/pdf/2505.09731"
+          ],
           "authors": [
             "William Xie",
             "Conway, Max",
@@ -144,6 +168,9 @@
           "date": "2025-04-16",
           "venue": "arXiv (Cornell University)",
           "pdf": "https://arxiv.org/pdf/2504.11827",
+          "pdfs": [
+            "https://arxiv.org/pdf/2504.11827"
+          ],
           "authors": [
             "William Xie",
             "Nikolaus Correll"
@@ -163,6 +190,9 @@
           "date": "2024-12-01",
           "venue": "arXiv (Cornell University)",
           "pdf": "https://arxiv.org/pdf/2412.00689",
+          "pdfs": [
+            "https://arxiv.org/pdf/2412.00689"
+          ],
           "authors": [
             "Carson Kohlbrenner",
             "Murray, Mitchell",
@@ -182,6 +212,9 @@
           "date": "2024-10-17",
           "venue": "arXiv (Cornell University)",
           "pdf": "https://arxiv.org/pdf/2410.13124",
+          "pdfs": [
+            "https://arxiv.org/pdf/2410.13124"
+          ],
           "authors": [
             "William Xie",
             "Stefan Caldararu",
@@ -196,6 +229,9 @@
           "date": "2024-03-12",
           "venue": "arXiv (Cornell University)",
           "pdf": "https://arxiv.org/pdf/2403.07832",
+          "pdfs": [
+            "https://arxiv.org/pdf/2403.07832"
+          ],
           "authors": [
             "William Xie",
             "Valentini, Maria",
@@ -211,6 +247,9 @@
           "date": "2024-02-08",
           "venue": "arXiv (Cornell University)",
           "pdf": "https://arxiv.org/pdf/2402.06018",
+          "pdfs": [
+            "https://arxiv.org/pdf/2402.06018"
+          ],
           "authors": [
             "Nikolaus Correll",
             "Dylan Kriegman",
@@ -226,6 +265,9 @@
           "date": "2024-01-22",
           "venue": "arXiv (Cornell University)",
           "pdf": "https://arxiv.org/pdf/2401.12317",
+          "pdfs": [
+            "https://arxiv.org/pdf/2401.12317"
+          ],
           "authors": [
             "Claire Le Goues",
             "Sebastian Elbaum",
@@ -253,6 +295,10 @@
           "date": "2023-07-31",
           "venue": "Nature Communications",
           "pdf": "https://www.nature.com/articles/s41467-023-39842-2.pdf",
+          "pdfs": [
+            "https://www.nature.com/articles/s41467-023-39842-2.pdf",
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC10390478/pdf/41467_2023_Article_39842.pdf"
+          ],
           "authors": [
             "Brian K. Johnson",
             "Mantas Naris",
@@ -276,6 +322,7 @@
           "date": "2023-04-24",
           "venue": null,
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Hoang Truong",
             "Nikolaus Correll",
@@ -290,6 +337,9 @@
           "date": "2023-01-25",
           "venue": "arXiv (Cornell University)",
           "pdf": "https://arxiv.org/pdf/2301.10846",
+          "pdfs": [
+            "https://arxiv.org/pdf/2301.10846"
+          ],
           "authors": [
             "James Watson",
             "Nikolaus Correll"
@@ -309,6 +359,7 @@
           "date": "2022-10-03",
           "venue": "Journal of Composite Materials",
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Sarah Aguasvivas Manzano",
             "Vani Sundaram",
@@ -327,6 +378,7 @@
           "date": "2022-09-09",
           "venue": "IEEE Transactions on Robotics",
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Vani Sundaram",
             "Khoi Ly",
@@ -346,6 +398,7 @@
           "date": "2022-05-02",
           "venue": "IEEE Transactions on Robotics",
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Khoi Ly",
             "Jatin V. Mayekar",
@@ -363,6 +416,7 @@
           "date": "2022-05-01",
           "venue": "Artificial Life and Robotics",
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Sumeet Batra",
             "John Klingner",
@@ -383,6 +437,9 @@
           "date": "2021-12-20",
           "venue": null,
           "pdf": "https://www.degruyter.com/document/doi/10.1515/9783110562064-010/pdf",
+          "pdfs": [
+            "https://www.degruyter.com/document/doi/10.1515/9783110562064-010/pdf"
+          ],
           "authors": [
             "Nikolaus Correll",
             "Micha\u00ebl Friedman",
@@ -397,6 +454,9 @@
           "date": "2021-03-17",
           "venue": "IEEE Robotics & Automation Magazine",
           "pdf": "https://eprints.whiterose.ac.uk/id/eprint/172917/1/RAM20_Hackathon%20%284%29.pdf",
+          "pdfs": [
+            "https://eprints.whiterose.ac.uk/id/eprint/172917/1/RAM20_Hackathon%20%284%29.pdf"
+          ],
           "authors": [
             "M\u00e1ximo A. Roa",
             "Mehmet R. Do\u011far",
@@ -419,6 +479,9 @@
           "date": "2021-01-04",
           "venue": "arXiv (Cornell University)",
           "pdf": "https://arxiv.org/pdf/2101.01139",
+          "pdfs": [
+            "https://arxiv.org/pdf/2101.01139"
+          ],
           "authors": [
             "Sarah Aguasvivas Manzano",
             "Patricia Xu",
@@ -441,6 +504,9 @@
           "date": "2020-10-01",
           "venue": "Soft Robotics",
           "pdf": "https://arxiv.org/pdf/2009.06852",
+          "pdfs": [
+            "https://arxiv.org/pdf/2009.06852"
+          ],
           "authors": [
             "Khoi Ly",
             "Nicholas Kellaris",
@@ -463,6 +529,9 @@
           "date": "2020-09-14",
           "venue": "arXiv (Cornell University)",
           "pdf": "https://arxiv.org/pdf/2009.06852",
+          "pdfs": [
+            "https://arxiv.org/pdf/2009.06852"
+          ],
           "authors": [
             "Khoi Ly",
             "Nicholas Kellaris",
@@ -485,6 +554,7 @@
           "date": "2020-07-04",
           "venue": "Acta Astronautica",
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Heather Hava",
             "Hanying Zhou",
@@ -504,6 +574,7 @@
           "date": "2020-04-15",
           "venue": "Robotics and Autonomous Systems",
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Nikolaus Correll",
             "Mac Schwager"
@@ -517,6 +588,7 @@
           "date": "2020-03-19",
           "venue": "IEEE Robotics and Automation Letters",
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Brian K. Johnson",
             "Vani Sundaram",
@@ -543,6 +615,9 @@
           "date": "2019-12-26",
           "venue": "Advanced Robotics",
           "pdf": "http://arxiv.org/pdf/1911.05884",
+          "pdfs": [
+            "http://arxiv.org/pdf/1911.05884"
+          ],
           "authors": [
             "Felix von Drigalski",
             "Christian Schlette",
@@ -562,6 +637,7 @@
           "date": "2019-10-04",
           "venue": "Robotics and Autonomous Systems",
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "John Klingner",
             "Nisar Ahmed",
@@ -576,6 +652,7 @@
           "date": "2019-07-07",
           "venue": "ThinkTech (Texas Tech University)",
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Heather Hava",
             "Larissa Zhou",
@@ -598,6 +675,7 @@
           "date": "2019-06-13",
           "venue": "The International Journal of Robotics Research",
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Dana Hughes",
             "Christoffer Heckman",
@@ -612,6 +690,9 @@
           "date": "2019-04-01",
           "venue": "Advances in Mechanical Engineering",
           "pdf": "https://journals.sagepub.com/doi/pdf/10.1177/1687814019844643",
+          "pdfs": [
+            "https://journals.sagepub.com/doi/pdf/10.1177/1687814019844643"
+          ],
           "authors": [
             "Jacob L. Segil",
             "Radhen Patel",
@@ -628,6 +709,9 @@
           "date": "2019-03-25",
           "venue": "arXiv (Cornell University)",
           "pdf": "https://arxiv.org/pdf/1903.10480",
+          "pdfs": [
+            "https://arxiv.org/pdf/1903.10480"
+          ],
           "authors": [
             "Nikolaus Correll",
             "Ray H. Baughman",
@@ -650,6 +734,7 @@
           "date": "2018-10-19",
           "venue": "Elsevier eBooks",
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Nikolaus Correll"
           ]
@@ -662,6 +747,7 @@
           "date": "2018-10-19",
           "venue": "Elsevier eBooks",
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Nozomi Akashi",
             "Iain A. Anderson",
@@ -726,6 +812,7 @@
           "date": "2018-10-12",
           "venue": "Soft Robotics",
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Michael McEvoy",
             "Nikolaus Correll"
@@ -739,6 +826,7 @@
           "date": "2018-10-01",
           "venue": null,
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Cosima Schunk",
             "Levi Pearson",
@@ -758,6 +846,9 @@
           "date": "2018-09-11",
           "venue": "arXiv (Cornell University)",
           "pdf": "https://arxiv.org/pdf/1809.04171",
+          "pdfs": [
+            "https://arxiv.org/pdf/1809.04171"
+          ],
           "authors": [
             "Yang Li",
             "Nikolaus Correll"
@@ -771,6 +862,7 @@
           "date": "2018-04-21",
           "venue": "Autonomous Robots",
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Radhen Patel",
             "Rebecca Cox",
@@ -785,6 +877,7 @@
           "date": "2018-02-27",
           "venue": "Autonomous Robots",
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Michael Otte",
             "Nikolaus Correll"
@@ -798,6 +891,7 @@
           "date": "2018-02-21",
           "venue": "Autonomous Robots",
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Yang Li",
             "John Klingner",
@@ -812,6 +906,7 @@
           "date": "2018-01-30",
           "venue": "IEEE Robotics and Automation Letters",
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Dana Hughes",
             "JOHN LAMMIE",
@@ -826,6 +921,9 @@
           "date": "2018-01-01",
           "venue": "Procedia Manufacturing",
           "pdf": "https://www.sciencedirect.com/science/article/pii/S2351978918305389/pdf",
+          "pdfs": [
+            "https://www.sciencedirect.com/science/article/pii/S2351978918305389/pdf"
+          ],
           "authors": [
             "Sarah Aguasvivas Manzano",
             "Dana Hughes",
@@ -840,6 +938,7 @@
           "date": "2018-01-01",
           "venue": "Communications in computer and information science",
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Radhen Patel",
             "Jacob L. Segil",
@@ -854,6 +953,7 @@
           "date": "2018-01-01",
           "venue": "Communications in computer and information science",
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Radhen Patel",
             "Rebeca Curtis",
@@ -869,6 +969,7 @@
           "date": "2018-01-01",
           "venue": "Springer proceedings in advanced robotics",
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Dana Hughes",
             "Nikolaus Correll"
@@ -888,6 +989,9 @@
           "date": "2017-11-22",
           "venue": "Science Robotics",
           "pdf": "http://infoscience.epfl.ch/record/232608",
+          "pdfs": [
+            "http://infoscience.epfl.ch/record/232608"
+          ],
           "authors": [
             "Yi\u011fit Meng\u00fc\u00e7",
             "Nikolaus Correll",
@@ -903,6 +1007,7 @@
           "date": "2017-11-06",
           "venue": null,
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Nikolaus Correll",
             "Prabal Dutta",
@@ -918,6 +1023,9 @@
           "date": "2017-08-15",
           "venue": "arXiv (Cornell University)",
           "pdf": "https://arxiv.org/pdf/1708.04677",
+          "pdfs": [
+            "https://arxiv.org/pdf/1708.04677"
+          ],
           "authors": [
             "Nikolaus Correll",
             "Prabal Dutta",
@@ -933,6 +1041,7 @@
           "date": "2017-07-24",
           "venue": "Springer proceedings in advanced robotics",
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Timothy M. Caldwell",
             "Nikolaus Correll"
@@ -946,6 +1055,7 @@
           "date": "2017-05-31",
           "venue": "Advanced Engineering Materials",
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Panagiotis Polygerinos",
             "Nikolaus Correll",
@@ -966,6 +1076,7 @@
           "date": "2017-05-01",
           "venue": null,
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Dana Hughes",
             "Alon Krauthammer",
@@ -980,6 +1091,7 @@
           "date": "2017-05-01",
           "venue": null,
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Nicholas Farrow",
             "Lauren McIntire",
@@ -994,6 +1106,9 @@
           "date": "2017-03-30",
           "venue": null,
           "pdf": "https://doi.org/10.64628/aai.mjydkpyx7",
+          "pdfs": [
+            "https://doi.org/10.64628/aai.mjydkpyx7"
+          ],
           "authors": [
             "Nikolaus Correll"
           ]
@@ -1006,6 +1121,9 @@
           "date": "2017-01-24",
           "venue": "Sensors",
           "pdf": "https://www.mdpi.com/1424-8220/17/2/219/pdf?version=1485237318",
+          "pdfs": [
+            "https://www.mdpi.com/1424-8220/17/2/219/pdf?version=1485237318"
+          ],
           "authors": [
             "Dana Hughes",
             "Halley Profita",
@@ -1021,6 +1139,7 @@
           "date": "2017-01-01",
           "venue": null,
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Michael Lightner",
             "Shaun K. Kane",
@@ -1036,6 +1155,7 @@
           "date": "2017-01-01",
           "venue": "National Conference on Artificial Intelligence",
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Rebecca Cox",
             "Nikolaus Correll"
@@ -1049,6 +1169,7 @@
           "date": "2017-01-01",
           "venue": "Springer proceedings in advanced robotics",
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Radhen Patel",
             "Jorge Ca\u00f1ardo Alastuey",
@@ -1069,6 +1190,9 @@
           "date": "2016-10-24",
           "venue": "arXiv (Cornell University)",
           "pdf": "https://arxiv.org/pdf/1610.07671",
+          "pdfs": [
+            "https://arxiv.org/pdf/1610.07671"
+          ],
           "authors": [
             "David Coleman",
             "Nikolaus Correll"
@@ -1082,6 +1206,7 @@
           "date": "2016-10-05",
           "venue": "IEEE Transactions on Automation Science and Engineering",
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Nikolaus Correll",
             "Kostas E. Bekris",
@@ -1103,6 +1228,9 @@
           "date": "2016-09-28",
           "venue": "PLoS ONE",
           "pdf": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0162768&type=printable",
+          "pdfs": [
+            "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0162768&type=printable"
+          ],
           "authors": [
             "Helen F. McCreery",
             "Nikolaus Correll",
@@ -1118,6 +1246,9 @@
           "date": "2016-06-27",
           "venue": null,
           "pdf": "https://doi.org/10.15607/rss.2016.xii.035",
+          "pdfs": [
+            "https://doi.org/10.15607/rss.2016.xii.035"
+          ],
           "authors": [
             "Radhen Patel",
             "Nikolaus Correll"
@@ -1131,6 +1262,9 @@
           "date": "2016-06-11",
           "venue": "arXiv (Cornell University)",
           "pdf": "https://arxiv.org/pdf/1606.03508",
+          "pdfs": [
+            "https://arxiv.org/pdf/1606.03508"
+          ],
           "authors": [
             "Dana Hughes",
             "Nikolaus Correll"
@@ -1144,6 +1278,9 @@
           "date": "2016-06-10",
           "venue": "arXiv (Cornell University)",
           "pdf": "https://arxiv.org/pdf/1606.03508",
+          "pdfs": [
+            "https://arxiv.org/pdf/1606.03508"
+          ],
           "authors": [
             "Dana Hughes",
             "Nikolaus Correll"
@@ -1157,6 +1294,9 @@
           "date": "2016-05-02",
           "venue": "arXiv (Cornell University)",
           "pdf": "https://arxiv.org/pdf/1605.00354",
+          "pdfs": [
+            "https://arxiv.org/pdf/1605.00354"
+          ],
           "authors": [
             "Nicholas Farrow",
             "Yang Li",
@@ -1171,6 +1311,7 @@
           "date": "2016-04-28",
           "venue": "Swarm Intelligence",
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Anshul Kanakia",
             "Behrouz Touri",
@@ -1185,6 +1326,9 @@
           "date": "2016-01-21",
           "venue": "arXiv (Cornell University)",
           "pdf": "http://arxiv.org/pdf/1601.05484.pdf",
+          "pdfs": [
+            "http://arxiv.org/pdf/1601.05484.pdf"
+          ],
           "authors": [
             "Nikolaus Correll",
             "Kostas E. Bekris",
@@ -1206,6 +1350,7 @@
           "date": "2016-01-01",
           "venue": "Lecture notes in computer science",
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Audrey Randall",
             "John Klingner",
@@ -1220,6 +1365,9 @@
           "date": "2016-01-01",
           "venue": "Procedia Technology",
           "pdf": "https://www.sciencedirect.com/science/article/pii/S2212017316303498/pdf",
+          "pdfs": [
+            "https://www.sciencedirect.com/science/article/pii/S2212017316303498/pdf"
+          ],
           "authors": [
             "Michael McEvoy",
             "Nikolaus Correll"
@@ -1233,6 +1381,7 @@
           "date": "2016-01-01",
           "venue": "Springer tracts in advanced robotics",
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Anshul Kanakia",
             "John Klingner",
@@ -1253,6 +1402,7 @@
           "date": "2015-11-12",
           "venue": "Springer tracts in advanced robotics",
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Michael McEvoy",
             "Nikolaus Correll"
@@ -1266,6 +1416,7 @@
           "date": "2015-11-12",
           "venue": "Springer tracts in advanced robotics",
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Timothy M. Caldwell",
             "David Coleman",
@@ -1280,6 +1431,7 @@
           "date": "2015-11-12",
           "venue": "Springer tracts in advanced robotics",
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Erik Komendera",
             "Nikolaus Correll"
@@ -1293,6 +1445,7 @@
           "date": "2015-11-09",
           "venue": null,
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Dana Hughes",
             "Nicholas Farrow",
@@ -1308,6 +1461,7 @@
           "date": "2015-10-19",
           "venue": "The International Journal of Robotics Research",
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Erik Komendera",
             "Nikolaus Correll"
@@ -1321,6 +1475,9 @@
           "date": "2015-09-09",
           "venue": "Bioinspiration & Biomimetics",
           "pdf": "https://iopscience.iop.org/article/10.1088/1748-3190/10/5/055002/pdf",
+          "pdfs": [
+            "https://iopscience.iop.org/article/10.1088/1748-3190/10/5/055002/pdf"
+          ],
           "authors": [
             "Dana Hughes",
             "Nikolaus Correll"
@@ -1334,6 +1491,7 @@
           "date": "2015-09-08",
           "venue": "ACM Transactions on Autonomous and Adaptive Systems",
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Homa Hosseinmardi",
             "Akshay Mysore",
@@ -1350,6 +1508,7 @@
           "date": "2015-09-01",
           "venue": null,
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Nicholas Farrow",
             "Nikolaus Correll"
@@ -1363,6 +1522,7 @@
           "date": "2015-03-19",
           "venue": "Science",
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Michael McEvoy",
             "Nikolaus Correll"
@@ -1376,6 +1536,7 @@
           "date": "2015-01-12",
           "venue": null,
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Halley Profita",
             "Nicholas Farrow",
@@ -1390,6 +1551,7 @@
           "date": "2015-01-01",
           "venue": null,
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Nikolaus Correll",
             "Heiko Hamann"
@@ -1409,6 +1571,9 @@
           "date": "2014-11-04",
           "venue": "arXiv (Cornell University)",
           "pdf": "https://arxiv.org/pdf/1411.0802",
+          "pdfs": [
+            "https://arxiv.org/pdf/1411.0802"
+          ],
           "authors": [
             "Lu Ma",
             "Mahsa Ghafarianzadeh",
@@ -1425,6 +1590,9 @@
           "date": "2014-10-08",
           "venue": "arXiv (Cornell University)",
           "pdf": "https://arxiv.org/pdf/1410.1950",
+          "pdfs": [
+            "https://arxiv.org/pdf/1410.1950"
+          ],
           "authors": [
             "David Coleman",
             "Ioan A. \u015eucan",
@@ -1441,6 +1609,7 @@
           "date": "2014-09-13",
           "venue": null,
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Dana Hughes",
             "Halley Profita",
@@ -1455,6 +1624,9 @@
           "date": "2014-09-01",
           "venue": null,
           "pdf": "https://arxiv.org/pdf/1402.2735",
+          "pdfs": [
+            "https://arxiv.org/pdf/1402.2735"
+          ],
           "authors": [
             "Timothy M. Caldwell",
             "Dave Coleman",
@@ -1469,6 +1641,7 @@
           "date": "2014-09-01",
           "venue": null,
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "John Klingner",
             "Anshul Kanakia",
@@ -1485,6 +1658,9 @@
           "date": "2014-06-01",
           "venue": "Zenodo (CERN European Organization for Nuclear Research)",
           "pdf": "https://zenodo.org/record/1178786",
+          "pdfs": [
+            "https://zenodo.org/record/1178786"
+          ],
           "authors": [
             "Jiffer Harriman",
             "Michael Theodore",
@@ -1500,6 +1676,7 @@
           "date": "2014-05-23",
           "venue": null,
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Nikolaus Correll"
           ]
@@ -1512,6 +1689,9 @@
           "date": "2014-05-11",
           "venue": "Proceedings of the International Conference on Automated Planning and Scheduling",
           "pdf": "https://ojs.aaai.org/index.php/ICAPS/article/download/13660/13509",
+          "pdfs": [
+            "https://ojs.aaai.org/index.php/ICAPS/article/download/13660/13509"
+          ],
           "authors": [
             "Michael Otte",
             "Nikolaus Correll"
@@ -1525,6 +1705,7 @@
           "date": "2014-05-01",
           "venue": null,
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Nicholas Farrow",
             "John Klingner",
@@ -1540,6 +1721,7 @@
           "date": "2014-05-01",
           "venue": null,
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Dana Hughes",
             "Nikolaus Correll"
@@ -1553,6 +1735,7 @@
           "date": "2014-04-14",
           "venue": "NASA STI Repository (National Aeronautics and Space Administration)",
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Erik Komendera",
             "John T. Dorsey",
@@ -1568,6 +1751,7 @@
           "date": "2014-04-01",
           "venue": null,
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Michael McEvoy",
             "Erik Komendera",
@@ -1582,6 +1766,7 @@
           "date": "2014-04-01",
           "venue": null,
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Michael Kasper",
             "Nikolaus Correll",
@@ -1596,6 +1781,7 @@
           "date": "2014-03-10",
           "venue": "Journal of Composite Materials",
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Michael McEvoy",
             "Nikolaus Correll"
@@ -1609,6 +1795,7 @@
           "date": "2014-02-16",
           "venue": null,
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Nicholas Farrow",
             "Naren Sivagnanadasan",
@@ -1623,6 +1810,9 @@
           "date": "2014-02-11",
           "venue": "arXiv (Cornell University)",
           "pdf": "https://arxiv.org/pdf/1402.2735",
+          "pdfs": [
+            "https://arxiv.org/pdf/1402.2735"
+          ],
           "authors": [
             "Timothy M. Caldwell",
             "Dave Coleman",
@@ -1637,6 +1827,9 @@
           "date": "2014-01-01",
           "venue": "Applied Mechanics and Materials",
           "pdf": "https://doi.org/10.4028/www.scientific.net/amm.490-491.1424",
+          "pdfs": [
+            "https://doi.org/10.4028/www.scientific.net/amm.490-491.1424"
+          ],
           "authors": [
             "Jae Heon Jeong",
             "Nikolaus Correll"
@@ -1650,6 +1843,7 @@
           "date": "2014-01-01",
           "venue": null,
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Jeeeun Kim",
             "Mike Kasper",
@@ -1665,6 +1859,9 @@
           "date": "2014-01-01",
           "venue": "Aisberg (University of Bergamo)",
           "pdf": "http://hdl.handle.net/10446/87657",
+          "pdfs": [
+            "http://hdl.handle.net/10446/87657"
+          ],
           "authors": [
             "David Coleman",
             "Ioan A. \u015eucan",
@@ -1680,6 +1877,7 @@
           "date": "2014-01-01",
           "venue": "Springer tracts in advanced robotics",
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Ken Sugawara",
             "Nikolaus Correll",
@@ -1694,6 +1892,7 @@
           "date": "2014-01-01",
           "venue": "Springer tracts in advanced robotics",
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Nikolaus Correll",
             "Chris Wailes",
@@ -1714,6 +1913,7 @@
           "date": "2013-12-06",
           "venue": null,
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Nikolaus Correll"
           ]
@@ -1726,6 +1926,7 @@
           "date": "2013-11-01",
           "venue": null,
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Michael Otte",
             "Nikolaus Correll",
@@ -1740,6 +1941,9 @@
           "date": "2013-08-20",
           "venue": "Springer tracts in advanced robotics",
           "pdf": "https://hdl.handle.net/1721.1/137188",
+          "pdfs": [
+            "https://hdl.handle.net/1721.1/137188"
+          ],
           "authors": [
             "Nikolaus Correll",
             "\u00c7a\u011fda\u015f D. \u00d6nal",
@@ -1756,6 +1960,7 @@
           "date": "2013-08-20",
           "venue": "Springer tracts in advanced robotics",
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Michael Otte",
             "Nikolaus Correll"
@@ -1769,6 +1974,7 @@
           "date": "2013-05-23",
           "venue": "Pan Stanford eBooks",
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Gr\u00e9gory Mermoud",
             "Amanda Prorok",
@@ -1786,6 +1992,7 @@
           "date": "2013-05-23",
           "venue": null,
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Nikolaus Correll",
             "Daniela Rus"
@@ -1799,6 +2006,7 @@
           "date": "2013-04-01",
           "venue": null,
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Erik Komendera",
             "Dustin Reishus",
@@ -1813,6 +2021,7 @@
           "date": "2013-02-10",
           "venue": null,
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Nikolaus Correll",
             "Nicholas Farrow",
@@ -1827,6 +2036,7 @@
           "date": "2013-01-31",
           "venue": "IEEE Transactions on Robotics",
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Micha\u00ebl Otte",
             "Nikolaus Correll"
@@ -1840,6 +2050,7 @@
           "date": "2013-01-01",
           "venue": null,
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Jaeheon Jeong",
             "J. Mulligan",
@@ -1860,6 +2071,7 @@
           "date": "2012-11-01",
           "venue": null,
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Shang Ma",
             "Homa Hosseinmardi",
@@ -1876,6 +2088,7 @@
           "date": "2012-10-19",
           "venue": "IEEE Transactions on Education",
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Nikolaus Correll",
             "Rowan Wing",
@@ -1890,6 +2103,7 @@
           "date": "2012-09-21",
           "venue": "IGI Global eBooks",
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Jacob Beal",
             "Stefan Dulman",
@@ -1906,6 +2120,9 @@
           "date": "2012-09-11",
           "venue": null,
           "pdf": "https://ntrs.nasa.gov/api/citations/20120014279/downloads/20120014279.pdf",
+          "pdfs": [
+            "https://ntrs.nasa.gov/api/citations/20120014279/downloads/20120014279.pdf"
+          ],
           "authors": [
             "John T. Dorsey",
             "William R. Doggett",
@@ -1923,6 +2140,9 @@
           "date": "2012-09-06",
           "venue": null,
           "pdf": "http://d-nb.info/102454866X/04",
+          "pdfs": [
+            "http://d-nb.info/102454866X/04"
+          ],
           "authors": [
             "Alcherio Martinoli",
             "Francesco Mondada",
@@ -1942,6 +2162,9 @@
           "date": "2012-09-05",
           "venue": "Springer tracts in advanced robotics",
           "pdf": "http://infoscience.epfl.ch/record/181563",
+          "pdfs": [
+            "http://infoscience.epfl.ch/record/181563"
+          ],
           "authors": [
             "Alcherio Martinoli",
             "Francesco Mondada",
@@ -1961,6 +2184,7 @@
           "date": "2012-09-05",
           "venue": "Springer tracts in advanced robotics",
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Michael Otte",
             "Nikolaus Correll"
@@ -1974,6 +2198,9 @@
           "date": "2012-02-24",
           "venue": "arXiv (Cornell University)",
           "pdf": "https://arxiv.org/pdf/1202.5509",
+          "pdfs": [
+            "https://arxiv.org/pdf/1202.5509"
+          ],
           "authors": [
             "Jacob Beal",
             "Stefan Dulman",
@@ -1990,6 +2217,7 @@
           "date": "2012-01-01",
           "venue": "Lecture notes in computer science",
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Homa Hosseinmardi",
             "Nikolaus Correll",
@@ -2010,6 +2238,7 @@
           "date": "2011-09-01",
           "venue": "2011 IEEE/RSJ International Conference on Intelligent Robots and Systems",
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Vijeth Rai",
             "Anne van Rossum",
@@ -2024,6 +2253,7 @@
           "date": "2011-05-01",
           "venue": null,
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Anna Derbakova",
             "Nikolaus Correll",
@@ -2038,6 +2268,9 @@
           "date": "2011-04-01",
           "venue": "The International Journal of Robotics Research",
           "pdf": "http://infoscience.epfl.ch/record/166964",
+          "pdfs": [
+            "http://infoscience.epfl.ch/record/166964"
+          ],
           "authors": [
             "Nikolaus Correll",
             "Alcherio Martinoli"
@@ -2051,6 +2284,7 @@
           "date": "2011-02-08",
           "venue": "The International Journal of Robotics Research",
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Amanda Prorok",
             "Nikolaus Correll",
@@ -2065,6 +2299,9 @@
           "date": "2011-01-01",
           "venue": "CU Scholar (University of Colorado Boulder)",
           "pdf": "https://scholar.colorado.edu/csci_techreports/1008",
+          "pdfs": [
+            "https://scholar.colorado.edu/csci_techreports/1008"
+          ],
           "authors": [
             "Michael Otte",
             "Nikolaus Correll"
@@ -2078,6 +2315,9 @@
           "date": "2011-01-01",
           "venue": "CU Scholar (University of Colorado Boulder)",
           "pdf": "https://scholar.colorado.edu/csci_techreports/1009",
+          "pdfs": [
+            "https://scholar.colorado.edu/csci_techreports/1009"
+          ],
           "authors": [
             "Erik Komendera",
             "Dustin Reishus",
@@ -2098,6 +2338,7 @@
           "date": "2010-10-01",
           "venue": null,
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Dwight Sutton",
             "Phil Klein",
@@ -2113,6 +2354,9 @@
           "date": "2010-08-24",
           "venue": "Intelligent Service Robotics",
           "pdf": "https://orcid.org/0000-0001-6084-7287",
+          "pdfs": [
+            "https://orcid.org/0000-0001-6084-7287"
+          ],
           "authors": [
             "Nikolaus Correll",
             "Nikos Ar\u00e9chiga",
@@ -2142,6 +2386,9 @@
           "date": "2010-08-08",
           "venue": "Neural Computing and Applications",
           "pdf": "https://link.springer.com/content/pdf/10.1007/s00521-010-0440-2.pdf",
+          "pdfs": [
+            "https://link.springer.com/content/pdf/10.1007/s00521-010-0440-2.pdf"
+          ],
           "authors": [
             "Nikolaus Correll",
             "Roderich Gro\u00df"
@@ -2155,6 +2402,7 @@
           "date": "2010-01-01",
           "venue": "CU Scholar (University of Colorado Boulder)",
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Neeti Wagle",
             "Nikolaus Correll"
@@ -2174,6 +2422,9 @@
           "date": "2009-10-01",
           "venue": null,
           "pdf": "https://dspace.mit.edu/bitstreams/61c3127c-2b02-4010-b31f-6f91fea22ac2/download",
+          "pdfs": [
+            "https://dspace.mit.edu/bitstreams/61c3127c-2b02-4010-b31f-6f91fea22ac2/download"
+          ],
           "authors": [
             "Nikolaus Correll",
             "Nikos Ar\u00e9chiga",
@@ -2203,6 +2454,9 @@
           "date": "2009-05-01",
           "venue": null,
           "pdf": "http://hdl.handle.net/1721.1/53729",
+          "pdfs": [
+            "http://hdl.handle.net/1721.1/53729"
+          ],
           "authors": [
             "Nikolaus Correll",
             "Jonathan Bachrach",
@@ -2218,6 +2472,9 @@
           "date": "2009-03-01",
           "venue": "IEEE Robotics & Automation Magazine",
           "pdf": "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=4799452&isnumber=4799428",
+          "pdfs": [
+            "http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=4799452&isnumber=4799428"
+          ],
           "authors": [
             "Nikolaus Correll",
             "Alcherio Martinoli"
@@ -2231,6 +2488,9 @@
           "date": "2009-01-01",
           "venue": null,
           "pdf": "http://eudl.eu/pdf/10.4108/ICST.ROBOCOMM2009.5863",
+          "pdfs": [
+            "http://eudl.eu/pdf/10.4108/ICST.ROBOCOMM2009.5863"
+          ],
           "authors": [
             "Jacob Beal",
             "Nikolaus Correll",
@@ -2252,6 +2512,9 @@
           "date": "2008-11-26",
           "venue": "Robotics and Autonomous Systems",
           "pdf": "http://infoscience.epfl.ch/record/134817",
+          "pdfs": [
+            "http://infoscience.epfl.ch/record/134817"
+          ],
           "authors": [
             "Samuel Rutishauser",
             "Nikolaus Correll",
@@ -2266,6 +2529,7 @@
           "date": "2008-11-05",
           "venue": null,
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Hari Balakrishnan",
             "Nikolaus Correll",
@@ -2283,6 +2547,7 @@
           "date": "2008-09-24",
           "venue": "IEEE Control Systems",
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Nikolaus Correll"
           ]
@@ -2295,6 +2560,9 @@
           "date": "2008-09-01",
           "venue": null,
           "pdf": "http://infoscience.epfl.ch/record/125704",
+          "pdfs": [
+            "http://infoscience.epfl.ch/record/125704"
+          ],
           "authors": [
             "Thomas Lochmatter",
             "Pierre Roduit",
@@ -2312,6 +2580,7 @@
           "date": "2008-08-12",
           "venue": "Lecture notes in computer science",
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Nikolaus Correll",
             "Mac Schwager",
@@ -2326,6 +2595,9 @@
           "date": "2008-05-01",
           "venue": null,
           "pdf": "http://infoscience.epfl.ch/record/114620",
+          "pdfs": [
+            "http://infoscience.epfl.ch/record/114620"
+          ],
           "authors": [
             "Nikolaus Correll"
           ]
@@ -2338,6 +2610,9 @@
           "date": "2008-04-01",
           "venue": "Annals of Mathematics and Artificial Intelligence",
           "pdf": "http://hdl.handle.net/1721.1/49445",
+          "pdfs": [
+            "http://hdl.handle.net/1721.1/49445"
+          ],
           "authors": [
             "Patrick Amstutz",
             "Nikolaus Correll",
@@ -2352,6 +2627,9 @@
           "date": "2008-01-29",
           "venue": "Springer tracts in advanced robotics",
           "pdf": "http://infoscience.epfl.ch/record/160993",
+          "pdfs": [
+            "http://infoscience.epfl.ch/record/160993"
+          ],
           "authors": [
             "Nikolaus Correll",
             "Samuel Rutishauser",
@@ -2366,6 +2644,9 @@
           "date": "2008-01-23",
           "venue": null,
           "pdf": "http://infoscience.epfl.ch/record/28060",
+          "pdfs": [
+            "http://infoscience.epfl.ch/record/28060"
+          ],
           "authors": [
             "Nikolaus Correll",
             "Alcherio Martinoli"
@@ -2379,6 +2660,7 @@
           "date": "2008-01-01",
           "venue": null,
           "pdf": null,
+          "pdfs": [],
           "authors": [
             "Hari Balakrishnan",
             "Nikolaus Correll",
@@ -2402,6 +2684,9 @@
           "date": "2007-11-15",
           "venue": "Science",
           "pdf": "http://infoscience.epfl.ch/record/114099",
+          "pdfs": [
+            "http://infoscience.epfl.ch/record/114099"
+          ],
           "authors": [
             "Jos\u00e9 Halloy",
             "Gr\u00e9gory Sempo",
@@ -2429,6 +2714,9 @@
           "date": "2007-06-09",
           "venue": null,
           "pdf": "http://infoscience.epfl.ch/record/81403",
+          "pdfs": [
+            "http://infoscience.epfl.ch/record/81403"
+          ],
           "authors": [
             "Nikolaus Correll",
             "Alcherio Martinoli"
@@ -2442,6 +2730,9 @@
           "date": "2007-04-01",
           "venue": "Proceedings - IEEE International Conference on Robotics and Automation/Proceedings",
           "pdf": "http://infoscience.epfl.ch/record/166173",
+          "pdfs": [
+            "http://infoscience.epfl.ch/record/166173"
+          ],
           "authors": [
             "Nikolaus Correll",
             "Alcherio Martinoli"
@@ -2455,6 +2746,9 @@
           "date": "2007-01-01",
           "venue": "Infoscience (Ecole Polytechnique F\u00e9d\u00e9rale de Lausanne)",
           "pdf": "https://infoscience.epfl.ch/record/98726/files/icra07workshop.pdf",
+          "pdfs": [
+            "https://infoscience.epfl.ch/record/98726/files/icra07workshop.pdf"
+          ],
           "authors": [
             "Nikolaus Correll",
             "Alcherio Martinoli"
@@ -2468,6 +2762,9 @@
           "date": "2007-01-01",
           "venue": null,
           "pdf": "http://infoscience.epfl.ch/record/100221",
+          "pdfs": [
+            "http://infoscience.epfl.ch/record/100221"
+          ],
           "authors": [
             "Nikolaus Correll",
             "Alcherio Martinoli"
@@ -2487,6 +2784,9 @@
           "date": "2006-10-01",
           "venue": null,
           "pdf": "https://infoscience.epfl.ch/bitstreams/fbe027a4-b588-4d93-bcc3-ce50d315f7a0/download",
+          "pdfs": [
+            "https://infoscience.epfl.ch/bitstreams/fbe027a4-b588-4d93-bcc3-ce50d315f7a0/download"
+          ],
           "authors": [
             "Nikolaus Correll",
             "Gr\u00e9gory Sempo",
@@ -2504,6 +2804,9 @@
           "date": "2006-01-18",
           "venue": null,
           "pdf": "http://infoscience.epfl.ch/record/30071",
+          "pdfs": [
+            "http://infoscience.epfl.ch/record/30071"
+          ],
           "authors": [
             "Nikolaus Correll",
             "Alcherio Martinoli"
@@ -2517,6 +2820,9 @@
           "date": "2006-01-01",
           "venue": "IFAC Proceedings Volumes",
           "pdf": "http://infoscience.epfl.ch/record/83906",
+          "pdfs": [
+            "http://infoscience.epfl.ch/record/83906"
+          ],
           "authors": [
             "Nikolaus Correll",
             "Alcherio Martinoli"
@@ -2530,6 +2836,9 @@
           "date": "2006-01-01",
           "venue": "Infoscience (Ecole Polytechnique F\u00e9d\u00e9rale de Lausanne)",
           "pdf": "http://infoscience.epfl.ch/record/89196",
+          "pdfs": [
+            "http://infoscience.epfl.ch/record/89196"
+          ],
           "authors": [
             "Nikolaus Correll",
             "Christopher M. Cianci",
@@ -2545,6 +2854,9 @@
           "date": "2006-01-01",
           "venue": "Springer tracts in advanced robotics",
           "pdf": "http://infoscience.epfl.ch/record/28061",
+          "pdfs": [
+            "http://infoscience.epfl.ch/record/28061"
+          ],
           "authors": [
             "Nikolaus Correll",
             "Alcherio Martinoli"
@@ -2564,6 +2876,9 @@
           "date": "2002-01-01",
           "venue": "Lund University Publications Student Papers (Lund University)",
           "pdf": "http://lup.lub.lu.se/student-papers/record/8848179",
+          "pdfs": [
+            "http://lup.lub.lu.se/student-papers/record/8848179"
+          ],
           "authors": [
             "Nikolaus Correll"
           ]
