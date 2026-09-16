@@ -297,15 +297,28 @@ def teaching_cards():
     return "\n".join(out)
 
 
-def _embed(video_id, title):
+def _video(video_id, title):
+    """The theme's Video component in its placeholder style.
+
+    An embedded iframe pulls a few hundred kilobytes of YouTube's JavaScript before
+    the visitor has asked to watch anything; on a desktop viewport, where several are
+    above the fold, that alone cost 840ms of blocking time. This ships a poster image
+    instead, which ndt.js swaps for the real player on click — and without JavaScript
+    the anchor is still a working link to the video.
+    """
+    poster = (load("video_thumbs.json") or {}).get("thumbs", {}).get(video_id)
+    if poster:
+        img = img_tag(poster, "", extra='width="640" height="360"') if not dims(poster) \
+            else img_tag(poster, "")
+    else:
+        # Until pull_video_thumbs.py has run, fall back to YouTube's own poster.
+        img = ('<img src="https://i.ytimg.com/vi/%s/hqdefault.jpg" alt="" width="480" '
+               'height="360" loading="lazy" decoding="async">' % esc(video_id))
     return (
-        '<div class="video--wrapper">\n'
-        '  <iframe width="1280" height="720" style="aspect-ratio:16/9"\n'
-        '    src="https://www.youtube-nocookie.com/embed/%s" title="%s"\n'
-        '    loading="lazy" referrerpolicy="strict-origin-when-cross-origin"\n'
-        '    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"\n'
-        '    allowfullscreen></iframe>\n'
-        '</div>' % (esc(video_id), esc(title)))
+        '<a class="video video--default" href="https://www.youtube.com/watch?v=%s">\n'
+        '    <figure>%s</figure>\n'
+        '    %s\n'
+        '  </a>' % (esc(video_id), img, esc(title)))
 
 
 def videos():
@@ -318,9 +331,8 @@ def videos():
         out.append(
             '<li>\n'
             '  %s\n'
-            '  <h3>%s</h3>\n'
             '  <p>%s</p>\n'
-            '</li>' % (_embed(v["id"], v["title"]), esc(v["title"]), esc(v.get("source") or "")))
+            '</li>' % (_video(v["id"], v["title"]), esc(v.get("source") or "")))
     return "\n".join(out)
 
 
@@ -335,7 +347,7 @@ def art_works():
         body = "\n      ".join('<p>%s</p>' % esc(p) for p in w.get("body", []))
         figure = ('\n      <figure class="image image-default">%s</figure>'
                   % img_tag(w["image"], esc(w["title"]))) if w.get("image") else ""
-        video = ("\n      " + _embed(w["video"], w["title"])) if w.get("video") else ""
+        video = ("\n      " + _video(w["video"], w["title"])) if w.get("video") else ""
         links = ""
         if w.get("links"):
             links = '\n      <p class="btn-list">%s</p>' % " ".join(

@@ -45,6 +45,8 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python3 scripts/pull_pub_figures.py ${{ github.event.inputs.refresh_figures == 'true' && '--refresh' || '' }}
+      - name: Fetch poster frames for the embedded videos
+        run: python3 scripts/pull_video_thumbs.py
       - name: Generate teaser lines from abstracts
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
