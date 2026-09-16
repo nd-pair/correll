@@ -9,9 +9,18 @@
         "Series of electronic music created with Elektron Model:Cycles, an FM-based synthesizer, and Arturia MicroFreak, a hybrid Digital Signal Processor (DSP) synthesizer with analog filters. DSPs have led to a renaissance of fully digital and hybrid synthesizers and beatboxes that dramatically lower the floor of music creation exploiting oscillators and non-linear dynamics. Cover art created by Stable Diffusion."
       ],
       "links": [
-        {"label": "YouTube", "url": "https://www.youtube.com/"},
-        {"label": "Apple Music", "url": "https://music.apple.com/"},
-        {"label": "Spotify", "url": "https://open.spotify.com/"}
+        {
+          "label": "YouTube",
+          "url": "https://www.youtube.com/@%D1%87%D1%8B%D1%87%D0%BA%D0%B0%D0%BD/releases"
+        },
+        {
+          "label": "Apple Music",
+          "url": "https://music.apple.com/us/artist/%D1%87%D1%8B%D1%87%D0%BA%D0%B0%D0%BD/1822476167"
+        },
+        {
+          "label": "Spotify",
+          "url": "https://open.spotify.com/artist/2y0T9HK6MEgEabWLMUUCmS"
+        }
       ]
     },
     {
@@ -23,8 +32,14 @@
         "As in my 2015 piece \"Droplets meet Philip Glass\", I'm exploring phase shift and resynchronization inspired by Steve Reich's work \"Piano Phase\", this time in kinematic systems. The system starts in the same phase, then cycles through different orders of disarray, and ends up in the same phase at around 3:30, resolving tension analogous with Purcell's piece that also explores dissonances in a painful, repetitive way. I'm also thrilled by Olafur Eliasson's use of monochromatic light in \"The Weather Project\", which is used here."
       ],
       "watch": [
-        {"label": "Steve Reich — Piano Phase", "id": "i0345c6zNfM"},
-        {"label": "Olafur Eliasson — The Weather Project", "id": "IsT9vEpfNq4"}
+        {
+          "label": "Steve Reich — Piano Phase",
+          "id": "i0345c6zNfM"
+        },
+        {
+          "label": "Olafur Eliasson — The Weather Project",
+          "id": "IsT9vEpfNq4"
+        }
       ]
     },
     {
@@ -45,7 +60,10 @@
         "A swarm of Droplets is repeating a simple pattern over and over, while getting more and more out of phase, letting more complex visual patterns emerge. The same effect — repeating patterns that slowly get out of phase — was first explored in music by Steve Reich in his 1965 piece \"It's gonna rain\", considered a landmark in the minimalism movement he pioneered with Philip Glass and others. String Quartet 3 (1985) is one of Glass' more typical works, heavily relying on repetitive structures."
       ],
       "watch": [
-        {"label": "Steve Reich — It's Gonna Rain", "id": "vugqRAX7xQE"}
+        {
+          "label": "Steve Reich — It's Gonna Rain",
+          "id": "vugqRAX7xQE"
+        }
       ],
       "refs": [
         "Farrow, N., Klingner, J., Reishus, D. and Correll, N., 2014. Miniature six-channel range and bearing system: algorithm, analysis and experimental validation. In 2014 IEEE International Conference on Robotics and Automation (ICRA), pp. 6180–6185."
