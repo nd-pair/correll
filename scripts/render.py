@@ -312,15 +312,14 @@ def videos():
     vids = (load("videos.json") or {}).get("videos", [])
     out = []
     for v in vids:
+        # The theme has a Video component but no "video card", so this is the component
+        # itself with an ordinary heading and caption under it, rather than a card
+        # variant the design kit does not define.
         out.append(
             '<li>\n'
-            '  <article class="card card--video">\n'
-            '    %s\n'
-            '    <div class="card-body">\n'
-            '      <h3 class="card-title">%s</h3>\n'
-            '      <p class="card-meta">%s</p>\n'
-            '    </div>\n'
-            '  </article>\n'
+            '  %s\n'
+            '  <h3>%s</h3>\n'
+            '  <p>%s</p>\n'
             '</li>' % (_embed(v["id"], v["title"]), esc(v["title"]), esc(v.get("source") or "")))
     return "\n".join(out)
 

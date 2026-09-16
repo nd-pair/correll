@@ -139,12 +139,3 @@
   font-size: 0.875rem;
 }
 
-/* --- video cards --------------------------------------------------------- */
-
-.card--video .video--wrapper {
-  margin: 0;
-}
-
-.card--video .card-body {
-  padding-block-start: 1rem;
-}
