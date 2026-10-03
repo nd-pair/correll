@@ -271,8 +271,30 @@ What it covers, and the manual steps it does not:
 
 The container these sites are edited from cannot reach `conductor.nd.edu`, so local runs serve the
 theme from [`ndwebgroup/ndt4-storybook`](https://github.com/ndwebgroup/ndt4-storybook)
-(`css/ndt.snapshot.css` and `public/js/global.js`) through a Playwright route handler. That is
-faithful for layout, colour and behaviour.
+(`css/ndt.snapshot.css` and `public/js/global.js`) through a Playwright route handler
+(`A11Y_THEME_DIR`). That is faithful for layout and behaviour, but **the snapshot does not apply
+every dark-mode rule the live theme does.** Two surfaces measured as failures offline and are fine
+against `conductor.nd.edu`:
+
+| Surface | Offline (snapshot) | Live theme |
+| --- | --- | --- |
+| `.section.bg--sky-blue-light` with stat tiles | stays light, text goes light, fails | flips to dark blue, white text |
+| `.dialog` (the members' gate) | panel stays white, text goes light, 1.19:1 | panel `#0c2340`, body text 13.22:1 |
+
+So treat an offline dark-mode failure on a **themed** surface as unproven until checked against the
+live theme; a failure on something `styles.css` owns is real either way. CI always uses the live
+theme, so CI is the authority.
+
+### Two measurement traps worth knowing
+
+- **The theme animates colour.** Nav links transition over 325ms. Neutralising the text and
+  screenshotting straight away captures half-faded glyphs and reports them as contrast failures, so
+  the check turns off `transition` and `animation` first and then asserts the text really went
+  transparent before believing any number.
+- **A modal hides everything.** A site with an entry gate opens a `<dialog>` over every page in a
+  fresh browser profile, and anything measured "behind" the hero is then the modal's own panel. The
+  check skips hero contrast while a `dialog[open]` is present, and `--session-storage` lets the run
+  through the gate so the pages themselves get measured.
 
 Local Lighthouse runs need a gzip-serving server to be meaningful — GitHub Pages compresses, and an
 uncompressed local server understates performance by 20 points. Local runs also cannot load

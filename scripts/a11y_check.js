@@ -52,6 +52,12 @@ const ROOT = path.resolve(arg('root', '_site'));
 const WARN_ONLY = argv.includes('--warn-only');
 const WIDTHS = arg('widths', '1440,390').split(',').map(Number);
 const SCHEMES = arg('schemes', 'light,dark').split(',');
+// Seed sessionStorage before the page scripts run. A site with an entry gate puts a
+// modal over every page in a fresh browser context, and everything measured behind
+// it is the modal, not the page — which is exactly the sort of wrong-but-confident
+// number this script exists to avoid. Example: --session-storage nd_pair_site=1
+const SESSION = (arg('session-storage', '') || '').split(',').filter(Boolean)
+  .map(pair => { const i = pair.indexOf('='); return [pair.slice(0, i), pair.slice(i + 1)]; });
 
 // Large text clears AA at 3:1 instead of 4.5:1 (>=24px, or >=18.66px bold).
 const needFor = (px, weight) => (px >= 24 || (px >= 18.66 && weight >= 700)) ? 3 : 4.5;
@@ -117,6 +123,18 @@ const CONTRAST_HELPERS = `
   window.__lum = function (r, g, b) {
     const f = c => { c /= 255; return c <= 0.04045 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4); };
     return 0.2126 * f(r) + 0.7152 * f(g) + 0.0722 * f(b);
+  };
+  // getComputedStyle can return rgb(), color(srgb ...), oklch() and more depending on
+  // how the stylesheet wrote it. Let the engine normalise it rather than parsing.
+  window.__rgb = function (css) {
+    const c = document.createElement('canvas');
+    c.width = c.height = 1;
+    const ctx = c.getContext('2d', { willReadFrequently: true });
+    ctx.fillStyle = '#000';
+    ctx.fillStyle = css;
+    ctx.fillRect(0, 0, 1, 1);
+    const d = ctx.getImageData(0, 0, 1, 1).data;
+    return [d[0], d[1], d[2]];
   };
   window.__ratio = function (a, b) {
     const hi = Math.max(a, b), lo = Math.min(a, b);
@@ -188,6 +206,16 @@ async function heroContrast(page, url, width, label) {
   const hero = await page.$('.page-image img');
   if (!hero) return;
 
+  // A site with an entry gate opens a modal over the page. The hero is then not
+  // visible at all, so sampling "behind" its text measures the modal's own panel
+  // and reports nonsense. Measure the hero in the state where it is actually on
+  // screen; pass --session-storage to let the run through the gate.
+  if (await page.$('dialog[open]')) {
+    console.log(`a11y_check: ${label} has a modal open; skipping hero contrast ` +
+                `(use --session-storage to measure the page behind it)`);
+    return;
+  }
+
   const shots = await page.evaluate(() => {
     const fig = document.querySelector('.page-image');
     const img = fig.querySelector('img');
@@ -215,11 +243,31 @@ async function heroContrast(page, url, width, label) {
     const hide = await page.addStyleTag({
       content: OVER_IMAGE.split(',').map(s => s.trim())
         .flatMap(s => [s, s + '::before', s + '::after']).join(',') +
-        '{color:transparent !important;text-decoration-color:transparent !important;' +
+        // transition/animation must go first: the theme animates nav link colour over
+        // 325ms, so without this the screenshot catches the glyphs mid-fade and every
+        // half-painted letter reads as a contrast failure.
+        '{transition:none !important;animation:none !important;' +
+        'color:transparent !important;text-decoration-color:transparent !important;' +
+        '-webkit-text-stroke-color:transparent !important;text-shadow:none !important;' +
         'border-color:transparent !important;box-shadow:none !important;' +
         'background-image:none !important;}',
     });
-    await page.waitForTimeout(120);
+    // Let the style land and a frame paint before capturing.
+    await page.evaluate(() => new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r))));
+    await page.waitForTimeout(200);
+    // Prove the text really is gone; a measurement of half-faded glyphs is worthless.
+    const stillPainted = await page.evaluate(sel => {
+      for (const el of document.querySelectorAll(sel)) {
+        const a = getComputedStyle(el).color.match(/[\d.]+/g);
+        if (a && a.length === 4 && parseFloat(a[3]) > 0.02) return getComputedStyle(el).color;
+        if (a && a.length === 3) return getComputedStyle(el).color;
+      }
+      return null;
+    }, OVER_IMAGE);
+    if (stillPainted) {
+      fail(`${label} @${width}px`, 'Could not neutralise hero text for measurement',
+        `computed colour was still ${stillPainted}; the contrast numbers below are unreliable`);
+    }
     const png = await page.screenshot({ clip: { x: 0, y: 0, width, height: 900 } });
     await page.evaluate(el => el.remove(), hide);
 
@@ -236,14 +284,19 @@ async function heroContrast(page, url, width, label) {
         const x1 = Math.min(c.width, b.x + b.w), y1 = Math.min(c.height, b.y + b.h);
         if (x1 <= x0 || y1 <= y0) return null;
         const d = ctx.getImageData(x0, y0, x1 - x0, y1 - y0).data;
-        const fg = b.color.match(/[\d.]+/g).map(Number);
+        const fg = window.__rgb(b.color);
         const lt = window.__lum(fg[0], fg[1], fg[2]);
-        let worst = Infinity, at = null;
+        const ratios = [];
         for (let i = 0; i < d.length; i += 4) {
-          const r = window.__ratio(lt, window.__lum(d[i], d[i + 1], d[i + 2]));
-          if (r < worst) { worst = r; at = [d[i], d[i + 1], d[i + 2]]; }
+          ratios.push([window.__ratio(lt, window.__lum(d[i], d[i + 1], d[i + 2])),
+                       d[i], d[i + 1], d[i + 2]]);
         }
-        return { ...b, worst, at };
+        ratios.sort((p, q) => p[0] - q[0]);
+        // The worst pixel, which is the honest reading of 1.4.3 — a glyph stroke
+        // sitting on a bright pixel is a real failure. This is only trustworthy
+        // because the text and its decorations have actually been removed above.
+        const pick = ratios[0];
+        return { ...b, worst: pick[0], at: [pick[1], pick[2], pick[3]] };
       }).filter(Boolean);
     }, ['data:image/png;base64,' + png.toString('base64'), boxes]);
 
@@ -462,6 +515,11 @@ async function raiseIssue(lines) {
         });
         const page = await ctx.newPage();
         await page.addInitScript(CONTRAST_HELPERS + GLYPH_RECTS);
+        if (SESSION.length) {
+          await page.addInitScript(entries => {
+            try { for (const [k, v] of entries) sessionStorage.setItem(k, v); } catch (e) { /* ignore */ }
+          }, SESSION);
+        }
         await themeFromDisk(page);
 
         for (const file of pages) {
