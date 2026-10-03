@@ -157,6 +157,30 @@
         </div>
       </div>
     </div>
+    <!-- The theme's sticky navigation. ndt.js watches .header-nav and reveals this
+         bar once the header above has scrolled out of view; it stays `hidden`, and
+         therefore out of the accessibility tree, until then. -->
+    <div class="header-nav-fixed" id="nav-fixed" hidden>
+      <div class="nav-fixed-inner">
+        <nav id="fixed" class="fixed nav-primary" aria-label="Primary navigation">
+          <div id="primary_fixed">
+            <ul class="nav-level-1 depth_1">
+            <li id="primary_fixed_0"><a href="index.html">Home</a></li>
+            <li id="primary_fixed_1"><a href="publications.html">Publications</a></li>
+            <li id="primary_fixed_2"><a href="people.html">People</a></li>
+            <li id="primary_fixed_3" class="active"><a href="teaching.html" aria-current="page" class="current">Teaching</a></li>
+            <li id="primary_fixed_4"><a href="art.html">Art</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div class="header-nav-toggle">
+          <button class="btn btn--action global-menu-toggle" aria-label="Open global menu and search" aria-controls="global-menu" aria-haspopup="dialog">
+            <svg class="icon-search-menu" aria-hidden="true"><use xlink:href="#icon-search-menu"></use></svg>
+            <svg class="icon-search" aria-hidden="true"><use xlink:href="#icon-search"></use></svg>
+          </button>
+        </div>
+      </div>
+    </div>
   </header>
 
 <main id="content" class="site-content">
@@ -185,7 +209,7 @@
     </div>
 
     <div class="page-secondary full-width">
-      <section class="section bg--sky-blue-light">
+      <section class="section bg--sky-blue-light p-4">
         <h2 class="section-title">Introduction to Autonomous Robots</h2>
         <p>An open, freely available textbook on the kinematics, perception, planning and control of
           autonomous mobile robots and manipulators, used in courses around the world.</p>

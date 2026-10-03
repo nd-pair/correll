@@ -82,6 +82,25 @@ def _pub_images():
     return merged
 
 
+def _first_pages():
+    """Papers whose thumbnail is a render of page one rather than a figure.
+
+    The two need different alt text: "a figure from" is a claim about the content of
+    the image, and it would be wrong for a page render.
+    """
+    return set((load("pub_figures.json") or {}).get("first_page", []))
+
+
+def _pub_alt(key, title, first_pages):
+    """Describe what the thumbnail actually is, in terms of the paper beside it."""
+    kind = "First page of" if key in first_pages else "Figure from"
+    return "%s the paper \u201c%s\u201d" % (kind, title or "this publication")
+
+
+def plural(n, word):
+    return "%d %s%s" % (n, word, "" if n == 1 else "s")
+
+
 def _authors(names, mark=re.compile(r"correll", re.I)):
     if not names:
         return ""
@@ -93,13 +112,13 @@ def _authors(names, mark=re.compile(r"correll", re.I)):
     return txt
 
 
-def _pub_card(w, images, teasers, heading="h3"):
+def _pub_card(w, images, teasers, first_pages, heading="h3"):
     link = w.get("doi") or w.get("id")
     key = norm(w.get("title"))
     img = images.get(key)
     teaser = teasers.get(key)
     figure = ('<figure class="card-image">%s</figure>'
-              % img_tag(img, "")) if img else PLACEHOLDER
+              % img_tag(img, _pub_alt(key, w.get("title"), first_pages))) if img else PLACEHOLDER
     meta = " &middot; ".join(x for x in [esc(w.get("venue")), esc(w.get("year"))] if x)
     title = esc(w.get("title"))
     title_html = ('<a class="card-link" href="%s">%s</a>' % (esc(link), title)) if link else title
@@ -124,13 +143,15 @@ def _pub_card(w, images, teasers, heading="h3"):
 def recent_publications(count=4):
     pubs = load("publications.json") or {"years": []}
     images, teasers = _pub_images(), (load("pub_teasers.json") or {}).get("teasers", {})
+    first_pages = _first_pages()
     flat = [it for g in pubs.get("years", []) for it in g.get("items", [])][:count]
     cards = []
     for w in flat:
         link = w.get("doi") or w.get("id")
         key = norm(w.get("title"))
         img = images.get(key)
-        figure = ('<figure class="card-image">%s</figure>' % img_tag(img, "")) if img else PLACEHOLDER
+        figure = ('<figure class="card-image">%s</figure>'
+                  % img_tag(img, _pub_alt(key, w.get("title"), first_pages))) if img else PLACEHOLDER
         title = esc(w.get("title"))
         title_html = ('<a class="card-link" href="%s">%s</a>' % (esc(link), title)) if link else title
         cards.append(
@@ -148,11 +169,20 @@ def recent_publications(count=4):
     return "\n".join(cards)
 
 
+# "OpenAlex (https://openalex.org)" in the data; a link on the name reads better
+# than a URL printed in running text, and gives the link its own context.
+_SOURCE = re.compile(r"^\s*(.+?)\s*\((https?://[^)]+)\)\s*$")
+
+
 def publications_summary():
     pubs = load("publications.json") or {}
     years = [g for g in pubs.get("years", []) if g.get("year")]
-    return "%s publications across %s years, synchronised weekly from %s." % (
-        pubs.get("total", 0), len(years), esc(pubs.get("source", "OpenAlex")))
+    source = pubs.get("source") or "OpenAlex"
+    m = _SOURCE.match(source)
+    source_html = ('<a href="%s">%s</a>' % (esc(m.group(2)), esc(m.group(1)))) if m \
+        else esc(source)
+    return "%s across %s, synchronised weekly from %s." % (
+        plural(pubs.get("total", 0), "publication"), plural(len(years), "year"), source_html)
 
 
 def publications_anchors():
@@ -165,16 +195,22 @@ def publications_anchors():
 def publications_list():
     pubs = load("publications.json") or {"years": []}
     images, teasers = _pub_images(), (load("pub_teasers.json") or {}).get("teasers", {})
+    first_pages = _first_pages()
     out = []
     for g in pubs.get("years", []):
         year = g.get("year") or "Other"
-        cards = "\n".join(_pub_card(w, images, teasers) for w in g.get("items", []))
+        cards = "\n".join(_pub_card(w, images, teasers, first_pages)
+                          for w in g.get("items", []))
+        # A bare number after the year read as part of the heading. The unit makes it
+        # a count; data-total lets app.js keep it honest while the list is filtered.
         out.append(
             '<section class="section pub-year" data-year="%s">\n'
             '  <h2 class="section-title section-title--sm" id="y%s">%s '
-            '<span class="pub-count">%s</span></h2>\n'
+            '<span class="pub-count" data-total="%d">%s</span></h2>\n'
             '  <ul class="list--unstyled pub-list">\n%s\n  </ul>\n'
-            '</section>' % (esc(year), esc(year), esc(year), g.get("count", 0), cards))
+            '</section>' % (esc(year), esc(year), esc(year),
+                            g.get("count", 0), plural(g.get("count", 0), "publication"),
+                            cards))
     return "\n".join(out)
 
 
@@ -185,7 +221,7 @@ def publications_list():
 def _person_card(m, heading="h3"):
     img = m.get("img")
     figure = ('<figure class="avatar avatar--sm card-image">%s</figure>'
-              % img_tag(img, "")) if img else ""
+              % img_tag(img, "Portrait of %s" % (m.get("name") or ""))) if img else ""
     role = ('<p class="person-title">%s</p>' % esc(m.get("role") or m.get("title"))) \
         if (m.get("role") or m.get("title")) else ""
     return (
@@ -209,7 +245,8 @@ def people_pi():
         return ""
     p = pi["members"][0]
     figure = ('<figure class="avatar avatar--md card-image">%s</figure>'
-              % img_tag(p["img"], "", lazy=False)) if p.get("img") else ""
+              % img_tag(p["img"], "Portrait of %s" % p.get("name", ""), lazy=False)) \
+        if p.get("img") else ""
     bits = []
     if p.get("title"):
         bits.append('<p class="person-title">%s</p>' % esc(p["title"]))
@@ -220,7 +257,7 @@ def people_pi():
                     % (esc(p["email"]), esc(p["email"])))
     return (
         '<div class="card-container">\n'
-        '  <div class="card card--person card--horizontal">\n'
+        '  <div class="card card--person">\n'
         '    %s\n'
         '    <div class="card-body">\n'
         '      <h2 class="card-title">%s</h2>\n'
@@ -298,13 +335,18 @@ def teaching_cards():
 
 
 def _video(video_id, title):
-    """The theme's Video component in its placeholder style.
+    """The theme's Video component in its dialog style.
 
     An embedded iframe pulls a few hundred kilobytes of YouTube's JavaScript before
     the visitor has asked to watch anything; on a desktop viewport, where several are
-    above the fold, that alone cost 840ms of blocking time. This ships a poster image
-    instead, which ndt.js swaps for the real player on click — and without JavaScript
-    the anchor is still a working link to the video.
+    above the fold, that alone cost 840ms of blocking time. The dialog style keeps a
+    poster image in the page and the player in a <dialog> that ndt.js opens on click,
+    so the video plays over the page instead of replacing what the visitor was
+    reading, and the anchor is still a working link to YouTube without JavaScript.
+
+    The poster image carries alt="" on purpose: the anchor's own text is the video's
+    title, so describing the thumbnail as well would make the link announce itself
+    twice.
     """
     poster = (load("video_thumbs.json") or {}).get("thumbs", {}).get(video_id)
     if poster:
@@ -315,10 +357,26 @@ def _video(video_id, title):
         img = ('<img src="https://i.ytimg.com/vi/%s/hqdefault.jpg" alt="" width="480" '
                'height="360" loading="lazy" decoding="async">' % esc(video_id))
     return (
-        '<a class="video video--default" href="https://www.youtube.com/watch?v=%s">\n'
-        '    <figure>%s</figure>\n'
-        '    %s\n'
-        '  </a>' % (esc(video_id), img, esc(title)))
+        '<div class="video--wrapper">\n'
+        '    <div class="dialog-item">\n'
+        '      <a class="video video--default dialog-link" href="https://www.youtube.com/watch?v=%s">\n'
+        '        <figure>%s</figure>\n'
+        '        %s\n'
+        '      </a>\n'
+        '      <dialog class="dialog dialog--video">\n'
+        '        <form method="dialog" class="dialog-close">\n'
+        '          <button type="submit" title="Close">&times;</button>\n'
+        '        </form>\n'
+        '        <div class="dialog-content">\n'
+        '          <iframe width="1280" height="720" style="aspect-ratio: 16/9;" '
+        'src="https://www.youtube.com/embed/%s?enablejsapi=1" title="%s" '
+        'frameborder="0" loading="lazy" '
+        'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; '
+        'picture-in-picture" allowfullscreen="allowfullscreen"></iframe>\n'
+        '        </div>\n'
+        '      </dialog>\n'
+        '    </div>\n'
+        '  </div>' % (esc(video_id), img, esc(title), esc(video_id), esc(title)))
 
 
 def videos():
@@ -345,8 +403,9 @@ def art_works():
     out = []
     for w in works:
         body = "\n      ".join('<p>%s</p>' % esc(p) for p in w.get("body", []))
+        # img_tag escapes for us; passing esc() in as well double-escaped the title.
         figure = ('\n      <figure class="image image-default">%s</figure>'
-                  % img_tag(w["image"], esc(w["title"]))) if w.get("image") else ""
+                  % img_tag(w["image"], w.get("alt") or w["title"])) if w.get("image") else ""
         video = ("\n      " + _video(w["video"], w["title"])) if w.get("video") else ""
         links = ""
         if w.get("links"):

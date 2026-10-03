@@ -29,8 +29,11 @@
     try { extra = JSON.parse(figure.getAttribute("data-hero-rotate")); } catch (e) { return; }
     if (!Array.isArray(extra) || !extra.length) return;
 
-    var shots = [{ src: base.getAttribute("src"), srcset: base.getAttribute("srcset") || "" }]
-      .concat(extra);
+    var shots = [{
+      src: base.getAttribute("src"),
+      srcset: base.getAttribute("srcset") || "",
+      alt: base.getAttribute("alt") || ""
+    }].concat(extra);
 
     window.addEventListener("load", function () {
       var layer = new Image();
@@ -52,6 +55,12 @@
         var show = function () {
           layer.classList.toggle("is-visible", !onLayer);
           onLayer = !onLayer;
+          // Only the photograph on screen describes itself; the one fading out
+          // goes quiet, so the hero never announces two images at once.
+          var shown = onLayer ? layer : base;
+          var hidden = onLayer ? base : layer;
+          shown.alt = next.alt || "";
+          hidden.alt = "";
           i = (i + 1) % shots.length;
         };
         if (target.complete) show();
@@ -78,7 +87,17 @@
       if (hit) shown++;
     });
     years.forEach(function (sec) {
-      sec.hidden = !sec.querySelector(".pub-list > li:not([hidden])");
+      var visible = sec.querySelectorAll(".pub-list > li:not([hidden])").length;
+      sec.hidden = !visible;
+      // The number beside a year heading is a count of what is on the page, so it
+      // has to follow the filter rather than keep advertising the full year.
+      var count = sec.querySelector(".pub-count");
+      if (count) {
+        var total = parseInt(count.getAttribute("data-total"), 10) || visible;
+        count.textContent = term && visible !== total
+          ? visible + " of " + total + (total === 1 ? " publication" : " publications")
+          : total + (total === 1 ? " publication" : " publications");
+      }
     });
     if (status) {
       status.textContent = term

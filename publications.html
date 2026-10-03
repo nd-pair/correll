@@ -157,6 +157,30 @@
         </div>
       </div>
     </div>
+    <!-- The theme's sticky navigation. ndt.js watches .header-nav and reveals this
+         bar once the header above has scrolled out of view; it stays `hidden`, and
+         therefore out of the accessibility tree, until then. -->
+    <div class="header-nav-fixed" id="nav-fixed" hidden>
+      <div class="nav-fixed-inner">
+        <nav id="fixed" class="fixed nav-primary" aria-label="Primary navigation">
+          <div id="primary_fixed">
+            <ul class="nav-level-1 depth_1">
+            <li id="primary_fixed_0"><a href="index.html">Home</a></li>
+            <li id="primary_fixed_1" class="active"><a href="publications.html" aria-current="page" class="current">Publications</a></li>
+            <li id="primary_fixed_2"><a href="people.html">People</a></li>
+            <li id="primary_fixed_3"><a href="teaching.html">Teaching</a></li>
+            <li id="primary_fixed_4"><a href="art.html">Art</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div class="header-nav-toggle">
+          <button class="btn btn--action global-menu-toggle" aria-label="Open global menu and search" aria-controls="global-menu" aria-haspopup="dialog">
+            <svg class="icon-search-menu" aria-hidden="true"><use xlink:href="#icon-search-menu"></use></svg>
+            <svg class="icon-search" aria-hidden="true"><use xlink:href="#icon-search"></use></svg>
+          </button>
+        </div>
+      </div>
+    </div>
   </header>
 
 <main id="content" class="site-content">
@@ -164,7 +188,7 @@
       <div class="page-title-wrapper">
         <nav aria-label="Breadcrumbs" class="breadcrumbs"><ol><li><a href="index.html">Home</a></li><li aria-current="page">Publications</li></ol></nav>
         <h1 class="page-title page-title--sm">Publications</h1>
-        <p class="page-lede">158 publications across 22 years, synchronised weekly from OpenAlex (https://openalex.org).</p>
+        <p class="page-lede">158 publications across 22 years, synchronised weekly from <a href="https://openalex.org">OpenAlex</a>.</p>
       </div>
     </div>
 
@@ -205,11 +229,11 @@
         </nav>
       </div>
 <section class="section pub-year" data-year="2026">
-  <h2 class="section-title section-title--sm" id="y2026">2026 <span class="pub-count">6</span></h2>
+  <h2 class="section-title section-title--sm" id="y2026">2026 <span class="pub-count" data-total="6">6 publications</span></h2>
   <ul class="list--unstyled pub-list">
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
-    <figure class="card-image"><img src="assets/pubs/auto/egocentric-tactile-and-proximity-sensors-as-observation-prio.webp" alt="" width="344" height="307" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/auto/egocentric-tactile-and-proximity-sensors-as-observation-prio.webp" alt="Figure from the paper “Egocentric Tactile and Proximity Sensors as Observation Priors for Humanoid Collision Avoidance”" width="344" height="307" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title"><a class="card-link" href="https://doi.org/10.48550/arxiv.2604.25554">Egocentric Tactile and Proximity Sensors as Observation Priors for Humanoid Collision Avoidance</a></h3>
       <p class="card-meta">Carson Kohlbrenner, Niraj Pudasaini, William Xie, Naren Sivagnanadasan, <b>Nikolaus Correll</b>, Alessandro Roncone</p>
@@ -219,7 +243,7 @@
 </li>
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
-    <figure class="card-image"><img src="assets/pubs/auto/liquid-networks-with-mixture-density-heads-for-efficient-imi.webp" alt="" width="373" height="480" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/auto/liquid-networks-with-mixture-density-heads-for-efficient-imi.webp" alt="First page of the paper “Liquid Networks with Mixture Density Heads for Efficient Imitation Learning”" width="373" height="480" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title"><a class="card-link" href="https://doi.org/10.48550/arxiv.2603.27058">Liquid Networks with Mixture Density Heads for Efficient Imitation Learning</a></h3>
       <p class="card-meta"><b>Nikolaus Correll</b></p>
@@ -229,7 +253,7 @@
 </li>
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
-    <figure class="card-image"><img src="assets/pubs/evbattery.webp" alt="" width="480" height="319" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/evbattery.webp" alt="Figure from the paper “Robotic Agentic Platform for Intelligent Electric Vehicle Disassembly”" width="480" height="319" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title"><a class="card-link" href="https://doi.org/10.48550/arxiv.2603.18520">Robotic Agentic Platform for Intelligent Electric Vehicle Disassembly</a></h3>
       <p class="card-meta">Zachary Allen, Max Conway, Lyle Antieau, Allen Ponraj, <b>Nikolaus Correll</b></p>
@@ -239,7 +263,7 @@
 </li>
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
-    <figure class="card-image"><img src="assets/pubs/xlerobot.webp" alt="" width="480" height="274" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/xlerobot.webp" alt="Figure from the paper “Cutting the Cord: System Architecture for Low-Cost, GPU-Accelerated Bimanual Mobile Manipulation”" width="480" height="274" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title"><a class="card-link" href="https://doi.org/10.48550/arxiv.2603.09051">Cutting the Cord: System Architecture for Low-Cost, GPU-Accelerated Bimanual Mobile Manipulation</a></h3>
       <p class="card-meta">Artemis Shaw, Chen Liu, Justin Costa, Rane Gray, Alina Skowronek, Kevin Diaz, Nam Bui, <b>Nikolaus Correll</b></p>
@@ -249,7 +273,7 @@
 </li>
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
-    <figure class="card-image"><img src="assets/pubs/fame.webp" alt="" width="480" height="216" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/fame.webp" alt="Figure from the paper “FAME: Force-Adaptive RL for Expanding the Manipulation Envelope of a Full-Scale Humanoid”" width="480" height="216" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title"><a class="card-link" href="https://doi.org/10.48550/arxiv.2603.08961">FAME: Force-Adaptive RL for Expanding the Manipulation Envelope of a Full-Scale Humanoid</a></h3>
       <p class="card-meta">Niraj Pudasaini, Yutong Zhang, Jensen Lavering, Alessandro Roncone, <b>Nikolaus Correll</b></p>
@@ -259,7 +283,7 @@
 </li>
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
-    <figure class="card-image"><img src="assets/pubs/3d_workspace.webp" alt="" width="480" height="373" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/3d_workspace.webp" alt="Figure from the paper “Characterization, Analytical Planning, and Hybrid Force Control for the Inspire RH56DFX Hand”" width="480" height="373" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title"><a class="card-link" href="https://doi.org/10.48550/arxiv.2603.08988">Characterization, Analytical Planning, and Hybrid Force Control for the Inspire RH56DFX Hand</a></h3>
       <p class="card-meta">Xuan Tan, William Xie, <b>Nikolaus Correll</b></p>
@@ -270,11 +294,11 @@
   </ul>
 </section>
 <section class="section pub-year" data-year="2025">
-  <h2 class="section-title section-title--sm" id="y2025">2025 <span class="pub-count">3</span></h2>
+  <h2 class="section-title section-title--sm" id="y2025">2025 <span class="pub-count" data-total="3">3 publications</span></h2>
   <ul class="list--unstyled pub-list">
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
-    <figure class="card-image"><img src="assets/pubs/unfettered.webp" alt="" width="480" height="175" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/unfettered.webp" alt="Figure from the paper “On the Dual-Use Dilemma in Physical Reasoning and Force”" width="480" height="175" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title"><a class="card-link" href="https://doi.org/10.48550/arxiv.2505.18792">On the Dual-Use Dilemma in Physical Reasoning and Force</a></h3>
       <p class="card-meta">William Xie, Enora Rice, <b>Nikolaus Correll</b></p>
@@ -284,7 +308,7 @@
 </li>
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
-    <figure class="card-image"><img src="assets/pubs/deligrasp2.webp" alt="" width="480" height="205" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/deligrasp2.webp" alt="Figure from the paper “Unfettered Forceful Skill Acquisition with Physical Reasoning and Coordinate Frame Labeling”" width="480" height="205" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title"><a class="card-link" href="https://doi.org/10.48550/arxiv.2505.09731">Unfettered Forceful Skill Acquisition with Physical Reasoning and Coordinate Frame Labeling</a></h3>
       <p class="card-meta">William Xie, Conway, Max, Yutong Zhang, <b>Nikolaus Correll</b></p>
@@ -294,7 +318,7 @@
 </li>
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
-    <figure class="card-image"><img src="assets/pubs/forcesensors.webp" alt="" width="480" height="313" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/forcesensors.webp" alt="Figure from the paper “Towards Forceful Robotic Foundation Models: a Literature Survey”" width="480" height="313" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title"><a class="card-link" href="https://doi.org/10.48550/arxiv.2504.11827">Towards Forceful Robotic Foundation Models: a Literature Survey</a></h3>
       <p class="card-meta">William Xie, <b>Nikolaus Correll</b></p>
@@ -305,11 +329,11 @@
   </ul>
 </section>
 <section class="section pub-year" data-year="2024">
-  <h2 class="section-title section-title--sm" id="y2024">2024 <span class="pub-count">5</span></h2>
+  <h2 class="section-title section-title--sm" id="y2024">2024 <span class="pub-count" data-total="5">5 publications</span></h2>
   <ul class="list--unstyled pub-list">
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
-    <figure class="card-image"><img src="assets/pubs/kohlbrenner.webp" alt="" width="480" height="351" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/kohlbrenner.webp" alt="Figure from the paper “A Machine Learning Approach to Contact Localization in Variable Density Three-Dimensional Tactile Artificial Skin”" width="480" height="351" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title"><a class="card-link" href="https://doi.org/10.48550/arxiv.2412.00689">A Machine Learning Approach to Contact Localization in Variable Density Three-Dimensional Tactile Artificial Skin</a></h3>
       <p class="card-meta">Carson Kohlbrenner, Murray, Mitchell, Yutong Zhang, Caleb Escobedo, Thomas Dunnington, Nicholas Stevenson, <b>Nikolaus Correll</b>, Alessandro Roncone</p>
@@ -319,7 +343,7 @@
 </li>
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
-    <figure class="card-image"><img src="assets/pubs/highlevel.webp" alt="" width="480" height="105" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/highlevel.webp" alt="Figure from the paper “Just Add Force for Contact-Rich Robot Policies”" width="480" height="105" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title"><a class="card-link" href="https://doi.org/10.48550/arxiv.2410.13124">Just Add Force for Contact-Rich Robot Policies</a></h3>
       <p class="card-meta">William Xie, Stefan Caldararu, <b>Nikolaus Correll</b></p>
@@ -329,7 +353,7 @@
 </li>
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
-    <figure class="card-image"><img src="assets/pubs/deligrasp.webp" alt="" width="328" height="480" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/deligrasp.webp" alt="Figure from the paper “DeliGrasp: Inferring Object Properties with LLMs for Adaptive Grasp Policies”" width="328" height="480" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title"><a class="card-link" href="https://doi.org/10.48550/arxiv.2403.07832">DeliGrasp: Inferring Object Properties with LLMs for Adaptive Grasp Policies</a></h3>
       <p class="card-meta">William Xie, Valentini, Maria, Jensen Lavering, <b>Nikolaus Correll</b></p>
@@ -339,7 +363,7 @@
 </li>
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
-    <figure class="card-image"><img src="assets/pubs/auto/a-versatile-robotic-hand-with-3d-perception-force-sensing-fo.webp" alt="" width="402" height="473" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/auto/a-versatile-robotic-hand-with-3d-perception-force-sensing-fo.webp" alt="Figure from the paper “A versatile robotic hand with 3D perception, force sensing for autonomous manipulation”" width="402" height="473" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title"><a class="card-link" href="https://doi.org/10.48550/arxiv.2402.06018">A versatile robotic hand with 3D perception, force sensing for autonomous manipulation</a></h3>
       <p class="card-meta"><b>Nikolaus Correll</b>, Dylan Kriegman, Stephen Otto, James Watson</p>
@@ -349,7 +373,7 @@
 </li>
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
-    <figure class="card-image"><img src="assets/pubs/auto/software-engineering-for-robotics-future-research-directions.webp" alt="" width="399" height="480" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/auto/software-engineering-for-robotics-future-research-directions.webp" alt="First page of the paper “Software Engineering for Robotics: Future Research Directions; Report from the 2023 Workshop on Software Engineering for Robotics”" width="399" height="480" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title"><a class="card-link" href="https://doi.org/10.48550/arxiv.2401.12317">Software Engineering for Robotics: Future Research Directions; Report from the 2023 Workshop on Software Engineering for Robotics</a></h3>
       <p class="card-meta">Claire Le Goues, Sebastian Elbaum, Anthony S. David, Celik, Z. Berkay, Mauricio Castillo‐Effen, <b>Nikolaus Correll</b>, Pooyan Jamshidi, Morgan Quigley <span class="pub-more">and 2 more</span></p>
@@ -360,7 +384,7 @@
   </ul>
 </section>
 <section class="section pub-year" data-year="2023">
-  <h2 class="section-title section-title--sm" id="y2023">2023 <span class="pub-count">3</span></h2>
+  <h2 class="section-title section-title--sm" id="y2023">2023 <span class="pub-count" data-total="3">3 publications</span></h2>
   <ul class="list--unstyled pub-list">
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
@@ -384,7 +408,7 @@
 </li>
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
-    <figure class="card-image"><img src="assets/pubs/auto/optimal-decision-making-in-robotic-assembly-and-other-trial-.webp" alt="" width="480" height="327" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/auto/optimal-decision-making-in-robotic-assembly-and-other-trial-.webp" alt="Figure from the paper “Optimal decision making in robotic assembly and other trial-and-error tasks”" width="480" height="327" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title"><a class="card-link" href="https://doi.org/10.48550/arxiv.2301.10846">Optimal decision making in robotic assembly and other trial-and-error tasks</a></h3>
       <p class="card-meta">James Watson, <b>Nikolaus Correll</b></p>
@@ -395,7 +419,7 @@
   </ul>
 </section>
 <section class="section pub-year" data-year="2022">
-  <h2 class="section-title section-title--sm" id="y2022">2022 <span class="pub-count">4</span></h2>
+  <h2 class="section-title section-title--sm" id="y2022">2022 <span class="pub-count" data-total="4">4 publications</span></h2>
   <ul class="list--unstyled pub-list">
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
@@ -440,7 +464,7 @@
   </ul>
 </section>
 <section class="section pub-year" data-year="2021">
-  <h2 class="section-title section-title--sm" id="y2021">2021 <span class="pub-count">3</span></h2>
+  <h2 class="section-title section-title--sm" id="y2021">2021 <span class="pub-count" data-total="3">3 publications</span></h2>
   <ul class="list--unstyled pub-list">
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
@@ -454,7 +478,7 @@
 </li>
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
-    <figure class="card-image"><img src="assets/pubs/auto/mobile-manipulation-hackathon-moving-into-real-world-applica.webp" alt="" width="456" height="126" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/auto/mobile-manipulation-hackathon-moving-into-real-world-applica.webp" alt="Figure from the paper “Mobile Manipulation Hackathon: Moving into Real World Applications”" width="456" height="126" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title"><a class="card-link" href="https://doi.org/10.1109/mra.2021.3061951">Mobile Manipulation Hackathon: Moving into Real World Applications</a></h3>
       <p class="card-meta">Máximo A. Roa, Mehmet R. Doğar, Jordi Pagès, Carlos Vivas, Antonio Morales, <b>Nikolaus Correll</b>, Michael Görner, Jan Rosell <span class="pub-more">and 3 more</span></p>
@@ -464,7 +488,7 @@
 </li>
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
-    <figure class="card-image"><img src="assets/pubs/auto/high-bandwidth-nonlinear-control-for-soft-actuators-with-rec.webp" alt="" width="350" height="219" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/auto/high-bandwidth-nonlinear-control-for-soft-actuators-with-rec.webp" alt="Figure from the paper “High-bandwidth nonlinear control for soft actuators with recursive network models”" width="350" height="219" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title"><a class="card-link" href="https://doi.org/10.1007/978-3-030-71151-1_52">High-bandwidth nonlinear control for soft actuators with recursive network models</a></h3>
       <p class="card-meta">Sarah Aguasvivas Manzano, Patricia Xu, Khoi Ly, Robert F. Shepherd, <b>Nikolaus Correll</b></p>
@@ -475,11 +499,11 @@
   </ul>
 </section>
 <section class="section pub-year" data-year="2020">
-  <h2 class="section-title section-title--sm" id="y2020">2020 <span class="pub-count">5</span></h2>
+  <h2 class="section-title section-title--sm" id="y2020">2020 <span class="pub-count" data-total="5">5 publications</span></h2>
   <ul class="list--unstyled pub-list">
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
-    <figure class="card-image"><img src="assets/pubs/auto/miniaturized-circuitry-for-capacitive-self-sensing-and-close.webp" alt="" width="369" height="480" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/auto/miniaturized-circuitry-for-capacitive-self-sensing-and-close.webp" alt="First page of the paper “Miniaturized Circuitry for Capacitive Self-Sensing and Closed-Loop Control of Soft Electrostatic Transducers”" width="369" height="480" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title"><a class="card-link" href="https://doi.org/10.1089/soro.2020.0048">Miniaturized Circuitry for Capacitive Self-Sensing and Closed-Loop Control of Soft Electrostatic Transducers</a></h3>
       <p class="card-meta">Khoi Ly, Nicholas Kellaris, Dade McMorris, Brian K. Johnson, Eric Acome, Vani Sundaram, Mantas Naris, J. Sean Humbert <span class="pub-more">and 3 more</span></p>
@@ -489,7 +513,7 @@
 </li>
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
-    <figure class="card-image"><img src="assets/pubs/auto/miniaturized-circuitry-for-capacitive-self-sensing-and-close-d55a18.webp" alt="" width="369" height="480" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/auto/miniaturized-circuitry-for-capacitive-self-sensing-and-close-d55a18.webp" alt="First page of the paper “Miniaturized Circuitry for Capacitive Self-sensing and Closed-loop\n Control of Soft Electrostatic Transducers”" width="369" height="480" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title"><a class="card-link" href="https://doi.org/10.48550/arxiv.2009.06852">Miniaturized Circuitry for Capacitive Self-sensing and Closed-loop\n Control of Soft Electrostatic Transducers</a></h3>
       <p class="card-meta">Khoi Ly, Nicholas Kellaris, Dade McMorris, Brian K. Johnson, Eric Acome, Vani Sundaram, Mantas Naris, J. Sean Humbert <span class="pub-more">and 3 more</span></p>
@@ -530,11 +554,11 @@
   </ul>
 </section>
 <section class="section pub-year" data-year="2019">
-  <h2 class="section-title section-title--sm" id="y2019">2019 <span class="pub-count">6</span></h2>
+  <h2 class="section-title section-title--sm" id="y2019">2019 <span class="pub-count" data-total="6">6 publications</span></h2>
   <ul class="list--unstyled pub-list">
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
-    <figure class="card-image"><img src="assets/pubs/auto/robots-assembling-machines-learning-from-the-world-robot-sum.webp" alt="" width="307" height="195" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/auto/robots-assembling-machines-learning-from-the-world-robot-sum.webp" alt="Figure from the paper “Robots assembling machines: learning from the World Robot Summit 2018 Assembly Challenge”" width="307" height="195" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title"><a class="card-link" href="https://doi.org/10.1080/01691864.2019.1705910">Robots assembling machines: learning from the World Robot Summit 2018 Assembly Challenge</a></h3>
       <p class="card-meta">Felix von Drigalski, Christian Schlette, Martin Rudorfer, <b>Nikolaus Correll</b>, Joshua C. Triyonoputro, Weiwei Wan, Tokuo Tsuji, Tetsuyou Watanabe</p>
@@ -574,7 +598,7 @@
 </li>
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
-    <figure class="card-image"><img src="assets/pubs/auto/multi-modal-prosthetic-fingertip-sensor-with-proximity-conta.webp" alt="" width="337" height="425" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/auto/multi-modal-prosthetic-fingertip-sensor-with-proximity-conta.webp" alt="Figure from the paper “Multi-modal prosthetic fingertip sensor with proximity, contact, and force localization capabilities”" width="337" height="425" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title"><a class="card-link" href="https://doi.org/10.1177/1687814019844643">Multi-modal prosthetic fingertip sensor with proximity, contact, and force localization capabilities</a></h3>
       <p class="card-meta">Jacob L. Segil, Radhen Patel, John Klingner, Richard F. Weir, <b>Nikolaus Correll</b></p>
@@ -584,7 +608,7 @@
 </li>
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
-    <figure class="card-image"><img src="assets/pubs/auto/robotic-materials.webp" alt="" width="480" height="115" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/auto/robotic-materials.webp" alt="First page of the paper “Robotic Materials”" width="480" height="115" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title"><a class="card-link" href="https://doi.org/10.48550/arxiv.1903.10480">Robotic Materials</a></h3>
       <p class="card-meta"><b>Nikolaus Correll</b>, Ray H. Baughman, Richard M. Voyles, Lining Yao, Dan Inman</p>
@@ -595,7 +619,7 @@
   </ul>
 </section>
 <section class="section pub-year" data-year="2018">
-  <h2 class="section-title section-title--sm" id="y2018">2018 <span class="pub-count">13</span></h2>
+  <h2 class="section-title section-title--sm" id="y2018">2018 <span class="pub-count" data-total="13">13 publications</span></h2>
   <ul class="list--unstyled pub-list">
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
@@ -639,7 +663,7 @@
 </li>
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
-    <figure class="card-image"><img src="assets/pubs/auto/from-natural-to-artificial-camouflage-components-and-systems.webp" alt="" width="401" height="268" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/auto/from-natural-to-artificial-camouflage-components-and-systems.webp" alt="Figure from the paper “From Natural to Artificial Camouflage: Components and Systems”" width="401" height="268" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title"><a class="card-link" href="https://doi.org/10.48550/arxiv.1809.04171">From Natural to Artificial Camouflage: Components and Systems</a></h3>
       <p class="card-meta">Yang Li, <b>Nikolaus Correll</b></p>
@@ -730,7 +754,7 @@
   </ul>
 </section>
 <section class="section pub-year" data-year="2017">
-  <h2 class="section-title section-title--sm" id="y2017">2017 <span class="pub-count">12</span></h2>
+  <h2 class="section-title section-title--sm" id="y2017">2017 <span class="pub-count" data-total="12">12 publications</span></h2>
   <ul class="list--unstyled pub-list">
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
@@ -754,7 +778,7 @@
 </li>
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
-    <figure class="card-image"><img src="assets/pubs/auto/new-directions-wireless-robotic-materials.webp" alt="" width="455" height="455" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/auto/new-directions-wireless-robotic-materials.webp" alt="Figure from the paper “New Directions: Wireless Robotic Materials”" width="455" height="455" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title"><a class="card-link" href="https://doi.org/10.48550/arxiv.1708.04677">New Directions: Wireless Robotic Materials</a></h3>
       <p class="card-meta"><b>Nikolaus Correll</b>, Prabal Dutta, Richard Han, Kristofer S. J. Pister</p>
@@ -855,11 +879,11 @@
   </ul>
 </section>
 <section class="section pub-year" data-year="2016">
-  <h2 class="section-title section-title--sm" id="y2016">2016 <span class="pub-count">12</span></h2>
+  <h2 class="section-title section-title--sm" id="y2016">2016 <span class="pub-count" data-total="12">12 publications</span></h2>
   <ul class="list--unstyled pub-list">
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
-    <figure class="card-image"><img src="assets/pubs/auto/sparser-sparse-roadmaps.webp" alt="" width="480" height="240" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/auto/sparser-sparse-roadmaps.webp" alt="Figure from the paper “Sparser Sparse Roadmaps”" width="480" height="240" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title"><a class="card-link" href="https://doi.org/10.48550/arxiv.1610.07671">Sparser Sparse Roadmaps</a></h3>
       <p class="card-meta">David Coleman, <b>Nikolaus Correll</b></p>
@@ -879,7 +903,7 @@
 </li>
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
-    <figure class="card-image"><img src="assets/pubs/auto/consensus-or-deadlock-consequences-of-simple-behavioral-rule.webp" alt="" width="480" height="336" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/auto/consensus-or-deadlock-consequences-of-simple-behavioral-rule.webp" alt="Figure from the paper “Consensus or Deadlock? Consequences of Simple Behavioral Rules for Coordination in Group Decisions”" width="480" height="336" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title"><a class="card-link" href="https://doi.org/10.1371/journal.pone.0162768">Consensus or Deadlock? Consequences of Simple Behavioral Rules for Coordination in Group Decisions</a></h3>
       <p class="card-meta">Helen F. McCreery, <b>Nikolaus Correll</b>, Michael D. Breed, Samuel M. Flaxman</p>
@@ -889,7 +913,7 @@
 </li>
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
-    <figure class="card-image"><img src="assets/pubs/auto/integrated-force-and-distance-sensing-using-elastomer-embedd.webp" alt="" width="402" height="302" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/auto/integrated-force-and-distance-sensing-using-elastomer-embedd.webp" alt="Figure from the paper “Integrated force and distance sensing using elastomer-embedded commodity proximity sensors”" width="402" height="302" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title"><a class="card-link" href="https://doi.org/10.15607/rss.2016.xii.035">Integrated force and distance sensing using elastomer-embedded commodity proximity sensors</a></h3>
       <p class="card-meta">Radhen Patel, <b>Nikolaus Correll</b></p>
@@ -899,7 +923,7 @@
 </li>
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
-    <figure class="card-image"><img src="assets/pubs/auto/distributed-machine-learning-in-materials-that-couple-sensin.webp" alt="" width="480" height="152" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/auto/distributed-machine-learning-in-materials-that-couple-sensin.webp" alt="Figure from the paper “Distributed Machine Learning in Materials that Couple Sensing, Actuation, Computation and Communication”" width="480" height="152" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title"><a class="card-link" href="https://doi.org/10.48550/arxiv.1606.03508">Distributed Machine Learning in Materials that Couple Sensing, Actuation, Computation and Communication</a></h3>
       <p class="card-meta">Dana Hughes, <b>Nikolaus Correll</b></p>
@@ -909,7 +933,7 @@
 </li>
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
-    <figure class="card-image"><img src="assets/pubs/auto/distributed-machine-learning-in-materials-that-couple-sensin-3465f9.webp" alt="" width="480" height="152" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/auto/distributed-machine-learning-in-materials-that-couple-sensin-3465f9.webp" alt="Figure from the paper “Distributed Machine Learning in Materials that Couple Sensing,\n Actuation, Computation and Communication”" width="480" height="152" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title"><a class="card-link" href="https://doi.org/10.48550/arxiv.1606.03508">Distributed Machine Learning in Materials that Couple Sensing,\n Actuation, Computation and Communication</a></h3>
       <p class="card-meta">Dana Hughes, <b>Nikolaus Correll</b></p>
@@ -919,7 +943,7 @@
 </li>
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
-    <figure class="card-image"><img src="assets/pubs/auto/morphological-and-embedded-computation-in-a-self-contained-s.webp" alt="" width="354" height="449" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/auto/morphological-and-embedded-computation-in-a-self-contained-s.webp" alt="Figure from the paper “Morphological and Embedded Computation in a Self-contained Soft Robotic Hand”" width="354" height="449" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title"><a class="card-link" href="https://doi.org/10.48550/arxiv.1605.00354">Morphological and Embedded Computation in a Self-contained Soft Robotic Hand</a></h3>
       <p class="card-meta">Nicholas Farrow, Yang Li, <b>Nikolaus Correll</b></p>
@@ -939,7 +963,7 @@
 </li>
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
-    <figure class="card-image"><img src="assets/pubs/auto/lessons-from-the-amazon-picking-challenge.webp" alt="" width="452" height="277" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/auto/lessons-from-the-amazon-picking-challenge.webp" alt="Figure from the paper “Lessons from the Amazon Picking Challenge.”" width="452" height="277" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title"><a class="card-link" href="https://openalex.org/W2295278273">Lessons from the Amazon Picking Challenge.</a></h3>
       <p class="card-meta"><b>Nikolaus Correll</b>, Kostas E. Bekris, Dmitry Berenson, Oliver Brock, Albert Causo, Kris Hauser, Kei Okada, Alberto Rodríguez <span class="pub-more">and 2 more</span></p>
@@ -980,7 +1004,7 @@
   </ul>
 </section>
 <section class="section pub-year" data-year="2015">
-  <h2 class="section-title section-title--sm" id="y2015">2015 <span class="pub-count">11</span></h2>
+  <h2 class="section-title section-title--sm" id="y2015">2015 <span class="pub-count" data-total="11">11 publications</span></h2>
   <ul class="list--unstyled pub-list">
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
@@ -1095,11 +1119,11 @@
   </ul>
 </section>
 <section class="section pub-year" data-year="2014">
-  <h2 class="section-title section-title--sm" id="y2014">2014 <span class="pub-count">21</span></h2>
+  <h2 class="section-title section-title--sm" id="y2014">2014 <span class="pub-count" data-total="21">21 publications</span></h2>
   <ul class="list--unstyled pub-list">
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
-    <figure class="card-image"><img src="assets/pubs/auto/simultaneous-localization-mapping-and-manipulation-for-unsup.webp" alt="" width="440" height="337" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/auto/simultaneous-localization-mapping-and-manipulation-for-unsup.webp" alt="Figure from the paper “Simultaneous Localization, Mapping, and Manipulation for Unsupervised Object Discovery”" width="440" height="337" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title"><a class="card-link" href="https://doi.org/10.48550/arxiv.1411.0802">Simultaneous Localization, Mapping, and Manipulation for Unsupervised Object Discovery</a></h3>
       <p class="card-meta">Lu Ma, Mahsa Ghafarianzadeh, Dave Coleman, <b>Nikolaus Correll</b>, Gabe Sibley</p>
@@ -1109,7 +1133,7 @@
 </li>
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
-    <figure class="card-image"><img src="assets/pubs/auto/experience-based-planning-with-sparse-roadmap-spanners.webp" alt="" width="480" height="265" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/auto/experience-based-planning-with-sparse-roadmap-spanners.webp" alt="Figure from the paper “Experience-Based Planning with Sparse Roadmap Spanners”" width="480" height="265" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title"><a class="card-link" href="https://doi.org/10.48550/arxiv.1410.1950">Experience-Based Planning with Sparse Roadmap Spanners</a></h3>
       <p class="card-meta">David Coleman, Ioan A. Şucan, Mark Moll, Kei Okada, <b>Nikolaus Correll</b></p>
@@ -1129,7 +1153,7 @@
 </li>
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
-    <figure class="card-image"><img src="assets/pubs/auto/optimal-parameter-identification-for-discrete-mechanical-sys.webp" alt="" width="376" height="408" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/auto/optimal-parameter-identification-for-discrete-mechanical-sys.webp" alt="Figure from the paper “Optimal parameter identification for discrete mechanical systems with application to flexible object manipulation”" width="376" height="408" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title"><a class="card-link" href="https://doi.org/10.1109/iros.2014.6942666">Optimal parameter identification for discrete mechanical systems with application to flexible object manipulation</a></h3>
       <p class="card-meta">Timothy M. Caldwell, Dave Coleman, <b>Nikolaus Correll</b></p>
@@ -1169,7 +1193,7 @@
 </li>
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
-    <figure class="card-image"><img src="assets/pubs/auto/c-forest-parallel-shortest-path-planning-with-super-linear-s.webp" alt="" width="334" height="480" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/auto/c-forest-parallel-shortest-path-planning-with-super-linear-s.webp" alt="First page of the paper “C-FOREST: Parallel Shortest-Path Planning with Super Linear Speedup”" width="334" height="480" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title"><a class="card-link" href="https://doi.org/10.1609/icaps.v24i1.13660">C-FOREST: Parallel Shortest-Path Planning with Super Linear Speedup</a></h3>
       <p class="card-meta">Michael Otte, <b>Nikolaus Correll</b></p>
@@ -1249,7 +1273,7 @@
 </li>
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
-    <figure class="card-image"><img src="assets/pubs/auto/optimal-parameter-identification-for-discrete-mechanical-sys-4cf62b.webp" alt="" width="376" height="408" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/auto/optimal-parameter-identification-for-discrete-mechanical-sys-4cf62b.webp" alt="Figure from the paper “Optimal Parameter Identification for Discrete Mechanical Systems with\n Application to Flexible Object Manipulation”" width="376" height="408" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title"><a class="card-link" href="https://doi.org/10.48550/arxiv.1402.2735">Optimal Parameter Identification for Discrete Mechanical Systems with\n Application to Flexible Object Manipulation</a></h3>
       <p class="card-meta">Timothy M. Caldwell, Dave Coleman, <b>Nikolaus Correll</b></p>
@@ -1279,7 +1303,7 @@
 </li>
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
-    <figure class="card-image"><img src="assets/pubs/auto/reducing-the-barrier-to-entry-of-complex-robotic-software-a-.webp" alt="" width="351" height="480" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/auto/reducing-the-barrier-to-entry-of-complex-robotic-software-a-.webp" alt="First page of the paper “Reducing the Barrier to Entry of Complex Robotic Software: a MoveIt! Case Study”" width="351" height="480" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title"><a class="card-link" href="https://doi.org/10.6092/joser_2014_05_01_p3">Reducing the Barrier to Entry of Complex Robotic Software: a MoveIt! Case Study</a></h3>
       <p class="card-meta">David Coleman, Ioan A. Şucan, Sachin Chitta, <b>Nikolaus Correll</b></p>
@@ -1310,7 +1334,7 @@
   </ul>
 </section>
 <section class="section pub-year" data-year="2013">
-  <h2 class="section-title section-title--sm" id="y2013">2013 <span class="pub-count">10</span></h2>
+  <h2 class="section-title section-title--sm" id="y2013">2013 <span class="pub-count" data-total="10">10 publications</span></h2>
   <ul class="list--unstyled pub-list">
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
@@ -1415,7 +1439,7 @@
   </ul>
 </section>
 <section class="section pub-year" data-year="2012">
-  <h2 class="section-title section-title--sm" id="y2012">2012 <span class="pub-count">9</span></h2>
+  <h2 class="section-title section-title--sm" id="y2012">2012 <span class="pub-count" data-total="9">9 publications</span></h2>
   <ul class="list--unstyled pub-list">
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
@@ -1449,7 +1473,7 @@
 </li>
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
-    <figure class="card-image"><img src="assets/pubs/auto/an-efficient-and-versatile-means-for-assembling-and-manufact.webp" alt="" width="433" height="393" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/auto/an-efficient-and-versatile-means-for-assembling-and-manufact.webp" alt="Figure from the paper “An Efficient and Versatile Means for Assembling and Manufacturing Systems in Space”" width="433" height="393" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title"><a class="card-link" href="https://doi.org/10.2514/6.2012-5115">An Efficient and Versatile Means for Assembling and Manufacturing Systems in Space</a></h3>
       <p class="card-meta">John T. Dorsey, William R. Doggett, Robert A. Hafley, Erik Komendera, <b>Nikolaus Correll</b>, Bruce King</p>
@@ -1459,7 +1483,7 @@
 </li>
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
-    <figure class="card-image"><img src="assets/pubs/auto/distributed-autonomous-robotic-systems-the-10th-internationa.webp" alt="" width="304" height="480" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/auto/distributed-autonomous-robotic-systems-the-10th-internationa.webp" alt="Figure from the paper “Distributed Autonomous Robotic Systems: The 10th International Symposium”" width="304" height="480" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title"><a class="card-link" href="https://doi.org/10.1007/978-3-642-32723-0">Distributed Autonomous Robotic Systems: The 10th International Symposium</a></h3>
       <p class="card-meta">Alcherio Martinoli, Francesco Mondada, <b>Nikolaus Correll</b>, Grgory Mermoud, Magnus Egerstedt, M. Ani Hsieh, Lynne E. Parker, Kasper Sty</p>
@@ -1489,7 +1513,7 @@
 </li>
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
-    <figure class="card-image"><img src="assets/pubs/auto/organizing-the-aggregate-languages-for-spatial-computing.webp" alt="" width="417" height="480" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/auto/organizing-the-aggregate-languages-for-spatial-computing.webp" alt="First page of the paper “Organizing the Aggregate: Languages for Spatial Computing”" width="417" height="480" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title"><a class="card-link" href="https://doi.org/10.48550/arxiv.1202.5509">Organizing the Aggregate: Languages for Spatial Computing</a></h3>
       <p class="card-meta">Jacob Beal, Stefan Dulman, Kyle Usbeck, Mirko Viroli, <b>Nikolaus Correll</b></p>
@@ -1510,7 +1534,7 @@
   </ul>
 </section>
 <section class="section pub-year" data-year="2011">
-  <h2 class="section-title section-title--sm" id="y2011">2011 <span class="pub-count">6</span></h2>
+  <h2 class="section-title section-title--sm" id="y2011">2011 <span class="pub-count" data-total="6">6 publications</span></h2>
   <ul class="list--unstyled pub-list">
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
@@ -1534,7 +1558,7 @@
 </li>
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
-    <figure class="card-image"><img src="assets/pubs/auto/modeling-and-designing-self-organized-aggregation-in-a-swarm.webp" alt="" width="310" height="480" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/auto/modeling-and-designing-self-organized-aggregation-in-a-swarm.webp" alt="First page of the paper “Modeling and designing self-organized aggregation in a swarm of miniature robots”" width="310" height="480" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title"><a class="card-link" href="https://doi.org/10.1177/0278364911403017">Modeling and designing self-organized aggregation in a swarm of miniature robots</a></h3>
       <p class="card-meta"><b>Nikolaus Correll</b>, Alcherio Martinoli</p>
@@ -1554,7 +1578,7 @@
 </li>
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
-    <figure class="card-image"><img src="assets/pubs/auto/path-planning-with-forests-of-random-trees-parallelization-w.webp" alt="" width="480" height="340" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/auto/path-planning-with-forests-of-random-trees-parallelization-w.webp" alt="First page of the paper “Path Planning with Forests of Random Trees: Parallelization with Super Linear Speedup ; CU-CS-1079-11”" width="480" height="340" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title"><a class="card-link" href="https://openalex.org/W2266937728">Path Planning with Forests of Random Trees: Parallelization with Super Linear Speedup ; CU-CS-1079-11</a></h3>
       <p class="card-meta">Michael Otte, <b>Nikolaus Correll</b></p>
@@ -1564,7 +1588,7 @@
 </li>
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
-    <figure class="card-image"><img src="assets/pubs/auto/assembly-by-intelligent-scaffolding-cu-cs-1080-11.webp" alt="" width="145" height="98" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/auto/assembly-by-intelligent-scaffolding-cu-cs-1080-11.webp" alt="Figure from the paper “Assembly by Intelligent Scaffolding ; CU-CS-1080-11”" width="145" height="98" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title"><a class="card-link" href="https://openalex.org/W2763546711">Assembly by Intelligent Scaffolding ; CU-CS-1080-11</a></h3>
       <p class="card-meta">Erik Komendera, Dustin Reishus, <b>Nikolaus Correll</b></p>
@@ -1575,7 +1599,7 @@
   </ul>
 </section>
 <section class="section pub-year" data-year="2010">
-  <h2 class="section-title section-title--sm" id="y2010">2010 <span class="pub-count">4</span></h2>
+  <h2 class="section-title section-title--sm" id="y2010">2010 <span class="pub-count" data-total="4">4 publications</span></h2>
   <ul class="list--unstyled pub-list">
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
@@ -1620,11 +1644,11 @@
   </ul>
 </section>
 <section class="section pub-year" data-year="2009">
-  <h2 class="section-title section-title--sm" id="y2009">2009 <span class="pub-count">4</span></h2>
+  <h2 class="section-title section-title--sm" id="y2009">2009 <span class="pub-count" data-total="4">4 publications</span></h2>
   <ul class="list--unstyled pub-list">
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
-    <figure class="card-image"><img src="assets/pubs/auto/building-a-distributed-robot-garden.webp" alt="" width="426" height="320" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/auto/building-a-distributed-robot-garden.webp" alt="Figure from the paper “Building a distributed robot garden”" width="426" height="320" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title"><a class="card-link" href="https://doi.org/10.1109/iros.2009.5354261">Building a distributed robot garden</a></h3>
       <p class="card-meta"><b>Nikolaus Correll</b>, Nikos Aréchiga, Adrienne Bolger, M. Bollini, Ben Charrow, Adam Clayton, Felipe Dominguez, Kenneth Donahue <span class="pub-more">and 10 more</span></p>
@@ -1654,7 +1678,7 @@
 </li>
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
-    <figure class="card-image"><img src="assets/pubs/auto/behavior-modes-for-randomized-robotic-coverage.webp" alt="" width="448" height="259" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/auto/behavior-modes-for-randomized-robotic-coverage.webp" alt="Figure from the paper “Behavior Modes for Randomized Robotic Coverage”" width="448" height="259" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title"><a class="card-link" href="https://doi.org/10.4108/icst.robocomm2009.5863">Behavior Modes for Randomized Robotic Coverage</a></h3>
       <p class="card-meta">Jacob Beal, <b>Nikolaus Correll</b>, Leonardo Urbina, Jonathan Bachrach</p>
@@ -1665,11 +1689,11 @@
   </ul>
 </section>
 <section class="section pub-year" data-year="2008">
-  <h2 class="section-title section-title--sm" id="y2008">2008 <span class="pub-count">10</span></h2>
+  <h2 class="section-title section-title--sm" id="y2008">2008 <span class="pub-count" data-total="10">10 publications</span></h2>
   <ul class="list--unstyled pub-list">
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
-    <figure class="card-image"><img src="assets/pubs/auto/collaborative-coverage-using-a-swarm-of-networked-miniature-.webp" alt="" width="480" height="242" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/auto/collaborative-coverage-using-a-swarm-of-networked-miniature-.webp" alt="Figure from the paper “Collaborative coverage using a swarm of networked miniature robots”" width="480" height="242" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title"><a class="card-link" href="https://doi.org/10.1016/j.robot.2008.10.023">Collaborative coverage using a swarm of networked miniature robots</a></h3>
       <p class="card-meta">Samuel Rutishauser, <b>Nikolaus Correll</b>, Alcherio Martinoli</p>
@@ -1699,7 +1723,7 @@
 </li>
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
-    <figure class="card-image"><img src="assets/pubs/auto/swistrack-a-flexible-open-source-tracking-software-for-multi.webp" alt="" width="480" height="373" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/auto/swistrack-a-flexible-open-source-tracking-software-for-multi.webp" alt="Figure from the paper “SwisTrack - A Flexible Open Source Tracking Software for Multi-Agent Systems”" width="480" height="373" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title"><a class="card-link" href="https://doi.org/10.1109/iros.2008.4650937">SwisTrack - A Flexible Open Source Tracking Software for Multi-Agent Systems</a></h3>
       <p class="card-meta">Thomas Lochmatter, Pierre Roduit, Chris Cianci, <b>Nikolaus Correll</b>, Jacques Jacot, Alcherio Martinoli</p>
@@ -1749,7 +1773,7 @@
 </li>
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
-    <figure class="card-image"><img src="assets/pubs/auto/modeling-and-optimization-of-a-swarm-intelligent-inspection-.webp" alt="" width="183" height="149" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/auto/modeling-and-optimization-of-a-swarm-intelligent-inspection-.webp" alt="Figure from the paper “Modeling and Optimization of a Swarm-Intelligent Inspection System”" width="183" height="149" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title"><a class="card-link" href="https://doi.org/10.1007/978-4-431-35873-2_36">Modeling and Optimization of a Swarm-Intelligent Inspection System</a></h3>
       <p class="card-meta"><b>Nikolaus Correll</b>, Alcherio Martinoli</p>
@@ -1770,11 +1794,11 @@
   </ul>
 </section>
 <section class="section pub-year" data-year="2007">
-  <h2 class="section-title section-title--sm" id="y2007">2007 <span class="pub-count">5</span></h2>
+  <h2 class="section-title section-title--sm" id="y2007">2007 <span class="pub-count" data-total="5">5 publications</span></h2>
   <ul class="list--unstyled pub-list">
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
-    <figure class="card-image"><img src="assets/pubs/auto/social-integration-of-robots-into-groups-of-cockroaches-to-c.webp" alt="" width="305" height="480" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/auto/social-integration-of-robots-into-groups-of-cockroaches-to-c.webp" alt="First page of the paper “Social Integration of Robots into Groups of Cockroaches to Control Self-Organized Choices”" width="305" height="480" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title"><a class="card-link" href="https://doi.org/10.1126/science.1144259">Social Integration of Robots into Groups of Cockroaches to Control Self-Organized Choices</a></h3>
       <p class="card-meta">José Halloy, Grégory Sempo, Gilles Caprari, Colette Rivault, Masoud Asadpour, Florin Tache, Imen Saïd, V. Durier <span class="pub-more">and 8 more</span></p>
@@ -1784,7 +1808,7 @@
 </li>
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
-    <figure class="card-image"><img src="assets/pubs/auto/system-identification-of-self-organizing-robotic-swarms.webp" alt="" width="333" height="480" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/auto/system-identification-of-self-organizing-robotic-swarms.webp" alt="First page of the paper “System Identification of Self-Organizing Robotic Swarms”" width="333" height="480" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title"><a class="card-link" href="https://doi.org/10.1007/4-431-35881-1_4">System Identification of Self-Organizing Robotic Swarms</a></h3>
       <p class="card-meta"><b>Nikolaus Correll</b>, Alcherio Martinoli</p>
@@ -1794,7 +1818,7 @@
 </li>
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
-    <figure class="card-image"><img src="assets/pubs/auto/robust-distributed-coverage-using-a-swarm-of-miniature-robot.webp" alt="" width="480" height="181" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/auto/robust-distributed-coverage-using-a-swarm-of-miniature-robot.webp" alt="Figure from the paper “Robust Distributed Coverage using a Swarm of Miniature Robots”" width="480" height="181" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title"><a class="card-link" href="https://doi.org/10.1109/robot.2007.363816">Robust Distributed Coverage using a Swarm of Miniature Robots</a></h3>
       <p class="card-meta"><b>Nikolaus Correll</b>, Alcherio Martinoli</p>
@@ -1804,7 +1828,7 @@
 </li>
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
-    <figure class="card-image"><img src="assets/pubs/auto/modeling-self-organized-aggregation-in-a-swarm-of-miniature-.webp" alt="" width="383" height="231" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/auto/modeling-self-organized-aggregation-in-a-swarm-of-miniature-.webp" alt="Figure from the paper “Modeling Self-Organized Aggregation in a Swarm of Miniature Robots”" width="383" height="231" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title"><a class="card-link" href="https://openalex.org/W1810559892">Modeling Self-Organized Aggregation in a Swarm of Miniature Robots</a></h3>
       <p class="card-meta"><b>Nikolaus Correll</b>, Alcherio Martinoli</p>
@@ -1814,7 +1838,7 @@
 </li>
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
-    <figure class="card-image"><img src="assets/pubs/auto/a-challenging-application-in-swarm-robotics-the-autonomous-i.webp" alt="" width="480" height="360" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/auto/a-challenging-application-in-swarm-robotics-the-autonomous-i.webp" alt="Figure from the paper “A Challenging Application in Swarm Robotics: The Autonomous Inspection of Complex Engineered Structures”" width="480" height="360" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title"><a class="card-link" href="https://openalex.org/W1926098067">A Challenging Application in Swarm Robotics: The Autonomous Inspection of Complex Engineered Structures</a></h3>
       <p class="card-meta"><b>Nikolaus Correll</b>, Alcherio Martinoli</p>
@@ -1825,11 +1849,11 @@
   </ul>
 </section>
 <section class="section pub-year" data-year="2006">
-  <h2 class="section-title section-title--sm" id="y2006">2006 <span class="pub-count">5</span></h2>
+  <h2 class="section-title section-title--sm" id="y2006">2006 <span class="pub-count" data-total="5">5 publications</span></h2>
   <ul class="list--unstyled pub-list">
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
-    <figure class="card-image"><img src="assets/pubs/auto/swistrack-a-tracking-tool-for-multi-unit-robotic-and-biologi.webp" alt="" width="331" height="226" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/auto/swistrack-a-tracking-tool-for-multi-unit-robotic-and-biologi.webp" alt="Figure from the paper “SwisTrack: A Tracking Tool for Multi-Unit Robotic and Biological Systems”" width="331" height="226" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title"><a class="card-link" href="https://doi.org/10.1109/iros.2006.282558">SwisTrack: A Tracking Tool for Multi-Unit Robotic and Biological Systems</a></h3>
       <p class="card-meta"><b>Nikolaus Correll</b>, Grégory Sempo, Y.L. de Meneses, José Halloy, Jean‐Louis Deneubourg, Alcherio Martinoli</p>
@@ -1839,7 +1863,7 @@
 </li>
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
-    <figure class="card-image"><img src="assets/pubs/auto/modeling-and-analysis-of-beaconless-and-beacon-based-policie.webp" alt="" width="221" height="147" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/auto/modeling-and-analysis-of-beaconless-and-beacon-based-policie.webp" alt="Figure from the paper “Modeling and Analysis of Beaconless and Beacon-Based Policies for a Swarm-Intelligent Inspection System”" width="221" height="147" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title"><a class="card-link" href="https://doi.org/10.1109/robot.2005.1570484">Modeling and Analysis of Beaconless and Beacon-Based Policies for a Swarm-Intelligent Inspection System</a></h3>
       <p class="card-meta"><b>Nikolaus Correll</b>, Alcherio Martinoli</p>
@@ -1849,7 +1873,7 @@
 </li>
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
-    <figure class="card-image"><img src="assets/pubs/auto/towards-optimal-control-of-self-organized-robotic-inspection.webp" alt="" width="197" height="148" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/auto/towards-optimal-control-of-self-organized-robotic-inspection.webp" alt="Figure from the paper “TOWARDS OPTIMAL CONTROL OF SELF-ORGANIZED ROBOTIC INSPECTION SYSTEMS”" width="197" height="148" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title"><a class="card-link" href="https://doi.org/10.3182/20060906-3-it-2910.00052">TOWARDS OPTIMAL CONTROL OF SELF-ORGANIZED ROBOTIC INSPECTION SYSTEMS</a></h3>
       <p class="card-meta"><b>Nikolaus Correll</b>, Alcherio Martinoli</p>
@@ -1859,7 +1883,7 @@
 </li>
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
-    <figure class="card-image"><img src="assets/pubs/auto/self-organized-embedded-sensor-actuator-networks-for-smart-t.webp" alt="" width="303" height="228" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/auto/self-organized-embedded-sensor-actuator-networks-for-smart-t.webp" alt="Figure from the paper “Self-Organized Embedded Sensor/Actuator Networks for &quot;&quot;Smart&quot;&quot; Turbines”" width="303" height="228" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title"><a class="card-link" href="https://openalex.org/W1585558507">Self-Organized Embedded Sensor/Actuator Networks for &quot;&quot;Smart&quot;&quot; Turbines</a></h3>
       <p class="card-meta"><b>Nikolaus Correll</b>, Christopher M. Cianci, Xavier Raemy, Alcherio Martinoli</p>
@@ -1869,7 +1893,7 @@
 </li>
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
-    <figure class="card-image"><img src="assets/pubs/auto/collective-inspection-of-regular-structures-using-a-swarm-of.webp" alt="" width="480" height="149" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/auto/collective-inspection-of-regular-structures-using-a-swarm-of.webp" alt="Figure from the paper “Collective Inspection of Regular Structures using a Swarm of Miniature Robots”" width="480" height="149" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title"><a class="card-link" href="https://doi.org/10.1007/11552246_36">Collective Inspection of Regular Structures using a Swarm of Miniature Robots</a></h3>
       <p class="card-meta"><b>Nikolaus Correll</b>, Alcherio Martinoli</p>
@@ -1880,11 +1904,11 @@
   </ul>
 </section>
 <section class="section pub-year" data-year="2002">
-  <h2 class="section-title section-title--sm" id="y2002">2002 <span class="pub-count">1</span></h2>
+  <h2 class="section-title section-title--sm" id="y2002">2002 <span class="pub-count" data-total="1">1 publication</span></h2>
   <ul class="list--unstyled pub-list">
 <li class="card-container">
   <article class="card card--horizontal card--image-sm card--pub">
-    <figure class="card-image"><img src="assets/pubs/auto/6-dof-visual-servoing-using-the-lie-group-of-affine-transfor.webp" alt="" width="287" height="480" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/auto/6-dof-visual-servoing-using-the-lie-group-of-affine-transfor.webp" alt="First page of the paper “6-DOF Visual Servoing Using the Lie Group of Affine Transformations”" width="287" height="480" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title"><a class="card-link" href="https://openalex.org/W2346563870">6-DOF Visual Servoing Using the Lie Group of Affine Transformations</a></h3>
       <p class="card-meta"><b>Nikolaus Correll</b></p>

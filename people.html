@@ -157,6 +157,30 @@
         </div>
       </div>
     </div>
+    <!-- The theme's sticky navigation. ndt.js watches .header-nav and reveals this
+         bar once the header above has scrolled out of view; it stays `hidden`, and
+         therefore out of the accessibility tree, until then. -->
+    <div class="header-nav-fixed" id="nav-fixed" hidden>
+      <div class="nav-fixed-inner">
+        <nav id="fixed" class="fixed nav-primary" aria-label="Primary navigation">
+          <div id="primary_fixed">
+            <ul class="nav-level-1 depth_1">
+            <li id="primary_fixed_0"><a href="index.html">Home</a></li>
+            <li id="primary_fixed_1"><a href="publications.html">Publications</a></li>
+            <li id="primary_fixed_2" class="active"><a href="people.html" aria-current="page" class="current">People</a></li>
+            <li id="primary_fixed_3"><a href="teaching.html">Teaching</a></li>
+            <li id="primary_fixed_4"><a href="art.html">Art</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div class="header-nav-toggle">
+          <button class="btn btn--action global-menu-toggle" aria-label="Open global menu and search" aria-controls="global-menu" aria-haspopup="dialog">
+            <svg class="icon-search-menu" aria-hidden="true"><use xlink:href="#icon-search-menu"></use></svg>
+            <svg class="icon-search" aria-hidden="true"><use xlink:href="#icon-search"></use></svg>
+          </button>
+        </div>
+      </div>
+    </div>
   </header>
 
 <main id="content" class="site-content">
@@ -170,8 +194,8 @@
     <div class="page-primary">
       <div class="section">
 <div class="card-container">
-  <div class="card card--person card--horizontal">
-    <figure class="avatar avatar--md card-image"><img src="assets/people/correll.webp" alt="" width="316" height="316"></figure>
+  <div class="card card--person">
+    <figure class="avatar avatar--md card-image"><img src="assets/people/correll.webp" alt="Portrait of Nikolaus Correll" width="316" height="316"></figure>
     <div class="card-body">
       <h2 class="card-title">Nikolaus Correll</h2>
       <p class="person-title">Viola D. Hank Professor of Aerospace and Mechanical Engineering</p>
@@ -186,7 +210,7 @@
   <ul class="grid grid-sm-2 grid-ml-4 list--unstyled">
 <li class="card-container">
   <div class="card card--person card--stacked">
-    <figure class="avatar avatar--sm card-image"><img src="assets/people/sheeraz-athar.webp" alt="" width="200" height="200" loading="lazy" decoding="async"></figure>
+    <figure class="avatar avatar--sm card-image"><img src="assets/people/sheeraz-athar.webp" alt="Portrait of Sheeraz Athar" width="200" height="200" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title">Sheeraz Athar</h3>
       <p class="person-title">Postdoctoral Associate • PhD Purdue University</p>
@@ -195,7 +219,7 @@
 </li>
 <li class="card-container">
   <div class="card card--person card--stacked">
-    <figure class="avatar avatar--sm card-image"><img src="assets/people/chen-liu.webp" alt="" width="300" height="300" loading="lazy" decoding="async"></figure>
+    <figure class="avatar avatar--sm card-image"><img src="assets/people/chen-liu.webp" alt="Portrait of Chen Liu" width="300" height="300" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title">Chen Liu</h3>
       <p class="person-title">PhD Student • MS University of Southern California</p>
@@ -204,7 +228,7 @@
 </li>
 <li class="card-container">
   <div class="card card--person card--stacked">
-    <figure class="avatar avatar--sm card-image"><img src="assets/people/niraj-pudasaini.webp" alt="" width="300" height="300" loading="lazy" decoding="async"></figure>
+    <figure class="avatar avatar--sm card-image"><img src="assets/people/niraj-pudasaini.webp" alt="Portrait of Niraj Pudasaini" width="300" height="300" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title">Niraj Pudasaini</h3>
       <p class="person-title">PhD Student • BS New York University Abu Dhabi</p>
@@ -218,7 +242,7 @@
   <ul class="grid grid-sm-2 grid-ml-4 list--unstyled">
 <li class="card-container">
   <div class="card card--person card--stacked">
-    <figure class="avatar avatar--sm card-image"><img src="assets/people/zachary-allen.webp" alt="" width="300" height="300" loading="lazy" decoding="async"></figure>
+    <figure class="avatar avatar--sm card-image"><img src="assets/people/zachary-allen.webp" alt="Portrait of Zachary Allen" width="300" height="300" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title">Zachary Allen</h3>
       <p class="person-title">PhD Student • BS University of Colorado • Senior Robotics Engineer, Lunar Outpost</p>
@@ -227,7 +251,7 @@
 </li>
 <li class="card-container">
   <div class="card card--person card--stacked">
-    <figure class="avatar avatar--sm card-image"><img src="assets/people/max-conway.webp" alt="" width="230" height="230" loading="lazy" decoding="async"></figure>
+    <figure class="avatar avatar--sm card-image"><img src="assets/people/max-conway.webp" alt="Portrait of Max Conway" width="230" height="230" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title">Max Conway</h3>
       <p class="person-title">PhD Student • BS/MSc University of Denver</p>
@@ -236,7 +260,7 @@
 </li>
 <li class="card-container">
   <div class="card card--person card--stacked">
-    <figure class="avatar avatar--sm card-image"><img src="assets/people/kailey-shara.webp" alt="" width="199" height="199" loading="lazy" decoding="async"></figure>
+    <figure class="avatar avatar--sm card-image"><img src="assets/people/kailey-shara.webp" alt="Portrait of Kailey Shara" width="199" height="199" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title">Kailey Shara</h3>
       <p class="person-title">PhD Student • BSc Case Western (Electrical Engineering) • BSc Case Western (Chemistry)</p>
@@ -245,7 +269,7 @@
 </li>
 <li class="card-container">
   <div class="card card--person card--stacked">
-    <figure class="avatar avatar--sm card-image"><img src="assets/people/james-watson.webp" alt="" width="300" height="300" loading="lazy" decoding="async"></figure>
+    <figure class="avatar avatar--sm card-image"><img src="assets/people/james-watson.webp" alt="Portrait of James Watson" width="300" height="300" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title">James Watson</h3>
       <p class="person-title">PhD Student • MSc University of Utah • BSc University of Illinois</p>
@@ -254,7 +278,7 @@
 </li>
 <li class="card-container">
   <div class="card card--person card--stacked">
-    <figure class="avatar avatar--sm card-image"><img src="assets/people/william-xie.webp" alt="" width="290" height="290" loading="lazy" decoding="async"></figure>
+    <figure class="avatar avatar--sm card-image"><img src="assets/people/william-xie.webp" alt="Portrait of William Xie" width="290" height="290" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title">William Xie</h3>
       <p class="person-title">PhD Student • NSF Graduate Fellow • BSc Columbia University</p>
@@ -263,7 +287,7 @@
 </li>
 <li class="card-container">
   <div class="card card--person card--stacked">
-    <figure class="avatar avatar--sm card-image"><img src="assets/people/yutong-zhang.webp" alt="" width="300" height="300" loading="lazy" decoding="async"></figure>
+    <figure class="avatar avatar--sm card-image"><img src="assets/people/yutong-zhang.webp" alt="Portrait of Yutong Zhang" width="300" height="300" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title">Yutong Zhang</h3>
       <p class="person-title">PhD Student • BS/MS Computer Science UC San Diego</p>
@@ -272,7 +296,7 @@
 </li>
 <li class="card-container">
   <div class="card card--person card--stacked">
-    <figure class="avatar avatar--sm card-image"><img src="assets/people/adam-abid.webp" alt="" width="297" height="297" loading="lazy" decoding="async"></figure>
+    <figure class="avatar avatar--sm card-image"><img src="assets/people/adam-abid.webp" alt="Portrait of Adam Abid" width="297" height="297" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title">Adam Abid</h3>
       <p class="person-title">Undergraduate • BS in Computer Science, Class of 2028</p>
@@ -281,7 +305,7 @@
 </li>
 <li class="card-container">
   <div class="card card--person card--stacked">
-    <figure class="avatar avatar--sm card-image"><img src="assets/people/paul-afriyie.webp" alt="" width="200" height="200" loading="lazy" decoding="async"></figure>
+    <figure class="avatar avatar--sm card-image"><img src="assets/people/paul-afriyie.webp" alt="Portrait of Paul Afriyie" width="200" height="200" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title">Paul Afriyie</h3>
       <p class="person-title">Undergraduate • BS in Computer Science, Class of 2029</p>
@@ -290,7 +314,7 @@
 </li>
 <li class="card-container">
   <div class="card card--person card--stacked">
-    <figure class="avatar avatar--sm card-image"><img src="assets/people/justin-costa.webp" alt="" width="262" height="262" loading="lazy" decoding="async"></figure>
+    <figure class="avatar avatar--sm card-image"><img src="assets/people/justin-costa.webp" alt="Portrait of Justin Costa" width="262" height="262" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title">Justin Costa</h3>
       <p class="person-title">Undergraduate • Independent Study • UROP</p>
@@ -299,7 +323,7 @@
 </li>
 <li class="card-container">
   <div class="card card--person card--stacked">
-    <figure class="avatar avatar--sm card-image"><img src="assets/people/jasmitha-gourabathini.webp" alt="" width="281" height="281" loading="lazy" decoding="async"></figure>
+    <figure class="avatar avatar--sm card-image"><img src="assets/people/jasmitha-gourabathini.webp" alt="Portrait of Jasmitha Gourabathini" width="281" height="281" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title">Jasmitha Gourabathini</h3>
       <p class="person-title">Undergraduate • FUTURE Program • UROP</p>
@@ -308,7 +332,7 @@
 </li>
 <li class="card-container">
   <div class="card card--person card--stacked">
-    <figure class="avatar avatar--sm card-image"><img src="assets/people/mateo-feit.webp" alt="" width="300" height="300" loading="lazy" decoding="async"></figure>
+    <figure class="avatar avatar--sm card-image"><img src="assets/people/mateo-feit.webp" alt="Portrait of Mateo Feit" width="300" height="300" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <h3 class="card-title">Mateo Feit</h3>
       <p class="person-title">High School Intern • Visiting Student</p>

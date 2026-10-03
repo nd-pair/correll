@@ -157,17 +157,54 @@
         </div>
       </div>
     </div>
+    <!-- The theme's sticky navigation. ndt.js watches .header-nav and reveals this
+         bar once the header above has scrolled out of view; it stays `hidden`, and
+         therefore out of the accessibility tree, until then. -->
+    <div class="header-nav-fixed" id="nav-fixed" hidden>
+      <div class="nav-fixed-inner">
+        <nav id="fixed" class="fixed nav-primary" aria-label="Primary navigation">
+          <div id="primary_fixed">
+            <ul class="nav-level-1 depth_1">
+            <li id="primary_fixed_0" class="active"><a href="index.html" aria-current="page" class="current">Home</a></li>
+            <li id="primary_fixed_1"><a href="publications.html">Publications</a></li>
+            <li id="primary_fixed_2"><a href="people.html">People</a></li>
+            <li id="primary_fixed_3"><a href="teaching.html">Teaching</a></li>
+            <li id="primary_fixed_4"><a href="art.html">Art</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div class="header-nav-toggle">
+          <button class="btn btn--action global-menu-toggle" aria-label="Open global menu and search" aria-controls="global-menu" aria-haspopup="dialog">
+            <svg class="icon-search-menu" aria-hidden="true"><use xlink:href="#icon-search-menu"></use></svg>
+            <svg class="icon-search" aria-hidden="true"><use xlink:href="#icon-search"></use></svg>
+          </button>
+        </div>
+      </div>
+    </div>
   </header>
 
 <main id="content" class="site-content">
-    <div class="page-header page-header--screen bg--dark">
-      <figure class="page-image bg--gradient bg--brand-blue bg--to-bottom-right" data-hero-rotate='[{"src":"assets/hero/xlerobot.webp","srcset":"assets/hero/xlerobot-800.webp 800w, assets/hero/xlerobot.webp 1600w"}]'>
-        <img src="assets/hero/battery.webp"
+    <!-- Container, not Screen. The Screen variant runs the photograph full-bleed
+         *behind* the site header, which puts white navigation over whatever the
+         photograph happens to show there; on the battery photo that is a white
+         cabinet, and no documented fadeDirection rescues it (all eight measured
+         1.00:1 at 1920px). The Container variant is what www.nd.edu itself uses:
+         the image sits below the header, so the navigation keeps its own
+         background and the gradient only has to carry the page title.
+         backgroundColor "black" + fadeDirection "to-top" are the documented
+         options that clear AA on both photographs at every width: the title sits
+         at the bottom of the image, which is where this gradient is densest.
+         Measured worst case 3.55:1 against the 3:1 large-text minimum. -->
+    <div class="page-header page-header--container bg--black">
+      <figure class="page-image bg--gradient bg--black bg--to-top" data-hero-rotate='[{"src":"assets/hero/xlerobot-800.webp","srcset":"assets/hero/xlerobot-800.webp 800w, assets/hero/xlerobot.webp 1600w","alt":"A small blue-and-black humanoid robot reaching toward a sheet of dark composite material on a workbench."}]'>
+        <img src="assets/hero/battery-800.webp"
              srcset="assets/hero/battery-800.webp 800w, assets/hero/battery.webp 1600w"
-             sizes="100vw" width="1600" height="1064" alt="" fetchpriority="high" decoding="async">
+             sizes="100vw" width="1600" height="1064"
+             alt="A two-armed robot working over an electric-vehicle battery pack laid open on a bench in the lab, its cells and orange high-voltage connectors exposed."
+             fetchpriority="high" decoding="async">
       </figure>
       <div class="page-title-wrapper">
-        <h1 class="page-title page-title--sm">Robotic manipulation, robotic materials, and full-stack humanoids</h1>
+        <h1 class="page-title page-title--md">Robotic manipulation, robotic materials, and full-stack humanoids</h1>
       </div>
     </div>
 
@@ -194,7 +231,7 @@
         <ul class="grid grid-md-3 list--unstyled">
           <li class="card-container">
             <div class="card card--figure">
-              <figure class="card-image"><img src="assets/pubs/deligrasp.webp" alt="" width="328" height="480" loading="lazy" decoding="async"></figure>
+              <figure class="card-image"><img src="assets/pubs/deligrasp.webp" alt="Six side-by-side gripper photographs comparing a force-aware grasp with a traditional one on a paper aeroplane, a raspberry and a hard taco: the traditional grasp crushes each object." width="328" height="480" loading="lazy" decoding="async"></figure>
               <div class="card-body">
                 <h3 class="card-title">Robotic manipulation</h3>
                 <p class="card-summary">Giving robots human-like object manipulation skills through
@@ -204,7 +241,7 @@
           </li>
           <li class="card-container">
             <div class="card card--figure">
-              <figure class="card-image"><img src="assets/pubs/forcesensors.webp" alt="" width="480" height="313" loading="lazy" decoding="async"></figure>
+              <figure class="card-image"><img src="assets/pubs/forcesensors.webp" alt="Diagram of a robot arm labelled with a torque sensor at each of its three joints, a six-axis force-torque sensor at the wrist and a grip sensor in the fingers." width="480" height="313" loading="lazy" decoding="async"></figure>
               <div class="card-body">
                 <h3 class="card-title">Robotic materials</h3>
                 <p class="card-summary">Composite materials that embed sensing, actuation, computation
@@ -214,7 +251,7 @@
           </li>
           <li class="card-container">
             <div class="card card--figure">
-              <figure class="card-image"><img src="assets/hero/xlerobot-800.webp" alt="" width="800" height="457" loading="lazy" decoding="async"></figure>
+              <figure class="card-image"><img src="assets/hero/xlerobot-800.webp" alt="A small blue-and-black humanoid robot reaching toward a sheet of dark composite material on a workbench." width="800" height="457" loading="lazy" decoding="async"></figure>
               <div class="card-body">
                 <h3 class="card-title">Full-stack humanoids</h3>
                 <p class="card-summary">Bringing manipulation and robotic materials together toward
@@ -225,12 +262,12 @@
         </ul>
       </section>
 
-      <section class="section bg--sky-blue-light">
+      <section class="section bg--sky-blue-light p-4">
         <h2 class="section-title">Recent publications</h2>
         <ul class="grid grid-sm-2 grid-ml-4 list--unstyled">
 <li class="card-container">
   <article class="card card--pub">
-    <figure class="card-image"><img src="assets/pubs/auto/egocentric-tactile-and-proximity-sensors-as-observation-prio.webp" alt="" width="344" height="307" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/auto/egocentric-tactile-and-proximity-sensors-as-observation-prio.webp" alt="Figure from the paper “Egocentric Tactile and Proximity Sensors as Observation Priors for Humanoid Collision Avoidance”" width="344" height="307" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <p class="card-label">2026</p>
       <h3 class="card-title"><a class="card-link" href="https://doi.org/10.48550/arxiv.2604.25554">Egocentric Tactile and Proximity Sensors as Observation Priors for Humanoid Collision Avoidance</a></h3>
@@ -240,7 +277,7 @@
 </li>
 <li class="card-container">
   <article class="card card--pub">
-    <figure class="card-image"><img src="assets/pubs/auto/liquid-networks-with-mixture-density-heads-for-efficient-imi.webp" alt="" width="373" height="480" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/auto/liquid-networks-with-mixture-density-heads-for-efficient-imi.webp" alt="First page of the paper “Liquid Networks with Mixture Density Heads for Efficient Imitation Learning”" width="373" height="480" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <p class="card-label">2026</p>
       <h3 class="card-title"><a class="card-link" href="https://doi.org/10.48550/arxiv.2603.27058">Liquid Networks with Mixture Density Heads for Efficient Imitation Learning</a></h3>
@@ -250,7 +287,7 @@
 </li>
 <li class="card-container">
   <article class="card card--pub">
-    <figure class="card-image"><img src="assets/pubs/evbattery.webp" alt="" width="480" height="319" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/evbattery.webp" alt="Figure from the paper “Robotic Agentic Platform for Intelligent Electric Vehicle Disassembly”" width="480" height="319" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <p class="card-label">2026</p>
       <h3 class="card-title"><a class="card-link" href="https://doi.org/10.48550/arxiv.2603.18520">Robotic Agentic Platform for Intelligent Electric Vehicle Disassembly</a></h3>
@@ -260,7 +297,7 @@
 </li>
 <li class="card-container">
   <article class="card card--pub">
-    <figure class="card-image"><img src="assets/pubs/xlerobot.webp" alt="" width="480" height="274" loading="lazy" decoding="async"></figure>
+    <figure class="card-image"><img src="assets/pubs/xlerobot.webp" alt="Figure from the paper “Cutting the Cord: System Architecture for Low-Cost, GPU-Accelerated Bimanual Mobile Manipulation”" width="480" height="274" loading="lazy" decoding="async"></figure>
     <div class="card-body">
       <p class="card-label">2026</p>
       <h3 class="card-title"><a class="card-link" href="https://doi.org/10.48550/arxiv.2603.09051">Cutting the Cord: System Architecture for Low-Cost, GPU-Accelerated Bimanual Mobile Manipulation</a></h3>
@@ -276,24 +313,60 @@
         <h2 class="section-title">Videos</h2>
         <ul class="grid grid-md-3 list--unstyled">
 <li>
-  <a class="video video--default" href="https://www.youtube.com/watch?v=nV5dm42ZR_c">
-    <figure><img src="https://i.ytimg.com/vi/nV5dm42ZR_c/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async"></figure>
-    IROS 2020 Keynote — Robots Getting a Grip on General Manipulation
-  </a>
+  <div class="video--wrapper">
+    <div class="dialog-item">
+      <a class="video video--default dialog-link" href="https://www.youtube.com/watch?v=nV5dm42ZR_c">
+        <figure><img src="https://i.ytimg.com/vi/nV5dm42ZR_c/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async"></figure>
+        IROS 2020 Keynote — Robots Getting a Grip on General Manipulation
+      </a>
+      <dialog class="dialog dialog--video">
+        <form method="dialog" class="dialog-close">
+          <button type="submit" title="Close">&times;</button>
+        </form>
+        <div class="dialog-content">
+          <iframe width="1280" height="720" style="aspect-ratio: 16/9;" src="https://www.youtube.com/embed/nV5dm42ZR_c?enablejsapi=1" title="IROS 2020 Keynote — Robots Getting a Grip on General Manipulation" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
+        </div>
+      </dialog>
+    </div>
+  </div>
   <p>IEEE Robotics &amp; Automation Society</p>
 </li>
 <li>
-  <a class="video video--default" href="https://www.youtube.com/watch?v=zNh-uz-B_wo">
-    <figure><img src="https://i.ytimg.com/vi/zNh-uz-B_wo/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async"></figure>
-    Advances in Robotic Materials
-  </a>
+  <div class="video--wrapper">
+    <div class="dialog-item">
+      <a class="video video--default dialog-link" href="https://www.youtube.com/watch?v=zNh-uz-B_wo">
+        <figure><img src="https://i.ytimg.com/vi/zNh-uz-B_wo/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async"></figure>
+        Advances in Robotic Materials
+      </a>
+      <dialog class="dialog dialog--video">
+        <form method="dialog" class="dialog-close">
+          <button type="submit" title="Close">&times;</button>
+        </form>
+        <div class="dialog-content">
+          <iframe width="1280" height="720" style="aspect-ratio: 16/9;" src="https://www.youtube.com/embed/zNh-uz-B_wo?enablejsapi=1" title="Advances in Robotic Materials" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
+        </div>
+      </dialog>
+    </div>
+  </div>
   <p>Associated Press</p>
 </li>
 <li>
-  <a class="video video--default" href="https://www.youtube.com/watch?v=Ql8SDvfj7Xs">
-    <figure><img src="https://i.ytimg.com/vi/Ql8SDvfj7Xs/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async"></figure>
-    Robotic hands for factory environments
-  </a>
+  <div class="video--wrapper">
+    <div class="dialog-item">
+      <a class="video video--default dialog-link" href="https://www.youtube.com/watch?v=Ql8SDvfj7Xs">
+        <figure><img src="https://i.ytimg.com/vi/Ql8SDvfj7Xs/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async"></figure>
+        Robotic hands for factory environments
+      </a>
+      <dialog class="dialog dialog--video">
+        <form method="dialog" class="dialog-close">
+          <button type="submit" title="Close">&times;</button>
+        </form>
+        <div class="dialog-content">
+          <iframe width="1280" height="720" style="aspect-ratio: 16/9;" src="https://www.youtube.com/embed/Ql8SDvfj7Xs?enablejsapi=1" title="Robotic hands for factory environments" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
+        </div>
+      </dialog>
+    </div>
+  </div>
   <p>TechCrunch</p>
 </li>
         </ul>

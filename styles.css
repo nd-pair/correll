@@ -36,6 +36,13 @@
 
 /* --- publications ------------------------------------------------------- */
 
+/* Muted text and neutral tiles have to be stated for both colour schemes. The
+   theme's palette variables (--gray, --gray-extra-extra-light) are fixed values,
+   not scheme-aware ones; the theme itself writes light-dark() for anything that has
+   to follow prefers-color-scheme — see .caption/figcaption and .card-label in
+   ndt.css. #555 on the dark page background (#091b34) measures 2.3:1. */
+
+
 .pub-search {
   max-width: 34rem;
 }
@@ -45,7 +52,7 @@
 }
 
 .pub-count {
-  color: var(--gray);
+  color: light-dark(var(--gray), var(--sky-blue-dark));
   font-family: var(--font-default);
   font-size: 1rem;
   font-weight: 400;
@@ -61,7 +68,7 @@
 .card--figure .card-image {
   align-items: center;
   aspect-ratio: 4 / 3;
-  background: var(--gray-extra-extra-light);
+  background: light-dark(var(--gray-extra-extra-light), var(--brand-blue));
   display: flex;
   justify-content: center;
 }
@@ -88,15 +95,19 @@
   display: none;
 }
 
-/* Cards whose paper has no figure still need a tile, so the grid rows and the
-   horizontal list stay aligned. */
-.card-image--empty {
-  background: var(--gray-extra-extra-light);
-}
-
+/* Cards whose paper has no figure still need to reserve the space, so the grid rows
+   and the horizontal list stay aligned — but an empty tinted block beside a paper
+   with no figure reads as a broken image rather than as nothing, and in dark mode it
+   was a pale rectangle on a dark page. It holds its size and shows no fill. */
 .card-image--empty span {
   display: block;
   height: 100%;
+}
+
+/* Matching the selector above it, so "no fill" actually wins over the tile. */
+.card--pub .card-image--empty,
+.card--figure .card-image--empty {
+  background: none;
 }
 
 .card--pub .card-image--empty {
@@ -121,7 +132,7 @@
 }
 
 .alumni-role {
-  color: var(--gray);
+  color: light-dark(var(--gray), var(--sky-blue-dark));
   display: block;
   font-size: 0.875rem;
 }
@@ -135,7 +146,7 @@
 }
 
 .art-refs {
-  color: var(--gray);
+  color: light-dark(var(--gray), var(--sky-blue-dark));
   font-size: 0.875rem;
 }
 

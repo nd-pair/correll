@@ -33,11 +33,18 @@ def read(*a):
         return fh.read()
 
 
-def nav_html(current, mobile=False):
+def nav_html(current, mobile=False, fixed=False):
     out = []
     for i, (href, label) in enumerate(NAV):
         active = href == current
-        if mobile:
+        if fixed:
+            # The sticky bar repeats the primary links, so every id has to differ
+            # from the one in the header above it.
+            a = '<a href="%s"%s>%s</a>' % (
+                href, ' aria-current="page" class="current"' if active else "", label)
+            out.append('            <li id="primary_fixed_%d"%s>%s</li>' % (
+                i, ' class="active"' if active else "", a))
+        elif mobile:
             cls = []
             if i == 0:
                 cls.append("first")
@@ -101,7 +108,8 @@ def main():
             + skiplinks + "\n"
             + '<div class="%s" id="wrapper">\n' % fm.get(
                 "wrapper", "wrapper page--full-width nav-top--false")
-            + header.replace("{{NAV}}", nav_html(name)) + "\n"
+            + header.replace("{{NAV}}", nav_html(name))
+                    .replace("{{NAVFIXED}}", nav_html(name, fixed=True)) + "\n"
             + render.expand(body.strip()) + "\n"
             + footer.replace("{{YEAR}}", year) + "\n"
             + "</div><!-- .wrapper -->\n"
