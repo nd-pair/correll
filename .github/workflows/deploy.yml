@@ -11,7 +11,13 @@ concurrency:
   group: pages
   cancel-in-progress: true
 jobs:
+  # A push is you, at the keyboard, able to fix what this finds. So it blocks:
+  # nothing reaches Pages until the site passes.
+  check:
+    uses: ./.github/workflows/a11y.yml
+
   deploy:
+    needs: check
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

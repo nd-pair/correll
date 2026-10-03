@@ -1,0 +1,51 @@
+name: Accessibility and design check
+
+# Reusable so deploy.yml (blocking) and refresh.yml (advisory) run exactly the
+# same check, and neither can drift from the other.
+on:
+  workflow_call:
+    inputs:
+      warn-only:
+        description: "Report problems without failing the job"
+        type: boolean
+        default: false
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pillow
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install the checker's dependencies
+        run: |
+          npm install --no-save --no-audit --no-fund playwright axe-core
+          npx playwright install --with-deps chromium
+
+      - name: Build the pages
+        run: python3 scripts/build_site.py
+
+      - name: Stage the publishable site
+        run: |
+          mkdir -p _site
+          cp *.html styles.css app.js robots.txt sitemap.xml _site/
+          cp -r assets _site/
+
+      # The runner can reach conductor.nd.edu and static.nd.edu, so this measures
+      # the real theme with the real brand fonts — which is what the University's
+      # own QA looks at. Do not set A11Y_THEME_DIR here.
+      - name: Check
+        run: >
+          node scripts/a11y_check.js --root _site
+          ${{ inputs.warn-only && '--warn-only' || '' }}

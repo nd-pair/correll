@@ -236,9 +236,27 @@ move while they run. Only publishable files are deployed — `pages/`, `partials
 
 ## 7. Before you call it done
 
+CI runs the whole list below on every push — `scripts/a11y_check.js`, same file in all
+three repos. Run it yourself before you push and you will not be surprised:
+
 ```bash
 python3 scripts/build_site.py
-# then, against the built pages:
+mkdir -p _site && cp *.html styles.css app.js robots.txt sitemap.xml _site/ && cp -r assets _site/
+node scripts/a11y_check.js --root _site        # add --warn-only to report without failing
+
+# Offline (no conductor.nd.edu), serve the theme from a storybook checkout instead:
+A11Y_THEME_DIR=../ndt4-storybook node scripts/a11y_check.js --root _site
+```
+
+It blocks the deploy on a push, where you are there to fix what it finds, and only warns
+on the scheduled refresh — filing one GitHub issue rather than letting the site go stale
+because an author's name tripped a contrast rule. **`web` is advisory even on pushes**
+until PAIR's own findings are cleared; the switch is commented in its workflows.
+
+What it covers, and the manual steps it does not:
+
+```bash
+# covered by scripts/a11y_check.js:
 #   - axe-core on every page, in light and dark, desktop and 390px wide,
 #     with any accordion or dialog both open and closed
 #   - pixel contrast behind any text that sits over a photograph, at every
@@ -246,6 +264,8 @@ python3 scripts/build_site.py
 #   - drive the interactive parts: open and close a video dialog, scroll until
 #     the sticky bar appears and back, type in the publication filter
 #   - no duplicate element ids (the sticky bar repeats the primary navigation)
+
+# still manual:
 #   - https://pagespeed.web.dev/ against the live URL, mobile and desktop
 ```
 
