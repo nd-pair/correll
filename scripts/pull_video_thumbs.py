@@ -14,7 +14,7 @@ check for. 4:3 posters are centre-cropped to 16:9 so the cards line up.
 
 Deps: pillow. Usage: python3 scripts/pull_video_thumbs.py
 """
-import io, json, os, sys, urllib.error, urllib.request
+import io, json, os, sys, time, urllib.error, urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "data", "video_thumbs.json")
@@ -46,18 +46,46 @@ def video_ids():
     return uniq
 
 
+def fetch(url, attempts=3):
+    """One poster, with a retry. Returns the bytes, or None if it could not be had.
+
+    Catches broadly on purpose. Only HTTPError was caught before, which left plain
+    URLError, socket timeouts and RemoteDisconnected to propagate — so a single
+    flaky request from a CDN we do not control aborted the whole weekly refresh,
+    taking the publication crawl and the deploy down with it.
+    """
+    for attempt in range(1, attempts + 1):
+        try:
+            req = urllib.request.Request(url, headers=UA)
+            with urllib.request.urlopen(req, timeout=30) as r:
+                return r.read()
+        except urllib.error.HTTPError as exc:
+            if exc.code in (403, 429, 500, 502, 503, 504) and attempt < attempts:
+                time.sleep(2 * attempt)
+                continue
+            return None            # 404 and friends: this size simply is not there
+        except Exception as exc:   # URLError, timeout, reset connection, anything
+            if attempt < attempts:
+                time.sleep(2 * attempt)
+                continue
+            print(f"  --  {url}: {exc}", file=sys.stderr)
+            return None
+    return None
+
+
 def best_poster(vid):
     """The largest poster YouTube actually has for this video."""
     from PIL import Image
     for name in SIZES:
-        url = f"https://i.ytimg.com/vi/{vid}/{name}.jpg"
-        try:
-            req = urllib.request.Request(url, headers=UA)
-            with urllib.request.urlopen(req, timeout=30) as r:
-                data = r.read()
-        except urllib.error.HTTPError:
+        data = fetch(f"https://i.ytimg.com/vi/{vid}/{name}.jpg")
+        if not data:
             continue
-        im = Image.open(io.BytesIO(data))
+        try:
+            im = Image.open(io.BytesIO(data))
+            im.load()
+        except Exception as exc:   # an HTML error page, a truncated body
+            print(f"  --  {vid}/{name}: not an image ({exc})", file=sys.stderr)
+            continue
         if im.width <= 120:          # YouTube's "no such size" grey placeholder
             continue
         return name, im
@@ -66,11 +94,28 @@ def best_poster(vid):
 
 def main():
     os.makedirs(DIR, exist_ok=True)
+    # Start from what we already have rather than from nothing. Rebuilding the index
+    # from scratch meant one failed fetch silently dropped that video's entry, even
+    # though its poster was still sitting on disk, and the page quietly went back to
+    # hot-linking YouTube.
     thumbs = {}
-    for vid in video_ids():
+    if os.path.exists(OUT):
+        try:
+            for vid, rel in (json.load(open(OUT)).get("thumbs") or {}).items():
+                if os.path.exists(os.path.join(ROOT, rel)):
+                    thumbs[vid] = rel
+        except Exception as exc:
+            print(f"  --  could not read {OUT}: {exc}", file=sys.stderr)
+
+    wanted = video_ids()
+    fetched = 0
+    for vid in wanted:
         name, im = best_poster(vid)
         if im is None:
-            print(f"  --  no poster for {vid}", file=sys.stderr)
+            if vid in thumbs:
+                print(f"  ..  keeping the existing poster for {vid}", file=sys.stderr)
+            else:
+                print(f"  --  no poster for {vid}", file=sys.stderr)
             continue
         im = im.convert("RGB")
         target = WIDTH * 9 / 16
@@ -82,9 +127,16 @@ def main():
         dest = os.path.join(DIR, f"{vid}.webp")
         im.save(dest, "WEBP", quality=80, method=6)
         thumbs[vid] = os.path.relpath(dest, ROOT)
+        fetched += 1
         print(f"  ok  {os.path.basename(dest)} ({name})", file=sys.stderr)
+
+    thumbs = {vid: thumbs[vid] for vid in wanted if vid in thumbs}   # page order
     json.dump({"count": len(thumbs), "thumbs": thumbs}, open(OUT, "w"), indent=2)
-    print(f"wrote {len(thumbs)} posters -> {OUT}")
+    print(f"{fetched} fetched, {len(thumbs)} of {len(wanted)} posters -> {OUT}")
+    if not thumbs and wanted:
+        # Worth noticing, but not worth failing the job over: the pages fall back to
+        # YouTube's own poster, and the publication refresh still deserves to land.
+        print("::warning::no video posters could be fetched this run", file=sys.stderr)
 
 
 if __name__ == "__main__":

@@ -74,6 +74,37 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: node scripts/a11y_check.js --root _site --warn-only
+      # Restored: an earlier edit of this file removed this step, so the weekly
+      # refresh was crawling, rebuilding and deploying without ever committing the
+      # refreshed data back — every run started from the same stale baseline.
+      - name: Commit and push the refreshed data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data assets/pubs assets/video *.html sitemap.xml
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git commit -m "Auto-refresh publications and thumbnails"
+          for attempt in 1 2 3; do
+            git fetch origin "$GITHUB_REF_NAME"
+            if ! git rebase "origin/$GITHUB_REF_NAME"; then
+              git rebase --abort || true
+              echo "::error::Refresh conflicts with $GITHUB_REF_NAME. Re-run this workflow."
+              exit 1
+            fi
+            python3 scripts/build_site.py
+            git add -A
+            git diff --cached --quiet || git commit --amend --no-edit
+            if git push origin "HEAD:$GITHUB_REF_NAME"; then
+              exit 0
+            fi
+            echo "push rejected (attempt $attempt); someone pushed while we ran — retrying"
+            sleep 5
+          done
+          echo "::error::Could not push the refresh after three attempts."
+          exit 1
       # Deploy Pages directly — a push made with GITHUB_TOKEN does not trigger deploy.yml,
       # so this workflow publishes the refreshed content itself.
       - uses: actions/configure-pages@v5
