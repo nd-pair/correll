@@ -4,7 +4,7 @@ Website for the **Correll Laboratory** of **Nikolaus Correll**, Viola D. Hank Pr
 Aerospace and Mechanical Engineering at the **University of Notre Dame** — robotic manipulation,
 robotic materials, and full-stack humanoids.
 
-Live at **[nd-pair.github.io/correll](https://nd-pair.github.io/correll)**.
+Live at **[correlllab.nd.edu](https://correlllab.nd.edu/)**.
 
 ## Built on the Notre Dame Web Theme
 

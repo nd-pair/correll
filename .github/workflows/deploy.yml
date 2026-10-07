@@ -34,7 +34,7 @@ jobs:
       - name: Stage the publishable site
         run: |
           mkdir -p _site
-          cp *.html styles.css app.js robots.txt sitemap.xml _site/
+          cp *.html styles.css app.js robots.txt sitemap.xml CNAME _site/
           cp -r assets _site/
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

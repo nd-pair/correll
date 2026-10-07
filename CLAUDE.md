@@ -169,10 +169,33 @@ Approved: [Conductor](https://conductor.nd.edu/), [sites.nd.edu](http://sites.nd
 University account, [WP Engine](https://wpengine.com/), [Netlify](https://www.netlify.com/),
 DreamHost, WordPress.com. Prohibited: *"Google Sites, Wix, Weebly, or Squarespace."*
 
-> **Open question for these repos.** They are on GitHub Pages, which appears on neither list. Confirm
-> with Notre Dame Creative before a QA review is scheduled. GitHub Pages also fixes
-> `Cache-Control: max-age=600` with no way to change headers, which costs points on the "efficient
-> cache lifetimes" audit; Netlify or AWS would not.
+These repos are on GitHub Pages, which appears on neither list. **Settled in practice for
+`correll`:** Notre Dame Creative approved that site to go live and assigned it the subdomain
+`correlllab.nd.edu` in October 2026, with the site still on Pages. `web` and `fcn` have had no such
+approval, so do not assume it carries over.
+
+GitHub Pages still fixes `Cache-Control: max-age=600` with no way to change headers, which costs
+points on the "efficient cache lifetimes" audit; Netlify or AWS would not.
+
+### How the custom domain is wired
+
+DNS cannot express a path, so the mapping takes two halves. The University's DNS points the
+subdomain at the *organisation* host — `CNAME correlllab -> nd-pair.github.io`, no repository name,
+no scheme. The `CNAME` **file** at the root of this repo is the other half: it names the hostname
+this repository claims, and GitHub matches the incoming `Host` header against it.
+
+Consequences worth holding on to:
+
+- **A project site on its own domain moves to the root.** `nd-pair.github.io/correll/` becomes
+  `correlllab.nd.edu/`, and `/correll/` stops existing. That is why `BASE` in `build_site.py` is the
+  new host: it feeds every canonical link, `og:url`, the sitemap and `robots.txt`.
+- **The `CNAME` file has to reach `_site`.** These workflows deploy an artifact rather than a branch,
+  so a staging step that forgets it publishes a site with no claim on the hostname, and GitHub drops
+  the custom domain on that deploy. Every `cp ... _site/` line carries it.
+- **Order matters when first attaching a domain.** The file claims a hostname immediately, and the
+  old `github.io` URL starts redirecting to it, so the site is unreachable until DNS resolves.
+- **One custom domain per repository.** `web` and `fcn` can each take their own; a second name for
+  the same repo would have to be a redirect elsewhere.
 
 **nd.edu subdomains** are approved by the Office of Public Affairs & Communications —
 [creative.nd.edu/subdomains](https://creative.nd.edu/subdomains/). Five business days; never
@@ -222,7 +245,7 @@ CI runs it too, so a hand-edited root `*.html` will be overwritten.
 
 | Repo | Live | Notes |
 | --- | --- | --- |
-| `correll` | [nd-pair.github.io/correll](https://nd-pair.github.io/correll/) | Correll Laboratory. Publications and figures from OpenAlex. |
+| `correll` | [correlllab.nd.edu](https://correlllab.nd.edu/) | Correll Laboratory. Publications and figures from OpenAlex. |
 | `web` | [nd-pair.github.io/web](https://nd-pair.github.io/web/) | PAIR. Carries a members' gate — a soft gate over public data, not a security boundary. |
 | `fcn` | [nd-pair.github.io/fcn](https://nd-pair.github.io/fcn/) | Faculty Collaboration Network. A single-page D3 application; branding applies, the page layout does not. |
 
@@ -241,7 +264,7 @@ three repos. Run it yourself before you push and you will not be surprised:
 
 ```bash
 python3 scripts/build_site.py
-mkdir -p _site && cp *.html styles.css app.js robots.txt sitemap.xml _site/ && cp -r assets _site/
+mkdir -p _site && cp *.html styles.css app.js robots.txt sitemap.xml CNAME _site/ && cp -r assets _site/
 node scripts/a11y_check.js --root _site        # add --warn-only to report without failing
 
 # Offline (no conductor.nd.edu), serve the theme from a storybook checkout instead:

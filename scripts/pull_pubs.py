@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build data/publications.json for correll.cs.colorado.edu → nd-pair.github.io/correll,
+"""Build data/publications.json for correll.cs.colorado.edu → correlllab.nd.edu,
 from OpenAlex (Nikolaus Correll's author ids, incl. split identities), grouped by year."""
 import json, os, re, sys, time, urllib.parse, urllib.request, datetime
 

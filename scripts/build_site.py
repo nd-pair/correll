@@ -17,7 +17,11 @@ import render
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 P = lambda *a: os.path.join(ROOT, *a)
-BASE = "https://nd-pair.github.io/correll/"
+# The site is served from its own subdomain, so a project site that used to live
+# under /correll/ now sits at the root of this host. The CNAME file at the repo
+# root is what claims the hostname; it has to reach _site or the next deploy
+# drops the domain.
+BASE = "https://correlllab.nd.edu/"
 
 NAV = [
     ("index.html", "Home"),

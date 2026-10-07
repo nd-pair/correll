@@ -10,7 +10,7 @@
     search.addEventListener("submit", function () {
       var input = search.querySelector('input[name="q"]');
       if (input && input.value.indexOf("site:") === -1) {
-        input.value = "site:nd-pair.github.io/correll " + input.value.trim();
+        input.value = "site:correlllab.nd.edu " + input.value.trim();
       }
     });
   }
