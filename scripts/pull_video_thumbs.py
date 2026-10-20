@@ -14,7 +14,7 @@ check for. 4:3 posters are centre-cropped to 16:9 so the cards line up.
 
 Deps: pillow. Usage: python3 scripts/pull_video_thumbs.py
 """
-import io, json, os, sys, time, urllib.error, urllib.request
+import io, json, os, sys, time, traceback, urllib.error, urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "data", "video_thumbs.json")
@@ -117,21 +117,36 @@ def main():
             else:
                 print(f"  --  no poster for {vid}", file=sys.stderr)
             continue
-        im = im.convert("RGB")
-        target = WIDTH * 9 / 16
-        if abs(im.width / im.height - 16 / 9) > 0.01:   # 4:3 poster -> crop the bars off
-            h = round(im.width * 9 / 16)
-            top = (im.height - h) // 2
-            im = im.crop((0, top, im.width, top + h))
-        im = im.resize((WIDTH, round(target)), Image.LANCZOS)
-        dest = os.path.join(DIR, f"{vid}.webp")
-        im.save(dest, "WEBP", quality=80, method=6)
+        # Guarded like the fetch above it. Hardening only the download left this
+        # half exposed, and a single image that will not convert, resize or encode
+        # still took the whole weekly refresh down with it. The traceback is printed
+        # in full because the last two failures here could not be diagnosed from the
+        # job log.
+        try:
+            im = im.convert("RGB")
+            target = WIDTH * 9 / 16
+            if abs(im.width / im.height - 16 / 9) > 0.01:   # 4:3 -> crop the bars off
+                h = round(im.width * 9 / 16)
+                top = (im.height - h) // 2
+                im = im.crop((0, top, im.width, top + h))
+            im = im.resize((WIDTH, round(target)), Image.LANCZOS)
+            dest = os.path.join(DIR, f"{vid}.webp")
+            im.save(dest, "WEBP", quality=80, method=6)
+        except Exception:
+            print(f"  --  {vid}: could not process the {name} poster", file=sys.stderr)
+            traceback.print_exc()
+            continue
         thumbs[vid] = os.path.relpath(dest, ROOT)
         fetched += 1
         print(f"  ok  {os.path.basename(dest)} ({name})", file=sys.stderr)
 
     thumbs = {vid: thumbs[vid] for vid in wanted if vid in thumbs}   # page order
-    json.dump({"count": len(thumbs), "thumbs": thumbs}, open(OUT, "w"), indent=2)
+    try:
+        json.dump({"count": len(thumbs), "thumbs": thumbs}, open(OUT, "w"), indent=2)
+    except Exception:
+        print(f"::warning::could not write {OUT}", file=sys.stderr)
+        traceback.print_exc()
+        return
     print(f"{fetched} fetched, {len(thumbs)} of {len(wanted)} posters -> {OUT}")
     if not thumbs and wanted:
         # Worth noticing, but not worth failing the job over: the pages fall back to

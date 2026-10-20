@@ -44,19 +44,51 @@ jobs:
           OPENALEX_MAILTO: ncorrell@nd.edu
         run: python3 scripts/pull_pubs.py
       - name: Extract curated thumbnails from the lab site
+        id: curated
+        continue-on-error: true
         run: python3 scripts/pull_pub_images.py
       # The next two steps use Claude (Anthropic API) when ANTHROPIC_API_KEY is set as a
       # repo secret; without it they no-op and the site keeps heuristic figures / no teasers.
       - name: Auto-extract & LLM-select figures from open-access PDFs
+        id: figures
+        continue-on-error: true
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python3 scripts/pull_pub_figures.py ${{ github.event.inputs.refresh_figures == 'true' && '--refresh' || '' }}
       - name: Fetch poster frames for the embedded videos
+        id: posters
+        continue-on-error: true
         run: python3 scripts/pull_video_thumbs.py
       - name: Generate teaser lines from abstracts
+        id: teasers
+        continue-on-error: true
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python3 scripts/pull_pub_teasers.py
+      # Everything above this line is enrichment: thumbnails, figures, teaser lines.
+      # Each reaches a third party, each falls back gracefully when it comes back
+      # empty, and none of them is worth losing the publication crawl, the rebuild
+      # and the deploy over — which is exactly what happened twice when a poster
+      # would not download. They are allowed to fail.
+      #
+      # continue-on-error concludes the run as a success, so a failure would
+      # otherwise be invisible on a Monday-morning cron. This surfaces one warning
+      # annotation per step that did not finish.
+      - name: Report any enrichment step that failed
+        if: >
+          steps.curated.outcome == 'failure' || steps.figures.outcome == 'failure' ||
+          steps.posters.outcome == 'failure' || steps.teasers.outcome == 'failure'
+        run: |
+          for pair in "curated:${{ steps.curated.outcome }}" \
+                      "figures:${{ steps.figures.outcome }}" \
+                      "posters:${{ steps.posters.outcome }}" \
+                      "teasers:${{ steps.teasers.outcome }}"; do
+            name="${pair%%:*}"; outcome="${pair##*:}"
+            [ "$outcome" = "failure" ] && \
+              echo "::warning::Enrichment step '$name' failed; the site was built and deployed without its contribution."
+          done
+          exit 0
+
       - name: Rebuild the pages from the refreshed data
         run: python3 scripts/build_site.py
 
