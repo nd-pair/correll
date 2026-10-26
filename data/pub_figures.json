@@ -1,6 +1,6 @@
 {
   "source": "open-access PDFs (teaser figure, LLM- or heuristic-selected)",
-  "count": 49,
+  "count": 57,
   "images": {
     "egocentric tactile and proximity sensors as observation priors for humanoid collision avoidance": "assets/pubs/auto/egocentric-tactile-and-proximity-sensors-as-observation-prio.webp",
     "liquid networks with mixture density heads for efficient imitation learning": "assets/pubs/auto/liquid-networks-with-mixture-density-heads-for-efficient-imi.webp",
@@ -50,15 +50,26 @@
     "collective inspection of regular structures using a swarm of miniature robots": "assets/pubs/auto/collective-inspection-of-regular-structures-using-a-swarm-of.webp",
     "6 dof visual servoing using the lie group of affine transformations": "assets/pubs/auto/6-dof-visual-servoing-using-the-lie-group-of-affine-transfor.webp",
     "building a distributed robot garden": "assets/pubs/auto/building-a-distributed-robot-garden.webp",
-    "multi modal prosthetic fingertip sensor with proximity contact and force localization capabilities": "assets/pubs/auto/multi-modal-prosthetic-fingertip-sensor-with-proximity-conta.webp"
+    "multi modal prosthetic fingertip sensor with proximity contact and force localization capabilities": "assets/pubs/auto/multi-modal-prosthetic-fingertip-sensor-with-proximity-conta.webp",
+    "golem modular humanoid autonomy towards electric vehicle battery disassembly": "assets/pubs/auto/golem-modular-humanoid-autonomy-towards-electric-vehicle-bat.webp",
+    "a multifunctional soft robotic shape display with high speed actuation sensing and control": "assets/pubs/auto/a-multifunctional-soft-robotic-shape-display-with-high-speed.webp",
+    "toward smart composites small scale untethered prediction and control for soft sensor actuator systems": "assets/pubs/auto/toward-smart-composites-small-scale-untethered-prediction-an.webp",
+    "augmented reality for human swarm interaction in a swarm robotic chemistry simulation": "assets/pubs/auto/augmented-reality-for-human-swarm-interaction-in-a-swarm-rob.webp",
+    "multi level spatial modeling for stochastic distributed robotic systems": "assets/pubs/auto/multi-level-spatial-modeling-for-stochastic-distributed-robo.webp",
+    "from swarm robotics to smart materials": "assets/pubs/auto/from-swarm-robotics-to-smart-materials.webp",
+    "multirobot inspection of industrial machinery": "assets/pubs/auto/multirobot-inspection-of-industrial-machinery.webp",
+    "distributed boundary coverage with a team of networked miniature robots using a robust market based algorithm": "assets/pubs/auto/distributed-boundary-coverage-with-a-team-of-networked-minia.webp"
   },
   "first_page": [
     "6 dof visual servoing using the lie group of affine transformations",
     "c forest parallel shortest path planning with super linear speedup",
+    "distributed boundary coverage with a team of networked miniature robots using a robust market based algorithm",
+    "from swarm robotics to smart materials",
     "liquid networks with mixture density heads for efficient imitation learning",
     "miniaturized circuitry for capacitive self sensing and closed loop control of soft electrostatic transducers",
     "miniaturized circuitry for capacitive self sensing and closed loop n control of soft electrostatic transducers",
     "modeling and designing self organized aggregation in a swarm of miniature robots",
+    "multi level spatial modeling for stochastic distributed robotic systems",
     "organizing the aggregate languages for spatial computing",
     "path planning with forests of random trees parallelization with super linear speedup cu cs 1079 11",
     "reducing the barrier to entry of complex robotic software a moveit case study",
