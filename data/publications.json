@@ -1,12 +1,32 @@
 {
-  "generated": "2026-10-26 13:09 UTC",
+  "generated": "2026-11-02 15:47 UTC",
   "source": "OpenAlex (https://openalex.org)",
-  "total": 156,
+  "total": 157,
   "years": [
     {
       "year": 2026,
-      "count": 7,
+      "count": 8,
       "items": [
+        {
+          "id": "https://openalex.org/W7223698509",
+          "doi": "https://doi.org/10.48550/arxiv.2610.31891",
+          "title": "Move, don't think: sample-efficient collision avoidance with lossy proximity sensors",
+          "year": 2026,
+          "date": "2026-10-22",
+          "venue": "arXiv (Cornell University)",
+          "pdf": "https://arxiv.org/pdf/2610.31891",
+          "pdfs": [
+            "https://arxiv.org/pdf/2610.31891"
+          ],
+          "authors": [
+            "Carson Kohlbrenner",
+            "Niraj Pudasaini",
+            "William Xie",
+            "Naren Sivagnanadasan",
+            "Nikolaus Correll",
+            "Alessandro Roncone"
+          ]
+        },
         {
           "id": "https://openalex.org/W7204200856",
           "doi": "https://doi.org/10.48550/arxiv.2608.21550",
@@ -1256,7 +1276,7 @@
           "title": "Integrated force and distance sensing using elastomer-embedded commodity proximity sensors",
           "year": 2016,
           "date": "2016-06-27",
-          "venue": null,
+          "venue": "Robotics: Science and Systems",
           "pdf": "https://doi.org/10.15607/rss.2016.xii.035",
           "pdfs": [
             "https://doi.org/10.15607/rss.2016.xii.035"
@@ -1439,7 +1459,7 @@
           "title": "Detecting and Identifying Tactile Gestures using Deep Autoencoders, Geometric Moments and Gesture Level Features",
           "year": 2015,
           "date": "2015-11-09",
-          "venue": "ACM International Conference on Multimodal Interaction (ICMI)",
+          "venue": "INTERNATIONAL CONFERENCE ON MULTIMODAL INTERACTION",
           "pdf": null,
           "pdfs": [],
           "authors": [
@@ -1982,7 +2002,7 @@
           "title": "Precise truss assembly using commodity parts and low precision welding",
           "year": 2013,
           "date": "2013-04-01",
-          "venue": null,
+          "venue": "IEEE International Conference on Technologies for Practical Robot Applications",
           "pdf": null,
           "pdfs": [],
           "authors": [
@@ -2026,7 +2046,7 @@
           "title": "Trinocular visual odometry for divergent views with minimal overlap",
           "year": 2013,
           "date": "2013-01-01",
-          "venue": null,
+          "venue": "IEEE Workshop on Robot Vision (WORV)",
           "pdf": null,
           "pdfs": [],
           "authors": [
@@ -2084,7 +2104,7 @@
           "pdfs": [],
           "authors": [
             "Jacob Beal",
-            "Stefan Octavian Dulman",
+            "Stefan Dulman",
             "Kyle Usbeck",
             "Mirko Viroli D",
             "Nikolaus Correll"
@@ -2181,7 +2201,7 @@
           ],
           "authors": [
             "Jacob Beal",
-            "Stefan Octavian Dulman",
+            "Stefan Dulman",
             "Kyle Usbeck",
             "Mirko Viroli D",
             "Nikolaus Correll"
@@ -2341,7 +2361,7 @@
             "Nikolaus Correll",
             "Nikos Ar\u00e9chiga",
             "Adrienne Bolger",
-            "Mario Attilio Bollini",
+            "M. Bollini",
             "Ben Charrow",
             "Adam Clayton",
             "Felipe Dominguez",
@@ -2352,7 +2372,7 @@
             "Alexander Patrikalakis",
             "Timothy Robertson",
             "Jeremy S. Smith",
-            "Daniel Eduardo Soltero",
+            "Daniel E. Soltero",
             "Melissa M. Tanner",
             "Lauren White",
             "Daniela L. Rus"
@@ -2409,7 +2429,7 @@
             "Nikolaus Correll",
             "Nikos Ar\u00e9chiga",
             "Adrienne Bolger",
-            "Mario Attilio Bollini",
+            "M. Bollini",
             "Ben Charrow",
             "Adam Clayton",
             "Felipe Dominguez",
@@ -2420,7 +2440,7 @@
             "Alexander Patrikalakis",
             "Timothy Robertson",
             "Jeremy S. Smith",
-            "Daniel Eduardo Soltero",
+            "Daniel E. Soltero",
             "Melissa M. Tanner",
             "Lauren White",
             "Daniela L. Rus"
@@ -2466,7 +2486,7 @@
           "title": "Behavior Modes for Randomized Robotic Coverage",
           "year": 2009,
           "date": "2009-01-01",
-          "venue": null,
+          "venue": "International Conference on Robot Communication and Coordination",
           "pdf": "http://eudl.eu/pdf/10.4108/ICST.ROBOCOMM2009.5863",
           "pdfs": [
             "http://eudl.eu/pdf/10.4108/ICST.ROBOCOMM2009.5863"

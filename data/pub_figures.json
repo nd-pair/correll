@@ -1,6 +1,6 @@
 {
   "source": "open-access PDFs (teaser figure, LLM- or heuristic-selected)",
-  "count": 57,
+  "count": 58,
   "images": {
     "egocentric tactile and proximity sensors as observation priors for humanoid collision avoidance": "assets/pubs/auto/egocentric-tactile-and-proximity-sensors-as-observation-prio.webp",
     "liquid networks with mixture density heads for efficient imitation learning": "assets/pubs/auto/liquid-networks-with-mixture-density-heads-for-efficient-imi.webp",
@@ -58,7 +58,8 @@
     "multi level spatial modeling for stochastic distributed robotic systems": "assets/pubs/auto/multi-level-spatial-modeling-for-stochastic-distributed-robo.webp",
     "from swarm robotics to smart materials": "assets/pubs/auto/from-swarm-robotics-to-smart-materials.webp",
     "multirobot inspection of industrial machinery": "assets/pubs/auto/multirobot-inspection-of-industrial-machinery.webp",
-    "distributed boundary coverage with a team of networked miniature robots using a robust market based algorithm": "assets/pubs/auto/distributed-boundary-coverage-with-a-team-of-networked-minia.webp"
+    "distributed boundary coverage with a team of networked miniature robots using a robust market based algorithm": "assets/pubs/auto/distributed-boundary-coverage-with-a-team-of-networked-minia.webp",
+    "move don t think sample efficient collision avoidance with lossy proximity sensors": "assets/pubs/auto/move-don-t-think-sample-efficient-collision-avoidance-with-l.webp"
   },
   "first_page": [
     "6 dof visual servoing using the lie group of affine transformations",
