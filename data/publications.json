@@ -1,12 +1,27 @@
 {
-  "generated": "2026-11-02 15:47 UTC",
+  "generated": "2026-11-09 16:15 UTC",
   "source": "OpenAlex (https://openalex.org)",
   "total": 157,
   "years": [
     {
       "year": 2026,
-      "count": 8,
+      "count": 9,
       "items": [
+        {
+          "id": "https://openalex.org/W7225389835",
+          "doi": "https://doi.org/10.5281/zenodo.23875225",
+          "title": "Data and code for: Digital value stream mapping from operator-recorded events: observation length, operator compliance and automated line diagnosis",
+          "year": 2026,
+          "date": "2026-11-02",
+          "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+          "pdf": "https://doi.org/10.5281/zenodo.23875225",
+          "pdfs": [
+            "https://doi.org/10.5281/zenodo.23875225"
+          ],
+          "authors": [
+            "Nikolaus Correll"
+          ]
+        },
         {
           "id": "https://openalex.org/W7223698509",
           "doi": "https://doi.org/10.48550/arxiv.2610.31891",
@@ -65,8 +80,10 @@
           "year": 2026,
           "date": "2026-08-01",
           "venue": "IEEE International Conference on Automation Science and Engineering (CASE)",
-          "pdf": null,
-          "pdfs": [],
+          "pdf": "https://doi.org/10.1109/case69030.2026.11704152",
+          "pdfs": [
+            "https://doi.org/10.1109/case69030.2026.11704152"
+          ],
           "authors": [
             "Zachary Allen",
             "Max Conway",
@@ -661,6 +678,22 @@
           ]
         },
         {
+          "id": "https://openalex.org/W2766874801",
+          "doi": "https://doi.org/10.1007/978-3-030-28619-4_6",
+          "title": "Materials That Make Robots Smart",
+          "year": 2019,
+          "date": "2019-11-28",
+          "venue": "Springer proceedings in advanced robotics",
+          "pdf": "https://arxiv.org/pdf/1711.00537",
+          "pdfs": [
+            "https://arxiv.org/pdf/1711.00537"
+          ],
+          "authors": [
+            "Nikolaus Correll",
+            "Christoffer Heckman"
+          ]
+        },
+        {
           "id": "https://openalex.org/W2978569040",
           "doi": "https://doi.org/10.1016/j.robot.2019.103306",
           "title": "Fault-tolerant Covariance Intersection for localizing robot swarms",
@@ -695,21 +728,6 @@
             "Hayley Kinlaw",
             "Kyri Baker",
             "Andy Kaufman",
-            "Nikolaus Correll"
-          ]
-        },
-        {
-          "id": "https://openalex.org/W2963705825",
-          "doi": "https://doi.org/10.1177/0278364919856099",
-          "title": "Materials that make robots smart",
-          "year": 2019,
-          "date": "2019-06-13",
-          "venue": "The International Journal of Robotics Research",
-          "pdf": null,
-          "pdfs": [],
-          "authors": [
-            "Dana Hughes",
-            "Christoffer Heckman",
             "Nikolaus Correll"
           ]
         },
@@ -1041,7 +1059,7 @@
           "pdfs": [],
           "authors": [
             "Nikolaus Correll",
-            "Prabal K. Dutta",
+            "Prabal Dutta",
             "Richard Y. Han",
             "Kristofer S. J. Pister"
           ]
@@ -1059,7 +1077,7 @@
           ],
           "authors": [
             "Nikolaus Correll",
-            "Prabal K. Dutta",
+            "Prabal Dutta",
             "Richard Y. Han",
             "Kristofer S. J. Pister"
           ]
@@ -1135,7 +1153,7 @@
           "title": "To really help US workers, we should invest in robots",
           "year": 2017,
           "date": "2017-03-30",
-          "venue": null,
+          "venue": "The Conversation",
           "pdf": "https://doi.org/10.64628/aai.mjydkpyx7",
           "pdfs": [
             "https://doi.org/10.64628/aai.mjydkpyx7"
@@ -1236,8 +1254,10 @@
           "year": 2016,
           "date": "2016-10-05",
           "venue": "IEEE Transactions on Automation Science and Engineering",
-          "pdf": null,
-          "pdfs": [],
+          "pdf": "https://arxiv.org/pdf/1601.05484",
+          "pdfs": [
+            "https://arxiv.org/pdf/1601.05484"
+          ],
           "authors": [
             "Nikolaus Correll",
             "Kostas E. Bekris",
@@ -1688,7 +1708,7 @@
           "title": "Crowdfunding of science leads to innovation and better public engagement",
           "year": 2014,
           "date": "2014-05-23",
-          "venue": null,
+          "venue": "The Conversation",
           "pdf": null,
           "pdfs": [],
           "authors": [
@@ -1909,7 +1929,7 @@
           "title": "Space exploration can drive the next agricultural revolution",
           "year": 2013,
           "date": "2013-12-06",
-          "venue": null,
+          "venue": "The Conversation",
           "pdf": null,
           "pdfs": [],
           "authors": [
@@ -2059,7 +2079,7 @@
     },
     {
       "year": 2012,
-      "count": 9,
+      "count": 8,
       "items": [
         {
           "id": "https://openalex.org/W2056697427",
@@ -2131,37 +2151,15 @@
           ]
         },
         {
-          "id": "https://openalex.org/W2410928708",
-          "doi": "https://doi.org/10.1007/978-3-642-32723-0",
-          "title": "Distributed Autonomous Robotic Systems: The 10th International Symposium",
-          "year": 2012,
-          "date": "2012-09-06",
-          "venue": null,
-          "pdf": "http://d-nb.info/102454866X/04",
-          "pdfs": [
-            "http://d-nb.info/102454866X/04"
-          ],
-          "authors": [
-            "Alcherio Martinoli",
-            "Francesco Mondada C",
-            "Nikolaus Correll",
-            "Grgory Mermoud",
-            "Magnus Egerstedt",
-            "M. Ani Hsieh",
-            "Lynne E. Parker",
-            "Kasper Sty"
-          ]
-        },
-        {
           "id": "https://openalex.org/W3143860396",
           "doi": "https://doi.org/10.1007/978-3-642-32723-0",
           "title": "Distributed Autonomous Robotic Systems",
           "year": 2012,
           "date": "2012-09-05",
           "venue": "Springer tracts in advanced robotics",
-          "pdf": "http://infoscience.epfl.ch/record/181563",
+          "pdf": "http://d-nb.info/102454866X/04",
           "pdfs": [
-            "http://infoscience.epfl.ch/record/181563"
+            "http://d-nb.info/102454866X/04"
           ],
           "authors": [
             "Alcherio Martinoli",
