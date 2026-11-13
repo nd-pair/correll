@@ -220,8 +220,13 @@ def publications_list():
 
 def _person_card(m, heading="h3"):
     img = m.get("img")
+    # Someone whose photograph we do not have yet still gets the avatar's space,
+    # or their name floats at the top of its grid cell beside everyone else's
+    # portrait and reads as a rendering fault. The spacer draws nothing.
     figure = ('<figure class="avatar avatar--sm card-image">%s</figure>'
-              % img_tag(img, "Portrait of %s" % (m.get("name") or ""))) if img else ""
+              % img_tag(img, "Portrait of %s" % (m.get("name") or ""))) if img else (
+        '<figure class="avatar avatar--sm card-image card-image--empty" '
+        'aria-hidden="true"><span></span></figure>')
     role = ('<p class="person-title">%s</p>' % esc(m.get("role") or m.get("title"))) \
         if (m.get("role") or m.get("title")) else ""
     return (

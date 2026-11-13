@@ -114,6 +114,29 @@
   aspect-ratio: 4 / 3;
 }
 
+/* A person we have no photograph of yet. Same job as the publication rule above:
+   hold the avatar's space so the names across a row line up, and draw nothing --
+   the kit tints every .card-image with a 3% overlay, which would otherwise leave
+   a grey disc where a face will go.
+
+   Only once the grid actually has rows to line up. .grid-sm-2 is one column below
+   30em, where the reserved space is not alignment but a hole above the name. The
+   kit does the same thing itself with .card-image:empty { display: none }. */
+.card--person .card-image--empty {
+  display: none;
+}
+
+@media only screen and (min-width: 30em) {
+  .card--person .card-image--empty {
+    display: block;
+  }
+
+  .card--person .card-image--empty,
+  .card--person .card-image--empty::after {
+    background: none;
+  }
+}
+
 /* 22 years of anchors do not fit on one line: let them wrap rather than clip. */
 .nav-anchor ul {
   flex-wrap: wrap;
