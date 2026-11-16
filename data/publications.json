@@ -1,12 +1,32 @@
 {
-  "generated": "2026-11-09 16:15 UTC",
+  "generated": "2026-11-16 15:42 UTC",
   "source": "OpenAlex (https://openalex.org)",
-  "total": 157,
+  "total": 156,
   "years": [
     {
       "year": 2026,
-      "count": 9,
+      "count": 10,
       "items": [
+        {
+          "id": "https://openalex.org/W7225991383",
+          "doi": "https://doi.org/10.48550/arxiv.2611.15928",
+          "title": "Runtime Safety and Emergency Stops on a Full-Size Humanoid: Deployment Lessons and a Case for Graduated Force Authority",
+          "year": 2026,
+          "date": "2026-11-11",
+          "venue": "arXiv (Cornell University)",
+          "pdf": "https://arxiv.org/pdf/2611.15928",
+          "pdfs": [
+            "https://arxiv.org/pdf/2611.15928"
+          ],
+          "authors": [
+            "Max Conway",
+            "YuTong Julia Zhang",
+            "Allen Devaraj",
+            "William Xie",
+            "Alessandro Roncone",
+            "Nikolaus Correll"
+          ]
+        },
         {
           "id": "https://openalex.org/W7225389835",
           "doi": "https://doi.org/10.5281/zenodo.23875225",
@@ -517,6 +537,25 @@
           ]
         },
         {
+          "id": "https://openalex.org/W3119192122",
+          "doi": "https://doi.org/10.1007/978-3-030-71151-1_52",
+          "title": "High-Bandwidth Nonlinear Control for Soft Actuators with Recursive Network Models",
+          "year": 2021,
+          "date": "2021-03-27",
+          "venue": "Springer proceedings in advanced robotics",
+          "pdf": "https://arxiv.org/pdf/2101.01139",
+          "pdfs": [
+            "https://arxiv.org/pdf/2101.01139"
+          ],
+          "authors": [
+            "Sarah Aguasvivas Manzano",
+            "Patricia Xu",
+            "Khoi D. Ly",
+            "Robert F. Shepherd",
+            "Nikolaus Correll"
+          ]
+        },
+        {
           "id": "https://openalex.org/W3136513942",
           "doi": "https://doi.org/10.1109/mra.2021.3061951",
           "title": "Mobile Manipulation Hackathon: Moving into Real World Applications",
@@ -539,25 +578,6 @@
             "Sergi Foix",
             "Raphael Memmesheimer",
             "Francesco Ferro"
-          ]
-        },
-        {
-          "id": "https://openalex.org/W3119192122",
-          "doi": "https://doi.org/10.1007/978-3-030-71151-1_52",
-          "title": "High-Bandwidth Nonlinear Control for Soft Actuators with Recursive Network Models",
-          "year": 2021,
-          "date": "2021-01-01",
-          "venue": "Springer proceedings in advanced robotics",
-          "pdf": "https://arxiv.org/pdf/2101.01139",
-          "pdfs": [
-            "https://arxiv.org/pdf/2101.01139"
-          ],
-          "authors": [
-            "Sarah Aguasvivas Manzano",
-            "Patricia Xu",
-            "Khoi D. Ly",
-            "Robert F. Shepherd",
-            "Nikolaus Correll"
           ]
         }
       ]
@@ -598,9 +618,9 @@
           "year": 2020,
           "date": "2020-07-04",
           "venue": "Acta Astronautica",
-          "pdf": "https://doi.org/10.1016/j.actaastro.2020.07.001",
+          "pdf": "https://www.sciencedirect.com/science/article/am/pii/S0094576520304185",
           "pdfs": [
-            "https://doi.org/10.1016/j.actaastro.2020.07.001"
+            "https://www.sciencedirect.com/science/article/am/pii/S0094576520304185"
           ],
           "authors": [
             "Heather Hava",
@@ -773,7 +793,7 @@
     },
     {
       "year": 2018,
-      "count": 13,
+      "count": 12,
       "items": [
         {
           "id": "https://openalex.org/W2896451911",
@@ -786,71 +806,6 @@
           "pdfs": [],
           "authors": [
             "Nikolaus Correll"
-          ]
-        },
-        {
-          "id": "https://openalex.org/W4245184442",
-          "doi": "https://doi.org/10.1016/b978-0-08-102260-3.09991-1",
-          "title": "List of contributors",
-          "year": 2018,
-          "date": "2018-10-19",
-          "venue": "Elsevier eBooks",
-          "pdf": null,
-          "pdfs": [],
-          "authors": [
-            "Nozomi Akashi",
-            "Iain A. Anderson",
-            "Yasemin Ozkan-Aydin",
-            "Daniel M. Baechle",
-            "Remmi Baker",
-            "Anna C. Balazs",
-            "Allan M. Brooks",
-            "Nikolaus Correll",
-            "Uranbileg Daalkhaijav",
-            "Kristopher A. Darling",
-            "Donglei Fan",
-            "Andrew T. Gaynor",
-            "Anit Kumar Giri",
-            "Daniel I. Goldman",
-            "Jianhe Guo",
-            "Christian M. Hubicki",
-            "Hiroshi Ishii",
-            "Volodymyr B. Koman",
-            "Daichi Kozawa",
-            "Tao Li",
-            "Zhaohan Li",
-            "Zexi Liang",
-            "Pingwei Liu",
-            "Albert Tianxiang Liu",
-            "Carmel Majidi",
-            "E.\u2010F. Markus Henke",
-            "Michael C. McAlpine",
-            "Y. Meng\u00fc\u00e7",
-            "Jeffrey Lawrence Moran",
-            "Randy A. Mrozek",
-            "Todd D. Murphey",
-            "Kohei Nakajima",
-            "Sung Hyun Park",
-            "Ron Pelrine",
-            "Ana Pervan",
-            "Kirstin H. Petersen",
-            "Jennifer M. Rieser",
-            "William Savoie",
-            "Ayusman Sen",
-            "Robert F. Shepherd",
-            "Oleg E. Shklyaev",
-            "Henry Shum",
-            "Geoffrey A. Slipher",
-            "Michael S. Strano",
-            "Ruitao Su",
-            "S. Walker",
-            "Shawn M. Walsh",
-            "Raymond A. Wildman",
-            "Katherine E. Wilson",
-            "Jing Yang",
-            "Lining Yao",
-            "Osman Do\u011fan Yirmibe\u015fo\u011flu",
-            "Ge Zhang"
           ]
         },
         {
@@ -904,6 +859,37 @@
           ]
         },
         {
+          "id": "https://openalex.org/W2883959653",
+          "doi": "https://doi.org/10.1007/978-3-319-94568-2_6",
+          "title": "Manipulation Using the \u201cUtah\u201d Prosthetic Hand: The Role of Stiffness in Manipulation",
+          "year": 2018,
+          "date": "2018-07-14",
+          "venue": "Communications in computer and information science",
+          "pdf": null,
+          "pdfs": [],
+          "authors": [
+            "Radhen Patel",
+            "Jacob L. Segil",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2580057948",
+          "doi": "https://doi.org/10.1007/978-3-319-94568-2_9",
+          "title": "Improving Grasp Performance Using In-Hand Proximity and Contact Sensing",
+          "year": 2018,
+          "date": "2018-07-14",
+          "venue": "Communications in computer and information science",
+          "pdf": null,
+          "pdfs": [],
+          "authors": [
+            "Radhen Patel",
+            "Rebeca Curtis",
+            "Branden Romero",
+            "Nikolaus Correll"
+          ]
+        },
+        {
           "id": "https://openalex.org/W2799692011",
           "doi": "https://doi.org/10.1007/s10514-018-9751-4",
           "title": "Integrated proximity, contact and force sensing using elastomer-embedded commodity proximity sensors",
@@ -915,6 +901,20 @@
           "authors": [
             "Radhen Patel",
             "Rebecca Cox",
+            "Nikolaus Correll"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2793703160",
+          "doi": "https://doi.org/10.1007/978-3-319-73008-0_43",
+          "title": "Distributed Convolutional Neural Networks for Human Activity Recognition in Wearable Robotics",
+          "year": 2018,
+          "date": "2018-03-13",
+          "venue": "Springer proceedings in advanced robotics",
+          "pdf": null,
+          "pdfs": [],
+          "authors": [
+            "Dana Hughes",
             "Nikolaus Correll"
           ]
         },
@@ -975,51 +975,6 @@
           ],
           "authors": [
             "Sarah Aguasvivas Manzano",
-            "Dana Hughes",
-            "Nikolaus Correll"
-          ]
-        },
-        {
-          "id": "https://openalex.org/W2883959653",
-          "doi": "https://doi.org/10.1007/978-3-319-94568-2_6",
-          "title": "Manipulation Using the \u201cUtah\u201d Prosthetic Hand: The Role of Stiffness in Manipulation",
-          "year": 2018,
-          "date": "2018-01-01",
-          "venue": "Communications in computer and information science",
-          "pdf": null,
-          "pdfs": [],
-          "authors": [
-            "Radhen Patel",
-            "Jacob L. Segil",
-            "Nikolaus Correll"
-          ]
-        },
-        {
-          "id": "https://openalex.org/W2580057948",
-          "doi": "https://doi.org/10.1007/978-3-319-94568-2_9",
-          "title": "Improving Grasp Performance Using In-Hand Proximity and Contact Sensing",
-          "year": 2018,
-          "date": "2018-01-01",
-          "venue": "Communications in computer and information science",
-          "pdf": null,
-          "pdfs": [],
-          "authors": [
-            "Radhen Patel",
-            "Rebeca Curtis",
-            "Branden Romero",
-            "Nikolaus Correll"
-          ]
-        },
-        {
-          "id": "https://openalex.org/W2793703160",
-          "doi": "https://doi.org/10.1007/978-3-319-73008-0_43",
-          "title": "Distributed Convolutional Neural Networks for Human Activity Recognition in Wearable Robotics",
-          "year": 2018,
-          "date": "2018-01-01",
-          "venue": "Springer proceedings in advanced robotics",
-          "pdf": null,
-          "pdfs": [],
-          "authors": [
             "Dana Hughes",
             "Nikolaus Correll"
           ]
@@ -1163,6 +1118,21 @@
           ]
         },
         {
+          "id": "https://openalex.org/W2598278179",
+          "doi": "https://doi.org/10.1007/978-3-319-50115-4_17",
+          "title": "Improving Grasp Performance Using In-Hand Proximity and Dynamic Tactile Sensing",
+          "year": 2017,
+          "date": "2017-03-20",
+          "venue": "Springer proceedings in advanced robotics",
+          "pdf": null,
+          "pdfs": [],
+          "authors": [
+            "Radhen Patel",
+            "Jorge Ca\u00f1ardo Alastuey",
+            "Nikolaus Correll"
+          ]
+        },
+        {
           "id": "https://openalex.org/W2580807697",
           "doi": "https://doi.org/10.3390/s17020219",
           "title": "Intelligent RF-Based Gesture Input Devices Implemented Using e-Textiles",
@@ -1207,21 +1177,6 @@
           "pdfs": [],
           "authors": [
             "Rebecca Cox",
-            "Nikolaus Correll"
-          ]
-        },
-        {
-          "id": "https://openalex.org/W2598278179",
-          "doi": "https://doi.org/10.1007/978-3-319-50115-4_17",
-          "title": "Improving Grasp Performance Using In-Hand Proximity and Dynamic Tactile Sensing",
-          "year": 2017,
-          "date": "2017-01-01",
-          "venue": "Springer proceedings in advanced robotics",
-          "pdf": null,
-          "pdfs": [],
-          "authors": [
-            "Radhen Patel",
-            "Jorge Ca\u00f1ardo Alastuey",
             "Nikolaus Correll"
           ]
         }
@@ -1288,6 +1243,21 @@
             "Nikolaus Correll",
             "Michael D. Breed",
             "Samuel M. Flaxman"
+          ]
+        },
+        {
+          "id": "https://openalex.org/W2546421665",
+          "doi": "https://doi.org/10.1007/978-3-319-43488-9_27",
+          "title": "Simulating Chemical Reactions Using a Swarm of Miniature Robots",
+          "year": 2016,
+          "date": "2016-08-09",
+          "venue": "Lecture notes in computer science",
+          "pdf": null,
+          "pdfs": [],
+          "authors": [
+            "Audrey Randall",
+            "John Klingner",
+            "Nikolaus Correll"
           ]
         },
         {
@@ -1379,16 +1349,16 @@
           ]
         },
         {
-          "id": "https://openalex.org/W2546421665",
-          "doi": "https://doi.org/10.1007/978-3-319-43488-9_27",
-          "title": "Simulating Chemical Reactions Using a Swarm of Miniature Robots",
+          "id": "https://openalex.org/W2405120882",
+          "doi": "https://doi.org/10.1007/978-4-431-55879-8_14",
+          "title": "A Response Threshold Sigmoid Function Model for Swarm Robot Collaboration",
           "year": 2016,
-          "date": "2016-01-01",
-          "venue": "Lecture notes in computer science",
+          "date": "2016-01-14",
+          "venue": "Springer tracts in advanced robotics",
           "pdf": null,
           "pdfs": [],
           "authors": [
-            "Audrey Randall",
+            "Anshul Kanakia",
             "John Klingner",
             "Nikolaus Correll"
           ]
@@ -1406,21 +1376,6 @@
           ],
           "authors": [
             "M. Andy McEvoy",
-            "Nikolaus Correll"
-          ]
-        },
-        {
-          "id": "https://openalex.org/W2405120882",
-          "doi": "https://doi.org/10.1007/978-4-431-55879-8_14",
-          "title": "A Response Threshold Sigmoid Function Model for Swarm Robot Collaboration",
-          "year": 2016,
-          "date": "2016-01-01",
-          "venue": "Springer tracts in advanced robotics",
-          "pdf": null,
-          "pdfs": [],
-          "authors": [
-            "Anshul Kanakia",
-            "John Klingner",
             "Nikolaus Correll"
           ]
         }
@@ -1603,7 +1558,7 @@
         {
           "id": "https://openalex.org/W2028658459",
           "doi": "https://doi.org/10.1145/2677199.2680586",
-          "title": "Flutter",
+          "title": "Flutter: An Exploration of an Assistive Garment Using Distributed Sensing, Computation and Actuation",
           "year": 2015,
           "date": "2015-01-12",
           "venue": "International Conference on Tangible, Embedded, and Embodied Interaction (TEI)",
@@ -1638,7 +1593,7 @@
         {
           "id": "https://openalex.org/W2092077905",
           "doi": "https://doi.org/10.1145/2634317.2634343",
-          "title": "SwitchBack",
+          "title": "SwitchBack: an on-body RF-based gesture input device",
           "year": 2014,
           "date": "2014-09-13",
           "venue": "ACM International Symposium on Wearable Computers (ISWC)",
@@ -1855,7 +1810,7 @@
         {
           "id": "https://openalex.org/W2129487045",
           "doi": "https://doi.org/10.1145/2658779.2659110",
-          "title": "SikuliBot",
+          "title": "SikuliBot: automating physical interface using images",
           "year": 2014,
           "date": "2014-01-01",
           "venue": "ACM Symposium on User Interface Software and Technology (UIST)",
@@ -1877,8 +1832,7 @@
           "venue": "arXiv (Cornell University)",
           "pdf": "https://arxiv.org/pdf/1404.3785",
           "pdfs": [
-            "https://arxiv.org/pdf/1404.3785",
-            "http://hdl.handle.net/10446/87657"
+            "https://arxiv.org/pdf/1404.3785"
           ],
           "authors": [
             "David Coleman",
@@ -1987,7 +1941,7 @@
         {
           "id": "https://openalex.org/W4256488142",
           "doi": "https://doi.org/10.1201/b14908-11",
-          "title": "Self-Organized Robotic Systems",
+          "title": "Self-Organized Robotic Systems: Large-Scale Experiments in Aggregation and Self-Assembly Using Miniature Robots",
           "year": 2013,
           "date": "2013-05-23",
           "venue": "Pan Stanford eBooks",
@@ -2034,7 +1988,7 @@
         {
           "id": "https://openalex.org/W2051292214",
           "doi": "https://doi.org/10.1145/2460625.2460718",
-          "title": "HoneyComb",
+          "title": "HoneyComb: a platform for computational robotic materials",
           "year": 2013,
           "date": "2013-02-10",
           "venue": "International Conference on Tangible, Embedded, and Embodied Interaction (TEI)",
@@ -2079,7 +2033,7 @@
     },
     {
       "year": 2012,
-      "count": 8,
+      "count": 7,
       "items": [
         {
           "id": "https://openalex.org/W2056697427",
@@ -2116,7 +2070,7 @@
         {
           "id": "https://openalex.org/W2170389705",
           "doi": "https://doi.org/10.4018/978-1-4666-2092-6.ch016",
-          "title": "Organizing the Aggregate",
+          "title": "Organizing the Aggregate: Languages for Spatial Computing",
           "year": 2012,
           "date": "2012-09-21",
           "venue": "IGI Global eBooks",
@@ -2153,7 +2107,7 @@
         {
           "id": "https://openalex.org/W3143860396",
           "doi": "https://doi.org/10.1007/978-3-642-32723-0",
-          "title": "Distributed Autonomous Robotic Systems",
+          "title": "Distributed Autonomous Robotic Systems: The 10th International Symposium",
           "year": 2012,
           "date": "2012-09-05",
           "venue": "Springer tracts in advanced robotics",
@@ -2183,25 +2137,6 @@
           "pdfs": [],
           "authors": [
             "Michael Otte",
-            "Nikolaus Correll"
-          ]
-        },
-        {
-          "id": "https://openalex.org/W4394655480",
-          "doi": "https://doi.org/10.48550/arxiv.1202.5509",
-          "title": "Organizing the Aggregate: Languages for Spatial Computing",
-          "year": 2012,
-          "date": "2012-02-24",
-          "venue": "arXiv (Cornell University)",
-          "pdf": "https://arxiv.org/pdf/1202.5509",
-          "pdfs": [
-            "https://arxiv.org/pdf/1202.5509"
-          ],
-          "authors": [
-            "Jacob Beal",
-            "Stefan Dulman",
-            "Kyle Usbeck",
-            "Mirko Viroli D",
             "Nikolaus Correll"
           ]
         },
@@ -2351,9 +2286,9 @@
           "year": 2010,
           "date": "2010-08-24",
           "venue": "Intelligent Service Robotics",
-          "pdf": "https://orcid.org/0000-0001-6084-7287",
+          "pdf": "http://hdl.handle.net/1721.1/71699",
           "pdfs": [
-            "https://orcid.org/0000-0001-6084-7287"
+            "http://hdl.handle.net/1721.1/71699"
           ],
           "authors": [
             "Nikolaus Correll",
@@ -2522,7 +2457,7 @@
         {
           "id": "https://openalex.org/W1991756220",
           "doi": "https://doi.org/10.1145/1460412.1460448",
-          "title": "PCP",
+          "title": "PCP: the personal commute portal",
           "year": 2008,
           "date": "2008-11-05",
           "venue": "ACM Conference on Embedded Networked Sensor Systems (SenSys)",
@@ -2795,6 +2730,22 @@
           ]
         },
         {
+          "id": "https://openalex.org/W2109587741",
+          "doi": "https://doi.org/10.1007/11552246_36",
+          "title": "Collective Inspection of Regular Structures using a Swarm of Miniature Robots",
+          "year": 2006,
+          "date": "2006-03-08",
+          "venue": "Springer tracts in advanced robotics",
+          "pdf": "http://infoscience.epfl.ch/record/28061",
+          "pdfs": [
+            "http://infoscience.epfl.ch/record/28061"
+          ],
+          "authors": [
+            "Nikolaus Correll",
+            "Alcherio Martinoli"
+          ]
+        },
+        {
           "id": "https://openalex.org/W2144512373",
           "doi": "https://doi.org/10.1109/robot.2005.1570484",
           "title": "Modeling and Analysis of Beaconless and Beacon-Based Policies for a Swarm-Intelligent Inspection System",
@@ -2841,22 +2792,6 @@
             "Nikolaus Correll",
             "Christopher M. Cianci",
             "Xavier Raemy",
-            "Alcherio Martinoli"
-          ]
-        },
-        {
-          "id": "https://openalex.org/W2109587741",
-          "doi": "https://doi.org/10.1007/11552246_36",
-          "title": "Collective Inspection of Regular Structures using a Swarm of Miniature Robots",
-          "year": 2006,
-          "date": "2006-01-01",
-          "venue": "Springer tracts in advanced robotics",
-          "pdf": "http://infoscience.epfl.ch/record/28061",
-          "pdfs": [
-            "http://infoscience.epfl.ch/record/28061"
-          ],
-          "authors": [
-            "Nikolaus Correll",
             "Alcherio Martinoli"
           ]
         }
