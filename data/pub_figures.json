@@ -1,6 +1,6 @@
 {
   "source": "open-access PDFs (teaser figure, LLM- or heuristic-selected)",
-  "count": 61,
+  "count": 62,
   "images": {
     "egocentric tactile and proximity sensors as observation priors for humanoid collision avoidance": "assets/pubs/auto/egocentric-tactile-and-proximity-sensors-as-observation-prio.webp",
     "liquid networks with mixture density heads for efficient imitation learning": "assets/pubs/auto/liquid-networks-with-mixture-density-heads-for-efficient-imi.webp",
@@ -62,7 +62,8 @@
     "move don t think sample efficient collision avoidance with lossy proximity sensors": "assets/pubs/auto/move-don-t-think-sample-efficient-collision-avoidance-with-l.webp",
     "materials that make robots smart": "assets/pubs/auto/materials-that-make-robots-smart.webp",
     "analysis and observations from the first amazon picking challenge": "assets/pubs/auto/analysis-and-observations-from-the-first-amazon-picking-chal.webp",
-    "distributed autonomous robotic systems": "assets/pubs/auto/distributed-autonomous-robotic-systems.webp"
+    "distributed autonomous robotic systems": "assets/pubs/auto/distributed-autonomous-robotic-systems.webp",
+    "runtime safety and emergency stops on a full size humanoid deployment lessons and a case for graduated force authority": "assets/pubs/auto/runtime-safety-and-emergency-stops-on-a-full-size-humanoid-d.webp"
   },
   "first_page": [
     "6 dof visual servoing using the lie group of affine transformations",
