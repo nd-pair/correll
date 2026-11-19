@@ -105,7 +105,7 @@ def main():
         canonical = BASE if name == "index.html" else BASE + name
         page = (
             head.replace("{{TITLE}}", fm["title"])
-                .replace("{{DESCRIPTION}}", fm["description"])
+                .replace("{{DESCRIPTION}}", render.expand(fm["description"]))
                 .replace("{{CANONICAL}}", canonical)
                 .replace("{{BASE}}", BASE)
             + sprite + "\n"
