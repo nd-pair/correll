@@ -232,16 +232,39 @@ fetched from JSON in the browser, so it reaches crawlers, screen readers and vis
 JavaScript.
 
 ```
-partials/    shared chrome: head, skip links, header, footer, global menu, icon sprite
+site.json    name, tagline, contact, base URL, og:image, breadcrumbs, nav, related links
 pages/       one file per page: JSON front matter + that page's <main>
 scripts/
-  build_site.py   partials + pages -> *.html at the repo root, plus sitemap.xml and robots.txt
+  build_site.py   a shim; the builder lives in the theme
+  fetch_theme.sh  unpacks nd-pair/pair-theme at the version in theme.lock into .theme/
   render.py       renders the data-driven sections
 data/        JSON refreshed by the crawl/pull scripts
+styles.css   only what the kit has no component for
+.theme/      the shared chrome, gitignored -- partials, the builder, a11y_check.js
 ```
 
-**After editing anything in `partials/`, `pages/` or `data/`, run `python3 scripts/build_site.py`.**
+**The chrome is no longer in this repository.** `partials/`, the builder and
+`scripts/a11y_check.js` live in [`nd-pair/pair-theme`](https://github.com/nd-pair/pair-theme),
+extracted from `correll` because that is the layout Notre Dame approved. `theme.lock` pins a tag;
+`scripts/fetch_theme.sh` unpacks it into `.theme/`; CI runs that straight after checkout. A clone
+cannot build until it has run once:
+
+```bash
+scripts/fetch_theme.sh && python3 scripts/build_site.py
+```
+
+To work on the chrome and this site together, point the build at a checkout instead:
+
+```bash
+THEME_DIR=../pair-theme python3 scripts/build_site.py
+```
+
+**After editing anything in `pages/`, `data/` or `site.json`, run `python3 scripts/build_site.py`.**
 CI runs it too, so a hand-edited root `*.html` will be overwritten.
+
+A chrome change that is meant to be invisible must rebuild `correll` byte-identically. That diff is
+the test, and it is how v1.0.0 was proven — all six `correll` pages and all seven `web` pages came
+out unchanged.
 
 | Repo | Live | Notes |
 | --- | --- | --- |

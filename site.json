@@ -1,0 +1,49 @@
+{
+  "name": "Correll Laboratory",
+  "tagline": "Aerospace and Mechanical Engineering",
+  "email": "ncorrell@nd.edu",
+  "base": "https://correlllab.nd.edu/",
+  "og_image": "assets/hero/battery.webp",
+  "breadcrumbs": [
+    {
+      "name": "College of Engineering",
+      "url": "https://engineering.nd.edu/"
+    },
+    {
+      "name": "Aerospace and Mechanical Engineering",
+      "url": "https://ame.nd.edu/"
+    }
+  ],
+  "nav": [
+    [
+      "index.html",
+      "Home"
+    ],
+    [
+      "publications.html",
+      "Publications"
+    ],
+    [
+      "people.html",
+      "People"
+    ],
+    [
+      "teaching.html",
+      "Teaching"
+    ],
+    [
+      "art.html",
+      "Art"
+    ]
+  ],
+  "related_links": [
+    {
+      "name": "Michiana Manufacturing",
+      "url": "https://nd-pair.github.io/michiana-manufacturing/"
+    },
+    {
+      "name": "iNDustry Labs",
+      "url": "https://industrylabs.nd.edu/"
+    }
+  ]
+}

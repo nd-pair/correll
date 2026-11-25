@@ -24,12 +24,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      # The chrome lives in nd-pair/pair-theme at the version in theme.lock.
+      # Without this the build has no partials and exits before writing a page.
+      - name: Fetch the shared theme
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: scripts/fetch_theme.sh
+
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
       - name: Install build dependencies
         run: pip install pillow
-      - name: Build pages from partials/ and pages/
+      - name: Build pages from the theme and pages/
         run: python3 scripts/build_site.py
       - name: Stage the publishable site
         run: |

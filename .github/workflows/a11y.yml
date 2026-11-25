@@ -19,6 +19,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # The chrome lives in nd-pair/pair-theme at the version in theme.lock.
+      # Without this the build has no partials and exits before writing a page.
+      - name: Fetch the shared theme
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: scripts/fetch_theme.sh
+
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
