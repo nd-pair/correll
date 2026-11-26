@@ -1,0 +1,6 @@
+{
+  "note": "Thumbnails added by hand, keyed the same way as pub_images.json. This file exists because pull_pub_images.py rewrites pub_images.json wholesale from the Colorado lab site on every refresh; anything added there by hand is gone on the next run. Nothing writes this file, so entries here survive. They win over both the scrape and the auto-extracted figures.",
+  "images": {
+    "a robotic skin for collision avoidance and affective touch recognition": "assets/pubs/skin-baxter.webp"
+  }
+}

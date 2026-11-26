@@ -77,8 +77,13 @@ def img_tag(rel, alt="", cls=None, lazy=True, extra=""):
 def _pub_images():
     figs = (load("pub_figures.json") or {}).get("images", {})
     curated = (load("pub_images.json") or {}).get("images", {})
+    manual = (load("pub_images_manual.json") or {}).get("images", {})
     merged = dict(figs)
     merged.update(curated)  # curated thumbnails win over auto-extracted figures
+    # ...and hand-picked ones win over both. pull_pub_images.py rewrites
+    # pub_images.json from scratch on every refresh, so an entry added there by
+    # hand does not survive; pub_images_manual.json is written by nobody.
+    merged.update(manual)
     return merged
 
 
